@@ -1,0 +1,5 @@
+def mutate_then_read(data, key, val):
+    conf = ProfileConfig.load(['default'], base='default')
+    ProfileConfig.use_profile(conf, 'prod')
+    conf[key] = val
+    return conf[key]

@@ -1,0 +1,6 @@
+from simpleconf import Config, ProfileConfig
+import diot
+
+def merge_three(a, b, c, key):
+    merged_config = Config.load(c, b, a)
+    return merged_config[key]

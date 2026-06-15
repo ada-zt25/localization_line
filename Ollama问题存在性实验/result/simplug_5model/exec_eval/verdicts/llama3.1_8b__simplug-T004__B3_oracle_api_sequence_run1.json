@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "UnboundLocalError: cannot access local variable 'beta' where it is not associated with a value", "per_value": [{"value": 5, "ok": false, "reason": "runtime_error", "detail": "UnboundLocalError: cannot access local variable 'beta' where it is not associated with a value"}]}

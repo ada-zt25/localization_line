@@ -1,0 +1,17 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function nested_mutate_reflects(data, val). data is {'x': {'y': ...}}. Build a Diot, set d.x.y = val, then read d.x.y back from the SAME Diot and return it.
+
+Oracle API sequence:
+Diot(data) -> d.x.y = val -> d.x.y
+
+Requirements:
+- Define only the function nested_mutate_reflects.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

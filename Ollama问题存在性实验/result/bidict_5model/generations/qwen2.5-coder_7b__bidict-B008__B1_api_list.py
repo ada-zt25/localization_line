@@ -1,0 +1,6 @@
+def atomic_add(bidict, batch):
+    try:
+        bidict.putall(batch)
+        return dict(bidict)
+    except (ValueDuplicationError, KeyDuplicationError, DuplicationError):
+        return dict(bidict)

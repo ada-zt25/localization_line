@@ -1,0 +1,6 @@
+def active_profile_name(profiles, profile):
+    config = Config()
+    for p in profiles:
+        config.load(p)
+    config.switch_to(profile)
+    return config.active_profile.name

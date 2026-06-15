@@ -1,0 +1,5 @@
+def merge_then_nested(data, k1, k2):
+    config = Config()
+    profile_config = ProfileConfig()
+    merged_config = config.merge(profile_config)
+    return merged_config[k1][k2]

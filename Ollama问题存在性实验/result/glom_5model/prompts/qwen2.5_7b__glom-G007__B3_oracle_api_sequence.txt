@@ -1,0 +1,17 @@
+You are writing Python code using the glom library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+glom, Coalesce, Assign, T, Path and PathAccessError (real glom names) are available
+
+Task:
+Write function assign_in_place(data, path, val). Set the value at the dotted path INSIDE the given data object (mutating it in place), then return the value read back from that SAME data.
+
+Oracle API sequence:
+glom(data, Assign(path, val)); glom(data, path)   # same target
+
+Requirements:
+- Define only the function assign_in_place.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

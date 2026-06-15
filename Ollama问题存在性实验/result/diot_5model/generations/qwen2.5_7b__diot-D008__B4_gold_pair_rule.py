@@ -1,0 +1,4 @@
+def todict_then_index(data):
+    diot_instance = Diot(data, diot_transform='safe', diot_nest=True)
+    plain_dict = diot_instance.to_dict()
+    return plain_dict['x']['y']

@@ -1,0 +1,28 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume this helper already exists and is correct:
+sp, alpha, beta, gamma = make_score_manager()
+
+Task:
+Write function persistent_disable_beta_then_temp_only_alpha_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. First disable beta by name. Then, inside a temporary context where only alpha is enabled, collect sp.hooks.score(value). After the context exits, collect sp.hooks.score(value) again. Return both results (inside, after).
+
+Retrieved simplug documentation snippets:
+- make_score_manager() returns a Simplug manager and plugin objects: sp, alpha, beta, gamma.
+- make_first_score_manager()/make_last_score_manager() return a manager whose score hook is declared with result=SimplugResult.FIRST/LAST.
+- A hook's result mode controls what hooks.<name>(...) returns: ALL_AVAILS returns a list of every enabled plugin's result; FIRST/LAST return a single result (the first/last enabled plugin's).
+- plugins_context(plugins) creates a temporary plugin context and restores the previous plugin state after the context exits.
+- hooks.score(value) invokes the score hook through the manager and returns the collected hook results.
+- disable(*names) disables plugins on the manager.
+- enable(*names) enables plugins on the manager.
+- get_plugin(name) returns a plugin wrapper object for a registered plugin.
+- wrapper.disable() disables the plugin represented by that wrapper.
+- wrapper.enable() enables the plugin represented by that wrapper.
+
+
+Requirements:
+- Define only the requested function.
+- Do not define make_score_manager.
+- Do not define plugin classes.
+- Use the existing variables returned by make_score_manager.
+- Return only executable Python code.

@@ -1,0 +1,14 @@
+def only_alpha_gamma_score(value):
+    with sp.plugins_context(["alpha", "gamma"]):
+        wrapper_alpha = sp.get_plugin("alpha")
+        wrapper_gamma = sp.get_plugin("gamma")
+
+        wrapper_alpha.disable()
+        wrapper_gamma.enable()
+
+        result = sp.hooks.score(value)
+
+        wrapper_gamma.disable()
+        wrapper_alpha.enable()
+
+    return result

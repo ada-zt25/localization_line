@@ -1,0 +1,6 @@
+def key_for(pairs, val):
+    b = bidict(pairs)
+    try:
+        return b.inv[val]
+    except KeyError:
+        raise ValueError(f"No key found for value {val}") from None

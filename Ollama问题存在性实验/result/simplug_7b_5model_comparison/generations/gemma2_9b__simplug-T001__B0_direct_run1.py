@@ -1,0 +1,5 @@
+def only_beta_score(value):
+  sp.hooks.enable_plugin('beta')
+  result = sp.hooks.score(value)
+  sp.hooks.disable_plugin('beta')
+  return result

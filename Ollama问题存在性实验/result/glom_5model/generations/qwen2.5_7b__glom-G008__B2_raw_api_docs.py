@@ -1,0 +1,2 @@
+def assign_return_target(data, path, val):
+    return glom.glom(data, Path(path), default=Coalesce(Assign(path, val)))

@@ -1,0 +1,17 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume this helper already exists and is correct:
+sp, alpha, beta, gamma = make_score_manager()
+
+Task:
+Write function only_beta_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. Run sp.hooks.score(value) with only the beta plugin enabled temporarily, then return the hook result.
+
+
+
+Requirements:
+- Define only the requested function.
+- Do not define make_score_manager.
+- Do not define plugin classes.
+- Use the existing variables returned by make_score_manager.
+- Return only executable Python code.

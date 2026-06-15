@@ -1,0 +1,16 @@
+def remap(pairs, key, val):
+    if isinstance(pairs, bidict):
+        new_pairs = pairs.copy()
+    elif isinstance(pairs, OrderedBidict):
+        new_pairs = pairs.copy()
+    else:
+        new_pairs = bidict(pairs)
+    
+    try:
+        old_key = new_pairs.inverse[val]
+        del new_pairs[old_key]
+    except KeyError:
+        pass
+    
+    new_pairs[key] = val
+    return dict(new_pairs)

@@ -1,0 +1,5 @@
+def param_on_same_params(args):
+    params = Params()
+    params.add('count', int)
+    ns = params.parse(POSITIONAL, args)
+    return ns.count

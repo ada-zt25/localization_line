@@ -1,0 +1,20 @@
+# Python caches / compiled artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.abi3.so
+
+# OS / editor
+.DS_Store
+
+# Local Claude Code settings (personal, machine-specific)
+.claude/
+
+# Vendored third-party libraries (~48M; includes platform-specific .so binaries
+# that are not portable). Reconstruct into
+# Ollama问题存在性实验/exec_oracle/vendor/ via pip — see docs/PairCoder_Benchmark.md §3.3:
+#   pip install --target vendor python-simpleconf==0.9.3 glom bidict
+#   (simplug / diot are pwwang PyPI libs; install the pinned versions there too)
+Ollama问题存在性实验/exec_oracle/vendor/

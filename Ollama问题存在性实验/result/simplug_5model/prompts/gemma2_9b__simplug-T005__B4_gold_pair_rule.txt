@@ -1,0 +1,39 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume this helper already exists and is correct:
+sp, alpha, beta, gamma = make_score_manager()
+
+Task:
+Write function beta_only_inside_context_then_all_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. First collect sp.hooks.score(value) inside a temporary context where only beta is enabled. Then after the context exits, collect sp.hooks.score(value) again with the original plugin state restored. Return both results.
+
+Relevant simplug APIs:
+- from simplug import Simplug
+- make_score_manager() -> returns (sp, alpha, beta, gamma)
+- make_first_score_manager() -> like make_score_manager, score hook uses result=FIRST
+- make_last_score_manager() -> like make_score_manager, score hook uses result=LAST
+- sp.plugins_context(plugins): context manager that temporarily changes enabled plugins.
+- sp.hooks.score(value): calls the score hook and returns collected results.
+- sp.disable(*names): disable plugins.
+- sp.enable(*names): enable plugins.
+- sp.get_plugin(name): get a plugin wrapper.
+- wrapper.disable(): disable this plugin wrapper.
+- wrapper.enable(): enable this plugin wrapper.
+
+
+Relevant API Pair Rule:
+5. sp.disable / sp.plugins_context -> sp.hooks.score
+Relation: state-lifecycle
+Constraint: sp.disable(name) is PERSISTENT -- the plugin stays disabled after the call and across a later plugins_context. plugins_context temporarily changes the enabled set and, on exit, restores the state that held WHEN THE CONTEXT WAS ENTERED -- not "all plugins enabled". A plugin disabled before entering the context therefore remains disabled after the context exits.
+Usage pattern:
+sp.disable("beta")
+with sp.plugins_context(["alpha"]):
+    inside = sp.hooks.score(value)   # only alpha
+after = sp.hooks.score(value)        # alpha and gamma (beta still disabled)
+
+Requirements:
+- Define only the requested function.
+- Do not define make_score_manager.
+- Do not define plugin classes.
+- Use the existing variables returned by make_score_manager.
+- Return only executable Python code.

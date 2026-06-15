@@ -1,0 +1,6 @@
+ Here is the Python code for the `last_score` function:
+
+```python
+def last_score(value):
+    return sp.hooks.score(value)
+```

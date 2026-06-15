@@ -1,0 +1,9 @@
+```python
+def nested_with_profiles(profiles):
+    conf = ProfileConfig.load(profiles)
+    a = conf.x
+    with ProfileConfig.with_profile(conf, 'default'):
+        b = conf.x
+    c = conf.x
+    return (a, b, c)
+```

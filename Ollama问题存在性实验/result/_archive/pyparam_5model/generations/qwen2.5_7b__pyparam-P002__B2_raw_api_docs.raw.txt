@@ -1,0 +1,7 @@
+```python
+def parse_float(args):
+    p = Params()
+    p.add_param('--ratio', type='float', default=0.0, required=True)
+    parsed_args = p.parse(args)
+    return float(getattr(parsed_args, 'ratio'))
+```

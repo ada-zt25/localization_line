@@ -1,0 +1,7 @@
+def invert(pairs):
+    b = OrderedBidict()
+    try:
+        b.putall(pairs.items())
+    except DuplicationError:
+        raise ValueError("Duplicate keys or values in input pairs")
+    return dict(b.inv)

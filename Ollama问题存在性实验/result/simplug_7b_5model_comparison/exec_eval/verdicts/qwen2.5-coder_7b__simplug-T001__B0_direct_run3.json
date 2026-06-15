@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "simplug.ResultError: Error while calling hook implementation, plugin=alpha; spec=score", "per_value": [{"value": 5, "ok": false, "reason": "runtime_error", "detail": "simplug.ResultError: Error while calling hook implementation, plugin=alpha; spec=score"}]}

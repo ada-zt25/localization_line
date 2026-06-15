@@ -1,0 +1,27 @@
+You are writing Python code using the pyparam library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Params (real pyparam class) and POSITIONAL are available
+
+Task:
+Write function two_params_same(args). args is ['--count','3','--label','hi']. Add BOTH an integer 'count' and a string 'label' to the SAME Params, parse args, and return (ns.count, ns.label).
+
+Relevant pyparam APIs:
+- Params() ; p.add_param(name, type='str'|'int'|'float'|'bool'|'list', default=None, required=False)
+- p.parse(args) -> Namespace      # args is a list of strings; use multi-character option names
+- the Namespace exposes parsed values by attribute (ns.count)
+
+
+Relevant API Pair Rule:
+4. add_param and parse on the SAME Params
+Relation: shared-receiver
+Constraint: A parameter is only recognized by the Params it was add_param'd to; you must parse the SAME Params object that holds the definitions. Parsing a different/empty Params does not know the option.
+Usage pattern:
+p = Params(); p.add_param('count', type='int'); p.parse(args).count   # same p
+
+Requirements:
+- Define only the function two_params_same.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

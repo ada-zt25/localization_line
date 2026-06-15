@@ -1,0 +1,5 @@
+def parse_then_attr(args):
+    params = Params()
+    params.add_param('count', type=int, default=1)
+    namespace = params.parse(args)
+    return namespace.count

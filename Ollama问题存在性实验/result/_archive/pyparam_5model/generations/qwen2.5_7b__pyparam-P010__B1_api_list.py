@@ -1,0 +1,5 @@
+def parse_then_use(args):
+    p = Params()
+    p.add_param('count', type='int', required=True)
+    parsed_args = p.parse(args)
+    return parsed_args.count * 2

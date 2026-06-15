@@ -1,0 +1,23 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function with_profile_keeps_current(profiles). Load a ProfileConfig and persistently switch to 'prod'. Enter and exit a temporary with_profile('default') context; afterwards return the active profile name (it must still be 'prod').
+
+Relevant simpleconf APIs:
+- Config.load(*configs, loader=None) -> Diot   # merge configs; later overrides earlier
+- ProfileConfig.load(profiles, base='default') -> Diot
+- ProfileConfig.use_profile(conf, profile)        # switch active profile (persistent)
+- ProfileConfig.with_profile(conf, profile)       # context manager: switch temporarily
+- ProfileConfig.current_profile(conf) -> str
+- the loaded config is a Diot (attribute & item access)
+
+
+Requirements:
+- Define only the function with_profile_keeps_current.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

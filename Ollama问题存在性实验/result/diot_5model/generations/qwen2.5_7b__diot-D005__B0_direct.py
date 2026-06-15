@@ -1,0 +1,4 @@
+def nested_stays_dict(data):
+    from diot import Diot
+    d = Diot(data, convert=False)
+    return d['x']

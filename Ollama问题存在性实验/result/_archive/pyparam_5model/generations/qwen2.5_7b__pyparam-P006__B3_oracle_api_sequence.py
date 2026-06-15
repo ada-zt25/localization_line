@@ -1,0 +1,7 @@
+from pyparam import Params
+
+def default_when_omitted(args):
+    p = Params()
+    p.add_param('label', default='D')
+    ns = p.parse(args)
+    return ns.label

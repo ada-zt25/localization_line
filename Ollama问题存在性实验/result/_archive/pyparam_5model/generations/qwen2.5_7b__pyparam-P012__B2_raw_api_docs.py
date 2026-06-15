@@ -1,0 +1,10 @@
+from pyparam import Params
+
+def two_params_same(args):
+    params = Params()
+    params.add_param('--count', type='int', default=0, required=True)
+    params.add_param('--label', type='str', default='', required=True)
+    
+    ns = params.parse(args)
+    
+    return (ns.count, ns.label)

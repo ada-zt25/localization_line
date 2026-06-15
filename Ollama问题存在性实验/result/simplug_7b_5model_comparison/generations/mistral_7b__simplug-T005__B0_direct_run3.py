@@ -1,0 +1,7 @@
+import contextlib
+
+def beta_only_inside_context_then_all_score(value):
+    with contextlib.nested(sp.hooks.enable('beta'), sp.hooks.disable('beta')):
+        score1 = sp.hooks.score(value)
+        sp.hooks.score(value)  # This will restore the original plugin state
+        return score1, sp.hooks.score(value)

@@ -1,0 +1,5 @@
+def param_on_same_params(args):
+    params = Params()
+    params.add_param('--count', type='int', default=1, required=True)
+    ns = params.parse(['--count'] + args)
+    return ns.count

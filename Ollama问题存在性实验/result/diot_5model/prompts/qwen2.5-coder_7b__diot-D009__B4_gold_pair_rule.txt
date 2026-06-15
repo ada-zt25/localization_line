@@ -1,0 +1,30 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function set_then_get(key, val). Create a Diot, set d[key]=val, then read key back from the SAME Diot and return it.
+
+Relevant diot APIs:
+- Diot(data, diot_transform='safe', diot_nest=True, diot_frozen=False)
+- OrderedDiot(...), FrozenDiot(...)
+- d.<key> / d[key] attribute & item access; d.get(key, default)
+- d.to_dict() -> a plain (recursive) dict
+- frozen diot: d.thaw() context manager to temporarily allow modification
+- DiotFrozenError is raised when modifying a frozen diot
+
+
+Relevant API Pair Rule:
+4. same Diot mutate/read
+Relation: shared-receiver
+Constraint: Reads reflect writes only on the SAME Diot object; a freshly built Diot from the original data does not see your mutation. (diot.py: __setitem__/__setattr__ mutate self.)
+Usage pattern:
+d = Diot(data); d.x.y = val; d.x.y   # same d
+
+Requirements:
+- Define only the function set_then_get.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

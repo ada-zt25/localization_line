@@ -1,0 +1,6 @@
+from diot import Diot
+
+def access_camel(data):
+    d = Diot()
+    d.fooBar = data['foo_bar']
+    return d

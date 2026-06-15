@@ -1,0 +1,30 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function access_snake(data). data is a dict with a camelCase key 'fooBar'. Build a Diot whose keys are accessible in snake_case, and return d.foo_bar.
+
+Relevant diot APIs:
+- Diot(data, diot_transform='safe', diot_nest=True, diot_frozen=False)
+- OrderedDiot(...), FrozenDiot(...)
+- d.<key> / d[key] attribute & item access; d.get(key, default)
+- d.to_dict() -> a plain (recursive) dict
+- frozen diot: d.thaw() context manager to temporarily allow modification
+- DiotFrozenError is raised when modifying a frozen diot
+
+
+Relevant API Pair Rule:
+1. Diot(diot_transform=...) -> attribute/key access
+Relation: param-dependency
+Constraint: The diot_transform argument fixes how keys may be accessed (diot.py: __init__ stores __diot__["transform"], TRANSFORMS maps names). To read a snake_case source key as camelCase you must build Diot(data, diot_transform='camelCase'); to read a camelCase key as snake_case use diot_transform='snake_case'. The default 'safe' does not provide camel/snake aliasing.
+Usage pattern:
+d = Diot(data, diot_transform='camelCase'); d.fooBar
+
+Requirements:
+- Define only the function access_snake.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

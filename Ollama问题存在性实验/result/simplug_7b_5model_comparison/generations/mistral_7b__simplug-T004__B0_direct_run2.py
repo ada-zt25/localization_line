@@ -1,0 +1,6 @@
+def get_beta_wrapper_disable_then_score(value):
+    beta_wrapper = sp.plugins[beta]
+    beta_wrapper.disabled = True
+    score = sp.hooks.score(value)
+    beta_wrapper.disabled = False
+    return score

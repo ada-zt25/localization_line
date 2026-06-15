@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "TypeError: 'SimplugHooks' object does not support item deletion", "per_value": [{"value": 5, "ok": false, "reason": "runtime_error", "detail": "TypeError: 'SimplugHooks' object does not support item deletion"}]}

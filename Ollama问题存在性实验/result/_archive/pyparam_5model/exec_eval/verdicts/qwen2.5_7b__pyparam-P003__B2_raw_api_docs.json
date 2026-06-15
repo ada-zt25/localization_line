@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "AttributeError: 'Namespace' object has no attribute 'name'. Did you mean: '--name'?"}

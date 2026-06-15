@@ -1,0 +1,81 @@
+{
+  "lib": "diot",
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "diot-D001",
+    "diot-D002",
+    "diot-D003",
+    "diot-D004",
+    "diot-D005",
+    "diot-D006",
+    "diot-D007",
+    "diot-D008",
+    "diot-D009",
+    "diot-D010",
+    "diot-D011",
+    "diot-D012"
+  ],
+  "task_meta": {
+    "diot-D001": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "diot-D002": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "diot-D003": {
+      "pair_type": "param-dependency",
+      "difficulty": "easy"
+    },
+    "diot-D004": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "diot-D005": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "diot-D006": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "diot-D007": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "diot-D008": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "diot-D009": {
+      "pair_type": "shared-receiver",
+      "difficulty": "easy"
+    },
+    "diot-D010": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "diot-D011": {
+      "pair_type": "lifecycle",
+      "difficulty": "medium"
+    },
+    "diot-D012": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

@@ -1,0 +1,17 @@
+You are writing Python code using the pyparam library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Params (real pyparam class) and POSITIONAL are available
+
+Task:
+Write function required_present(args). args is like ['--rr','9']. Build a Params with a REQUIRED integer parameter 'rr', parse args, and return its value.
+
+Oracle API sequence:
+Params -> add_param('rr', type='int', required=True) -> parse(args).rr
+
+Requirements:
+- Define only the function required_present.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

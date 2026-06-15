@@ -1,0 +1,5 @@
+def disable_beta_then_score(value):
+    with sp.plugins_context([plugin for plugin in sp.get_all_plugins() if plugin.name != 'beta']):
+        sp.hooks.score(value)
+        results = sp.hooks.score(value=None)
+        return next(results) if results else None

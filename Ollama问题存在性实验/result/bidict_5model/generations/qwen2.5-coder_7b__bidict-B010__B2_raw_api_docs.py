@@ -1,0 +1,6 @@
+def reject_dup(b, key, val):
+    try:
+        b[key] = val
+    except ValueDuplicationError:
+        pass
+    return dict(b)

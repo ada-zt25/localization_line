@@ -1,0 +1,13 @@
+```python
+def remap(pairs, key, val):
+    from bidict import bidict
+    
+    b = bidict(pairs)
+    try:
+        old_key = next(k for k in b if b[k] == val)
+        del b[old_key]
+    except StopIteration:
+        pass
+    b[key] = val
+    return dict(b)
+```

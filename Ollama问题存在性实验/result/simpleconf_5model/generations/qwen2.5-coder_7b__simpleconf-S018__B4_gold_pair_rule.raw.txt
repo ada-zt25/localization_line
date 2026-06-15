@@ -1,0 +1,9 @@
+```python
+def two_reads_same_conf(profiles):
+    conf = ProfileConfig.load(profiles)
+    ProfileConfig.use_profile(conf, 'prod')
+    x1 = conf.x
+    ProfileConfig.use_profile(conf, 'prod')  # Switch back to prod for the second read
+    x2 = conf.x
+    return (x1, x2)
+```

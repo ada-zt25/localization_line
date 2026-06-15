@@ -1,0 +1,6 @@
+from diot import Diot
+
+def nested_mutate_reflects(data, val):
+    d = Diot(data)
+    d.x.y = val
+    return d.x.y

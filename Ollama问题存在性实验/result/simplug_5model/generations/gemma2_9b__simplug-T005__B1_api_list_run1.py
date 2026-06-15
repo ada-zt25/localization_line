@@ -1,0 +1,5 @@
+def beta_only_inside_context_then_all_score(value):
+  with sp.plugins_context([sp.get_plugin(name) for name in ['beta']]):
+    beta_only = sp.hooks.score(value)
+  all_plugins = sp.hooks.score(value)
+  return beta_only, all_plugins

@@ -1,0 +1,4 @@
+def disable_beta_then_score(value):
+    global sp, alpha, beta, gamma
+    sp.disable(beta)
+    return sp.hooks.score(value)

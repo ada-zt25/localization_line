@@ -1,0 +1,6 @@
+def make_frozen(pairs):
+    try:
+        b = bidict(pairs)
+        return frozenbidict(b.items())
+    except DuplicationError as e:
+        raise ValueError("Duplicate keys or values in pairs") from e

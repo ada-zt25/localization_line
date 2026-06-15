@@ -1,0 +1,6 @@
+def parse_two_fields(args):
+    p = Params()
+    p.add_param('--count', type='int', default=1, required=True)
+    p.add_param('--label', type='str', default='', required=True)
+    ns = p.parse(args)
+    return (ns.count, ns.label)

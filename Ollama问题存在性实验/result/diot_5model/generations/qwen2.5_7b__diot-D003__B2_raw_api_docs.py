@@ -1,0 +1,5 @@
+def get_default(data, key):
+    from diot import Diot
+    
+    d = Diot(data)
+    return d.get(key, 0)

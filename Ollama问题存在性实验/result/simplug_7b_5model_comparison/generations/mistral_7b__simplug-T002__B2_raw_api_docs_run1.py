@@ -1,0 +1,9 @@
+def only_alpha_gamma_score(value):
+    with plugins_context([alpha, gamma]):
+        sp.hooks.score(value)
+        sp.plugins[alpha].disable()
+        sp.plugins[gamma].disable()
+        result = sp.hooks.score(value)
+        sp.plugins[alpha].enable()
+        sp.plugins[gamma].enable()
+    return result

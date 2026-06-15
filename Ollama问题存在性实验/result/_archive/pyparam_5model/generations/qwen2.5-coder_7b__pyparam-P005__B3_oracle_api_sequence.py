@@ -1,0 +1,5 @@
+def required_present(args):
+    params = Params()
+    params.add_param('rr', type='int', required=True)
+    params.parse(args)
+    return params.rr

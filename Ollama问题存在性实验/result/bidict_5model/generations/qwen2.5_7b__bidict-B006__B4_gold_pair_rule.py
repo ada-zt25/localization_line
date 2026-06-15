@@ -1,0 +1,4 @@
+def set_through_inverse(pairs, key, val):
+    b = bidict(pairs)
+    b.inv[val] = key
+    return b[key]

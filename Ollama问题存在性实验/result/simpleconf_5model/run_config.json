@@ -1,0 +1,111 @@
+{
+  "lib": "simpleconf",
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "simpleconf-S001",
+    "simpleconf-S002",
+    "simpleconf-S003",
+    "simpleconf-S004",
+    "simpleconf-S005",
+    "simpleconf-S006",
+    "simpleconf-S007",
+    "simpleconf-S008",
+    "simpleconf-S009",
+    "simpleconf-S010",
+    "simpleconf-S011",
+    "simpleconf-S012",
+    "simpleconf-S013",
+    "simpleconf-S014",
+    "simpleconf-S015",
+    "simpleconf-S016",
+    "simpleconf-S017",
+    "simpleconf-S018"
+  ],
+  "task_meta": {
+    "simpleconf-S001": {
+      "pair_type": "param-dependency",
+      "difficulty": "easy"
+    },
+    "simpleconf-S002": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "simpleconf-S003": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "simpleconf-S004": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "simpleconf-S005": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "simpleconf-S006": {
+      "pair_type": "return-flow",
+      "difficulty": "easy"
+    },
+    "simpleconf-S007": {
+      "pair_type": "return-flow",
+      "difficulty": "easy"
+    },
+    "simpleconf-S008": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "simpleconf-S009": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "simpleconf-S010": {
+      "pair_type": "shared-receiver",
+      "difficulty": "easy"
+    },
+    "simpleconf-S011": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "simpleconf-S012": {
+      "pair_type": "lifecycle",
+      "difficulty": "medium"
+    },
+    "simpleconf-S013": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    },
+    "simpleconf-S014": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    },
+    "simpleconf-S015": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    },
+    "simpleconf-S016": {
+      "pair_type": "lifecycle",
+      "difficulty": "medium"
+    },
+    "simpleconf-S017": {
+      "pair_type": "lifecycle",
+      "difficulty": "medium"
+    },
+    "simpleconf-S018": {
+      "pair_type": "shared-receiver",
+      "difficulty": "easy"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

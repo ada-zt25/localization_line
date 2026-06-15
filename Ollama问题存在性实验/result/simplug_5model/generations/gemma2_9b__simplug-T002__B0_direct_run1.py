@@ -1,0 +1,3 @@
+def only_alpha_gamma_score(value):
+  with sp.hooks.override_scores(alpha=True, beta=False, gamma=True):
+    return sp.hooks.score(value)

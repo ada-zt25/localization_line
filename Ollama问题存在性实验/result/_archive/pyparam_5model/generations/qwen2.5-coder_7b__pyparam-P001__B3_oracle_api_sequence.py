@@ -1,0 +1,5 @@
+def parse_int(args):
+    params = Params()
+    params.add_param('count', type='int')
+    parsed_args = params.parse(args)
+    return int(parsed_args.count)

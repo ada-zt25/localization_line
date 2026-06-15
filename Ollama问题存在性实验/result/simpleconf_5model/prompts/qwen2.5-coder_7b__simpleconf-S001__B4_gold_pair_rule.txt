@@ -1,0 +1,30 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function merge_get(base, override, key). Load a merged config from base then override (so override wins on conflicts) and return the value for key.
+
+Relevant simpleconf APIs:
+- Config.load(*configs, loader=None) -> Diot   # merge configs; later overrides earlier
+- ProfileConfig.load(profiles, base='default') -> Diot
+- ProfileConfig.use_profile(conf, profile)        # switch active profile (persistent)
+- ProfileConfig.with_profile(conf, profile)       # context manager: switch temporarily
+- ProfileConfig.current_profile(conf) -> str
+- the loaded config is a Diot (attribute & item access)
+
+
+Relevant API Pair Rule:
+1. Config.load(*configs) -> merge precedence
+Relation: param-dependency
+Constraint: Config.load merges sources left-to-right; sources given LATER override earlier ones on conflicting keys. The argument ORDER decides the merged value.
+Usage pattern:
+Config.load(base, override)[key]   # override wins
+
+Requirements:
+- Define only the function merge_get.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

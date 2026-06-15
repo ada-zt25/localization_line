@@ -1,0 +1,20 @@
+def persistent_disable_beta_then_temp_only_alpha_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+
+    # Disable beta
+    beta.disabled = True
+
+    # Save initial score with both alpha and beta enabled
+    initial_score = sp.hooks.score(value)
+
+    # Enter a temporary context where only alpha is enabled
+    with gamma.context('alpha'):
+        # Collect score with only alpha enabled
+        inside_score = sp.hooks.score(value)
+
+    # Exit the temporary context, re-enabling beta
+
+    # Collect score with both alpha and beta enabled again
+    final_score = sp.hooks.score(value)
+
+    return initial_score, inside_score, final_score

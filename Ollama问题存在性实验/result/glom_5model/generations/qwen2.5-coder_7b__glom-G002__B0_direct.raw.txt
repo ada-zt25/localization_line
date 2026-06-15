@@ -1,0 +1,4 @@
+```python
+def apply_after_nav(data):
+    return glom(data, Coalesce(Path('nums'), []) | T.sum())
+```

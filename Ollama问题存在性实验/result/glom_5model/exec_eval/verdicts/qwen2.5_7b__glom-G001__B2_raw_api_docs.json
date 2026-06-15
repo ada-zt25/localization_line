@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "glom.core.PathAccessError: error raised while processing, details below.\n Target-spec trace (most recent last):\n - Target: {'a': {'b': {'c': 7}}}\n - Spec: Path('b')\nglom.core.PathAccessError: could not access 'b', part 0 of Path('b'), got error: KeyError('b')"}

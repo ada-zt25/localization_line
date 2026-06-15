@@ -1,0 +1,6 @@
+def disable_beta_then_score(value):
+    with plugins_context([beta]):
+        beta.disable()
+        result = sp.hooks.score(value)
+    beta.enable()
+    return result

@@ -1,0 +1,3 @@
+def merge_then_nested(data, k1, k2):
+    config = ProfileConfig.from_dict(data)
+    return config[k1][k2]

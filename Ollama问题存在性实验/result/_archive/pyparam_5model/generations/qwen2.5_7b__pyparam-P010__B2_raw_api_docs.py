@@ -1,0 +1,8 @@
+def parse_then_use(args):
+    params = Params()
+    params.add_param('--count', type='int', default=0, required=True)
+    
+    parsed_args = params.parse(args)
+    count = getattr(parsed_args, 'count')
+    
+    return count * 2

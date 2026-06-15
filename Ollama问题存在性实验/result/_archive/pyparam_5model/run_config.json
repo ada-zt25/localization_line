@@ -1,0 +1,81 @@
+{
+  "lib": "pyparam",
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "pyparam-P001",
+    "pyparam-P002",
+    "pyparam-P003",
+    "pyparam-P004",
+    "pyparam-P005",
+    "pyparam-P006",
+    "pyparam-P007",
+    "pyparam-P008",
+    "pyparam-P009",
+    "pyparam-P010",
+    "pyparam-P011",
+    "pyparam-P012"
+  ],
+  "task_meta": {
+    "pyparam-P001": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "pyparam-P002": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "pyparam-P003": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "pyparam-P004": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "pyparam-P005": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "pyparam-P006": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "pyparam-P007": {
+      "pair_type": "param-dependency",
+      "difficulty": "easy"
+    },
+    "pyparam-P008": {
+      "pair_type": "return-flow",
+      "difficulty": "easy"
+    },
+    "pyparam-P009": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "pyparam-P010": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "pyparam-P011": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "pyparam-P012": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

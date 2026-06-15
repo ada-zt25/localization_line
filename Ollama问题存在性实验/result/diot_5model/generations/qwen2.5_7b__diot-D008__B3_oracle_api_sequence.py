@@ -1,0 +1,5 @@
+def todict_then_index(data):
+    from diot import Diot
+    d = Diot(data)
+    plain_dict = d.to_dict()
+    return plain_dict['x']['y']

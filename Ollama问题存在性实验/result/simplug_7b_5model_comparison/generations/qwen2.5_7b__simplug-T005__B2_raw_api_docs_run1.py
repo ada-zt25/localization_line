@@ -1,0 +1,6 @@
+def beta_only_inside_context_then_all_score(value):
+    with sp.hooks.plugins_context(beta):
+        beta_result = sp.hooks.score(value)
+        alpha_beta_gamma_result = sp.hooks.score(value)
+    
+    return beta_result, alpha_beta_gamma_result

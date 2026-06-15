@@ -1,0 +1,8 @@
+```python
+def atomic_add(bidict, batch):
+    try:
+        bidict.update(batch)
+        return {**bidict}
+    except DuplicationError:
+        return {}
+```

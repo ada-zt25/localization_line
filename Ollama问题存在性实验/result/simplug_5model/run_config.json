@@ -1,0 +1,74 @@
+{
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b",
+    "llama3.1:8b",
+    "gemma2:9b",
+    "mistral:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "simplug-T001",
+    "simplug-T002",
+    "simplug-T003",
+    "simplug-T004",
+    "simplug-T005",
+    "simplug-T006",
+    "simplug-T007",
+    "simplug-T008",
+    "simplug-T009",
+    "simplug-T010"
+  ],
+  "task_meta": {
+    "simplug-T001": {
+      "pair_type": "param-dependency",
+      "difficulty": "easy"
+    },
+    "simplug-T002": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "simplug-T003": {
+      "pair_type": "shared-receiver",
+      "difficulty": "easy"
+    },
+    "simplug-T004": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "simplug-T005": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    },
+    "simplug-T006": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "simplug-T007": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "simplug-T008": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "simplug-T009": {
+      "pair_type": "return-flow",
+      "difficulty": "hard"
+    },
+    "simplug-T010": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    }
+  },
+  "temperature": 0.2,
+  "retries": 1,
+  "runs": 3,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

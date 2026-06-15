@@ -1,0 +1,21 @@
+== Evaluating saved generations in /sessions/happy-nice-curie/mnt/从 API 知识注入到源码图推理合成：PairCoder/Ollama问题存在性实验/result/simplug_7b_5model_comparison ==
+  evaluated 50/450 (1s)
+  evaluated 100/450 (1s)
+  evaluated 150/450 (2s)
+  evaluated 200/450 (3s)
+  evaluated 250/450 (4s)
+  evaluated 300/450 (5s)
+  evaluated 350/450 (5s)
+  evaluated 400/450 (6s)
+  evaluated 450/450 (6s)
+  wrote /sessions/happy-nice-curie/mnt/从 API 知识注入到源码图推理合成：PairCoder/Ollama问题存在性实验/result/simplug_7b_5model_comparison/exec_eval/exec_results.csv (450 rows)
+  wrote /sessions/happy-nice-curie/mnt/从 API 知识注入到源码图推理合成：PairCoder/Ollama问题存在性实验/result/simplug_7b_5model_comparison/exec_eval/exec_summary.md
+{
+  "n_run_level": 450,
+  "both_pass": 99,
+  "both_fail": 322,
+  "static_pass_exec_fail": 25,
+  "static_fail_exec_pass": 4,
+  "agreement_rate": 0.9355555555555556,
+  "cohens_kappa": 0.8296478082656712
+}

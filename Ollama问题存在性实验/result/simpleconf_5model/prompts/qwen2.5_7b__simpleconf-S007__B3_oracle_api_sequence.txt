@@ -1,0 +1,17 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function profile_load_attr(profiles). Load a ProfileConfig from profiles and return conf.x (the default profile's value).
+
+Oracle API sequence:
+ProfileConfig.load -> conf.x
+
+Requirements:
+- Define only the function profile_load_attr.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

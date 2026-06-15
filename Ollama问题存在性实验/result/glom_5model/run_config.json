@@ -1,0 +1,71 @@
+{
+  "lib": "glom",
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "glom-G001",
+    "glom-G002",
+    "glom-G003",
+    "glom-G004",
+    "glom-G005",
+    "glom-G006",
+    "glom-G007",
+    "glom-G008",
+    "glom-G009",
+    "glom-G010"
+  ],
+  "task_meta": {
+    "glom-G001": {
+      "pair_type": "return-flow",
+      "difficulty": "easy"
+    },
+    "glom-G002": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "glom-G003": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "glom-G004": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "glom-G005": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "glom-G006": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "glom-G007": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "glom-G008": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "glom-G009": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "glom-G010": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

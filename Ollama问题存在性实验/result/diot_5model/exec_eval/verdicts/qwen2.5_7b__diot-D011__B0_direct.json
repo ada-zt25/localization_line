@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "ImportError: cannot import name 'thaw' from 'diot' (/Users/zt25/coding/从 API 知识注入到源码图推理合成：PairCoder/Ollama问题存在性实验/exec_oracle/vendor/diot/__init__.py)"}

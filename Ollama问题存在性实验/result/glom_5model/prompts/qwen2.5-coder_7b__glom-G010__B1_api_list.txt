@@ -1,0 +1,25 @@
+You are writing Python code using the glom library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+glom, Coalesce, Assign, T, Path and PathAccessError (real glom names) are available
+
+Task:
+Write function summarize(data). data has a 'nums' list of integers. Return a NEW dict {'total': <sum>, 'count': <length>} computed from data['nums'] (the output is a dict you specify).
+
+Relevant glom APIs:
+- glom(target, spec) -> pull data out of target according to spec
+- spec 'a.b.c' (a dotted string) navigates NESTED structures (incl. list indices like 'items.0.v')
+- spec ('a.b', subspec) chains: navigate to 'a.b' then apply subspec (e.g. sum, len, or ['field'])
+- spec ['field'] over an iterable returns a LIST of that field; spec {...} returns a dict of that shape
+- glom(target, spec, default=X) returns X instead of raising when the path is missing
+- Coalesce(s1, s2, ...) tries each spec in order, using the first that succeeds
+- glom(target, Assign('a.b', value)) sets target's nested path IN PLACE and returns target
+- PathAccessError is raised when a path cannot be accessed (and no default/Coalesce applies)
+
+
+Requirements:
+- Define only the function summarize.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

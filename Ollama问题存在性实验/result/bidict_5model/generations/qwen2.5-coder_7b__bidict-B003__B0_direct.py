@@ -1,0 +1,2 @@
+def inverse_view(pairs):
+    return OrderedBidict((v, k) for k, v in pairs)

@@ -1,0 +1,2 @@
+def first_item(data):
+    return glom(data, Path('items.0.v'), default=None)

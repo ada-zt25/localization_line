@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "wrong_output_structure", "reason_coarse": "wrong_behavior", "detail": "returned a Config; expected a Diot ({'a': 1, 'b': 2})"}

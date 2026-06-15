@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "AttributeError: 'ProfileConfig' object has no attribute 'switch_profile'. Did you mean: 'with_profile'?"}

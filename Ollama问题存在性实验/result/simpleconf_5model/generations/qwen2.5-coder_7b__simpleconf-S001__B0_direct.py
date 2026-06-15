@@ -1,0 +1,4 @@
+def merge_get(base, override, key):
+    merged_config = base.copy()
+    merged_config.update(override)
+    return merged_config.get(key)

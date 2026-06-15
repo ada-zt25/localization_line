@@ -1,0 +1,4 @@
+def parse_list(args):
+    params = Params(items=POSITIONAL)
+    params.parse(args)
+    return params.items

@@ -1,0 +1,27 @@
+You are writing Python code using the pyparam library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Params (real pyparam class) and POSITIONAL are available
+
+Task:
+Write function parse_then_attr(args). Build a Params with integer 'count', parse args, and return the count attribute from the resulting Namespace.
+
+Relevant pyparam APIs:
+- Params() ; p.add_param(name, type='str'|'int'|'float'|'bool'|'list', default=None, required=False)
+- p.parse(args) -> Namespace      # args is a list of strings; use multi-character option names
+- the Namespace exposes parsed values by attribute (ns.count)
+
+
+Relevant API Pair Rule:
+3. parse -> Namespace access
+Relation: return-flow
+Constraint: parse(args) RETURNS a Namespace; read values by attribute on that returned Namespace (returning the Namespace itself, or a constant, is wrong).
+Usage pattern:
+ns = p.parse(args); ns.count
+
+Requirements:
+- Define only the function parse_then_attr.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,0 +1,6 @@
+ Here is the Python code for the requested function:
+
+```python
+def first_score(value):
+    return sp.hooks.score(value)
+```

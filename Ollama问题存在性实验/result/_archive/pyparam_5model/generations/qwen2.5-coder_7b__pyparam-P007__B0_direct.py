@@ -1,0 +1,4 @@
+def parse_given(args):
+    p = Params(count=POSITIONAL(int, default=0))
+    ns = p.parse_args(args)
+    return ns.count

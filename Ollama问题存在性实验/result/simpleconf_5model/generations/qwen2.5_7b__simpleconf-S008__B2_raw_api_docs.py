@@ -1,0 +1,6 @@
+from simpleconf import Config, ProfileConfig
+
+def merge_then_nested(data, k1, k2):
+    conf = Config()
+    conf.load(data)
+    return conf[k1][k2]

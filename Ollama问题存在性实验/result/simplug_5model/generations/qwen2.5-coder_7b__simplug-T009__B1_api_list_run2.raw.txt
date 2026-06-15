@@ -1,0 +1,15 @@
+```python
+def disable_alpha_gamma_via_wrappers_then_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+    
+    with sp.plugins_context(plugins=[alpha.name]):
+        alpha_wrapper = sp.get_plugin(alpha.name)
+        alpha_wrapper.disable()
+    
+    with sp.plugins_context(plugins=[gamma.name]):
+        gamma_wrapper = sp.get_plugin(gamma.name)
+        gamma_wrapper.disable()
+    
+    result = sp.hooks.score(value)
+    return result
+```

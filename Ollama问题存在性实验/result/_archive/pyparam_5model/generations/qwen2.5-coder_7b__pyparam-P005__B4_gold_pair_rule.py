@@ -1,0 +1,5 @@
+def required_present(args):
+    p = Params()
+    p.add_param('rr', type='int', required=True)
+    ns = p.parse(args)
+    return ns.rr

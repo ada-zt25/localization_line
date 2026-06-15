@@ -1,0 +1,6 @@
+def two_params_same(args):
+    ns = Params(POSITIONAL)
+    ns.add('count', type=int)
+    ns.add('label', type=str)
+    ns.parse(args)
+    return (ns.count, ns.label)

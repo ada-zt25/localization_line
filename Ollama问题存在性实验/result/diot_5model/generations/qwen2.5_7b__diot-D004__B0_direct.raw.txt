@@ -1,0 +1,8 @@
+```python
+def to_plain_dict(data):
+    if isinstance(data, dict):
+        diot_data = Diot(data)
+        return {k: to_plain_dict(v) for k, v in diot_data.items()}
+    else:
+        return data
+```

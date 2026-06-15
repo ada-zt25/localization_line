@@ -1,0 +1,17 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function use_profile_same_conf(profiles, profile). Load a ProfileConfig, switch it to the given profile, and read conf.x back from the SAME config object.
+
+Oracle API sequence:
+ProfileConfig.load -> use_profile -> conf.x (same conf)
+
+Requirements:
+- Define only the function use_profile_same_conf.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

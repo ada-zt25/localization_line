@@ -1,0 +1,16 @@
+You are writing Python code using the bidict library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+bidict, frozenbidict, OrderedBidict (real bidict classes) and ValueDuplicationError / KeyDuplicationError / DuplicationError are available
+
+Task:
+Write function make_frozen(pairs). Return an IMMUTABLE bidict built from pairs -- one that rejects any later modification (mapping the same pairs as the input).
+
+
+
+Requirements:
+- Define only the function make_frozen.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,0 +1,17 @@
+You are writing Python code using the bidict library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+bidict, frozenbidict, OrderedBidict (real bidict classes) and ValueDuplicationError / KeyDuplicationError / DuplicationError are available
+
+Task:
+Write function roundtrip(pairs, key). Build a bidict; look up the value for key, then look that value back up through the inverse to recover the key, and return it.
+
+Oracle API sequence:
+b = bidict(pairs); b.inv[b[key]]
+
+Requirements:
+- Define only the function roundtrip.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

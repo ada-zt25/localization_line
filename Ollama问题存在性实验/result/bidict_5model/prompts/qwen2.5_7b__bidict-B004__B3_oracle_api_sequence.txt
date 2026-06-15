@@ -1,0 +1,17 @@
+You are writing Python code using the bidict library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+bidict, frozenbidict, OrderedBidict (real bidict classes) and ValueDuplicationError / KeyDuplicationError / DuplicationError are available
+
+Task:
+Write function remap(pairs, key, val). pairs already maps some existing key to val. Insert key->val into a bidict so it stays a valid 1:1 mapping, replacing (dropping) the old key that held val. Return the resulting plain dict.
+
+Oracle API sequence:
+b = bidict(pairs); b.forceput(key, val); dict(b)
+
+Requirements:
+- Define only the function remap.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.
