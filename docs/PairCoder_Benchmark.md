@@ -93,13 +93,21 @@ PairCoder Benchmark 评测一个问题:**对一个模型"未见过"的库,要注
 > **退役记录**:pyparam 0.5.4 曾在册,经实测 B1(纯 API 清单)即满分、B4−B1≈0——其 `add_param/parse/ns.attr` 语义被 API 清单完全表达,且自动类型推断使非平凡候选无干净 oracle,**于 6.15 移除**(数据归档 `result/_archive/`,代码保留)。varname 曾作候选,因靠帧/源码魔法、仅契合 3 类 pair、exec 下需 hack 而弃用。
 
 ### 3.3 vendoring(复现)
+仓库不提交 `vendor/`(48M 第三方库 + 平台专用 .so);用一条命令重建全部 5 库到 `exec_oracle/vendor/`(注意 simpleconf 的 PyPI 包名是 `python-simpleconf`,导入名才是 `simpleconf`):
 ```bash
 cd Ollama问题存在性实验/exec_oracle
-# simplug/diot 已逐字 vendored。补装其余库到 vendor/:
-python3 -m pip install --target vendor python-simpleconf==0.9.3
-python3 -m pip install --target vendor glom bidict
+python3 -m pip install --target vendor \
+  simplug==0.5.7 diot==0.3.4 python-simpleconf==0.9.3 glom==25.12.0 bidict==0.23.1
 ```
-> 全部纯 Python、纯本地;跑实验用能 import vendor 的同一解释器(本机 Python 3.14)。
+依赖(glom 的 boltons/face 等)会随之装入。全部纯 Python、纯本地;跑实验用能 import vendor 的同一解释器(本机 Python 3.14)。
+
+| 库 | PyPI 包名 | 导入名 | 固定版本 |
+|---|---|---|---|
+| simplug | `simplug` | `simplug` | 0.5.7 |
+| diot | `diot` | `diot` | 0.3.4 |
+| simpleconf | **`python-simpleconf`** | `simpleconf` | 0.9.3 |
+| glom | `glom` | `glom` | 25.12.0 |
+| bidict | `bidict` | `bidict` | 0.23.1 |
 
 ---
 

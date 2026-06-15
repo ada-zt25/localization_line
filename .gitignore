@@ -13,8 +13,9 @@ __pycache__/
 .claude/
 
 # Vendored third-party libraries (~48M; includes platform-specific .so binaries
-# that are not portable). Reconstruct into
-# Ollama问题存在性实验/exec_oracle/vendor/ via pip — see docs/PairCoder_Benchmark.md §3.3:
-#   pip install --target vendor python-simpleconf==0.9.3 glom bidict
-#   (simplug / diot are pwwang PyPI libs; install the pinned versions there too)
+# that are not portable). Reconstruct all 5 libs into
+# Ollama问题存在性实验/exec_oracle/vendor/ (see docs/PairCoder_Benchmark.md §3.3):
+#   cd Ollama问题存在性实验/exec_oracle
+#   python3 -m pip install --target vendor \
+#     simplug==0.5.7 diot==0.3.4 python-simpleconf==0.9.3 glom==25.12.0 bidict==0.23.1
 Ollama问题存在性实验/exec_oracle/vendor/
