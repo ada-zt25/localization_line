@@ -1,0 +1,11 @@
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def nested_mutate_reflects(data, val):
+    d = Diot(OrderedDiot(data))
+    try:
+        frozen_d = d.freeze()
+    except DiotFrozenError:
+        d.set(data)
+
+    d.x.y = val
+    return d.x.y

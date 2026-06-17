@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError(\"no binding for nonlocal 'sp' found\")", "per_value": []}

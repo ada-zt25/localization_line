@@ -1,0 +1,12 @@
+from bidict import bidict, frozenbidict, OrderedBidict
+
+def remap(pairs: bidict, key, val):
+    if pairs.get(key) == val:
+        return dict(pairs)
+    elif val in pairs.values():
+        raise KeyDuplicationError(f"Key {key} maps to value already used by another key")
+    else:
+        new_pairs = pairs.copy()
+        new_pairs[key] = val
+        del new_pairs[pairs.inv.get(val)]
+        return dict(new_pairs)

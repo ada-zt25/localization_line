@@ -1,0 +1,3 @@
+def get_default(data, key):
+    d = Diot(data, diot_transform='safe', diot_nest=True)
+    return d.get(key, 0)

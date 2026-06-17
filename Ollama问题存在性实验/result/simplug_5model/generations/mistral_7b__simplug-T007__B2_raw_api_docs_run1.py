@@ -1,6 +1,0 @@
-def first_score(value):
-    with plugins_context([sp.plugins[plugin] for plugin in sp.enabled_plugins]):
-        sp.disable(*[plugin for plugin in sp.plugins if plugin != 'alpha' and plugin != 'beta' and plugin != 'gamma'])
-        sp.hooks.score(value)
-        results = sp.hooks.score(value, result_mode=SimplugResult.FIRST)
-    return results[0]

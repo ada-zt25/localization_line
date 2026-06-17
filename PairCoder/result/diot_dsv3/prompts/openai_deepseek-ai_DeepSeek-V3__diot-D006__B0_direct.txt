@@ -1,0 +1,16 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function nested_is_diot(data). data is {'x': {...}}. Build a Diot (default nesting) and return d.x, which must itself be a Diot (so it supports attribute access).
+
+
+
+Requirements:
+- Define only the function nested_is_diot.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

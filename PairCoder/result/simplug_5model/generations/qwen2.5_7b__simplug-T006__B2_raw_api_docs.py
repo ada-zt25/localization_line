@@ -1,0 +1,6 @@
+def disable_alpha_gamma_then_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+    with plugins_context([alpha, gamma]):
+        sp.hooks.disable('alpha', 'gamma')
+        result = sp.hooks.score(value)
+    return result

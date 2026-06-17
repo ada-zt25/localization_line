@@ -1,0 +1,9 @@
+```python
+def switch_two_profiles(profiles):
+  config = Config.load(*profiles, loader=None)
+  with ProfileConfig.with_profile(config, 'prod'):
+    prod_x = config['x']
+  with ProfileConfig.with_profile(config, 'default'):
+    default_x = config['x']
+  return (prod_x, default_x) 
+```

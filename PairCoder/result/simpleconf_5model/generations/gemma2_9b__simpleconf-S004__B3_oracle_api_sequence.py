@@ -1,0 +1,4 @@
+def profile_value(profiles, profile):
+  profile_config = ProfileConfig.load(profiles)
+  profile_config.select(profile)
+  return profile_config.conf.x

@@ -1,0 +1,8 @@
+def nested_with_profiles(profiles):
+    config = ProfileConfig(profiles)
+    with config.with_profile('prod') as prod_config:
+        a = prod_config.x
+        with prod_config.with_profile('default') as default_config:
+            b = default_config.x
+        c = prod_config.x
+    return (a, b, c)

@@ -1,0 +1,8 @@
+from bidict import bidict
+
+def key_for(pairs, val):
+    bdict = bidict(pairs)
+    try:
+        return bdict.inv[val]
+    except DuplicationError as e:
+        raise ValueError("Multiple keys map to the same value") from e

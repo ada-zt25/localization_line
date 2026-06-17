@@ -1,7 +1,0 @@
-def set_through_inverse(pairs, key, val):
-    b = bidict(pairs)
-    try:
-        b.inv[val] = key
-    except KeyDuplicationError as e:
-        raise ValueError("Key already exists") from e
-    return b[key]

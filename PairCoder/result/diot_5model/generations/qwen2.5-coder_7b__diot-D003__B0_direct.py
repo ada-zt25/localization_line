@@ -1,0 +1,5 @@
+def get_default(data, key):
+    try:
+        return Diot(data)[key]
+    except (KeyError, DiotFrozenError):
+        return 0

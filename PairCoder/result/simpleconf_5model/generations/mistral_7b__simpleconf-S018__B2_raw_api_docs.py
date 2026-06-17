@@ -1,0 +1,11 @@
+from simpleconf import Config, ProfileConfig
+
+def two_reads_same_conf(profiles):
+    config = Config()
+    config.load(*profiles)
+
+    with config.with_profile('prod'):
+        conf = config.current_profile()
+        x1 = getattr(config, f'conf.{conf}.x')
+        x2 = getattr(config, f'conf.{conf}.x')
+        return (x1, x2)

@@ -1,0 +1,4 @@
+def disable_beta_then_score(value):
+    _, alpha, beta, gamma = make_score_manager()
+    beta.enabled = False
+    return sp.hooks.score(value)

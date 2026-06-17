@@ -1,0 +1,9 @@
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def todict_then_index(data):
+    diot = OrderedDiot(data)
+    try:
+        frozen_diot = FrozenDiot(diot)
+    except DiotFrozenError:
+        return None
+    return frozen_diot['x']['y']

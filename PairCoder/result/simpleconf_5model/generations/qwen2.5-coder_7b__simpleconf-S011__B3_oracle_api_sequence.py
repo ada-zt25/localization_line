@@ -1,0 +1,5 @@
+def switch_two_profiles(profiles):
+    prod_x = profiles.load('prod').get('x')
+    profiles.switch_profile('default')
+    default_x = profiles.get('x')
+    return (prod_x, default_x)

@@ -1,0 +1,5 @@
+def restructure(data):
+    return {
+        'name': glom.Coalesce('a.b', data),
+        'n': len(glom.Coalesce('items', data))
+    }

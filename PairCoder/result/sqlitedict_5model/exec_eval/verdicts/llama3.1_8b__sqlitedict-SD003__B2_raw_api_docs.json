@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "obligation_unmet", "reason_coarse": "pair_state_violation", "detail": "a fresh connection cannot see ['a', 'c'] (got {'a': None, 'c': None}, expected {'a': 1, 'c': 3}); you must call db.commit() after writing -- close()/with do NOT commit"}

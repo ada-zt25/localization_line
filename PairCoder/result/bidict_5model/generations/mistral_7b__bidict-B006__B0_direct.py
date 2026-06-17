@@ -1,0 +1,6 @@
+from bidict import bidict, frozenbidict, OrderedBidict
+
+def set_through_inverse(pairs, key, val):
+    b = OrderedBidict() if not pairs else frozenbidict.unfrozen(pairs)
+    b.inverse[val] = key
+    return b[key]

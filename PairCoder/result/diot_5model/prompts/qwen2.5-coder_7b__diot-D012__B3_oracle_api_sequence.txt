@@ -1,0 +1,17 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function thaw_is_temporary(data, key, val). Build a FrozenDiot. Inside its thaw() context set d[key]=val; after the context exits the diot must be frozen again. Return the diot.
+
+Abstract API sequence (call order only):
+d = FrozenDiot(data); modify it within the allowed scope
+
+Requirements:
+- Define only the function thaw_is_temporary.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

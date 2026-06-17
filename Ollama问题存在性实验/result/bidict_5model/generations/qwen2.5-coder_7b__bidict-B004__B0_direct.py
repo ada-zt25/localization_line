@@ -1,9 +1,0 @@
-def remap(pairs, key, val):
-    bd = OrderedBidict(pairs)
-    try:
-        old_key = next(k for k, v in pairs.items() if v == val)
-        del bd[old_key]
-    except StopIteration:
-        pass
-    bd[key] = val
-    return dict(bd)

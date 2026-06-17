@@ -1,6 +1,0 @@
-def first_score(value):
-    with sp.plugins_context([sp.get_plugin('my_first_score_hook')]):
-        sp.enable('my_first_score_hook')
-        result = sp.hooks.score(value)
-        sp.disable('my_first_score_hook')
-    return result

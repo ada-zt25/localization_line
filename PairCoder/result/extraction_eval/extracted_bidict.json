@@ -1,0 +1,258 @@
+[
+  {
+    "lib": "bidict",
+    "relation": "param-dependency",
+    "channel": "DFP",
+    "anchors": [
+      "bidict.forceput",
+      "bidict.put"
+    ],
+    "witness": 0.826,
+    "score": 0.826,
+    "confidence": 0.6652,
+    "rationale": "variant pair put/forceput: choice decides survival of old mapping",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: param-dependency\nConstraint: The choice among bidict.forceput, bidict.put decides the paired operation's outcome (which value/old-mapping survives); pick the variant/argument that matches the required semantics.",
+    "label": 1,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "param-dependency",
+    "channel": "DFP",
+    "anchors": [
+      "bidict.forceupdate",
+      "bidict.update"
+    ],
+    "witness": 0.826,
+    "score": 0.826,
+    "confidence": 0.6652,
+    "rationale": "variant pair update/forceupdate: choice decides survival of old mapping",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: param-dependency\nConstraint: The choice among bidict.forceupdate, bidict.update decides the paired operation's outcome (which value/old-mapping survives); pick the variant/argument that matches the required semantics.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "shared-receiver",
+    "channel": "SS",
+    "anchors": [
+      "bidict.inv"
+    ],
+    "witness": 0.678,
+    "score": 0.678,
+    "confidence": 0.6237,
+    "rationale": "bidict.inv is a live view of the same object",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: shared-receiver\nConstraint: Operate on the SAME object across bidict.inv; reads reflect writes only on that same receiver, not on a freshly rebuilt one.",
+    "label": 1,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "shared-receiver",
+    "channel": "SS",
+    "anchors": [
+      "bidict.inverse"
+    ],
+    "witness": 0.678,
+    "score": 0.678,
+    "confidence": 0.6237,
+    "rationale": "bidict.inverse is a live view of the same object",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: shared-receiver\nConstraint: Operate on the SAME object across bidict.inverse; reads reflect writes only on that same receiver, not on a freshly rebuilt one.",
+    "label": 1,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "shared-receiver",
+    "channel": "SS",
+    "anchors": [
+      "frozenbidict.inv"
+    ],
+    "witness": 0.678,
+    "score": 0.678,
+    "confidence": 0.6237,
+    "rationale": "frozenbidict.inv is a live view of the same object",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: shared-receiver\nConstraint: Operate on the SAME object across frozenbidict.inv; reads reflect writes only on that same receiver, not on a freshly rebuilt one.",
+    "label": 1,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "shared-receiver",
+    "channel": "SS",
+    "anchors": [
+      "frozenbidict.inverse"
+    ],
+    "witness": 0.678,
+    "score": 0.678,
+    "confidence": 0.6237,
+    "rationale": "frozenbidict.inverse is a live view of the same object",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: shared-receiver\nConstraint: Operate on the SAME object across frozenbidict.inverse; reads reflect writes only on that same receiver, not on a freshly rebuilt one.",
+    "label": 1,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "param-dependency",
+    "channel": "DFP",
+    "anchors": [
+      "bidict",
+      "bidict(arg=)"
+    ],
+    "witness": 0.42,
+    "score": 0.42,
+    "confidence": 0.5472,
+    "rationale": "keyword 'arg=' of bidict gates paired access/behavior",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: param-dependency\nConstraint: The choice among bidict, bidict(arg=) decides the paired operation's outcome (which value/old-mapping survives); pick the variant/argument that matches the required semantics.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "param-dependency",
+    "channel": "DFP",
+    "anchors": [
+      "frozenbidict",
+      "frozenbidict(arg=)"
+    ],
+    "witness": 0.42,
+    "score": 0.42,
+    "confidence": 0.5472,
+    "rationale": "keyword 'arg=' of frozenbidict gates paired access/behavior",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: param-dependency\nConstraint: The choice among frozenbidict, frozenbidict(arg=) decides the paired operation's outcome (which value/old-mapping survives); pick the variant/argument that matches the required semantics.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "bidict.items"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "items return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in bidict.items dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "bidict.keys"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "keys return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in bidict.keys dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "bidict.values"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "values return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in bidict.values dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "frozenbidict.items"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "items return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in frozenbidict.items dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "frozenbidict.keys"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "keys return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in frozenbidict.keys dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  },
+  {
+    "lib": "bidict",
+    "relation": "config-return-contract",
+    "channel": "TC",
+    "anchors": [
+      "frozenbidict.values"
+    ],
+    "witness": 0.33,
+    "score": 0.33,
+    "confidence": 0.5198,
+    "rationale": "values return type/shape depends on config/spec",
+    "rule_text": "Relevant API Pair Rule (auto-extracted):\nRelation: config-return-contract\nConstraint: The config/spec in frozenbidict.values dictates the RETURN type/shape; choose the spec shape that yields the required output type.",
+    "label": 0,
+    "platt": [
+      1.2249,
+      -0.3252
+    ]
+  }
+]

@@ -1,0 +1,2 @@
+def pluck_list(data):
+    return glom(data, Coalesce(T['items'], []), PathAccessError, Path('*.v'))

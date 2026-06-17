@@ -1,0 +1,7 @@
+def atomic_add(pairs, batch):
+    b = bidict(pairs)
+    try:
+        b.putall(batch, on_dup_key=KeyDuplicationError.RAISE, on_dup_val=ValueDuplicationError.RAISE, on_dup_kv=DuplicationError.RAISE)
+    except (KeyDuplicationError, ValueDuplicationError, DuplicationError):
+        return dict(bidict(pairs))
+    return dict(b)

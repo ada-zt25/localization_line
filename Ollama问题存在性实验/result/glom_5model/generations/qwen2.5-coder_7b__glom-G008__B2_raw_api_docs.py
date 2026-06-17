@@ -1,2 +1,0 @@
-def assign_return_target(data, path, val):
-    return glom.assign(data, path, val)

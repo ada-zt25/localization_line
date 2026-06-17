@@ -1,6 +1,0 @@
- Here's the Python code for the requested function:
-
-```python
-def last_score(value):
-    return sp.hooks.score(value)
-```

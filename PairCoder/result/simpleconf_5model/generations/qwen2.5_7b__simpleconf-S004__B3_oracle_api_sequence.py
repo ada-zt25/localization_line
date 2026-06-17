@@ -1,0 +1,4 @@
+def profile_value(profiles, profile):
+    pc = ProfileConfig.load(profiles)
+    pc.switch_profile(profile)
+    return pc.conf.x

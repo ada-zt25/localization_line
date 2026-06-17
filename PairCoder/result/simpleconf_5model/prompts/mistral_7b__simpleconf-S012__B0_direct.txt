@@ -1,0 +1,16 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function with_profile_temporary(profiles, profile). Load a ProfileConfig. Inside a with_profile(profile) context read conf.x; after the context exits read conf.x again (it reverts to the default profile). Return (inside, after).
+
+
+
+Requirements:
+- Define only the function with_profile_temporary.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,7 +1,0 @@
-from pyparam import Params
-
-def parse_float(args):
-    p = Params()
-    p.add('ratio', type=float, positional=POSITIONAL)
-    parsed_params = p.parse(args)
-    return float(parsed_params.ratio)

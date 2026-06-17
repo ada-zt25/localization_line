@@ -1,0 +1,9 @@
+import simpleconf
+
+def switch_two_profiles(profiles):
+    config = profiles['current']
+    prod_x = config.get('x', None)
+    config.switch_profile('prod')
+    default_x = config.get('x', None)
+    config.switch_profile(profiles['default'])
+    return (prod_x, default_x)

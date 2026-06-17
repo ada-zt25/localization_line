@@ -1,0 +1,5 @@
+def double_use_persistent(profiles):
+    conf = ProfileConfig(profiles)
+    conf.switch('prod', persistent=True)
+    conf.switch('default', persistent=True)
+    return conf.x

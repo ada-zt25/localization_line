@@ -1,5 +1,0 @@
-def parse_then_attr(args):
-    params = Params()
-    params.add_param('count', type=int)
-    ns = params.parse(args)
-    return ns.count

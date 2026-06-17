@@ -1,5 +1,0 @@
-def nested_is_diot(data):
-    if isinstance(data, dict) and all(isinstance(v, (Diot, dict)) for v in data.values()):
-        d = Diot(data)
-        return d.x
-    raise DiotFrozenError("Input data does not represent a nested Diot structure")

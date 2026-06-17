@@ -1,0 +1,2 @@
+def apply_after_nav(data):
+    return glom.glom(data, ('nums', sum))

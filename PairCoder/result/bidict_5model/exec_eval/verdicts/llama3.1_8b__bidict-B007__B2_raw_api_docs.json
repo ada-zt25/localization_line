@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "import_time_error", "reason_coarse": "exec_error", "detail": "ImportError: cannot import name 'inv' from 'bidict' (C:\\Users\\Tzx25\\Documents\\Codex\\2026-06-15\\pyluvtan-pair-coder-git-https-github\\PairCoder\\exec_oracle\\vendor\\bidict\\__init__.py)"}

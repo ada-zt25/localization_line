@@ -1,6 +1,0 @@
-```python
-def beta_only_inside_context_then_all_score(value):
-    with plugins_context([beta]):
-        sp.hooks.score(value)
-    return sp.hooks.score(value), sp.hooks.score(value)
-```

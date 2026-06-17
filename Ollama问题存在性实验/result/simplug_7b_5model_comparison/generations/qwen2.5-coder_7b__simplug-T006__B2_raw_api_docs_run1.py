@@ -1,5 +1,0 @@
-def disable_alpha_gamma_then_score(value):
-    with plugins_context([alpha, gamma]):
-        alpha.disable()
-        gamma.disable()
-        return sp.hooks.score(value)

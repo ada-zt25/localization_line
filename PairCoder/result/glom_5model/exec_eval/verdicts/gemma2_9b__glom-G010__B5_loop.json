@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError('invalid syntax', ('<solution>', 2, 45, \"  return glom(data, {'total': Coalesce(sum, .), 'count': len})\\n\", 2, 46))"}

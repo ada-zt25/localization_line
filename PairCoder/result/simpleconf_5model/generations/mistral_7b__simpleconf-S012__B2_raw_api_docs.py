@@ -1,0 +1,12 @@
+import simpleconf
+
+def with_profile_temporary(profiles, profile):
+    conf = simpleconf.Config()
+    conf.load(*profiles)
+
+    original_profile = current_profile(conf)
+    with with_profile(conf, profile):
+        inside = conf.x
+    after = conf.x
+
+    return inside, after

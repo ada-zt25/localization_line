@@ -1,6 +1,0 @@
-def only_alpha_gamma_score(value):
-    with sp.plugins_context([alpha, gamma]):
-        sp.disable(*[plugin for plugin in sp.get_plugins() if plugin != alpha and plugin != gamma])
-        result = sp.hooks.score(value)
-        sp.enable(*[plugin for plugin in sp.get_plugins() if plugin != alpha and plugin != gamma])
-        return result

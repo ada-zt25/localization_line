@@ -1,0 +1,4 @@
+def active_profile_name(profiles, profile):
+    config = ProfileConfig()
+    config.switch_to(profile)
+    return config.active_profile_name

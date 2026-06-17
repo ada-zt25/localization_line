@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "wrong_output", "reason_coarse": "wrong_behavior", "detail": "returned [], expected [('beta', 10)]", "per_value": [{"value": 5, "ok": false, "reason": "wrong_output", "detail": "returned [], expected [('beta', 10)]"}]}

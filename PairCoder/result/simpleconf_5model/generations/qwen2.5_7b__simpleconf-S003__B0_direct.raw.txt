@@ -1,0 +1,9 @@
+```python
+from simpleconf import Config, ProfileConfig
+
+def load_is_diot(data):
+    config = Config(data)
+    return config.as_dict()
+```
+
+Note: The `as_dict()` method is used here to ensure the returned object supports attribute access similar to a Diot object. However, if `as_dict()` does not provide this functionality, you may need to use another method or directly return the `Config` object depending on how it implements attribute access.

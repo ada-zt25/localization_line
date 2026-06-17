@@ -1,0 +1,9 @@
+ Here is the Python code for the `first_item` function using the glom library as per your requirements:
+
+```python
+from typing import Any, List, Dict
+import glom
+
+def first_item(data: Any) -> List[Any]:
+    return Coalesce(*[glom(data, spec) for spec in [('items', ['v'])]])
+```

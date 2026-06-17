@@ -1,0 +1,13 @@
+ Here is the Python code for the `remap` function using the bidict library as per your requirements:
+
+```python
+from bidict import bidict, frozenbidict, ValueDuplicationError
+
+def remap(pairs, key, val):
+    b = bidict(pairs)
+    try:
+        b.forceput(key, val)
+    except ValueDuplicationError:
+        pass
+    return dict(frozenbidict(b))
+```

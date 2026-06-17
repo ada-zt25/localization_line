@@ -1,0 +1,2 @@
+def pluck_list(data):
+    return glom(data, T.items | Coalesce([], []) | Path('v') | Assign(T.v))

@@ -1,0 +1,6 @@
+ Here is the Python code for the `coalesce_get` function using the given APIs:
+
+```python
+def coalesce_get(data, primary, backup):
+    return Coalesce('primary', 'backup')(glom, data)
+```

@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "state_not_restored", "reason_coarse": "pair_state_violation", "detail": "manager 0 final enabled == ['alpha', 'gamma'], expected ['alpha', 'beta', 'gamma']", "per_value": [{"value": 5, "ok": false, "reason": "state_not_restored", "detail": "manager 0 final enabled == ['alpha', 'gamma'], expected ['alpha', 'beta', 'gamma']"}]}

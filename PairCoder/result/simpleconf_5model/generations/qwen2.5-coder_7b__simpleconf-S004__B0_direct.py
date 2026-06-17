@@ -1,0 +1,4 @@
+def profile_value(profiles, profile):
+    config = ProfileConfig(profiles)
+    config.switch_to_profile(profile)
+    return config.conf.x

@@ -1,0 +1,4 @@
+from bidict import bdict, inv
+
+def inverse_view(pairs):
+    return bdict(pairs).inv

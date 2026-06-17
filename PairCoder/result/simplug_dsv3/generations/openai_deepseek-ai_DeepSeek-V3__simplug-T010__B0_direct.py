@@ -1,0 +1,7 @@
+def persistent_disable_beta_then_temp_only_alpha_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+    sp.disable(beta.name)
+    with sp.only(alpha.name):
+        inside = sp.hooks.score(value)
+    after = sp.hooks.score(value)
+    return inside, after

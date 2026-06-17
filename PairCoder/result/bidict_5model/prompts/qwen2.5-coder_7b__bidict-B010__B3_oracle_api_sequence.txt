@@ -1,0 +1,17 @@
+You are writing Python code using the bidict library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+bidict, frozenbidict, OrderedBidict (real bidict classes) and ValueDuplicationError / KeyDuplicationError / DuplicationError are available
+
+Task:
+Write function reject_dup(pairs, key, val) where val is ALREADY used by another key. A bidict cannot map two keys to the same value, so the attempt to add key->val must fail and leave the bidict UNCHANGED (do NOT drop the old key). Return the resulting plain dict.
+
+Abstract API sequence (call order only):
+b = bidict(pairs); insert (key, val) handling a value conflict; then dict(b)
+
+Requirements:
+- Define only the function reject_dup.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

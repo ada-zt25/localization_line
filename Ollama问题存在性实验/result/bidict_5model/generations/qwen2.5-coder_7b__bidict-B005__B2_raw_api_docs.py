@@ -1,8 +1,0 @@
-def add_then_lookup(pairs, key, val):
-    b = OrderedBidict()
-    try:
-        b.putall(pairs)
-        b[key] = val
-        return b.inv[val]
-    except DuplicationError as e:
-        raise ValueError("Duplicate value found in pairs") from e

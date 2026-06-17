@@ -1,0 +1,7 @@
+def two_reads_same_conf(profiles):
+    config = Config()
+    profile = profiles.get('prod')
+    config.set_profile(profile)
+    conf_x1 = config.read('conf.x')
+    conf_x2 = config.read('conf.x')
+    return (conf_x1, conf_x2)

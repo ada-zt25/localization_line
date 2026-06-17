@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "wrong_output", "reason_coarse": "wrong_behavior", "detail": "returned {'name': Coalesce('', Path(T a 'b', {'a': {'b': 'hi'}, 'items': [1, 2, 3]})), 'n': 2}, expected {'name': 'hi', 'n': 3}"}

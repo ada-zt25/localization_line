@@ -1,0 +1,6 @@
+def assign_in_place(data, path, val):
+    try:
+        glom.assign(data, path, val)
+        return glom.glom(data, path)
+    except PathAccessError as e:
+        raise ValueError(f"Path '{path}' not found in data") from e

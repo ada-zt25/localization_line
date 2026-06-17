@@ -1,0 +1,5 @@
+def merge_three(a, b, c, key):
+    config = Config.load(a)
+    config = ProfileConfig.load(b, base=config)
+    config = ProfileConfig.load(c, base=config)
+    return config.get(key)

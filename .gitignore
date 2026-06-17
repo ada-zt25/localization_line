@@ -9,6 +9,16 @@ __pycache__/
 # OS / editor
 .DS_Store
 
+# Secrets / API keys — NEVER commit. Read keys from environment variables
+# (e.g. OPENAI_API_KEY) instead of files.
+.env
+.env.*
+*.key
+*.pem
+secrets*
+*_key.txt
+openai_key*
+
 # Local Claude Code settings (personal, machine-specific)
 .claude/
 
@@ -19,3 +29,4 @@ __pycache__/
 #   python3 -m pip install --target vendor \
 #     simplug==0.5.7 diot==0.3.4 python-simpleconf==0.9.3 glom==25.12.0 bidict==0.23.1
 Ollama问题存在性实验/exec_oracle/vendor/
+PairCoder/exec_oracle/vendor/

@@ -1,0 +1,6 @@
+```python
+def use_profile_same_conf(profiles, profile):
+    config = ProfileConfig()
+    config.switch_to(profile)
+    return config.read('conf.x')
+```

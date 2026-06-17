@@ -1,0 +1,3 @@
+def todict_then_index(data):
+    d = Diot(data)
+    return dict(d)['x']['y']

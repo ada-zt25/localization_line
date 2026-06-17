@@ -1,0 +1,3 @@
+def merge_get(base, override, key):
+  merged = base.merge(override)
+  return merged.get(key)

@@ -1,0 +1,11 @@
+ Here is the Python code for the function `disable_alpha_gamma_then_score(value)`:
+
+```python
+def disable_alpha_gamma_then_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+    with sp.plugins_context([beta]):
+        alpha.disable()
+        gamma.disable()
+        result = sp.hooks.score(value)
+    return result
+```

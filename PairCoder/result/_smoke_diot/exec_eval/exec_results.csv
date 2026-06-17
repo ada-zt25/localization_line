@@ -1,0 +1,2 @@
+run_idx,model,task_id,pair_type,difficulty,method,exec_pass,exec_reason,exec_reason_coarse,exec_detail,generation_path
+1,qwen2.5:7b,diot-D001,param-dependency,medium,B0_direct,False,wrong_output_structure,wrong_behavior,returned a Diot; expected a int (7),C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\Ollama问题存在性实验\result\_smoke_diot\generations\qwen2.5_7b__diot-D001__B0_direct.py

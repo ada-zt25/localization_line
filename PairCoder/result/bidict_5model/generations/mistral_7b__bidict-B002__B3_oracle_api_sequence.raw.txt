@@ -1,0 +1,9 @@
+ Here is the Python code for the function `invert`:
+
+```python
+from bidict import bidict, frozenbidict, OrderedBidict
+
+def invert(pairs):
+    b = bidict(pairs)
+    return dict(b.inverse)
+```

@@ -1,4 +1,0 @@
-def parse_two_fields(args):
-    ns = Params(count=POSITIONAL(int), label=POSITIONAL(str))
-    ns.parse(args)
-    return (ns.count, ns.label)

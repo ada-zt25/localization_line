@@ -1,0 +1,58 @@
+{
+  "raw": "RELATION: shared-receiver | APIS: b.inv, b.forceput | RULE: Mutating b.inv affects the same bidict as mutating b directly.  \nRELATION: return-flow | APIS: b.inv, b[key] | RULE: The inverse view b.inv must be used to query a value->key lookup after inserting via b[key].  \nRELATION: param-dependency | APIS: b.forceput, b.putall | RULE: Use forceput to bypass duplication checks when putall would raise DuplicationError.  \nRELATION: lifecycle | APIS: frozenbidict, b.forceput | RULE: forceput cannot be called on a frozenbidict as it is immutable.  \nRELATION: completion-obligation | APIS: b.putall, DuplicationError | RULE: If putall raises DuplicationError, the entire operation is rolled back atomically.  \nRELATION: config-return-contract | APIS: bidict, frozenbidict | RULE: Constructing with frozenbidict returns an immutable object, rejecting all mutating ops.",
+  "proposals": [
+    {
+      "relation": "shared-receiver",
+      "anchors": [
+        "b.inv",
+        "b.forceput"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: Mutating b.inv affects the same bidict as mutating b directly.",
+      "rule": "Mutating b.inv affects the same bidict as mutating b directly."
+    },
+    {
+      "relation": "return-flow",
+      "anchors": [
+        "b.inv"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: The inverse view b.inv must be used to query a value->key lookup after inserting via b[key].",
+      "rule": "The inverse view b.inv must be used to query a value->key lookup after inserting via b[key]."
+    },
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "b.forceput",
+        "b.putall"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: Use forceput to bypass duplication checks when putall would raise DuplicationError.",
+      "rule": "Use forceput to bypass duplication checks when putall would raise DuplicationError."
+    },
+    {
+      "relation": "lifecycle",
+      "anchors": [
+        "frozenbidict",
+        "b.forceput"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: forceput cannot be called on a frozenbidict as it is immutable.",
+      "rule": "forceput cannot be called on a frozenbidict as it is immutable."
+    },
+    {
+      "relation": "completion-obligation",
+      "anchors": [
+        "b.putall",
+        "DuplicationError"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: If putall raises DuplicationError, the entire operation is rolled back atomically.",
+      "rule": "If putall raises DuplicationError, the entire operation is rolled back atomically."
+    },
+    {
+      "relation": "config-return-contract",
+      "anchors": [
+        "bidict",
+        "frozenbidict"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: Constructing with frozenbidict returns an immutable object, rejecting all mutating ops.",
+      "rule": "Constructing with frozenbidict returns an immutable object, rejecting all mutating ops."
+    }
+  ]
+}

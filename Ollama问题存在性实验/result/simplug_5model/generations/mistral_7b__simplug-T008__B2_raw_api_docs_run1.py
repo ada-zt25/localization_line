@@ -1,4 +1,0 @@
-def last_score(value):
-    with plugins_context([sp.plugins[plugin] for plugin in (alpha, beta, gamma)]):
-        sp.hooks.score(value)
-        return sp.hooks._results[-1].result

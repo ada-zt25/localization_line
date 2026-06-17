@@ -1,0 +1,5 @@
+from simpleconf import Config, ProfileConfig
+
+def merge_three(a: Config, b: Config, c: Config, key):
+    merged = a.load([b, c])
+    return merged[key]

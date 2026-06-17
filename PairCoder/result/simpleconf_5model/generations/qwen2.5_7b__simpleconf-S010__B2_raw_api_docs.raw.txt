@@ -1,0 +1,16 @@
+```python
+from simpleconf import Config, ProfileConfig
+
+def mutate_then_read(data, key, val):
+    conf = Config.load(data)
+    base_profile = current_profile(conf)
+    
+    # Set the value under the active profile
+    with_profile(conf, 'default'):
+        setattr(conf.default, key, val)
+    
+    # Read back the value from the same config instance
+    read_val = getattr(conf.default, key)
+    
+    return read_val
+```

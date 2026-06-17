@@ -1,7 +1,0 @@
-def default_when_omitted(args):
-    params = Params(
-        count=POSITIONAL,
-        label=('label', 'D')
-    )
-    ns = params.parse_args(args)
-    return ns.label

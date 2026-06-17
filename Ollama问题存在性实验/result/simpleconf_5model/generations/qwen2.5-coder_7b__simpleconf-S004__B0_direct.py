@@ -1,4 +1,0 @@
-def profile_value(profiles, profile):
-    conf = ProfileConfig(profiles)
-    conf.switch_to(profile)
-    return conf.x

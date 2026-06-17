@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError('cannot assign to iterable argument unpacking', ('<solution>', 4, 21, '        Config.load(*configs=data[profile], loader=None)\\n', 4, 43))"}

@@ -1,0 +1,13 @@
+from typing import Union, Any
+
+def assign_in_place(data: Union[T, list], path: Path, val: Any) -> Any:
+    value = Coalesce(PathAccessError, Glom(path)(data))
+    if isinstance(value, (list, tuple)):
+        if len(path) > 1 and path[-1] == -1:
+            del value[-1]
+            value.append(val)
+        else:
+            value[path[-1]] = val
+    else:
+        Assign(path)(data)(val)
+    return value

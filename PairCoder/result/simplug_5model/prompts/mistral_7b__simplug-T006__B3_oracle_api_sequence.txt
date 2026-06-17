@@ -1,0 +1,17 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+make_score_manager(), make_first_score_manager() and make_last_score_manager() are available; each returns (sp, alpha, beta, gamma) backed by the real simplug library (sp is a Simplug manager with a 'score' hook and three plugins).
+
+Task:
+Write function disable_alpha_gamma_then_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. Disable alpha and gamma by name, then call sp.hooks.score(value), and return the result.
+
+Abstract API sequence (call order only):
+make_score_manager -> sp.disable -> sp.hooks.score
+
+Requirements:
+- Define only the function disable_alpha_gamma_then_score.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

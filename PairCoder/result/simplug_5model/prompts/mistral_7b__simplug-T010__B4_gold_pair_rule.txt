@@ -1,0 +1,38 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+make_score_manager(), make_first_score_manager() and make_last_score_manager() are available; each returns (sp, alpha, beta, gamma) backed by the real simplug library (sp is a Simplug manager with a 'score' hook and three plugins).
+
+Task:
+Write function persistent_disable_beta_then_temp_only_alpha_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. First disable beta by name. Then, inside a temporary context where only alpha is enabled, collect sp.hooks.score(value). After the context exits, collect sp.hooks.score(value) again. Return both results (inside, after).
+
+Relevant simplug APIs:
+- from simplug import Simplug
+- make_score_manager() -> returns (sp, alpha, beta, gamma)
+- make_first_score_manager() -> like make_score_manager, score hook uses result=FIRST
+- make_last_score_manager() -> like make_score_manager, score hook uses result=LAST
+- sp.plugins_context(plugins): context manager that temporarily changes enabled plugins.
+- sp.hooks.score(value): calls the score hook and returns collected results.
+- sp.disable(*names): disable plugins.
+- sp.enable(*names): enable plugins.
+- sp.get_plugin(name): get a plugin wrapper.
+- wrapper.disable(): disable this plugin wrapper.
+- wrapper.enable(): enable this plugin wrapper.
+
+
+Relevant API Pair Rule:
+5. sp.disable / sp.plugins_context -> sp.hooks.score
+Relation: lifecycle
+Constraint: sp.disable(name) is PERSISTENT -- the plugin stays disabled after the call and across a later plugins_context. plugins_context temporarily changes the enabled set and, on exit, restores the state that held WHEN THE CONTEXT WAS ENTERED -- not "all plugins enabled". A plugin disabled before entering the context therefore remains disabled after the context exits.
+Usage pattern:
+sp.disable("beta")
+with sp.plugins_context(["alpha"]):
+    inside = sp.hooks.score(value)   # only alpha
+after = sp.hooks.score(value)        # alpha and gamma (beta still disabled)
+
+Requirements:
+- Define only the function persistent_disable_beta_then_temp_only_alpha_score.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

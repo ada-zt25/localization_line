@@ -1,5 +1,0 @@
-def parse_str(args):
-    p = Params()
-    p.add_param('name', type='str')
-    ns = p.parse(args)
-    return ns.name

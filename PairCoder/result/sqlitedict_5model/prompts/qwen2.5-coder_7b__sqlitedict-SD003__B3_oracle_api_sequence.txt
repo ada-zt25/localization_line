@@ -1,0 +1,17 @@
+You are writing Python code using the sqlitedict library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+make_store() is available and returns a fresh SqliteDict (real sqlitedict library) on its own file; SqliteDict is also available.
+
+Task:
+Write function durable_delete(items, key). Open a store with make_store(), store all of items durably, then delete the given key and make that deletion durable too -- a freshly opened connection must see the remaining items and must NOT see the deleted key.
+
+Abstract API sequence (call order only):
+make_store(); write all items; then delete the given key
+
+Requirements:
+- Define only the function durable_delete.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

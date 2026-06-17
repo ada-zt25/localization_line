@@ -1,0 +1,4 @@
+def restructure(data):
+    name = glom(data, 'a.b', default=None)
+    n_items = glom(data, ('items', len), default=0)
+    return glom({}, Assign('name', name), Assign('n', n_items))

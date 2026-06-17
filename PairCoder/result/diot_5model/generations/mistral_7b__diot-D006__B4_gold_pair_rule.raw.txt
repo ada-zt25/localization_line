@@ -1,0 +1,9 @@
+ Here is the Python code for the `nested_is_diot` function as per your requirements:
+
+```python
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def nested_is_diot(data):
+    d = Diot(data, diot_nest=True)
+    return d.x
+```

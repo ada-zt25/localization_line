@@ -1,0 +1,10 @@
+def durable_delete(items, key):
+    with make_store() as db:
+        db.update({k: v for k, v in items.items()})
+        db.commit()
+        del db[key]
+        db.commit()
+        db.close()
+    with make_store() as db:
+        assert all(k in db for k in items if k != key), "Items should be present except the deleted key"
+    return

@@ -1,0 +1,7 @@
+def set_then_get(key, val):
+    d = Diot()
+    try:
+        d[key] = val
+        return d[key]
+    except DiotFrozenError as e:
+        raise ValueError(f"Cannot modify frozen diot: {e}")

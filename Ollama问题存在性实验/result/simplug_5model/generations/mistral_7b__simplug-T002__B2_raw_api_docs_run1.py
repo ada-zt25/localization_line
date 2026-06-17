@@ -1,8 +1,0 @@
-def only_alpha_gamma_score(value):
-    plugins = {'alpha', 'gamma'}
-    original_plugins = set(sp.get_plugin_names())
-    sp.disable(*original_plugins - plugins)
-    sp.enable(*plugins)
-    result = hooks.score(value)
-    sp.enable(*original_plugins)
-    return list(filter(lambda x: x.name in plugins, result))[0].result

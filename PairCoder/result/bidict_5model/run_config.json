@@ -1,0 +1,332 @@
+{
+  "lib": "bidict",
+  "models": [
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b",
+    "llama3.1:8b",
+    "gemma2:9b",
+    "mistral:7b"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule",
+    "B5_loop"
+  ],
+  "tasks": [
+    "bidict-B001",
+    "bidict-B002",
+    "bidict-B003",
+    "bidict-B004",
+    "bidict-B005",
+    "bidict-B006",
+    "bidict-B007",
+    "bidict-B008",
+    "bidict-B009",
+    "bidict-B010"
+  ],
+  "task_meta": {
+    "bidict-B001": {
+      "pair_type": "return-flow",
+      "difficulty": "easy"
+    },
+    "bidict-B002": {
+      "pair_type": "config-return-contract",
+      "difficulty": "medium"
+    },
+    "bidict-B003": {
+      "pair_type": "config-return-contract",
+      "difficulty": "easy"
+    },
+    "bidict-B004": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    },
+    "bidict-B005": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "bidict-B006": {
+      "pair_type": "shared-receiver",
+      "difficulty": "medium"
+    },
+    "bidict-B007": {
+      "pair_type": "return-flow",
+      "difficulty": "medium"
+    },
+    "bidict-B008": {
+      "pair_type": "lifecycle",
+      "difficulty": "hard"
+    },
+    "bidict-B009": {
+      "pair_type": "lifecycle",
+      "difficulty": "medium"
+    },
+    "bidict-B010": {
+      "pair_type": "param-dependency",
+      "difficulty": "medium"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "jobs": 4,
+  "keep_alive": "1h",
+  "num_predict": 500,
+  "top_p": 0.9,
+  "num_gpu": null,
+  "ollama_url": "http://localhost:11434/api/generate",
+  "b5_loop_convergence": {
+    "qwen2.5_7b__bidict-B001__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B002__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B003__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B004__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B005__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B006__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B007__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B008__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "qwen2.5_7b__bidict-B009__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5_7b__bidict-B010__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B001__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B002__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B003__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B004__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B005__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B006__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B007__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B008__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B009__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "qwen2.5-coder_7b__bidict-B010__B5_loop": {
+      "passed": true,
+      "rounds_used": 2,
+      "final_confidence": 0.5
+    },
+    "llama3.1_8b__bidict-B001__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B002__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B003__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B004__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B005__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B006__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B007__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "llama3.1_8b__bidict-B008__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "llama3.1_8b__bidict-B009__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "llama3.1_8b__bidict-B010__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "gemma2_9b__bidict-B001__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B002__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B003__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B004__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B005__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B006__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B007__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B008__B5_loop": {
+      "passed": true,
+      "rounds_used": 2,
+      "final_confidence": 0.5
+    },
+    "gemma2_9b__bidict-B009__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "gemma2_9b__bidict-B010__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "mistral_7b__bidict-B001__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "mistral_7b__bidict-B002__B5_loop": {
+      "passed": true,
+      "rounds_used": 2,
+      "final_confidence": 0.5
+    },
+    "mistral_7b__bidict-B003__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "mistral_7b__bidict-B004__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "mistral_7b__bidict-B005__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "mistral_7b__bidict-B006__B5_loop": {
+      "passed": true,
+      "rounds_used": 3,
+      "final_confidence": 0.4
+    },
+    "mistral_7b__bidict-B007__B5_loop": {
+      "passed": true,
+      "rounds_used": 2,
+      "final_confidence": 0.5
+    },
+    "mistral_7b__bidict-B008__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    },
+    "mistral_7b__bidict-B009__B5_loop": {
+      "passed": true,
+      "rounds_used": 1,
+      "final_confidence": 0.667
+    },
+    "mistral_7b__bidict-B010__B5_loop": {
+      "passed": false,
+      "rounds_used": 3,
+      "final_confidence": 0.2
+    }
+  }
+}

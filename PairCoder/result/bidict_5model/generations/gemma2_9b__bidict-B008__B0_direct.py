@@ -1,0 +1,10 @@
+def atomic_add(pairs, batch):
+  try:
+    result = OrderedBidict()
+    for key, value in pairs:
+      result[key] = value
+    for key, value in batch:
+      result[key] = value
+    return dict(result)
+  except (KeyDuplicationError, ValueDuplicationError) as e:
+    return dict(pairs)

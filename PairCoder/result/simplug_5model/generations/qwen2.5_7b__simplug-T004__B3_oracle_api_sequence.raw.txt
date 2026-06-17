@@ -1,0 +1,7 @@
+```python
+def get_beta_wrapper_disable_then_score(value):
+    _, _, beta, _ = make_score_manager()
+    wrapper = beta.get_plugin()
+    wrapper.disable()
+    return sp.hooks.score(value)
+```

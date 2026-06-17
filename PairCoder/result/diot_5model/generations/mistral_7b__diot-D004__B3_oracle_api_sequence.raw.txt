@@ -1,0 +1,6 @@
+ Here is the Python code for the function `to_plain_dict(data)`:
+
+```python
+def to_plain_dict(data):
+    return diot.as_plain(diot.from_dict(data))
+```

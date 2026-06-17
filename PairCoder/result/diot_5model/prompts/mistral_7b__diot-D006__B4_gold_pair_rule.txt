@@ -1,0 +1,31 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function nested_is_diot(data). data is {'x': {...}}. Build a Diot (default nesting) and return d.x, which must itself be a Diot (so it supports attribute access).
+
+Relevant diot APIs:
+- Diot(data, diot_transform='safe', diot_nest=True, diot_frozen=False)
+- OrderedDiot(...), FrozenDiot(...)
+- d.<key> / d[key] attribute & item access; d.get(key, default)
+- d.to_dict() -> a plain (recursive) dict
+- frozen diot: d.thaw() context manager to temporarily allow modification
+- DiotFrozenError is raised when modifying a frozen diot
+
+
+Relevant API Pair Rule:
+2. Diot(diot_nest=...) -> nested value type ; .to_dict() -> plain dict
+Relation: config-return-contract
+Constraint: diot_nest (diot.py: __diot__["nest"], utils.nest) decides the TYPE of nested values: True (default) converts nested dicts to Diot (attribute-accessible); False leaves them plain dict. d.to_dict() (utils.to_dict) returns a RECURSIVELY plain dict, not a Diot.
+Usage pattern:
+Diot(data, diot_nest=False)['x']   # a plain dict
+Diot(data).to_dict()               # recursively plain dict
+
+Requirements:
+- Define only the function nested_is_diot.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,0 +1,16 @@
+from diot import Diot, OrderedDiot, FrozenDiot
+from diot import DiotFrozenError
+
+def get_default(data, key, default=0):
+    diot = OrderedDiot() if isinstance(data, dict) else data
+    diot.diot_transform = 'safe'
+    diot.diot_nest = True
+
+    try:
+        return diot.get(key)
+    except DiotFrozenError:
+        with diot.thaw() as thawed_diot:
+            return thawed_diot.get(key, default)
+
+    if not isinstance(data, FrozenDiot):
+        return diot.to_dict().get(key, default)

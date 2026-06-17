@@ -1,5 +1,0 @@
-def parse_float(args):
-    params = Params()
-    params.add_param('ratio', type='float')
-    parsed_args = params.parse(args)
-    return parsed_args.ratio

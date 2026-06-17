@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "wrong_output", "reason_coarse": "wrong_behavior", "detail": "returned {'x': {'y': 1}, 'diot_nest': False, 'diot_transform': 'safe'}, expected {'x': {'y': 1}}"}

@@ -1,0 +1,4 @@
+def merge_get(base, override, key):
+  Config.load([base])
+  override_config = ProfileConfig(override)
+  return override_config.get(key)

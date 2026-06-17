@@ -1,0 +1,7 @@
+from diot import FrozenDiot, DiotFrozenError
+
+def thaw_to_modify(data, key, val):
+    frozen = FrozenDiot(data)
+    with frozen.thaw() as d:
+        d[key] = val
+    return d.get(key, DiotFrozenError("Key not found or frozen diot was modified"))

@@ -1,0 +1,68 @@
+{
+  "raw": "Here are the pairwise API composition constraints:\n\nRELATION: param-dependency | APIS: make_first_score_manager, sp.hooks.score | RULE: The score hook result mode (FIRST) determines the return type of hooks.score(value).  \nRELATION: param-dependency | APIS: make_last_score_manager, sp.hooks.score | RULE: The score hook result mode (LAST) determines the return type of hooks.score(value).  \nRELATION: return-flow | APIS: sp.plugins_context, sp.hooks.score | RULE: hooks.score(value) must be called within the plugins_context(plugins) block to use the temporary plugin state.  \nRELATION: shared-receiver | APIS: sp.disable, sp.enable | RULE: disable(*names) and enable(*names) must act on the same Simplug manager instance.  \nRELATION: shared-receiver | APIS: wrapper.disable, wrapper.enable | RULE: disable() and enable() must act on the same plugin wrapper instance.  \nRELATION: lifecycle | APIS: sp.plugins_context, sp.hooks.score | RULE: hooks.score(value) must be called while the plugins_context(plugins) context is active.  \nRELATION: completion-obligation | APIS: sp.plugins_context, sp.hooks.score | RULE: hooks.score(value) must be called before exiting the plugins_context(plugins) block to use the temporary plugin state.",
+  "proposals": [
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "make_first_score_manager",
+        "sp.hooks.score"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: The score hook result mode (FIRST) determines the return type of hooks.score(value).",
+      "rule": "The score hook result mode (FIRST) determines the return type of hooks.score(value)."
+    },
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "make_last_score_manager",
+        "sp.hooks.score"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: The score hook result mode (LAST) determines the return type of hooks.score(value).",
+      "rule": "The score hook result mode (LAST) determines the return type of hooks.score(value)."
+    },
+    {
+      "relation": "return-flow",
+      "anchors": [
+        "sp.plugins_context",
+        "sp.hooks.score"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: hooks.score(value) must be called within the plugins_context(plugins) block to use the temporary plugin state.",
+      "rule": "hooks.score(value) must be called within the plugins_context(plugins) block to use the temporary plugin state."
+    },
+    {
+      "relation": "shared-receiver",
+      "anchors": [
+        "sp.disable",
+        "sp.enable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: disable(*names) and enable(*names) must act on the same Simplug manager instance.",
+      "rule": "disable(*names) and enable(*names) must act on the same Simplug manager instance."
+    },
+    {
+      "relation": "shared-receiver",
+      "anchors": [
+        "wrapper.disable",
+        "wrapper.enable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: disable() and enable() must act on the same plugin wrapper instance.",
+      "rule": "disable() and enable() must act on the same plugin wrapper instance."
+    },
+    {
+      "relation": "lifecycle",
+      "anchors": [
+        "sp.plugins_context",
+        "sp.hooks.score"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: hooks.score(value) must be called while the plugins_context(plugins) context is active.",
+      "rule": "hooks.score(value) must be called while the plugins_context(plugins) context is active."
+    },
+    {
+      "relation": "completion-obligation",
+      "anchors": [
+        "sp.plugins_context",
+        "sp.hooks.score"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: hooks.score(value) must be called before exiting the plugins_context(plugins) block to use the temporary plugin state.",
+      "rule": "hooks.score(value) must be called before exiting the plugins_context(plugins) block to use the temporary plugin state."
+    }
+  ]
+}

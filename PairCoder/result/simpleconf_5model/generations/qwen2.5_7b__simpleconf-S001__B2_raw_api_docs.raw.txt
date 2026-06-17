@@ -1,0 +1,17 @@
+```python
+from simpleconf import Config, ProfileConfig
+
+def merge_get(base: Config, override: ProfileConfig, key):
+    # Switch to the 'default' profile of base for consistent merging
+    current_profile = base.use_profile('default')
+    
+    # Merge override into base's default profile
+    with override.with_profile('default'):
+        merged_config = base.load()
+    
+    # Revert to original profile
+    base.use_profile(current_profile)
+    
+    # Return the value for key
+    return merged_config[key]
+```

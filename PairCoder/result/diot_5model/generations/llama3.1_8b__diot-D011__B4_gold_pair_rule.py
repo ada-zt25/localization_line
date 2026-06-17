@@ -1,0 +1,3 @@
+def thaw_to_modify(data, key, val):
+    with FrozenDiot(data).thaw() as d:
+        return d[key] = val

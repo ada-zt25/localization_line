@@ -1,0 +1,3 @@
+def merge_get(base, override, key):
+  merged = Config.load([base, override])
+  return merged[key]

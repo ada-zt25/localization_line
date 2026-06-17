@@ -1,0 +1,14 @@
+from bidict import Bidict, frozenbidict
+
+def key_for(pairs: dict) -> callable:
+    b = Bidict()
+    b.putall(pairs)
+    b_frozen = frozenbidict(b)
+
+    def find_key(val):
+        try:
+            return next(k for k in b if b[k] == val)
+        except StopIteration:
+            raise KeyError(f"No key found for value {val}")
+
+    return find_key

@@ -1,0 +1,5 @@
+def set_then_get(key, val):
+    d = Diot()
+    with d.thaw():
+        d[key] = val
+    return d.get(key)

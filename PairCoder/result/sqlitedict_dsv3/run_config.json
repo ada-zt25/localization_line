@@ -1,0 +1,40 @@
+{
+  "lib": "sqlitedict",
+  "models": [
+    "openai:deepseek-ai/DeepSeek-V3"
+  ],
+  "methods": [
+    "B0_direct",
+    "B1_api_list",
+    "B2_raw_api_docs",
+    "B3_oracle_api_sequence",
+    "B4_gold_pair_rule"
+  ],
+  "tasks": [
+    "sqlitedict-SD001",
+    "sqlitedict-SD002",
+    "sqlitedict-SD003"
+  ],
+  "task_meta": {
+    "sqlitedict-SD001": {
+      "pair_type": "completion-obligation",
+      "difficulty": "easy"
+    },
+    "sqlitedict-SD002": {
+      "pair_type": "completion-obligation",
+      "difficulty": "medium"
+    },
+    "sqlitedict-SD003": {
+      "pair_type": "completion-obligation",
+      "difficulty": "medium"
+    }
+  },
+  "temperature": 0.2,
+  "runs": 1,
+  "jobs": 4,
+  "keep_alive": "1h",
+  "num_predict": 500,
+  "top_p": 0.9,
+  "num_gpu": null,
+  "ollama_url": "http://localhost:11434/api/generate"
+}

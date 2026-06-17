@@ -1,0 +1,2 @@
+def coalesce_get(data):
+  return Coalesce(T['primary'] , T['backup'])

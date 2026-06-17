@@ -1,0 +1,8 @@
+```python
+def with_profile_temporary(profiles, profile):
+  conf = Config.load(*profiles)
+  with ProfileConfig.with_profile(conf, profile):
+    inside = conf.x
+  after = conf.x
+  return inside, after 
+```

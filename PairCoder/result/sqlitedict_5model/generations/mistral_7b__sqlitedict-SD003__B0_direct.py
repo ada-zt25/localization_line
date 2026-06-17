@@ -1,0 +1,17 @@
+import os
+import sqlite3
+from sqlitedict import SqliteDict as Dict
+
+def durable_delete(items, key):
+    store = make_store()
+    with store.transaction():
+        for item in items:
+            store[item] = None
+        del store[key]
+        store.sync()
+        store.close()
+
+    new_store = make_store()
+    if not new_store or len(new_store) != (len(items) - 1):
+        raise ValueError("Deletion was not durable")
+    return new_store

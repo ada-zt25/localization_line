@@ -1,0 +1,86 @@
+[
+  {
+    "relation": "return-flow",
+    "anchors": [
+      "glom",
+      "Coalesce"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: Coalesce must be used as a spec within glom to handle multiple path candidates.",
+    "rule": "Coalesce must be used as a spec within glom to handle multiple path candidates.",
+    "witness": "NO_DIVERGENCE",
+    "witness_detail": "both return 1"
+  },
+  {
+    "relation": "param-dependency",
+    "anchors": [
+      "glom",
+      "Assign"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: Assign must be used as the spec in glom to mutate the target in place.",
+    "rule": "Assign must be used as the spec in glom to mutate the target in place.",
+    "witness": "ABSTAIN",
+    "witness_detail": "compliant() did not run: AttributeError(\"'function' object has no attribute 'glom'\")"
+  },
+  {
+    "relation": "config-return-contract",
+    "anchors": [
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: Using a list spec ['field'] in glom ensures the output is a list of that field.",
+    "rule": "Using a list spec ['field'] in glom ensures the output is a list of that field.",
+    "witness": "ABSTAIN",
+    "witness_detail": "compliant() did not run: AttributeError(\"'function' object has no attribute 'glom'\")"
+  },
+  {
+    "relation": "config-return-contract",
+    "anchors": [
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: Using a dict spec {'k': subspec} in glom ensures the output is a dict with those keys.",
+    "rule": "Using a dict spec {'k': subspec} in glom ensures the output is a dict with those keys.",
+    "witness": "ABSTAIN",
+    "witness_detail": "compliant() did not run: AttributeError(\"'function' object has no attribute 'glom'\")"
+  },
+  {
+    "relation": "param-dependency",
+    "anchors": [
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: default= parameter in glom must be used when PathAccessError is possible and no Coalesce is applied.",
+    "rule": "default= parameter in glom must be used when PathAccessError is possible and no Coalesce is applied.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 1"
+  },
+  {
+    "relation": "return-flow",
+    "anchors": [
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: Tuple specs in glom must chain operations, where each element is applied to the output of the previous one.",
+    "rule": "Tuple specs in glom must chain operations, where each element is applied to the output of the previous one.",
+    "witness": "ABSTAIN",
+    "witness_detail": "compliant() did not run: AttributeError(\"'function' object has no attribute 'glom'\")"
+  },
+  {
+    "relation": "shared-receiver",
+    "anchors": [
+      "Assign",
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: Assign must be used within glom to mutate the same target object passed to glom.",
+    "rule": "Assign must be used within glom to mutate the same target object passed to glom.",
+    "witness": "FIRES",
+    "witness_detail": "compliant={'a': 2} vs violating={'a': 1}"
+  },
+  {
+    "relation": "completion-obligation",
+    "anchors": [
+      "Coalesce",
+      "glom"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: Coalesce must be wrapped in glom to evaluate and return the first successful candidate.",
+    "rule": "Coalesce must be wrapped in glom to evaluate and return the first successful candidate.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 42"
+  }
+]

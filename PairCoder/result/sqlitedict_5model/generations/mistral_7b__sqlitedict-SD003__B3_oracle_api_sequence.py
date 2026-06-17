@@ -1,0 +1,11 @@
+import sqlite3
+
+def durable_delete(items, key):
+    store = make_store()
+    for item in items:
+        store[item] = None
+    conn = sqlite3.connect(store['__file__'])
+    cursor = conn.cursor()
+    cursor.execute('DELETE FROM sqlitedict WHERE name=?', (key,))
+    conn.commit()
+    conn.close()

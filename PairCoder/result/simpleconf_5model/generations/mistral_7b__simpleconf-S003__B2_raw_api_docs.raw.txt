@@ -1,0 +1,13 @@
+ Here is the Python code for the function `load_is_diot` as per your requirements:
+
+```python
+from simpleconf import Config, ProfileConfig
+
+def load_is_diot(data):
+    config = Config()
+    config.load(data)
+    profile_config = ProfileConfig(config)
+    with profile_config.with_profile('default'):
+        config.load({'default': data})
+    return config
+```

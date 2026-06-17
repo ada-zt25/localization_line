@@ -1,0 +1,5 @@
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def nested_is_diot(data):
+    d = Diot.create(data, diot_transform='safe', diot_nest=True)
+    return d.get('x')

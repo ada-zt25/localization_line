@@ -1,0 +1,7 @@
+ Here is the Python code for the `assign_in_place` function as per your requirements:
+
+```python
+def assign_in_place(data, path, val):
+    glom(data, Assign(path, val))
+    return glom(data, path)
+```

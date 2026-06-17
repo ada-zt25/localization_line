@@ -1,9 +1,0 @@
- Here is the Python code for the requested function:
-
-```python
-def only_beta_score(value):
-    sp.hooks.enable('beta')
-    score = sp.hooks.score(value)
-    sp.hooks.disable('beta')
-    return score
-```

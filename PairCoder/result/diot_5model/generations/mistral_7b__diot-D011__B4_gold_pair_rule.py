@@ -1,0 +1,7 @@
+from contextlib import contextmanager
+
+def thaw_to_modify(data, key, val):
+    d = FrozenDiot(data)
+    with d.thaw():
+        d[key] = val
+    return d[key]

@@ -1,0 +1,10 @@
+from glom import glom, Coalesce, Assign
+
+def restructure(data):
+    return Coalesce(
+        {
+            'name': glom(data, 'a.b'),
+            'n': len(glom(data, ('items',)))
+        },
+        {}
+    )

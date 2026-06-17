@@ -1,0 +1,17 @@
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def nested_mutate_reflects(data, val):
+    d = OrderedDiot()
+    for key, value in data.items():
+        if isinstance(value, dict):
+            d[key] = nested_mutate_reflects(value, val)
+        else:
+            d[key] = value
+    try:
+        result = d['x']['y']
+        d['x']['y'] = val
+        return result
+    except KeyError:
+        raise DiotFrozenError("Data is frozen")
+    except AttributeError:
+        raise DiotFrozenError("Data is not a Diot object")

@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "TypeError: glom.core.Coalesce() argument after * must be an iterable, not int"}

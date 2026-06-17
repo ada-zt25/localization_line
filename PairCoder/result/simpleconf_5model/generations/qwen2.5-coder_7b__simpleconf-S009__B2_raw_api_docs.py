@@ -1,0 +1,6 @@
+def use_profile_same_conf(profiles, profile):
+    conf = Config()
+    for p in profiles:
+        conf.load(p)
+    with ProfileConfig(conf).use_profile(profile):
+        return getattr(conf, 'x')

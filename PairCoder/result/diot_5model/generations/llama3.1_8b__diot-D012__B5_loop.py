@@ -1,0 +1,5 @@
+def thaw_is_temporary(data, key, val):
+    diot = FrozenDiot(data)
+    with diot.thaw():
+        diot[key] = val
+    return diot

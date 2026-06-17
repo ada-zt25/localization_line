@@ -1,2 +1,0 @@
-def coalesce_get(data):
-    return glom(data, Coalesce(T('primary'), T('backup')))

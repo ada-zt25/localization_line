@@ -1,0 +1,3 @@
+def nested_is_diot(data):
+    d = Diot(nest=True)
+    return d.from_dict(data).x

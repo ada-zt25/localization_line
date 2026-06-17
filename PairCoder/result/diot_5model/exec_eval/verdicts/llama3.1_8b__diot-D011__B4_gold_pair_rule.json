@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError('invalid syntax', ('<solution>', 3, 23, '        return d[key] = val\\n', 3, 24))"}

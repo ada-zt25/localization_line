@@ -1,0 +1,8 @@
+ Here is the Python code for the `first_item` function using the glom library:
+
+```python
+from typing import Any, List, Dict
+
+def first_item(data: Any) -> Any:
+    return Coalesce(Path('items[0]', data), None)
+```

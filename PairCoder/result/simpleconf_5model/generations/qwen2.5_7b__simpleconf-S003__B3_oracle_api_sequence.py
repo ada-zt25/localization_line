@@ -1,0 +1,5 @@
+from simpleconf import Config, ProfileConfig, Diot
+
+def load_is_diot(data):
+    config = Config.load(data)
+    return Diot(config.to_dict())

@@ -1,0 +1,4 @@
+def only_beta_score(value):
+    sp, _, beta, _ = make_score_manager()
+    with sp.hooks.temporarily_enable([beta]):
+        return sp.hooks.score(value)

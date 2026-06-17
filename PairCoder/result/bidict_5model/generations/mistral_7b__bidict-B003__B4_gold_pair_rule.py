@@ -1,0 +1,8 @@
+from bidict import bidict, frozenbidict, ValueDuplicationError, KeyDuplicationError
+
+def inverse_view(pairs):
+    b = bidict(pairs)
+    try:
+        return frozenbidict(b.inv)
+    except (ValueDuplicationError, KeyDuplicationError) as e:
+        raise DuplicationError("Inverse view creation failed due to duplicates.") from e

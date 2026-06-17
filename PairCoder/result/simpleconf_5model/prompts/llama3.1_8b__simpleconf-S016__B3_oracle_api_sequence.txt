@@ -1,0 +1,17 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function use_survives_with(profiles). Load a ProfileConfig and persistently switch to 'prod'. Enter and exit a temporary with_profile('default') context; afterwards return conf.x (it must still be the 'prod' value).
+
+Abstract API sequence (call order only; you choose persistent vs temporary switching):
+load(...); set a profile; enter a profile scope; then read conf.x after it
+
+Requirements:
+- Define only the function use_survives_with.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

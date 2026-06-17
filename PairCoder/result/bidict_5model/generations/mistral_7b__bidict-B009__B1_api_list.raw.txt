@@ -1,0 +1,8 @@
+ Here's the Python code for the `make_frozen` function:
+
+```python
+def make_frozen(pairs):
+    b = bidict()
+    b.putall(pairs)
+    return frozenbidict(b)
+```

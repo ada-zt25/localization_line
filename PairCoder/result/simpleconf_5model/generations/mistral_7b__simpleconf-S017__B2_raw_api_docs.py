@@ -1,0 +1,14 @@
+import simpleconf
+
+def double_use_persistent(profiles):
+    conf = simpleconf.Config()
+    conf.load(*profiles)
+
+    with conf.with_profile('prod'):
+        pass
+
+    current_profile = conf.current_profile()
+    with conf.with_profile('default'):
+        pass
+
+    return conf.x

@@ -1,0 +1,6 @@
+def with_profile_keeps_current(profiles):
+  Config.load(profiles)
+  Config.set('prod')
+  with Config.profile('default'):
+    active_profile = Config.get_active()
+  return active_profile

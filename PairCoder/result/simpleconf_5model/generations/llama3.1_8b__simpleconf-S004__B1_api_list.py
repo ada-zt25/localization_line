@@ -1,0 +1,3 @@
+def profile_value(profiles, profile):
+    with ProfileConfig.load(profiles, base='default').with_profile(profile) as conf:
+        return conf['x']

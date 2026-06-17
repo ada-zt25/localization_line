@@ -1,0 +1,7 @@
+from diot import Diot, OrderedDiot, FrozenDiot
+
+def get_default(data, key):
+    if isinstance(data, FrozenDiot):
+        return 0
+    else:
+        return data.get(key, 0)

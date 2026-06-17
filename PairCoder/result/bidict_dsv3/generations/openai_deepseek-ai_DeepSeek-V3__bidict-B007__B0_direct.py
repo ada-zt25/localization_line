@@ -1,0 +1,4 @@
+def roundtrip(pairs, key):
+    b = bidict(pairs)
+    val = b[key]
+    return b.inverse[val]

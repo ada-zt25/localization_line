@@ -1,7 +1,0 @@
-def key_for(pairs, val):
-    b = OrderedBidict()
-    try:
-        b.putall(pairs.items())
-        return b.inv[val]
-    except (KeyDuplicationError, ValueDuplicationError) as e:
-        raise DuplicationError from e

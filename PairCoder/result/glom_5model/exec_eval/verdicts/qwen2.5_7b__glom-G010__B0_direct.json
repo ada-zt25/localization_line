@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "wrong_output", "reason_coarse": "wrong_behavior", "detail": "returned {'total': [1, 2, 3], 'count': [1, 2, 3]}, expected {'total': 6, 'count': 3}"}

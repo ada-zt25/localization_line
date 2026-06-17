@@ -1,0 +1,22 @@
+from simpleconf import ProfileConfig, with_profile
+
+def use_then_with_restore(profiles):
+    config = Config()
+    prod_config = profiles['prod']
+    default_config = profiles['default']
+
+    mid = None
+    after = None
+
+    # Load and persistently switch to 'prod'
+    prod_config.load()
+    prod_config.set_active()
+
+    # Read conf.x inside a temporary 'default' profile scope
+    with with_profile(default_config):
+        mid = prod_config.get('conf.x')
+
+    # Revert back to 'prod'
+    after = prod_config.get('conf.x')
+
+    return (mid, after)

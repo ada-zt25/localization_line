@@ -1,0 +1,15 @@
+def to_plain_dict(data):
+    def _to_plain_dict(node, parent=None):
+        if isinstance(node, Diot):
+            return node.as_dict() if not node.frozen else {str(node): None}
+        elif isinstance(node, OrderedDiot):
+            result = {}
+            for key, value in node:
+                result[key] = _to_plain_dict(value, key)
+            return result
+        elif isinstance(node, FrozenDiot):
+            raise DiotFrozenError("Cannot convert frozen Diot to plain dict.")
+        else:
+            return node
+
+    return _to_plain_dict(data)

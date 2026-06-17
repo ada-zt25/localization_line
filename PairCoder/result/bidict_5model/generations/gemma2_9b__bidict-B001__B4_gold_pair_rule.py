@@ -1,0 +1,2 @@
+def key_for(pairs, val):
+  return bidict(pairs).inv[val]

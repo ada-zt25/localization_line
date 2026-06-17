@@ -1,0 +1,8 @@
+```python
+def invert(pairs):
+    try:
+        bidict_obj = bidict(pairs)
+        return dict(bidict_obj.inverse)
+    except DuplicationError as e:
+        raise ValueError("Duplicate values or keys found in the input dictionary") from e
+```

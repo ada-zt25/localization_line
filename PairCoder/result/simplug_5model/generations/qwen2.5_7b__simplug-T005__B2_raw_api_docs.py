@@ -1,0 +1,9 @@
+def beta_only_inside_context_then_all_score(value):
+    sp, alpha, beta, gamma = make_score_manager()
+    
+    with sp.plugins_context([beta]):
+        temp_result = sp.hooks.score(value)
+        
+    all_results = sp.hooks.score(value)
+    
+    return temp_result, all_results

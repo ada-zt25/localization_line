@@ -1,0 +1,30 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function merge_then_nested(data, k1, k2). Load a config from data and return the nested value config[k1][k2].
+
+Relevant simpleconf APIs:
+- Config.load(*configs, loader=None) -> Diot   # merge configs; later overrides earlier
+- ProfileConfig.load(profiles, base='default') -> Diot
+- ProfileConfig.use_profile(conf, profile)        # switch active profile (persistent)
+- ProfileConfig.with_profile(conf, profile)       # context manager: switch temporarily
+- ProfileConfig.current_profile(conf) -> str
+- the loaded config is a Diot (attribute & item access)
+
+
+Relevant API Pair Rule:
+3. load -> access
+Relation: return-flow
+Constraint: To read a value you must index/attribute into the config RETURNED by load (not the input dict, not the config object itself).
+Usage pattern:
+Config.load(data)[key]
+
+Requirements:
+- Define only the function merge_then_nested.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,0 +1,4 @@
+def mutate_then_read(data, key, val):
+  conf = Config()
+  conf[key] = data
+  return conf[key]

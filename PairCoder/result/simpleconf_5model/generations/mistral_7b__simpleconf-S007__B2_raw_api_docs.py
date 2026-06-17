@@ -1,0 +1,8 @@
+from simpleconf import Config, ProfileConfig
+
+def profile_load_attr(profiles):
+    conf = Config()
+    conf.load(*profiles)
+
+    with conf.with_profile('default'):
+        return conf.x

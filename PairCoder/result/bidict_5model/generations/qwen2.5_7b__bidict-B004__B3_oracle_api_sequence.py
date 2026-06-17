@@ -1,0 +1,10 @@
+from bidict import bidict
+
+def remap(pairs, key, val):
+    b = bidict(pairs)
+    try:
+        del b[val]
+    except KeyError:
+        pass
+    b[key] = val
+    return dict(b)

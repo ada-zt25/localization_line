@@ -1,0 +1,3 @@
+def merge_then_nested(data, k1, k2):
+  conf = Config.load(data)
+  return conf[k1][k2]

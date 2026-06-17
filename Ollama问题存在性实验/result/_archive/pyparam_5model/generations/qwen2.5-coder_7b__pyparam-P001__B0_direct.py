@@ -1,4 +1,0 @@
-def parse_int(args):
-    p = Params([POSITIONAL('count', int)])
-    parsed_args = p.parse(args)
-    return parsed_args.count

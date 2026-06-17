@@ -1,0 +1,36 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+make_score_manager(), make_first_score_manager() and make_last_score_manager() are available; each returns (sp, alpha, beta, gamma) backed by the real simplug library (sp is a Simplug manager with a 'score' hook and three plugins).
+
+Task:
+Write function last_score(value). Use make_last_score_manager() to get sp, alpha, beta, gamma. Call sp.hooks.score(value) and return its result directly.
+
+Relevant simplug APIs:
+- from simplug import Simplug
+- make_score_manager() -> returns (sp, alpha, beta, gamma)
+- make_first_score_manager() -> like make_score_manager, score hook uses result=FIRST
+- make_last_score_manager() -> like make_score_manager, score hook uses result=LAST
+- sp.plugins_context(plugins): context manager that temporarily changes enabled plugins.
+- sp.hooks.score(value): calls the score hook and returns collected results.
+- sp.disable(*names): disable plugins.
+- sp.enable(*names): enable plugins.
+- sp.get_plugin(name): get a plugin wrapper.
+- wrapper.disable(): disable this plugin wrapper.
+- wrapper.enable(): enable this plugin wrapper.
+
+
+Relevant API Pair Rule:
+4. sp.spec(result=...) -> sp.hooks.score
+Relation: config-return-contract
+Constraint: The hook's result mode decides the RETURN SHAPE of sp.hooks.score(value). make_first_score_manager / make_last_score_manager declare the score hook with result=FIRST / result=LAST, so sp.hooks.score(value) returns a SINGLE result (the first/last enabled plugin's, by registration order) -- NOT a list. Return it directly; do not wrap it in a list or index into it as if it were a list.
+Usage pattern:
+result = sp.hooks.score(value)   # a single ("name", number) tuple
+return result
+
+Requirements:
+- Define only the function last_score.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

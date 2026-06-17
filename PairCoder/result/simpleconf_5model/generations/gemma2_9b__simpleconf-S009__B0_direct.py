@@ -1,0 +1,4 @@
+def use_profile_same_conf(profiles, profile):
+  prof = ProfileConfig(profiles[profile])
+  prof.switch()
+  return prof.conf.x

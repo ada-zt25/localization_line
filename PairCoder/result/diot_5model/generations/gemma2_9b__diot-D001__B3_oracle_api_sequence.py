@@ -1,0 +1,3 @@
+def access_camel(data):
+  d = OrderedDiot(data, camel_case=True)
+  return d.fooBar

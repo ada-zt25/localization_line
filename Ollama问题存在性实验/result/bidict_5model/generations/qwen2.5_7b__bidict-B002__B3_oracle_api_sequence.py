@@ -1,5 +1,0 @@
-def invert(pairs):
-    try:
-        return dict(bidict(pairs).inv)
-    except DuplicationError as e:
-        raise ValueError("Duplicate values in input dictionary") from e

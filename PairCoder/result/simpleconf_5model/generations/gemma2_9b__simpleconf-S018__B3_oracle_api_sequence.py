@@ -1,0 +1,6 @@
+def two_reads_same_conf(profiles):
+  profile = ProfileConfig.load(profiles)
+  profile.set('prod')
+  x1 = profile.conf.x
+  x2 = profile.conf.x
+  return (x1, x2)

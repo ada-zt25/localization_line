@@ -1,3 +1,0 @@
-def only_beta_score(value):
-  with sp.plugins_context({'beta': True}):
-    return sp.hooks.score(value)

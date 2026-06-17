@@ -1,8 +1,0 @@
-def assign_return_target(data, path, val):
-    from glom import Coalesce, Assign, T
-
-    try:
-        glom(data, Path(path), default={}, missing_type=Coalesce) | Assign(T[path], val)
-    except PathAccessError:
-        pass
-    return data

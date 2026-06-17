@@ -1,4 +1,0 @@
-def only_alpha_gamma_score(value):
-    sp, alpha, beta, gamma = make_score_manager()
-    with sp.hooks.enabled(alpha=True, gamma=True, beta=False):
-        return sp.hooks.score(value)

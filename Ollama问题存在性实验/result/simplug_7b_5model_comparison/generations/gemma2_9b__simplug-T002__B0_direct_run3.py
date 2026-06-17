@@ -1,5 +1,0 @@
-def only_alpha_gamma_score(value):
-  sp.hooks.enable(['alpha', 'gamma'])
-  result = sp.hooks.score(value)
-  sp.hooks.disable(['alpha', 'gamma'])
-  return result

@@ -1,0 +1,5 @@
+def use_then_with_restore(profiles):
+    mid = profiles['prod'].load().conf.x
+    with profiles['default'].with_profile('default'):
+        after = profiles['default'].load().conf.x
+    return (mid, after)

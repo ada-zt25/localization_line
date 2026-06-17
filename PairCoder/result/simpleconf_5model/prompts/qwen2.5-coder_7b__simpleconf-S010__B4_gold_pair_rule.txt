@@ -1,0 +1,30 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function mutate_then_read(data, key, val). Load a config, set conf[key]=val, then read key back from the SAME config and return it.
+
+Relevant simpleconf APIs:
+- Config.load(*configs, loader=None) -> Diot   # merge configs; later overrides earlier
+- ProfileConfig.load(profiles, base='default') -> Diot
+- ProfileConfig.use_profile(conf, profile)        # switch active profile (persistent)
+- ProfileConfig.with_profile(conf, profile)       # context manager: switch temporarily
+- ProfileConfig.current_profile(conf) -> str
+- the loaded config is a Diot (attribute & item access)
+
+
+Relevant API Pair Rule:
+4. same conf + use_profile
+Relation: shared-receiver
+Constraint: use_profile mutates the active profile on the SAME conf object; reads on that conf reflect the switch. A freshly reloaded config starts at the default profile.
+Usage pattern:
+conf = ProfileConfig.load(profiles); ProfileConfig.use_profile(conf, 'prod'); conf.x   # same conf
+
+Requirements:
+- Define only the function mutate_then_read.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

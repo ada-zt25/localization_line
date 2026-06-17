@@ -1,0 +1,8 @@
+def atomic_add(pairs, batch):
+    b = bidict(pairs)
+    try:
+        for key, value in batch:
+            b[key] = value
+    except DuplicationError:
+        return dict(b)
+    return dict(b)

@@ -1,0 +1,91 @@
+run_idx,model,task_id,pair_type,difficulty,method,exec_pass,exec_reason,exec_reason_coarse,exec_detail,generation_path
+1,openai:deepseek-ai/DeepSeek-V3,glom-G001,return-flow,easy,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G001__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G001,return-flow,easy,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G001__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G001,return-flow,easy,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G001__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G001,return-flow,easy,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G001__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G001,return-flow,easy,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G001__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G002,return-flow,medium,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G002__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G002,return-flow,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G002__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G002,return-flow,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G002__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G002,return-flow,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G002__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G002,return-flow,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G002__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G003,config-return-contract,easy,B0_direct,False,runtime_error,exec_error,AttributeError: 'function' object has no attribute 'T',C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G003__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G003,config-return-contract,easy,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G003__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G003,config-return-contract,easy,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G003__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G003,config-return-contract,easy,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G003__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G003,config-return-contract,easy,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G003__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G004,config-return-contract,medium,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G004__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G004,config-return-contract,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G004__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G004,config-return-contract,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G004__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G004,config-return-contract,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G004__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G004,config-return-contract,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G004__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G005,param-dependency,medium,B0_direct,False,runtime_error,exec_error,"glom.core.GlomError.wrap(TypeError): error raised while processing, details below.
+ Target-spec trace (most recent last):
+ - Target: {'a': {'b': 1}}
+ + Spec: Coalesce('a.zzz', -1)
+ |\ Spec: 'a.zzz'
+ |X glom.core.PathAccessError: could not access 'zzz', part 1 of Path('a', 'zzz'), got error: KeyError('zzz')
+ |\ Spec: -1
+                    ' or other Spec-like type, not: %r' % (spec,))
+TypeError: expected spec to be dict, list, tuple, callable, string, or other Spec-like type, not: -1",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G005__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G005,param-dependency,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G005__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G005,param-dependency,medium,B2_raw_api_docs,False,runtime_error,exec_error,"glom.core.GlomError.wrap(TypeError): error raised while processing, details below.
+ Target-spec trace (most recent last):
+ - Target: {'a': {'b': 1}}
+ + Spec: Coalesce('a.zzz', -1)
+ |\ Spec: 'a.zzz'
+ |X glom.core.PathAccessError: could not access 'zzz', part 1 of Path('a', 'zzz'), got error: KeyError('zzz')
+ |\ Spec: -1
+                    ' or other Spec-like type, not: %r' % (spec,))
+TypeError: expected spec to be dict, list, tuple, callable, string, or other Spec-like type, not: -1",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G005__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G005,param-dependency,medium,B3_oracle_api_sequence,False,runtime_error,exec_error,"glom.core.GlomError.wrap(TypeError): error raised while processing, details below.
+ Target-spec trace (most recent last):
+ - Target: {'a': {'b': 1}}
+ + Spec: Coalesce('a.zzz', -1)
+ |\ Spec: 'a.zzz'
+ |X glom.core.PathAccessError: could not access 'zzz', part 1 of Path('a', 'zzz'), got error: KeyError('zzz')
+ |\ Spec: -1
+                    ' or other Spec-like type, not: %r' % (spec,))
+TypeError: expected spec to be dict, list, tuple, callable, string, or other Spec-like type, not: -1",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G005__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G005,param-dependency,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G005__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G006,param-dependency,medium,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G006__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G006,param-dependency,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G006__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G006,param-dependency,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G006__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G006,param-dependency,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G006__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G006,param-dependency,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G006__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G007,shared-receiver,medium,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G007__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G007,shared-receiver,medium,B1_api_list,False,wrong_output,wrong_behavior,"returned {'a': {'b': 99}}, expected 99",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G007__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G007,shared-receiver,medium,B2_raw_api_docs,False,wrong_output,wrong_behavior,"returned {'a': {'b': 99}}, expected 99",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G007__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G007,shared-receiver,medium,B3_oracle_api_sequence,False,runtime_error,exec_error,"glom.core.PathAccessError: error raised while processing, details below.
+ Target-spec trace (most recent last):
+ - Target: {'a': {'b': 99}}
+ - Spec: (Assign(Path('a', 'b'), 99), T['a.b'])
+ - Spec: Assign(Path('a', 'b'), 99)
+ - Spec: T['a.b']
+glom.core.PathAccessError: could not access 'a.b', part 0 of T['a.b'], got error: KeyError('a.b')",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G007__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G007,shared-receiver,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G007__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G008,shared-receiver,medium,B0_direct,False,runtime_error,exec_error,AttributeError: 'Assign' object has no attribute 'glom'. Did you mean: 'glomit'?,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G008__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G008,shared-receiver,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G008__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G008,shared-receiver,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G008__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G008,shared-receiver,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G008__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G008,shared-receiver,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G008__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G009,return-flow,medium,B0_direct,False,runtime_error,exec_error,"glom.core.GlomError.wrap(TypeError): error raised while processing, details below.
+ Target-spec trace (most recent last):
+ - Target: {'items': [{'v': 10}, {'v': 20}]}
+ - Spec: ('items', [{'v': 'v'}], 0, 'v')
+ - Spec: 'items'
+ - Target: [{'v': 10}, {'v': 20}]
+ - Spec: [{'v': 'v'}]
+ - Target: [{'v': 10}, {'v': 20}]
+ - Spec: 0
+                    ' or other Spec-like type, not: %r' % (spec,))
+TypeError: expected spec to be dict, list, tuple, callable, string, or other Spec-like type, not: 0",C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G009__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G009,return-flow,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G009__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G009,return-flow,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G009__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G009,return-flow,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G009__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G009,return-flow,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G009__B4_gold_pair_rule.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G010,config-return-contract,medium,B0_direct,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G010__B0_direct.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G010,config-return-contract,medium,B1_api_list,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G010__B1_api_list.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G010,config-return-contract,medium,B2_raw_api_docs,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G010__B2_raw_api_docs.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G010,config-return-contract,medium,B3_oracle_api_sequence,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G010__B3_oracle_api_sequence.py
+1,openai:deepseek-ai/DeepSeek-V3,glom-G010,config-return-contract,medium,B4_gold_pair_rule,True,,,,C:\Users\Tzx25\Documents\Codex\2026-06-15\pyluvtan-pair-coder-git-https-github\PairCoder\result\glom_dsv3\generations\openai_deepseek-ai_DeepSeek-V3__glom-G010__B4_gold_pair_rule.py

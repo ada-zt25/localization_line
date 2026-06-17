@@ -1,0 +1,42 @@
+[
+  {
+    "relation": "lifecycle",
+    "anchors": [
+      "d.thaw"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: A frozen diot must use thaw() context manager before modification.",
+    "rule": "A frozen diot must use thaw() context manager before modification.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 2"
+  },
+  {
+    "relation": "shared-receiver",
+    "anchors": [
+      "d.thaw"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: Modifications inside thaw() must act on the same frozen diot.",
+    "rule": "Modifications inside thaw() must act on the same frozen diot.",
+    "witness": "NO_DIVERGENCE",
+    "witness_detail": "both return 2"
+  },
+  {
+    "relation": "config-return-contract",
+    "anchors": [
+      "d.to_dict"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: diot_nest=False ensures to_dict() returns non-recursive plain dicts.",
+    "rule": "diot_nest=False ensures to_dict() returns non-recursive plain dicts.",
+    "witness": "FIRES",
+    "witness_detail": "compliant=True vs violating=False"
+  },
+  {
+    "relation": "completion-obligation",
+    "anchors": [
+      "d.thaw"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: thaw() must enclose modifications or they raise DiotFrozenError.",
+    "rule": "thaw() must enclose modifications or they raise DiotFrozenError.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 2"
+  }
+]

@@ -1,0 +1,8 @@
+ Here is the Python code for the `durable_update` function as per your requirements:
+
+```python
+def durable_update(items):
+    with make_store() as db:
+        db.update(items)
+        db.commit()
+```

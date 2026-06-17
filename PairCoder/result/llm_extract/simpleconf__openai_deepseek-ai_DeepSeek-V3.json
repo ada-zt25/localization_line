@@ -1,0 +1,58 @@
+{
+  "raw": "Here are the pairwise API composition constraints:\n\nRELATION: lifecycle | APIS: ProfileConfig.with_profile, ProfileConfig.current_profile | RULE: current_profile must be called within the with_profile context to get the temporary profile.  \nRELATION: param-dependency | APIS: ProfileConfig.load, ProfileConfig.use_profile | RULE: use_profile's profile argument must exist in the profiles loaded by ProfileConfig.load.  \nRELATION: shared-receiver | APIS: ProfileConfig.use_profile, ProfileConfig.current_profile | RULE: both must operate on the same config object to reflect/profile changes correctly.  \nRELATION: return-flow | APIS: Config.load, ProfileConfig.load | RULE: Config.load's Diot output must be passed as the conf argument to ProfileConfig.load.  \nRELATION: completion-obligation | APIS: ProfileConfig.with_profile, (context exit) | RULE: the with_profile context must complete to revert to the original profile.  \nRELATION: config-return-contract | APIS: ProfileConfig.load, ProfileConfig.current_profile | RULE: current_profile returns the name matching the profile hierarchy specified in load's base parameter.",
+  "proposals": [
+    {
+      "relation": "lifecycle",
+      "anchors": [
+        "ProfileConfig.with_profile",
+        "ProfileConfig.current_profile"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: current_profile must be called within the with_profile context to get the temporary profile.",
+      "rule": "current_profile must be called within the with_profile context to get the temporary profile."
+    },
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "ProfileConfig.load",
+        "ProfileConfig.use_profile"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: use_profile's profile argument must exist in the profiles loaded by ProfileConfig.load.",
+      "rule": "use_profile's profile argument must exist in the profiles loaded by ProfileConfig.load."
+    },
+    {
+      "relation": "shared-receiver",
+      "anchors": [
+        "ProfileConfig.use_profile",
+        "ProfileConfig.current_profile"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: both must operate on the same config object to reflect/profile changes correctly.",
+      "rule": "both must operate on the same config object to reflect/profile changes correctly."
+    },
+    {
+      "relation": "return-flow",
+      "anchors": [
+        "Config.load",
+        "ProfileConfig.load"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: Config.load's Diot output must be passed as the conf argument to ProfileConfig.load.",
+      "rule": "Config.load's Diot output must be passed as the conf argument to ProfileConfig.load."
+    },
+    {
+      "relation": "completion-obligation",
+      "anchors": [
+        "ProfileConfig.with_profile"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: the with_profile context must complete to revert to the original profile.",
+      "rule": "the with_profile context must complete to revert to the original profile."
+    },
+    {
+      "relation": "config-return-contract",
+      "anchors": [
+        "ProfileConfig.load",
+        "ProfileConfig.current_profile"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: current_profile returns the name matching the profile hierarchy specified in load's base parameter.",
+      "rule": "current_profile returns the name matching the profile hierarchy specified in load's base parameter."
+    }
+  ]
+}

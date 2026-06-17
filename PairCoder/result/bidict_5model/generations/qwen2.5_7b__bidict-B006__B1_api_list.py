@@ -1,0 +1,7 @@
+def set_through_inverse(pairs, key, val):
+    b = bidict(pairs)
+    try:
+        b.inv[val] = key
+    except KeyDuplicationError:
+        raise ValueError("Key already exists in the bidirectional mapping")
+    return b[key]

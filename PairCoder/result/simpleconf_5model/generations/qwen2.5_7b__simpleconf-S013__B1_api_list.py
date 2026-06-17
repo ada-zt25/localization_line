@@ -1,0 +1,7 @@
+def use_then_with_restore(profiles):
+    pc = ProfileConfig.load(profiles, base='default')
+    mid = pc.conf.x
+    with pc.with_profile('default'):
+        mid = pc.conf.x
+    after = pc.conf.x
+    return (mid, after)

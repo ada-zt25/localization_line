@@ -1,0 +1,4 @@
+def thaw_is_temporary(data, key, val):
+    with FrozenDiot(data) as d:
+        d[key] = val
+    return d

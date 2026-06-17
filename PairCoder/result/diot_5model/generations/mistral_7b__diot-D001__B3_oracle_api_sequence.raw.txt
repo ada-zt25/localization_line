@@ -1,0 +1,14 @@
+ Here is the Python code for the function `access_camel`:
+
+```python
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def access_camel(data):
+    camel_case_diot = OrderedDiot(FrozenDiot(data), camel_to_snake)
+    try:
+        return camel_case_diot.fooBar
+    except DiotFrozenError:
+        raise ValueError("The provided data does not contain the key 'foo_bar'")
+```
+
+In this code, `camel_to_snake` is a helper function that converts camelCase keys to snake_case. However, since it was not provided in your question, I assumed it is already defined and available for use. If needed, you can find an implementation of the `camel_to_snake` function online.

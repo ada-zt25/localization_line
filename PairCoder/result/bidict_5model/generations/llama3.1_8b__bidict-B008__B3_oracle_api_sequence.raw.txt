@@ -1,0 +1,12 @@
+```python
+from bidict import bidict, frozenbidict, OrderedBidict
+
+def atomic_add(pairs, batch):
+    b = bidict(pairs)
+    try:
+        for key, value in batch:
+            b.add(key, value)
+    except (KeyDuplicationError, ValueDuplicationError):
+        pass
+    return dict(b)
+```

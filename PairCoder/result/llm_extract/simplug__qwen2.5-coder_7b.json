@@ -1,0 +1,80 @@
+{
+  "raw": "RELATION: param-dependency | APIS: make_first_score_manager(), make_last_score_manager() | RULE: The score hook mode (FIRST or LAST) is determined by which function is used to create the manager.\n\nRELATION: return-flow | APIS: sp.hooks.score(value), sp.plugins_context(plugins) | RULE: The result of sp.hooks.score(value) must be passed into sp.plugins_context(plugins) for it to have any effect.\n\nRELATION: shared-receiver | APIS: sp, wrapper.enable(), wrapper.disable() | RULE: All calls related to a single plugin (e.g., enabling or disabling) must be made on the same Simplug manager object.\n\nRELATION: config-return-contract | APIS: make_score_manager(), make_first_score_manager(), make_last_score_manager() | RULE: The return type and shape of the functions are determined by whether they use make_score_manager, make_first_score_manager, or make_last_score_manager.\n\nRELATION: lifecycle | APIS: sp.disable(*names), sp.enable(*names) | RULE: Plugin enabling and disabling must be done within the same Simplug manager's lifecycle to take effect.\n\nRELATION: completion-obligation | APIS: sp.hooks.score(value), sp.get_plugin(name).disable() | RULE: A call to sp.hooks.score(value) must be paired with a call to disable or enable on a plugin wrapper to have any observable effect.\n---\nRELATION: param-dependency | APIS: make_score_manager(), make_first_score_manager(), make_last_score_manager() | RULE: The choice of which API to use determines the behavior of the score hook, specifically whether it returns the first or last result.\n---\nRELATION: param-dependency | APIS: make_first_score_manager(), make_last_score_manager() | RULE: The result mode of the score hook is determined by which function is used to create the manager (FIRST or LAST).\n\nRELATION: return-flow | APIS: sp.hooks.score(value), sp.plugins_context(plugins) | RULE: The results returned by sp.hooks.score(value) must be passed into the plugins_context context manager for processing.\n\nRELATION: shared-receiver | APIS: sp, wrapper.enable(), wrapper.disable() | RULE: Both operations (enabling and disabling a plugin) must be performed on the same Simplug manager object.\n\nRELATION: config-return-contract | APIS: make_score_manager(), make_first_score_manager(), make_last_score_manager() | RULE: The return type or shape of the manager is determined by which function is used to create it (standard, first, or last result mode).\n\nRELATION: lifecycle | APIS: sp.disable(*names), sp.enable(*names) | RULE: Plugin enabling and disabling operations must be performed within a valid Simplug manager context.\n\nRELATION: completion-obligation | APIS: sp.hooks.score(value), wrapper.disable() | RULE: A call to sp.hooks.score(value) must be paired with an appropriate discharge call (e.g., disabling a plugin) to take effect.",
+  "proposals": [
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "make_first_score_manager",
+        "make_last_score_manager"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: The result mode of the score hook is determined by which function is used to create the manager (FIRST or LAST).",
+      "rule": "The result mode of the score hook is determined by which function is used to create the manager (FIRST or LAST)."
+    },
+    {
+      "relation": "return-flow",
+      "anchors": [
+        "sp.hooks.score",
+        "sp.plugins_context"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: The results returned by sp.hooks.score(value) must be passed into the plugins_context context manager for processing.",
+      "rule": "The results returned by sp.hooks.score(value) must be passed into the plugins_context context manager for processing."
+    },
+    {
+      "relation": "shared-receiver",
+      "anchors": [
+        "sp",
+        "wrapper.enable",
+        "wrapper.disable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: Both operations (enabling and disabling a plugin) must be performed on the same Simplug manager object.",
+      "rule": "Both operations (enabling and disabling a plugin) must be performed on the same Simplug manager object."
+    },
+    {
+      "relation": "config-return-contract",
+      "anchors": [
+        "make_score_manager",
+        "make_first_score_manager",
+        "make_last_score_manager"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: The return type or shape of the manager is determined by which function is used to create it (standard, first, or last result mode).",
+      "rule": "The return type or shape of the manager is determined by which function is used to create it (standard, first, or last result mode)."
+    },
+    {
+      "relation": "lifecycle",
+      "anchors": [
+        "sp.disable",
+        "sp.enable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: Plugin enabling and disabling operations must be performed within a valid Simplug manager context.",
+      "rule": "Plugin enabling and disabling operations must be performed within a valid Simplug manager context."
+    },
+    {
+      "relation": "completion-obligation",
+      "anchors": [
+        "sp.hooks.score",
+        "sp.get_plugin.disable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: A call to sp.hooks.score(value) must be paired with a call to disable or enable on a plugin wrapper to have any observable effect.",
+      "rule": "A call to sp.hooks.score(value) must be paired with a call to disable or enable on a plugin wrapper to have any observable effect."
+    },
+    {
+      "relation": "param-dependency",
+      "anchors": [
+        "make_score_manager",
+        "make_first_score_manager",
+        "make_last_score_manager"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: The choice of which API to use determines the behavior of the score hook, specifically whether it returns the first or last result.",
+      "rule": "The choice of which API to use determines the behavior of the score hook, specifically whether it returns the first or last result."
+    },
+    {
+      "relation": "completion-obligation",
+      "anchors": [
+        "sp.hooks.score",
+        "wrapper.disable"
+      ],
+      "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: A call to sp.hooks.score(value) must be paired with an appropriate discharge call (e.g., disabling a plugin) to take effect.",
+      "rule": "A call to sp.hooks.score(value) must be paired with an appropriate discharge call (e.g., disabling a plugin) to take effect."
+    }
+  ]
+}

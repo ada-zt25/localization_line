@@ -1,0 +1,6 @@
+def assign_in_place(data, path, val):
+    try:
+        glom(data, Assign(path, val))
+        return Coalesce(*glom(data, path))
+    except PathAccessError:
+        raise ValueError(f"Path '{path}' not found in data")

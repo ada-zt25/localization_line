@@ -1,0 +1,8 @@
+def atomic_add(pairs, batch):
+  try:
+    b = bidict()
+    b.putall(pairs)
+    b.putall(batch)
+    return b
+  except DuplicationError:
+    return {}

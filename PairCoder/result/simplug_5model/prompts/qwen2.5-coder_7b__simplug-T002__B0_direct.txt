@@ -1,0 +1,16 @@
+You are writing Python code using the simplug library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+make_score_manager(), make_first_score_manager() and make_last_score_manager() are available; each returns (sp, alpha, beta, gamma) backed by the real simplug library (sp is a Simplug manager with a 'score' hook and three plugins).
+
+Task:
+Write function only_alpha_gamma_score(value). Use make_score_manager() to get sp, alpha, beta, gamma. Run sp.hooks.score(value) with only alpha and gamma enabled temporarily, then return the hook result.
+
+
+
+Requirements:
+- Define only the function only_alpha_gamma_score.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

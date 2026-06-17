@@ -1,0 +1,17 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function access_snake(data). data is a dict with a camelCase key 'fooBar'. Build a Diot whose keys are accessible in snake_case, and return d.foo_bar.
+
+Abstract API sequence (call order only; you choose the constructor options):
+d = Diot(data, <options>); then access the requested key
+
+Requirements:
+- Define only the function access_snake.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

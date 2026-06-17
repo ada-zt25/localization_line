@@ -1,7 +1,0 @@
-def restructure(data):
-    try:
-        name = glom(data, 'a.b', default=None)
-        n = glom(data, ('items', len), default=0)
-        return {'name': name, 'n': n}
-    except PathAccessError:
-        return {'name': None, 'n': 0}

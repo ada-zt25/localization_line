@@ -1,0 +1,4 @@
+def load_then_get(data, key):
+    config = ProfileConfig()
+    config.load(data)
+    return config[key]

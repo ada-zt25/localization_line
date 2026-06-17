@@ -1,0 +1,7 @@
+def first_score(value):
+    sp, alpha, beta, gamma = make_first_score_manager()
+
+    with plugins_context([alpha, beta, gamma]):
+        disable(*[plugin.name for plugin in [alpha, beta, gamma] if plugin.name != 'score'])
+        enable('score')
+        sp.hooks.score(value)

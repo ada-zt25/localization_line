@@ -1,4 +1,0 @@
-def parse_then_use(args):
-    params = Params(count=int)
-    parsed_args = params.parse(args, POSITIONAL)
-    return parsed_args.count * 2

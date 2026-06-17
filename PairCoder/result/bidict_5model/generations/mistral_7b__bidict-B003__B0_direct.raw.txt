@@ -1,0 +1,12 @@
+ ```python
+from bidict import bidict, frozenbidict, OrderedBidict
+
+def inverse_view(pairs):
+    bi = bidict(pairs)
+    if isinstance(bi, frozenbidict):
+        return OrderedBidict(zip(bi.values, bi.keys))
+    elif isinstance(bi, OrderedBidict):
+        return frozenbidict(zip(bi.values, bi.keys))
+    else:
+        raise DuplicationError("Inverse view creation failed due to duplicated keys or values.")
+```

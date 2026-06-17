@@ -1,0 +1,9 @@
+def restructure(data):
+    return glom.Assign(
+        'name', glom.glom(data, 'a.b')
+    )(
+        glom.Assign(
+            'n',
+            len(glom.glom(data, 'items'))
+        )(data)
+    )

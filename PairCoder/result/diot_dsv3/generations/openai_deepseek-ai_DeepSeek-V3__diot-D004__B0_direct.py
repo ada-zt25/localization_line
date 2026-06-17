@@ -1,0 +1,8 @@
+def to_plain_dict(data):
+    if isinstance(data, (Diot, OrderedDiot, FrozenDiot)):
+        data = dict(data.items())
+    if isinstance(data, dict):
+        return {k: to_plain_dict(v) for k, v in data.items()}
+    elif isinstance(data, (list, tuple)):
+        return [to_plain_dict(v) for v in data]
+    return data

@@ -1,0 +1,17 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function mutate_then_read(data, key, val). Load a config, set conf[key]=val, then read key back from the SAME config and return it.
+
+Abstract API sequence (call order only):
+Config.load(...); write conf[key]; then read conf[key]
+
+Requirements:
+- Define only the function mutate_then_read.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

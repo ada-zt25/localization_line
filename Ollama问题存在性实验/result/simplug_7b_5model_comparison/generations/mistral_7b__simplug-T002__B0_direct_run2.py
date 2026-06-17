@@ -1,7 +1,0 @@
-def only_alpha_gamma_score(value):
-    sp.hooks.enable('alpha')
-    sp.hooks.enable('gamma')
-    sp.hooks.disable('beta')
-    score = sp.hooks.score(value)
-    sp.hooks.enable('beta')  # enable beta again after scoring
-    return score

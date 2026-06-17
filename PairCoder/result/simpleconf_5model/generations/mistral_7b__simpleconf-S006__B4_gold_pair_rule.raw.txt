@@ -1,0 +1,7 @@
+ Here is the Python code for the `load_then_get` function as per your requirements:
+
+```python
+def load_then_get(data, key):
+    with ProfileConfig.with_profile(None, Config.load(data)) as config:
+        return config[key]
+```

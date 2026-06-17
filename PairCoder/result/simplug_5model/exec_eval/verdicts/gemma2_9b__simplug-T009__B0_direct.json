@@ -1,0 +1,1 @@
+{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "AttributeError: type object 'Alpha' has no attribute 'get_wrapper'"}

@@ -1,0 +1,2 @@
+def to_plain_dict(data):
+  return dict(OrderedDiot(data).to_plain())

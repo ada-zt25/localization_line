@@ -1,4 +1,0 @@
-def get_beta_wrapper_disable_then_score(value):
-    with plugins_context([beta.get_plugin()]):
-        beta.get_plugin().disable()
-        return sp.hooks.score(value)

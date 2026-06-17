@@ -1,5 +1,0 @@
-def parse_int(args):
-    p = Params()
-    p.add_param('count', type='int')
-    ns = p.parse(args)
-    return ns.count

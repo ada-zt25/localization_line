@@ -1,0 +1,8 @@
+def merge_get(base, override, key):
+    with ProfileConfig.with_profile(base, current=ProfileConfig.current_profile(base)):
+        ProfileConfig.load(base)
+
+    ProfileConfig.use_profile(override, current=ProfileConfig.current_profile(base))
+    ProfileConfig.load(override)
+
+    return base[key]

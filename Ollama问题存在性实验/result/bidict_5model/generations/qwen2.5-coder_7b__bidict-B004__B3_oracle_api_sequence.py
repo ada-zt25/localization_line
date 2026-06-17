@@ -1,9 +1,0 @@
-def remap(pairs, key, val):
-    b = bidict(pairs)
-    try:
-        b.forceput(key, val)
-    except DuplicationError as e:
-        old_key = next(k for k, v in pairs.items() if v == val)
-        del b[old_key]
-        b[key] = val
-    return dict(b)

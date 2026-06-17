@@ -1,0 +1,10 @@
+ Here is the Python code for the `get_default` function as per your requirements:
+
+```python
+def get_default(data, key):
+    d = Diot(data)
+    try:
+        return d[key]
+    except KeyError:
+        return 0
+```

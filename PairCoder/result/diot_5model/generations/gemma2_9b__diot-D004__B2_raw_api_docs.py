@@ -1,0 +1,2 @@
+def to_plain_dict(data):
+  return Diot.from_dict(data).to_dict(diot_nest=False)

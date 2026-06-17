@@ -1,0 +1,17 @@
+You are writing Python code using the glom library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+glom, Coalesce, Assign, T, Path and PathAccessError (real glom names) are available
+
+Task:
+Write function restructure(data). data has data['a']['b'] (a string) and a list data['items']. Return a NEW dict {'name': <data.a.b>, 'n': <number of items>} -- the output shape is a dict you specify.
+
+Abstract API sequence (call order only; you choose the spec):
+glom(data, <spec>)
+
+Requirements:
+- Define only the function restructure.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

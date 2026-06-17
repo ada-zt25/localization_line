@@ -1,0 +1,6 @@
+from diot import Diot
+
+def todict_then_index(data):
+    di = Diot(data)
+    plain_dict = di.toatoms()
+    return plain_dict['x']['y']

@@ -1,5 +1,0 @@
-def key_for(pairs, val):
-    try:
-        return bidict(pairs).inv[val]
-    except KeyError:
-        raise ValueError(f"No key found for value {val}")

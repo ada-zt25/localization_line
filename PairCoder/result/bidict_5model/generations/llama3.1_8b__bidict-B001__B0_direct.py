@@ -1,0 +1,5 @@
+from bidict import Bidict, frozenbidict
+
+def key_for(pairs, val):
+    b = Bidict(pairs)
+    return b.inv[val]

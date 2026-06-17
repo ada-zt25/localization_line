@@ -1,0 +1,2 @@
+def first_item(data):
+    return glom(data, Coalesce(T['items'].get(0, {}), PathAccessError))['v']

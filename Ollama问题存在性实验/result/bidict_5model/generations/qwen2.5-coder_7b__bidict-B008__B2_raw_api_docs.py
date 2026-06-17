@@ -1,6 +1,0 @@
-def atomic_add(bidict, batch):
-    try:
-        bidict.putall(batch)
-    except DuplicationError:
-        pass
-    return dict(bidict)

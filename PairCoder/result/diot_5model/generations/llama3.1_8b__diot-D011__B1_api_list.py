@@ -1,0 +1,7 @@
+def thaw_to_modify(data, key, val):
+    with FrozenDiot(data).thaw() as d:
+        if key in d:
+            d[key] = val
+        else:
+            raise KeyError(key)
+        return d[key]

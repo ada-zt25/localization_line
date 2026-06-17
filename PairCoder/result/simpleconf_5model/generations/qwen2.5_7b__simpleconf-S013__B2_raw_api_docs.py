@@ -1,0 +1,15 @@
+def use_then_with_restore(profiles):
+    conf = Config.load(profiles)
+    prod = ProfileConfig(conf, 'prod')
+    default = ProfileConfig(conf, 'default')
+
+    mid = None
+    after = None
+
+    with prod.use_profile():
+        mid = conf.x
+        with default.with_profile():
+            pass
+    after = conf.x
+
+    return (mid, after)

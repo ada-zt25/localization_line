@@ -1,0 +1,17 @@
+You are writing Python code using the simpleconf library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Config and ProfileConfig (real simpleconf classes) are available
+
+Task:
+Write function load_then_get(data, key). Load a config from data and return the value at key from that loaded config.
+
+Abstract API sequence (call order only):
+Config.load(data); then read [key]
+
+Requirements:
+- Define only the function load_then_get.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

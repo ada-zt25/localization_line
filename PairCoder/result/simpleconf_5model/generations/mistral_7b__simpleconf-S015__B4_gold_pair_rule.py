@@ -1,0 +1,10 @@
+import simpleconf
+
+def nested_with_profiles(profiles):
+    with ProfileConfig.load(profiles, base='default') as conf:
+        with conf.with_profile('prod'):
+            a = conf['x']
+        with conf.with_profile('default'):
+            b = conf['x']
+        c = conf['x'] with conf.with_profile('prod')
+    return (a, b, c)

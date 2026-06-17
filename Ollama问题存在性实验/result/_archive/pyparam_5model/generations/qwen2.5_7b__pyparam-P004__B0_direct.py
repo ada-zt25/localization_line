@@ -1,5 +1,0 @@
-def parse_list(args):
-    p = Params()
-    p.add('items', list, POSITIONAL)
-    p.parse_args(args)
-    return p['items']

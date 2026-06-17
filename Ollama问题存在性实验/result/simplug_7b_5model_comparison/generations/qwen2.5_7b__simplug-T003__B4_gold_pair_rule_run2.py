@@ -1,4 +1,0 @@
-def disable_beta_then_score(value):
-    sp.disable("beta")
-    result = sp.hooks.score(value)
-    return result

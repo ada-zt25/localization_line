@@ -1,0 +1,17 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function get_default(data, key). Build a Diot from data and return the value for key, or 0 if the key is absent (do not raise).
+
+Abstract API sequence (call order only):
+d = Diot(data); then read the key with a fallback for the missing case
+
+Requirements:
+- Define only the function get_default.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

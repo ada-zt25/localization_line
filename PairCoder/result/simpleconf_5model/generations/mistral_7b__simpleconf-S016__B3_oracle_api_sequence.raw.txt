@@ -1,0 +1,10 @@
+ Here is the Python code for the function `use_survives_with` using simpleconf library:
+
+```python
+from contextlib import contextmanager
+
+def use_survives_with(profiles):
+    with profiles['prod'].load(), contextmanager(profiles['default'])(None):
+        conf = Config()
+        return conf.x
+```

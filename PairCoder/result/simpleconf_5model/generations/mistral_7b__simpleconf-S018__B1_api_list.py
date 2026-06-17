@@ -1,0 +1,9 @@
+from simpleconf import Config, ProfileConfig
+
+def two_reads_same_conf(profiles):
+    with ProfileConfig.load(profiles, base='default').with_profile('prod'):
+        conf = ProfileConfig.current_profile()
+        x1 = conf['x']
+        Config.load([conf], loader=None)
+        x2 = conf['x']
+        return (x1, x2)

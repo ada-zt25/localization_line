@@ -1,0 +1,12 @@
+from bidict import bidict, frozenbidict, OrderedBidict
+from typing import List, Tuple
+
+def atomic_add(pairs: bidict, batch: List[Tuple[str, str]]) -> dict:
+    b = bidict(pairs)
+    try:
+        for key, value in batch:
+            b.update({key: value})
+        return dict(frozenbidict(b))
+    except (ValueDuplicationError, KeyDuplicationError, DuplicationError):
+        pass
+    return {}

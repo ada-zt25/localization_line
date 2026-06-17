@@ -1,0 +1,17 @@
+
+# Fair closed-loop (dev-feedback / held-out eval), K=3, runs=1, model=openai:deepseek-ai/DeepSeek-V3
+conditions: B0, B1, B3, B4, B5_loop
+
+splittable tasks: 6  (glom)
+  run 1/1 done
+
+## Held-out pass rate (fair, equal budget K, mean over runs)
+  B0       : 4/6 = 0.667
+  B1       : 6/6 = 1.000
+  B3       : 4/6 = 0.667
+  B4       : 6/6 = 1.000
+  B5_loop  : 6/6 = 1.000
+  B0 - B4 = -0.333
+  B1 - B4 = +0.000
+  B3 - B4 = -0.333
+  B5_loop - B4 = +0.000

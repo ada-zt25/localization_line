@@ -1,0 +1,4 @@
+from glom import Coalesce, Path, T, Assign
+
+def deep_get(data, path):
+    return Coalesce(Path(path), T())(data)

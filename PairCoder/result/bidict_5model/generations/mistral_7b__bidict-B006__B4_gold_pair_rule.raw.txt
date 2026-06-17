@@ -1,0 +1,8 @@
+ Here is the Python code for the function `set_through_inverse` as per your requirements:
+
+```python
+def set_through_inverse(pairs, key, val):
+    b = bidict(pairs)
+    b.forceput(val, key)
+    return b[key]
+```

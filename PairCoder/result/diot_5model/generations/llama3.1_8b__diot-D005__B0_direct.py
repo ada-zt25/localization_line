@@ -1,0 +1,5 @@
+def nested_stays_dict(data):
+    diot = Diot()
+    diot.config.nested_dicts = False
+    d = diot.from_dict(data)
+    return d['x']

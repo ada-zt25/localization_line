@@ -1,0 +1,16 @@
+You are writing Python code using the diot library.
+Return only Python code. Do not include Markdown fences. Do not explain.
+
+Assume the following already exist and are correct:
+Diot, OrderedDiot, FrozenDiot (real diot classes) and DiotFrozenError are available
+
+Task:
+Write function to_plain_dict(data). data is a nested dict. Build a Diot from it and return it converted to a recursively PLAIN dict (no Diot anywhere inside).
+
+
+
+Requirements:
+- Define only the function to_plain_dict.
+- Do not redefine the provided helpers.
+- Use the provided helpers/objects.
+- Return only executable Python code.

@@ -1,0 +1,13 @@
+ ```python
+from bidict import bidict, frozenbidict, OrderedBidict
+from typing import Iterable
+
+def roundtrip(pairs: Iterable[tuple], key):
+    b = bidict(pairs)
+    try:
+        return b.inv[key]
+    except KeyError:
+        raise ValueError(f"Key {key} not found in the provided pairs.")
+    finally:
+        b = frozenbidict(b)  # ensure immutability after lookup
+```

@@ -1,0 +1,7 @@
+from bidict import Bidict, frozenbidict
+
+def remap(pairs, key, val):
+    b = Bidict()
+    b.update(frozenbidict(pairs))
+    b.forceput(key, val)
+    return dict(b)

@@ -1,0 +1,6 @@
+def with_profile_temporary(profiles, profile):
+    config = ProfileConfig.load(profiles, base='default')
+    with ProfileConfig.with_profile(config, profile):
+        inside = config['conf.x']
+    after = config['conf.x']
+    return (inside, after)

@@ -1,0 +1,67 @@
+[
+  {
+    "relation": "shared-receiver",
+    "anchors": [
+      "b.inv",
+      "b.forceput"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: shared-receiver\nConstraint: Mutating b.inv affects the same bidict as mutating b directly.",
+    "rule": "Mutating b.inv affects the same bidict as mutating b directly.",
+    "witness": "FIRES",
+    "witness_detail": "compliant=True vs violating=False"
+  },
+  {
+    "relation": "return-flow",
+    "anchors": [
+      "b.inv"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: return-flow\nConstraint: The inverse view b.inv must be used to query a value->key lookup after inserting via b[key].",
+    "rule": "The inverse view b.inv must be used to query a value->key lookup after inserting via b[key].",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 'b'"
+  },
+  {
+    "relation": "param-dependency",
+    "anchors": [
+      "b.forceput",
+      "b.putall"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: param-dependency\nConstraint: Use forceput to bypass duplication checks when putall would raise DuplicationError.",
+    "rule": "Use forceput to bypass duplication checks when putall would raise DuplicationError.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns bidict({'a': 3, 'b': 2})"
+  },
+  {
+    "relation": "lifecycle",
+    "anchors": [
+      "frozenbidict",
+      "b.forceput"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: lifecycle\nConstraint: forceput cannot be called on a frozenbidict as it is immutable.",
+    "rule": "forceput cannot be called on a frozenbidict as it is immutable.",
+    "witness": "FIRES",
+    "witness_detail": "violating() raises while compliant() returns 2"
+  },
+  {
+    "relation": "completion-obligation",
+    "anchors": [
+      "b.putall",
+      "DuplicationError"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: completion-obligation\nConstraint: If putall raises DuplicationError, the entire operation is rolled back atomically.",
+    "rule": "If putall raises DuplicationError, the entire operation is rolled back atomically.",
+    "witness": "FIRES",
+    "witness_detail": "compliant=2 vs violating=1"
+  },
+  {
+    "relation": "config-return-contract",
+    "anchors": [
+      "bidict",
+      "frozenbidict"
+    ],
+    "rule_text": "Relevant API Pair Rule (LLM-proposed):\nRelation: config-return-contract\nConstraint: Constructing with frozenbidict returns an immutable object, rejecting all mutating ops.",
+    "rule": "Constructing with frozenbidict returns an immutable object, rejecting all mutating ops.",
+    "witness": "FIRES",
+    "witness_detail": "compliant=<class 'TypeError'> vs violating=2"
+  }
+]

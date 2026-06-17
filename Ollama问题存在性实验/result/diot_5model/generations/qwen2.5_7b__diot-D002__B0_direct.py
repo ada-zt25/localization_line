@@ -1,5 +1,0 @@
-from diot import Diot
-
-def access_snake(data):
-    d = Diot(**{k.replace('_', ' ').title().replace(' ', '_'): v for k, v in data.items()})
-    return d.foo_bar

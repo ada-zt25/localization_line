@@ -1,0 +1,12 @@
+ Here is the Python code for the `reject_dup` function using the bidict library:
+
+```python
+def reject_dup(pairs, key, val):
+    b = bidict()
+    b.putall(pairs)
+    try:
+        b.forceput(key, val)
+    except DuplicationError as e:
+        pass
+    return dict(b)
+```

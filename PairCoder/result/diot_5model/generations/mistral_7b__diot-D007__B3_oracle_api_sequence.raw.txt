@@ -1,0 +1,9 @@
+ Here is the Python code for the `nested_chain` function:
+
+```python
+from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
+
+def nested_chain(data):
+    d = Diot(data)
+    return d.ordered().get('x').get('y')
+```

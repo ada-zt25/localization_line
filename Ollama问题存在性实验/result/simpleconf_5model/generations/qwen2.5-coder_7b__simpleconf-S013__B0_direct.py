@@ -1,6 +1,0 @@
-def use_then_with_restore(profiles):
-    config = ProfileConfig(profiles)
-    mid = config.conf.x
-    with config.with_profile('default'):
-        after = config.conf.x
-    return mid, after

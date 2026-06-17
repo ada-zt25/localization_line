@@ -1,4 +1,0 @@
-def profile_value(profiles, profile):
-    conf = Config.load(profiles)
-    with use_profile(conf, profile):
-        return getattr(conf, 'x', None)

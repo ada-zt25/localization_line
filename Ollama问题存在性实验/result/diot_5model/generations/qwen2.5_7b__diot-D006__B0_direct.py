@@ -1,5 +1,0 @@
-def nested_is_diot(data):
-    from diot import Diot
-
-    d = Diot(data)
-    return d.x

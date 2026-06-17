@@ -1,0 +1,10 @@
+ Here is a possible implementation of the `coalesce_get` function using the provided helpers:
+
+```python
+from glom import Coalesce, glom
+
+def coalesce_get(data, primary=None, backup=None):
+    return Coalesce(glom(data, primary), glom(data, backup))
+```
+
+This function takes a `data` object and two optional arguments: `primary` (the first candidate to try) and `backup` (the second candidate to try). It uses the `Coalesce` helper to return the value of the first non-empty result of applying the specified paths to the data object. If both candidates are empty, it will raise a `PathAccessError`.

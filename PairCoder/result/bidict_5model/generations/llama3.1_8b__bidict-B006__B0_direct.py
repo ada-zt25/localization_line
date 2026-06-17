@@ -1,0 +1,8 @@
+from bidict import bidict
+
+def set_through_inverse(pairs, key, val):
+    b = bidict()
+    for k, v in pairs:
+        b[k] = v
+    b.inverse[val] = key
+    return b[key]

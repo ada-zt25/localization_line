@@ -1,5 +1,0 @@
-def parse_then_attr(args):
-    p = Params()
-    p.count = int
-    parsed_args = POSITIONAL.parse_args(args)
-    return parsed_args.count

@@ -1,0 +1,6 @@
+def durable_delete(items, key):
+  with make_store() as db:
+    db.update(items)
+    db.commit()
+    del db[key]
+    db.commit()

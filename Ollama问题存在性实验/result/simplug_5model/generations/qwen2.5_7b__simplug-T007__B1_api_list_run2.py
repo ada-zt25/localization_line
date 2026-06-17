@@ -1,6 +1,0 @@
-from simplug import Simplug
-
-sp, alpha, beta, gamma = make_first_score_manager()
-
-def first_score(value):
-    return sp.hooks.score(value)

@@ -1,0 +1,3 @@
+def access_camel(data):
+    d = Diot(data, ordered=True)
+    return getattr(d, 'fooBar')
