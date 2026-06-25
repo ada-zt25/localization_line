@@ -1,9 +1,0 @@
-```python
-def make_frozen(pairs):
-    try:
-        b = bidict(pairs).inv  # Create a mutable bidict and its inverse
-        b.putall(pairs)        # Attempt to put all pairs atomically
-        return frozenbidict(b) # Return the immutable version if successful
-    except DuplicationError:  # Handle potential clashes
-        raise ValueError("Pair duplication error encountered, cannot create frozen bidict")
-```

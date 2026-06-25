@@ -1,2 +1,0 @@
-def summarize(data):
-    return Coalesce(Assign('total', sum), Assign('count', len))(data['nums'])

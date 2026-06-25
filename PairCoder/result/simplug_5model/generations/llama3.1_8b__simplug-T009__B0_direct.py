@@ -1,7 +1,0 @@
-def disable_alpha_gamma_via_wrappers_then_score(value):
-    sp, alpha, beta, gamma = make_score_manager()
-    alpha_wrapper = sp.hooks.score.alpha
-    alpha_wrapper.enabled = False
-    gamma_wrapper = sp.hooks.score.gamma
-    gamma_wrapper.enabled = False
-    return sp.hooks.score(value)

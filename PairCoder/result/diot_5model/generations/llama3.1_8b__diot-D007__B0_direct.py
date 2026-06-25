@@ -1,3 +1,0 @@
-def nested_chain(data):
-    diot = Diot(data)
-    return getattr(diot, 'x').y

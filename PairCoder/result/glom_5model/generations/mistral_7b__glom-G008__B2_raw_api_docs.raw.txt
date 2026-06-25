@@ -1,6 +1,0 @@
- Here is the Python code for the `assign_return_target` function as per your requirements:
-
-```python
-def assign_return_target(data, path, val):
-    return Assign(path, T(val))(data)
-```

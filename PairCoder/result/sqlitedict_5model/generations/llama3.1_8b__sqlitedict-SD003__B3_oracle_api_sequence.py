@@ -1,7 +1,0 @@
-def durable_delete(items, key):
-    store = make_store()
-    for item in items:
-        store[item] = None  # write all items durably
-    store.commit()  # commit changes to make them durable
-    del store[key]  # delete the given key
-    store.commit()  # make deletion durable too

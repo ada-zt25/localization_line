@@ -1,6 +1,0 @@
-def todict_then_index(data):
-    from diot import Diot
-    
-    d = Diot(data, diot_nest=False)
-    plain_dict = d.to_dict()
-    return plain_dict.get('x', {}).get('y')

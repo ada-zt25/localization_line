@@ -1,3 +1,0 @@
-def invert(pairs):
-    b = bidict(pairs)
-    return {v: k for k, v in b.items()}

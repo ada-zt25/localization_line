@@ -1,3 +1,0 @@
-def assign_in_place(data, path, val):
-    glom(data, Assign(path, val))
-    return glom(data, path)

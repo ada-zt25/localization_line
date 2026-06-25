@@ -1,0 +1,6 @@
+[e2e] 5 mixed instances (2 to run); k=5 cap=30 topk=10 workers=8 file_loc=agentless coverage=False file_rerank=0
+[cov] pre-pass: 2 uncached instances x 3 Docker workers (DYNAMIC half; cache=egl_cov_cache.json)
+[cov 1/2] sphinx-doc__sphinx-7738        files=0 exec_lines=0
+[cov 2/2] django__django-13401           files=0 exec_lines=0
+[cov] DYNAMIC half ON: 0/5 instances have failing-test coverage
+[cov] prefetch-only complete (0/5 cached); skipping LLM run.

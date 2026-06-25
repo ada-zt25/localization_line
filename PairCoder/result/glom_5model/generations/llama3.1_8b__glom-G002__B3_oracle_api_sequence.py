@@ -1,4 +1,0 @@
-from glom import glom, Coalesce, Assign
-
-def apply_after_nav(data):
-    return glom(data, Assign('nums_sum', Coalesce(glom.T['nums'], 0).sum()))

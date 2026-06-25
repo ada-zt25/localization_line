@@ -1,3 +1,0 @@
-def key_for(pairs, val):
-    bid = OrderedBidict(pairs)
-    return bid.inv[val]

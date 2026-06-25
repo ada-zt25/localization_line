@@ -1,8 +1,0 @@
- Here is the Python code for the `apply_after_nav` function using the glom library:
-
-```python
-from typing import Any, List
-
-def apply_after_nav(data: Any) -> int:
-    return sum(glom(data, 'nums'))
-```

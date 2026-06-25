@@ -1,9 +1,0 @@
-def mutate_then_read(data, key, val):
-    config = ProfileConfig()
-    config.load(data)
-    profile = config.current_profile(config)
-    with config.with_profile('temp'):
-        config[key] = val
-        result = config[key]
-    config.use_profile(config, profile)
-    return result

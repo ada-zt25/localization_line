@@ -1,7 +1,0 @@
-def atomic_add(pairs, batch):
-    b = pairs.copy()
-    try:
-        b.putall(batch)
-        return dict(b.inv)
-    except DuplicationError:
-        return {}

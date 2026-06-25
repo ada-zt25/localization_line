@@ -1,0 +1,949 @@
+{
+  "results": [
+    {
+      "instance_id": "astropy__astropy-14369",
+      "repo": "astropy/astropy",
+      "gold_files": [
+        "astropy/units/format/cds.py",
+        "astropy/units/format/cds_parsetab.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 39,
+      "n_repo_pyfiles": 941,
+      "n_static": 5,
+      "n_called": 60,
+      "n_neigh": 10,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.436,
+      "line_recall_graph": 0.333,
+      "line_R@1_static": 0,
+      "line_R@5_static": 1,
+      "line_R@10_static": 1,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.5,
+        "line_recall": 0.026,
+        "solved": false,
+        "n_located_lines": 7,
+        "n_located_files": 1,
+        "edited_files": [
+          "astropy/units/format/cds.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 2,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 6,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 7,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 7,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 1,
+        "line_R@10": 1
+      },
+      "done": true
+    },
+    {
+      "instance_id": "astropy__astropy-8707",
+      "repo": "astropy/astropy",
+      "gold_files": [
+        "astropy/io/fits/card.py",
+        "astropy/io/fits/header.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 21,
+      "n_repo_pyfiles": 780,
+      "n_static": 4,
+      "n_called": 34,
+      "n_neigh": 10,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.19,
+      "line_recall_graph": 0.19,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 1,
+      "line_R@1": 0,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 0,
+        "n_located_files": 0,
+        "edited_files": [],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-14623",
+      "repo": "matplotlib/matplotlib",
+      "gold_files": [
+        "lib/matplotlib/axes/_base.py",
+        "lib/matplotlib/ticker.py",
+        "lib/mpl_toolkits/mplot3d/axes3d.py"
+      ],
+      "n_gold_files": 3,
+      "total_gold_lines": 23,
+      "n_repo_pyfiles": 860,
+      "n_static": 5,
+      "n_called": 42,
+      "n_neigh": 0,
+      "fr_static": 0.333,
+      "fr_static_called": 0.667,
+      "fr_graph": 0.667,
+      "all_found_static": 0,
+      "all_found_graph": 0,
+      "recovered_by_graph": [],
+      "recovered_by_called": [
+        "lib/matplotlib/ticker.py"
+      ],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.0,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 43,
+        "n_located_files": 2,
+        "edited_files": [
+          "lib/matplotlib/scale.py",
+          "lib/matplotlib/tests/test_scale.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 11,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 11,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 2,
+            "edited": 19,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 2,
+            "edited": 43,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24870",
+      "repo": "matplotlib/matplotlib",
+      "gold_files": [
+        "lib/matplotlib/contour.py",
+        "lib/matplotlib/tri/_tricontour.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 24,
+      "n_repo_pyfiles": 908,
+      "n_static": 5,
+      "n_called": 47,
+      "n_neigh": 0,
+      "fr_static": 0.5,
+      "fr_static_called": 0.5,
+      "fr_graph": 0.5,
+      "all_found_static": 0,
+      "all_found_graph": 0,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.292,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 1,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 13,
+        "n_located_files": 1,
+        "edited_files": [
+          "lib/matplotlib/tests/test_contour.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 10,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 10,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 13,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25479",
+      "repo": "matplotlib/matplotlib",
+      "gold_files": [
+        "lib/matplotlib/cm.py",
+        "lib/matplotlib/colors.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 4,
+      "n_repo_pyfiles": 894,
+      "n_static": 5,
+      "n_called": 38,
+      "n_neigh": 0,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.25,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.5,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 25,
+        "n_located_files": 1,
+        "edited_files": [
+          "lib/matplotlib/cm.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 5,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 0,
+            "edited": 5,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 0,
+            "edited": 5,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 25,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25775",
+      "repo": "matplotlib/matplotlib",
+      "gold_files": [
+        "lib/matplotlib/backends/backend_agg.py",
+        "lib/matplotlib/backends/backend_cairo.py",
+        "lib/matplotlib/text.py"
+      ],
+      "n_gold_files": 3,
+      "total_gold_lines": 25,
+      "n_repo_pyfiles": 894,
+      "n_static": 5,
+      "n_called": 40,
+      "n_neigh": 0,
+      "fr_static": 0.667,
+      "fr_static_called": 0.667,
+      "fr_graph": 0.667,
+      "all_found_static": 0,
+      "all_found_graph": 0,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.12,
+      "line_recall_graph": 0.08,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 1,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.333,
+        "line_recall": 0.08,
+        "solved": false,
+        "n_located_lines": 4,
+        "n_located_files": 1,
+        "edited_files": [
+          "lib/matplotlib/backends/backend_agg.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 3,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 4,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 4,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 4,
+            "passed": false
+          }
+        ],
+        "line_R@1": 1,
+        "line_R@5": 1,
+        "line_R@10": 1
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-3095",
+      "repo": "pydata/xarray",
+      "gold_files": [
+        "xarray/core/indexing.py",
+        "xarray/core/variable.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 33,
+      "n_repo_pyfiles": 135,
+      "n_static": 5,
+      "n_called": 21,
+      "n_neigh": 4,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.152,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 29,
+        "n_located_files": 1,
+        "edited_files": [
+          "xarray/core/utils.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 5,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 29,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 29,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 0,
+            "edited": 29,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-3305",
+      "repo": "pydata/xarray",
+      "gold_files": [
+        "xarray/core/dataset.py",
+        "xarray/core/variable.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 12,
+      "n_repo_pyfiles": 137,
+      "n_static": 5,
+      "n_called": 25,
+      "n_neigh": 4,
+      "fr_static": 0.5,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 0,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [
+        "xarray/core/dataset.py"
+      ],
+      "line_recall_static": 0.333,
+      "line_recall_graph": 0.083,
+      "line_R@1_static": 0,
+      "line_R@5_static": 1,
+      "line_R@10_static": 1,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 18,
+        "n_located_files": 1,
+        "edited_files": [
+          "xarray/core/duck_array_ops.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 15,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 18,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 18,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 0,
+            "edited": 18,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-3993",
+      "repo": "pydata/xarray",
+      "gold_files": [
+        "xarray/core/dataarray.py",
+        "xarray/core/dataset.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 25,
+      "n_repo_pyfiles": 151,
+      "n_static": 4,
+      "n_called": 25,
+      "n_neigh": 5,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.0,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 0,
+        "n_located_files": 0,
+        "edited_files": [],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited": 0,
+            "passed": false,
+            "no_edits": true
+          },
+          {
+            "round": 1,
+            "edited": 0,
+            "passed": false,
+            "no_edits": true
+          },
+          {
+            "round": 2,
+            "edited": 0,
+            "passed": false,
+            "no_edits": true
+          },
+          {
+            "round": 3,
+            "edited_files": 0,
+            "edited": 0,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-6938",
+      "repo": "pydata/xarray",
+      "gold_files": [
+        "xarray/core/dataset.py",
+        "xarray/core/variable.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 26,
+      "n_repo_pyfiles": 170,
+      "n_static": 5,
+      "n_called": 15,
+      "n_neigh": 5,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.0,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 23,
+        "n_located_files": 1,
+        "edited_files": [
+          "xarray/core/coordinates.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 20,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 23,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 23,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 23,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-6992",
+      "repo": "pydata/xarray",
+      "gold_files": [
+        "xarray/core/dataset.py",
+        "xarray/core/indexes.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 59,
+      "n_repo_pyfiles": 169,
+      "n_static": 5,
+      "n_called": 21,
+      "n_neigh": 4,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.0,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 13,
+        "n_located_files": 1,
+        "edited_files": [
+          "xarray/core/coordinates.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 3,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 0,
+            "edited": 3,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 13,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 13,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12682",
+      "repo": "scikit-learn/scikit-learn",
+      "gold_files": [
+        "examples/decomposition/plot_sparse_coding.py",
+        "sklearn/decomposition/dict_learning.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 63,
+      "n_repo_pyfiles": 726,
+      "n_static": 3,
+      "n_called": 0,
+      "n_neigh": 4,
+      "fr_static": 1.0,
+      "fr_static_called": 1.0,
+      "fr_graph": 1.0,
+      "all_found_static": 1,
+      "all_found_graph": 1,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.032,
+      "line_recall_graph": 0.016,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 1,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 24,
+        "n_located_files": 2,
+        "edited_files": [
+          "sklearn/decomposition/__init__.py",
+          "sklearn/decomposition/tests/test_dict_learning.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 3,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 16,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 23,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 24,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-25102",
+      "repo": "scikit-learn/scikit-learn",
+      "gold_files": [
+        "sklearn/base.py",
+        "sklearn/feature_selection/_base.py"
+      ],
+      "n_gold_files": 2,
+      "total_gold_lines": 23,
+      "n_repo_pyfiles": 906,
+      "n_static": 5,
+      "n_called": 0,
+      "n_neigh": 1,
+      "fr_static": 0.5,
+      "fr_static_called": 0.5,
+      "fr_graph": 0.5,
+      "all_found_static": 0,
+      "all_found_graph": 0,
+      "recovered_by_graph": [],
+      "recovered_by_called": [],
+      "line_recall_static": 0.0,
+      "line_recall_graph": 0.0,
+      "line_R@1_static": 0,
+      "line_R@5_static": 0,
+      "line_R@10_static": 0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "loop": {
+        "file_recall": 0.0,
+        "line_recall": 0.0,
+        "solved": false,
+        "n_located_lines": 28,
+        "n_located_files": 1,
+        "edited_files": [
+          "sklearn/utils/_set_output.py"
+        ],
+        "rounds_run": 4,
+        "per_round": [
+          {
+            "round": 0,
+            "edited_files": 1,
+            "edited": 14,
+            "passed": false
+          },
+          {
+            "round": 1,
+            "edited_files": 1,
+            "edited": 19,
+            "passed": false
+          },
+          {
+            "round": 2,
+            "edited_files": 1,
+            "edited": 28,
+            "passed": false
+          },
+          {
+            "round": 3,
+            "edited_files": 1,
+            "edited": 28,
+            "passed": false
+          }
+        ],
+        "line_R@1": 0,
+        "line_R@5": 0,
+        "line_R@10": 0
+      },
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 13,
+    "fr_static": 0.808,
+    "fr_static_called": 0.872,
+    "fr_graph(+neigh)": 0.872,
+    "all_found_static": 8,
+    "all_found_graph": 9,
+    "line_recall_static": 0.085,
+    "line_recall_graph": 0.107,
+    "line_R@k_static_loc": {
+      "1": 0,
+      "5": 15.4,
+      "10": 30.8
+    },
+    "line_R@k_graph_loc": {
+      "1": 7.7,
+      "5": 23.1,
+      "10": 46.2
+    },
+    "instances_graph_recovered_file": 0,
+    "instances_cov_recovered_file": 2,
+    "loop": {
+      "n": 13,
+      "file_recall": 0.103,
+      "line_recall": 0.008,
+      "solved_rate": 0,
+      "line_R@1": 7.7,
+      "line_R@5": 15.4,
+      "line_R@10": 15.4
+    }
+  }
+}

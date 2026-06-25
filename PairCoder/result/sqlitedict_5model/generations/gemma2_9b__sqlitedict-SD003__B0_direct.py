@@ -1,5 +1,0 @@
-def durable_delete(items, key):
-  with make_store() as store:
-    store.update(items)
-  with make_store() as store:
-    del store[key]

@@ -1,4 +1,0 @@
-def switch_two_profiles(profiles):
-    with profiles.use_profile('prod'):
-        prod_x = profiles.x
-    return (prod_x, profiles.x)

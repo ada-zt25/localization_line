@@ -1,3 +1,0 @@
-def assign_in_place(data, path, val):
-    glom.Assign(glom(data, path))(val)
-    return glom(data, path)

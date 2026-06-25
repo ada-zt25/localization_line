@@ -1,2 +1,0 @@
-def deep_get(data, path):
-  return glom(data, [Path(path)])

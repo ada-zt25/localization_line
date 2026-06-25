@@ -1,6 +1,0 @@
-def use_survives_with(profiles):
-    conf = ProfileConfig.load(profiles)
-    conf.switch('prod')
-    with conf.with_profile('default'):
-        pass
-    return conf.x

@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "import_time_error", "reason_coarse": "exec_error", "detail": "ImportError: cannot import name 'Diot' from 'simpleconf' (C:\\Users\\Tzx25\\Documents\\Codex\\2026-06-15\\pyluvtan-pair-coder-git-https-github\\PairCoder\\exec_oracle\\vendor\\simpleconf\\__init__.py)"}

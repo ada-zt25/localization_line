@@ -1,9 +1,0 @@
- Here is the Python code for the function `inverse_view` as per your requirements:
-
-```python
-from bidict import bidict, frozenbidict, OrderedBidict
-
-def inverse_view(pairs):
-    b = bidict(pairs)
-    return b.inverse
-```

@@ -1,6 +1,0 @@
-```python
-def profile_value(profiles, profile):
-    conf = ProfileConfig.load(profiles)
-    ProfileConfig.use_profile(conf, profile)
-    return conf.x
-```

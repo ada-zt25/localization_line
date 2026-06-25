@@ -1,5 +1,0 @@
-```python
-def nested_stays_dict(data):
-    d = Diot(data, diot_transform='safe', diot_nest=False, diot_frozen=False)
-    return d['x']
-```

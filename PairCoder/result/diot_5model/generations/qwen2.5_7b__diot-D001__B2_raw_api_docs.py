@@ -1,5 +1,0 @@
-from diot import Diot
-
-def access_camel(data):
-    d = Diot(data, diot_transform='camelCase')
-    return d.fooBar

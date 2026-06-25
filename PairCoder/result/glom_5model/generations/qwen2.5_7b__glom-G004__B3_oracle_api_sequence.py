@@ -1,2 +1,0 @@
-def restructure(data):
-    return glom(data, {'name': T['a']['b'], 'n': Coalesce(len(T['items']), 0)})

@@ -1,9 +1,0 @@
-from bidict import bidict
-
-def remap(pairs, key, val):
-    b = bidict(pairs)
-    try:
-        b.insert(key, val)
-    except DuplicationError:
-        pass  # ignore if key already exists
-    return dict(b)

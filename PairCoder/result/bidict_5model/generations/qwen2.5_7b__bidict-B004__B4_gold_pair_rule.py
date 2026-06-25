@@ -1,9 +1,0 @@
-def remap(pairs, key, val):
-    b = bidict(pairs)
-    try:
-        old_key = b.inv[val]
-        if old_key != key:
-            b.forceput(key, val)
-        return dict(b)
-    except KeyError:
-        raise ValueError("Value does not exist in the bidict") from None

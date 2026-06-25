@@ -1,8 +1,0 @@
-from typing import Dict, List, Any
-import glom
-
-def summarize(data: Dict[str, Any]) -> Dict[str, int]:
-    return glom.glom(data, {
-        'total': Coalesce('nums', 0) + sum(Coalesce('nums') or []),
-        'count': len(Coalesce('nums', [])),
-    })

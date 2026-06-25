@@ -1,8 +1,0 @@
- Here is the Python code for the `first_item` function using the glom library:
-
-```python
-from typing import List, Dict
-
-def first_item(data: Dict[str, List[Dict[str, str]]]):
-    return Coalesce(*[Path('items.{}', default=None)(data)])[0]['v']
-```

@@ -1,8 +1,0 @@
-```python
-def two_reads_same_conf(profiles):
-  profile = profiles['prod']
-  profile.switch('prod')
-  x1 = profile.conf.x
-  x2 = profile.conf.x
-  return (x1, x2) 
-```

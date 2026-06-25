@@ -1,7 +1,0 @@
-from bidict import bidict, frozenbidict, OrderedBidict
-from typing import Dict
-
-def remap(pairs: bidict, key: str, val: any) -> Dict[str, any]:
-    b = pairs.copy()
-    b.putall({key: val})
-    return dict(b)

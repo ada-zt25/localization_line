@@ -1,8 +1,0 @@
- Here is the Python code for the `assign_in_place` function using the glom library:
-
-```python
-def assign_in_place(data, path, val):
-    spec = Coalesce(*Path(path))
-    Assign(spec, val)(data)
-    return PathAccess(spec)(data)
-```

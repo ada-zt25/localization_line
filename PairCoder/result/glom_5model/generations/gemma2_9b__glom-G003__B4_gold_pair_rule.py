@@ -1,2 +1,0 @@
-def pluck_list(data):
-  return glom(data, ('items', ['v']))

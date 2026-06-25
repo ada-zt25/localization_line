@@ -1,6 +1,0 @@
-def atomic_add(b, batch):
-    try:
-        b.putall(batch)
-    except DuplicationError:
-        pass
-    return dict(b)

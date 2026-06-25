@@ -1,6 +1,0 @@
-def durable_put(items):
-    db = make_store()
-    for key, value in items.items():
-        db[key] = value
-    db.commit()
-    db.close()

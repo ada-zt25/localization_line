@@ -1,5 +1,0 @@
-def nested_mutate_reflects(data, val):
-    d = Diot(data)
-    with d.thaw():
-        d.x.y = val
-    return d.x.y

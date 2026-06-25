@@ -1,9 +1,0 @@
-def reject_dup(pairs, key, val):
-  b = bidict()
-  for k, v in pairs:
-    b[k] = v
-  try:
-    b.forceput(key, val)
-  except DuplicationError:
-    return dict(b)
-  return dict(b)

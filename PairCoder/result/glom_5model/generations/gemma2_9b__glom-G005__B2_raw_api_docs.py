@@ -1,5 +1,0 @@
-def safe_get(data, path):
-  try:
-    return glom(data, path)
-  except PathAccessError:
-    return -1

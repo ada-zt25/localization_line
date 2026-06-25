@@ -1,2 +1,0 @@
-def safe_get(data, path):
-    return glom(data, path, default=-1)

@@ -1,4 +1,0 @@
-from glom import Coalesce, Assign, T
-
-def deep_get(data, path):
-    return glom(data, Path(path), default=PathAccessError, when=Coalesce(T, PathAccessError))

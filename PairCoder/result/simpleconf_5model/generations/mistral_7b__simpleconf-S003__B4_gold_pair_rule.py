@@ -1,6 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def load_is_diot(data):
-    conf = Config()
-    conf.load([data])
-    return conf

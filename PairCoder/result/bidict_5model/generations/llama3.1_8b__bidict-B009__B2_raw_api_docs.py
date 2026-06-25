@@ -1,9 +1,0 @@
-from bidict import frozenbidict, putall
-
-def make_frozen(pairs):
-    b = frozenbidict()
-    try:
-        putall(b, pairs)
-    except DuplicationError as e:
-        raise ValueError(f"Duplicate key or value: {e}")
-    return b

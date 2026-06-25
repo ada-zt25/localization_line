@@ -1,5 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def profile_load_attr(profiles):
-    conf = Config(profiles)
-    return conf['default'].x

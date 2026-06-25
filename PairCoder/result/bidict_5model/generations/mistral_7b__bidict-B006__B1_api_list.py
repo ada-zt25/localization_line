@@ -1,7 +1,0 @@
-from bidict import bidict, frozenbidict, OrderedBidict
-from typing import Union
-
-def set_through_inverse(pairs: bidict, key: str, val: Union[str, int]) -> Union[str, int]:
-    b = pairs.copy()
-    b.inv.forceput(val, key)
-    return b[key]

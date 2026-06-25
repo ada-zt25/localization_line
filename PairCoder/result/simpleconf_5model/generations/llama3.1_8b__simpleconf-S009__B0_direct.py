@@ -1,5 +1,0 @@
-def use_profile_same_conf(profiles, profile):
-    Config.load('conf.x')
-    config = Config.get_config()
-    config.switch_to_profile(profile)
-    return config.read('conf.x')

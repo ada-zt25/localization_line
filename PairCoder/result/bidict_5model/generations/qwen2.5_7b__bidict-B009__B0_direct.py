@@ -1,5 +1,0 @@
-def make_frozen(pairs):
-    try:
-        return frozenbidict(pairs)
-    except DuplicationError as e:
-        raise ValueError("Pairs contain duplicate keys or values") from e

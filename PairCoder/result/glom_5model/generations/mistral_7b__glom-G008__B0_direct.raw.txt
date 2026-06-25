@@ -1,7 +1,0 @@
- Here is the Python code for the `assign_return_target` function:
-
-```python
-def assign_return_target(data, path, val):
-    Coalesce(Assign(path, val)(data), data)
-    return data
-```

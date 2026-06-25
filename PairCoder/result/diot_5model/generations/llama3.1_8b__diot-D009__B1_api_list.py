@@ -1,5 +1,0 @@
-def set_then_get(key, val):
-    d = Diot(data={}, diot_transform='safe', diot_nest=True)
-    with d.thaw() as thawed_d:
-        thawed_d[key] = val
-    return d.get(key)

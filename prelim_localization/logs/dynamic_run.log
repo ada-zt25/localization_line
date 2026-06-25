@@ -1,0 +1,724 @@
+[e2e] 300 mixed instances (300 to run); k=5 cap=30 topk=10 workers=20 file_loc=arise coverage=True file_rerank=0
+[cov] pre-pass: 97 instances needing coverage x 8 Docker workers (DYNAMIC half; cache=egl_cov_cache.json)
+[cov 1/97] django__django-13551           files=364 exec_lines=18761
+[cov 2/97] astropy__astropy-14995         files=257 exec_lines=14728
+[cov 3/97] django__django-12308           files=334 exec_lines=17865
+[cov 4/97] sphinx-doc__sphinx-7738        files=0 exec_lines=0
+[cov 5/97] pytest-dev__pytest-7373        files=0 exec_lines=0
+[cov 6/97] django__django-15851           files=197 exec_lines=8974
+[cov 7/97] django__django-15814           files=196 exec_lines=8961
+[cov 8/97] django__django-14787           files=196 exec_lines=8675
+[cov 9/97] django__django-13028           files=334 exec_lines=21286
+[cov 10/97] sphinx-doc__sphinx-8627        files=0 exec_lines=0
+[cov 11/97] django__django-14752           files=196 exec_lines=8611
+[cov 12/97] sympy__sympy-20154             files=378 exec_lines=23375
+[cov 13/97] pytest-dev__pytest-11143       files=0 exec_lines=0
+[cov 14/97] sphinx-doc__sphinx-8474        files=0 exec_lines=0
+[cov 15/97] astropy__astropy-14365         files=174 exec_lines=10957
+[cov 16/97] pydata__xarray-4094            files=71 exec_lines=8627
+[cov 17/97] sphinx-doc__sphinx-11445       files=0 exec_lines=0
+[cov 18/97] django__django-12708           files=330 exec_lines=18013
+[cov 19/97] django__django-11999           files=328 exec_lines=16994
+[cov 20/97] sympy__sympy-23262             files=422 exec_lines=31080
+[cov 21/97] pylint-dev__pylint-7080        files=146 exec_lines=9563
+[cov 22/97] django__django-11848           files=304 exec_lines=12813
+[cov 23/97] pytest-dev__pytest-8906        files=0 exec_lines=0
+[cov 24/97] sphinx-doc__sphinx-8506        files=0 exec_lines=0
+[cov 25/97] scikit-learn__scikit-learn-15512 files=0 exec_lines=0
+[cov 26/97] matplotlib__matplotlib-25332   files=105 exec_lines=17375
+[cov 27/97] django__django-13590           files=335 exec_lines=19368
+[cov 28/97] django__django-14999           files=196 exec_lines=8676
+[cov 29/97] sympy__sympy-16281             files=0 exec_lines=0
+[cov 30/97] pytest-dev__pytest-7168        files=0 exec_lines=0
+[cov 31/97] pytest-dev__pytest-5227        files=0 exec_lines=0
+[cov 32/97] django__django-11620           files=0 exec_lines=0
+[cov 33/97] django__django-12700           files=0 exec_lines=0
+[cov 34/97] sympy__sympy-12481             files=323 exec_lines=18303
+[cov 35/97] django__django-13933           files=196 exec_lines=8533
+[cov 36/97] sympy__sympy-21847             files=405 exec_lines=23797
+[cov 37/97] sympy__sympy-21612             files=457 exec_lines=36419
+[cov 38/97] sympy__sympy-16503             files=0 exec_lines=0
+[cov 39/97] scikit-learn__scikit-learn-14894 files=0 exec_lines=0
+[cov 40/97] sphinx-doc__sphinx-8713        files=0 exec_lines=0
+[cov 41/97] pytest-dev__pytest-7220        files=0 exec_lines=0
+[cov 42/97] pytest-dev__pytest-6116        files=0 exec_lines=0
+[cov 43/97] django__django-11099           files=336 exec_lines=16247
+[cov 44/97] scikit-learn__scikit-learn-15535 files=0 exec_lines=0
+[cov 45/97] sphinx-doc__sphinx-7975        files=0 exec_lines=0
+[cov 46/97] pytest-dev__pytest-5413        files=0 exec_lines=0
+[cov 47/97] scikit-learn__scikit-learn-25500 files=0 exec_lines=0
+[cov 48/97] django__django-16255           files=196 exec_lines=9031
+[cov 49/97] scikit-learn__scikit-learn-25747 files=0 exec_lines=0
+[cov 50/97] matplotlib__matplotlib-23299   files=96 exec_lines=12229
+[cov 51/97] django__django-15695           files=196 exec_lines=8943
+[cov 52/97] sphinx-doc__sphinx-8595        files=0 exec_lines=0
+[cov 53/97] django__django-10914           files=345 exec_lines=18423
+[cov 54/97] django__django-12125           files=318 exec_lines=13442
+[cov 55/97] sympy__sympy-20590             files=379 exec_lines=23761
+[cov 56/97] sphinx-doc__sphinx-8721        files=0 exec_lines=0
+[cov 57/97] scikit-learn__scikit-learn-13779 files=0 exec_lines=0
+[cov 58/97] scikit-learn__scikit-learn-14983 files=0 exec_lines=0
+[cov 59/97] sphinx-doc__sphinx-8273        files=0 exec_lines=0
+[cov 60/97] sphinx-doc__sphinx-8282        files=0 exec_lines=0
+[cov 61/97] django__django-14238           files=198 exec_lines=8577
+[cov 62/97] pytest-dev__pytest-7432        files=0 exec_lines=0
+[cov 63/97] pytest-dev__pytest-5692        files=0 exec_lines=0
+[cov 64/97] django__django-13964           files=196 exec_lines=8532
+[cov 65/97] scikit-learn__scikit-learn-14092 files=0 exec_lines=0
+[cov 66/97] sympy__sympy-13031             files=314 exec_lines=20104
+[cov 67/97] pytest-dev__pytest-5495        files=0 exec_lines=0
+[cov 68/97] pytest-dev__pytest-11148       files=0 exec_lines=0
+[cov 69/97] sphinx-doc__sphinx-7686        files=0 exec_lines=0
+[cov 70/97] sympy__sympy-18199             files=385 exec_lines=40971
+[cov 71/97] sympy__sympy-16106             files=0 exec_lines=0
+[cov 72/97] sympy__sympy-24213             files=440 exec_lines=30551
+[cov 73/97] sphinx-doc__sphinx-10451       files=0 exec_lines=0
+[cov 74/97] django__django-13315           files=340 exec_lines=22141
+[cov 75/97] django__django-14534           files=196 exec_lines=8612
+[cov 76/97] sympy__sympy-24066             files=440 exec_lines=30555
+[cov 77/97] sympy__sympy-21379             files=416 exec_lines=33084
+[cov 78/97] pytest-dev__pytest-7490        files=0 exec_lines=0
+[cov 79/97] django__django-14580           files=196 exec_lines=8574
+[cov 80/97] django__django-11815           files=318 exec_lines=13401
+[cov 81/97] django__django-16595           files=305 exec_lines=15018
+[cov 82/97] pytest-dev__pytest-5221        files=0 exec_lines=0
+[cov 83/97] sphinx-doc__sphinx-8801        files=0 exec_lines=0
+[cov 84/97] pytest-dev__pytest-8365        files=0 exec_lines=0
+[cov 85/97] pytest-dev__pytest-5103        files=0 exec_lines=0
+[cov 86/97] scikit-learn__scikit-learn-25570 files=0 exec_lines=0
+[cov 87/97] scikit-learn__scikit-learn-25638 files=0 exec_lines=0
+[cov 88/97] django__django-13158           files=334 exec_lines=17715
+[cov 89/97] sympy__sympy-18189             files=361 exec_lines=29841
+[cov 90/97] matplotlib__matplotlib-23476   files=103 exec_lines=20535
+[cov 91/97] sphinx-doc__sphinx-10325       files=0 exec_lines=0
+[cov 92/97] sphinx-doc__sphinx-8435        files=0 exec_lines=0
+[cov 93/97] pytest-dev__pytest-9359        files=0 exec_lines=0
+[cov 94/97] sympy__sympy-17139             files=377 exec_lines=38849
+[cov 95/97] scikit-learn__scikit-learn-14087 files=0 exec_lines=0
+[cov 96/97] psf__requests-863              files=0 exec_lines=0
+[cov 97/97] matplotlib__matplotlib-23314   files=124 exec_lines=28332
+[cov] DYNAMIC half ON: 250/300 instances have failing-test coverage
+[reuse] loaded file-loc for 292 instances from egl_e2e_ARISE_static.json (file-finder skipped where available)
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[1/300] sympy__sympy-13895             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[2/300] django__django-15851           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[3/300] sphinx-doc__sphinx-8627        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[4/300] django__django-16527           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[5/300] mwaskom__seaborn-2848          file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[6/300] matplotlib__matplotlib-23563   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[7/300] django__django-15996           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[8/300] django__django-13551           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[9/300] scikit-learn__scikit-learn-10297 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[10/300] django__django-15252           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[11/300] django__django-14787           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[12/300] matplotlib__matplotlib-26020   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[13/300] pytest-dev__pytest-7373        file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[14/300] sphinx-doc__sphinx-7738        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[15/300] django__django-12308           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[16/300] psf__requests-2148             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[17/300] astropy__astropy-14995         file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[18/300] sympy__sympy-20154             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[19/300] scikit-learn__scikit-learn-11281 file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[20/300] sphinx-doc__sphinx-8474        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[21/300] sympy__sympy-23191             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[22/300] django__django-13401           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[23/300] django__django-11133           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[24/300] django__django-16400           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[25/300] pallets__flask-5063            file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[26/300] sympy__sympy-21171             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[27/300] sympy__sympy-23117             file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[28/300] django__django-13028           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[29/300] pydata__xarray-4094            file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[30/300] django__django-15814           file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[31/300] matplotlib__matplotlib-24149   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[32/300] pylint-dev__pylint-7080        file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[33/300] django__django-14752           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[34/300] scikit-learn__scikit-learn-13241 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[35/300] pytest-dev__pytest-8906        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[36/300] sympy__sympy-24909             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[37/300] scikit-learn__scikit-learn-15512 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[38/300] django__django-16873           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+<unknown>:662: SyntaxWarning: "\o" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\o"? A raw string is also an option.
+<unknown>:678: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+<unknown>:1394: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+<unknown>:1424: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+<unknown>:1603: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+<unknown>:1607: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+<unknown>:1696: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+[39/300] django__django-13768           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[40/300] sphinx-doc__sphinx-11445       file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[41/300] django__django-14017           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[42/300] django__django-15400           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[43/300] sympy__sympy-23262             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[44/300] astropy__astropy-14365         file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[45/300] django__django-14730           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[46/300] matplotlib__matplotlib-25332   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[47/300] sympy__sympy-20049             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[48/300] pytest-dev__pytest-11143       file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[49/300] django__django-11179           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[50/300] sympy__sympy-18835             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:387: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+[51/300] sympy__sympy-22714             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[52/300] sympy__sympy-14024             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[53/300] django__django-11999           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[54/300] sympy__sympy-21614             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[55/300] django__django-12708           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[56/300] django__django-12747           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[57/300] django__django-17051           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[58/300] django__django-16046           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:662: SyntaxWarning: "\o" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\o"? A raw string is also an option.
+<unknown>:678: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+<unknown>:1394: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+<unknown>:1424: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+<unknown>:1603: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+<unknown>:1607: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+<unknown>:1696: SyntaxWarning: "\l" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\l"? A raw string is also an option.
+[59/300] sympy__sympy-17630             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[60/300] sympy__sympy-21612             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[61/300] django__django-11620           file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[62/300] django__django-15781           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[63/300] sympy__sympy-12236             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[64/300] django__django-11848           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[65/300] psf__requests-2674             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[66/300] django__django-12453           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[67/300] sympy__sympy-15345             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[68/300] sympy__sympy-11897             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[69/300] sympy__sympy-20639             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[70/300] scikit-learn__scikit-learn-10508 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[71/300] sympy__sympy-16281             file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[72/300] sphinx-doc__sphinx-8506        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[73/300] sympy__sympy-15011             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[74/300] django__django-11039           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[75/300] matplotlib__matplotlib-23964   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[76/300] django__django-17087           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[77/300] django__django-11422           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[78/300] django__django-14999           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[79/300] sympy__sympy-21847             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[80/300] django__django-14915           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[81/300] matplotlib__matplotlib-18869   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[82/300] django__django-13590           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[83/300] django__django-12856           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[84/300] sympy__sympy-12419             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[85/300] django__django-15347           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[86/300] pytest-dev__pytest-7168        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[87/300] pydata__xarray-5131            file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[88/300] django__django-15202           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[89/300] astropy__astropy-14182         file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[90/300] pytest-dev__pytest-7220        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[91/300] sympy__sympy-22005             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[92/300] sympy__sympy-18698             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[93/300] scikit-learn__scikit-learn-13142 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[94/300] django__django-13933           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[95/300] django__django-12700           file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[96/300] sympy__sympy-12481             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[97/300] pytest-dev__pytest-5227        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[98/300] django__django-15213           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[99/300] django__django-14016           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[100/300] pylint-dev__pylint-6506        file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[101/300] django__django-16139           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[102/300] scikit-learn__scikit-learn-25500 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[103/300] sympy__sympy-15308             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[104/300] matplotlib__matplotlib-25079   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[105/300] sympy__sympy-18087             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[106/300] sympy__sympy-16503             file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[107/300] scikit-learn__scikit-learn-12471 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[108/300] django__django-14411           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[109/300] django__django-15902           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[110/300] django__django-11910           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[111/300] scikit-learn__scikit-learn-14894 file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[112/300] scikit-learn__scikit-learn-25747 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[113/300] django__django-15498           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[114/300] sympy__sympy-20590             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[115/300] django__django-12983           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[116/300] django__django-11099           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[117/300] pydata__xarray-4493            file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[118/300] sphinx-doc__sphinx-8713        file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[119/300] matplotlib__matplotlib-23299   file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[120/300] pytest-dev__pytest-5413        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[121/300] scikit-learn__scikit-learn-15535 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[122/300] scikit-learn__scikit-learn-10949 file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[123/300] sympy__sympy-20442             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[124/300] django__django-16910           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[125/300] django__django-13658           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[126/300] sympy__sympy-24102             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[127/300] django__django-12915           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[128/300] django__django-16255           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[129/300] django__django-14667           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[130/300] django__django-15320           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[131/300] pytest-dev__pytest-6116        file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[132/300] mwaskom__seaborn-3190          file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[133/300] sympy__sympy-13773             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[134/300] sympy__sympy-13971             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[135/300] matplotlib__matplotlib-25311   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[136/300] django__django-13321           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[137/300] django__django-13925           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[138/300] sympy__sympy-19254             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[139/300] sympy__sympy-20322             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[140/300] django__django-11905           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[141/300] django__django-11283           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[142/300] pylint-dev__pylint-7228        file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[143/300] sympy__sympy-17022             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[144/300] sympy__sympy-13043             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[145/300] django__django-15738           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[146/300] sphinx-doc__sphinx-7975        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[147/300] matplotlib__matplotlib-22835   file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[148/300] scikit-learn__scikit-learn-14983 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[149/300] django__django-13220           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[150/300] sympy__sympy-11400             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[151/300] scikit-learn__scikit-learn-13584 file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[152/300] sympy__sympy-13146             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[153/300] astropy__astropy-7746          file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[154/300] django__django-15695           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[155/300] django__django-12125           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[156/300] django__django-12113           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[157/300] django__django-10914           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[158/300] django__django-14997           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[159/300] scikit-learn__scikit-learn-13497 file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[160/300] sympy__sympy-13437             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[161/300] sympy__sympy-19487             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[162/300] pylint-dev__pylint-7114        file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[163/300] sphinx-doc__sphinx-8595        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[164/300] django__django-16379           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[165/300] django__django-13448           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[166/300] scikit-learn__scikit-learn-13779 file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[167/300] django__django-11049           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[168/300] django__django-11583           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[169/300] astropy__astropy-6938          file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[170/300] mwaskom__seaborn-3407          file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[171/300] django__django-14155           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[172/300] django__django-12908           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[173/300] sympy__sympy-21055             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[174/300] sphinx-doc__sphinx-8273        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[175/300] django__django-15388           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[176/300] django__django-13757           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[177/300] scikit-learn__scikit-learn-11040 file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[178/300] matplotlib__matplotlib-23562   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[179/300] sphinx-doc__sphinx-8282        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[180/300] django__django-11742           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[181/300] pallets__flask-4992            file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[182/300] sympy__sympy-16988             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[183/300] django__django-12589           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[184/300] django__django-13660           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[185/300] django__django-16229           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[186/300] pytest-dev__pytest-5495        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[187/300] django__django-11797           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[188/300] django__django-11564           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[189/300] scikit-learn__scikit-learn-14092 file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[190/300] django__django-13964           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[191/300] pytest-dev__pytest-11148       file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[192/300] sphinx-doc__sphinx-8721        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[193/300] django__django-16820           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[194/300] scikit-learn__scikit-learn-13439 file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[195/300] sphinx-doc__sphinx-7686        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[196/300] sympy__sympy-21379             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[197/300] sympy__sympy-18057             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[198/300] sympy__sympy-20212             file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[199/300] django__django-13447           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[200/300] sympy__sympy-18621             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[201/300] sympy__sympy-13471             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[202/300] matplotlib__matplotlib-24970   file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+<unknown>:3594: SyntaxWarning: "\m" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\m"? A raw string is also an option.
+[203/300] django__django-15819           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+<unknown>:465: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:475: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:485: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:497: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:507: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:517: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:526: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[204/300] django__django-12286           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[205/300] sympy__sympy-18199             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[206/300] django__django-14238           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[207/300] pytest-dev__pytest-7432        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+<unknown>:401: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:411: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:421: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:432: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:442: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:452: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:461: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[208/300] pytest-dev__pytest-5692        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[209/300] matplotlib__matplotlib-22711   file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[210/300] psf__requests-3362             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[211/300] django__django-11019           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[212/300] django__django-13315           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[213/300] sympy__sympy-14396             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[214/300] sympy__sympy-13031             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[215/300] pydata__xarray-3364            file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[216/300] scikit-learn__scikit-learn-13496 file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[217/300] sympy__sympy-15678             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[218/300] pytest-dev__pytest-7490        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[219/300] django__django-14580           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[220/300] matplotlib__matplotlib-26011   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[221/300] django__django-15790           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[222/300] django__django-11964           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[223/300] sympy__sympy-24213             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[224/300] django__django-11001           file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[225/300] sympy__sympy-13480             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[226/300] sympy__sympy-11870             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:465: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:475: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:485: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:497: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:507: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:517: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:526: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[227/300] pallets__flask-4045            file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[228/300] psf__requests-2317             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[229/300] django__django-14534           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[230/300] django__django-16816           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:3594: SyntaxWarning: "\m" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\m"? A raw string is also an option.
+[231/300] sympy__sympy-16106             file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[232/300] sympy__sympy-24066             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[233/300] django__django-12470           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[234/300] sympy__sympy-12454             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[235/300] sympy__sympy-14317             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+<unknown>:401: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:411: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:421: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:432: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:442: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:452: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:461: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[236/300] sympy__sympy-13177             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[237/300] sphinx-doc__sphinx-10451       file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[238/300] django__django-15061           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[239/300] psf__requests-1963             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[240/300] django__django-14672           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[241/300] matplotlib__matplotlib-23314   file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[242/300] sympy__sympy-24152             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[243/300] sympy__sympy-17655             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[244/300] matplotlib__matplotlib-25433   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[245/300] scikit-learn__scikit-learn-25570 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[246/300] django__django-13033           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[247/300] django__django-11815           file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[248/300] django__django-12184           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[249/300] sympy__sympy-18532             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[250/300] matplotlib__matplotlib-25498   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[251/300] matplotlib__matplotlib-23476   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[252/300] django__django-14855           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[253/300] sympy__sympy-13647             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[254/300] matplotlib__matplotlib-23987   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[255/300] sphinx-doc__sphinx-8801        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[256/300] django__django-15789           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[257/300] sympy__sympy-14774             file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[258/300] sympy__sympy-13915             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[259/300] matplotlib__matplotlib-25442   file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[260/300] django__django-16595           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[261/300] sympy__sympy-15609             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[262/300] pydata__xarray-4248            file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[263/300] scikit-learn__scikit-learn-25638 file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[264/300] django__django-13710           file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[265/300] pylint-dev__pylint-7993        file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[266/300] django__django-13158           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[267/300] sympy__sympy-21627             file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[268/300] astropy__astropy-12907         file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[269/300] django__django-12284           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[270/300] sympy__sympy-12171             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[271/300] django__django-16408           file_rec=0.0 cov=1 line_R@5 arise=0 ours=0
+[272/300] pytest-dev__pytest-9359        file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[273/300] pylint-dev__pylint-5859        file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[274/300] django__django-10924           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[275/300] pytest-dev__pytest-5221        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+[276/300] pytest-dev__pytest-8365        file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[277/300] sympy__sympy-15346             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[278/300] django__django-16041           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[279/300] sympy__sympy-22840             file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[280/300] matplotlib__matplotlib-24334   file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[281/300] sympy__sympy-18189             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[282/300] mwaskom__seaborn-3010          file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[283/300] django__django-14608           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[284/300] django__django-13230           file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[285/300] django__django-12497           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[286/300] django__django-14382           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[287/300] pytest-dev__pytest-5103        file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[288/300] sympy__sympy-19007             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[289/300] django__django-13265           file_rec=1.0 cov=1 line_R@5 arise=1 ours=0
+[290/300] psf__requests-863              file_rec=1.0 cov=0 line_R@5 arise=0 ours=1
+[291/300] matplotlib__matplotlib-23913   file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[292/300] django__django-11630           file_rec=1.0 cov=1 line_R@5 arise=1 ours=1
+[293/300] scikit-learn__scikit-learn-14087 file_rec=0.0 cov=0 line_R@5 arise=0 ours=0
+[294/300] sympy__sympy-16792             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[295/300] matplotlib__matplotlib-24265   file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[296/300] sympy__sympy-14308             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[297/300] sphinx-doc__sphinx-10325       file_rec=1.0 cov=0 line_R@5 arise=1 ours=1
+[298/300] sympy__sympy-14817             file_rec=1.0 cov=1 line_R@5 arise=0 ours=1
+[299/300] sympy__sympy-17139             file_rec=1.0 cov=1 line_R@5 arise=0 ours=0
+[300/300] sphinx-doc__sphinx-8435        file_rec=1.0 cov=0 line_R@5 arise=0 ours=0
+
+==== E2E SUMMARY (file-NOT-given, ARISE-aligned) ====
+{
+  "n": 300,
+  "n_with_coverage": 250,
+  "file_recall_gold": 0.737,
+  "file_R@k": {
+    "1": 63.3,
+    "5": 71.7,
+    "10": 73.7
+  },
+  "line_recall": 0.41,
+  "line_recall_ci": [
+    0.364,
+    0.455
+  ],
+  "line_recall_given_found_files": 0.41,
+  "line_precision": 0.069,
+  "line_precision_ci": [
+    0.053,
+    0.085
+  ],
+  "line_f1": 0.098,
+  "n_pred_mean": 39.827,
+  "line_R@k": {
+    "1": 27.7,
+    "5": 43.0,
+    "10": 47.3
+  },
+  "swe_contextbench_ref": {
+    "gpt5_prometheus_recall": ">0.60",
+    "precision": "<0.35",
+    "f1": "<0.40"
+  },
+  "arise_ref_line_R@k": {
+    "1": 41,
+    "5": 62,
+    "10": 74
+  },
+  "arise_ref_file_R@1": 67,
+  "line_loc_arms": {
+    "arise_static": {
+      "R@1": 8.7,
+      "R@3": 16.3,
+      "R@5": 22.0,
+      "R@10": 26.3,
+      "recall": 0.212,
+      "precision": 0.019,
+      "f1": 0.031
+    },
+    "vote_only": {
+      "R@1": 25.0,
+      "R@3": 37.7,
+      "R@5": 42.0,
+      "R@10": 48.3,
+      "recall": 0.41,
+      "precision": 0.069,
+      "f1": 0.098
+    },
+    "ours_static": {
+      "R@1": 24.0,
+      "R@3": 36.3,
+      "R@5": 41.7,
+      "R@10": 47.0,
+      "recall": 0.41,
+      "precision": 0.069,
+      "f1": 0.098
+    },
+    "ours_dynamic_nofp": {
+      "R@1": 24.3,
+      "R@3": 36.3,
+      "R@5": 41.7,
+      "R@10": 47.3,
+      "recall": 0.41,
+      "precision": 0.069,
+      "f1": 0.098
+    },
+    "ours_dynamic": {
+      "R@1": 27.7,
+      "R@3": 39.3,
+      "R@5": 43.0,
+      "R@10": 47.3,
+      "recall": 0.41,
+      "precision": 0.069,
+      "f1": 0.098
+    }
+  },
+  "headline_us_vs_arise": {
+    "ours_dynamic_line_R@k": {
+      "1": 27.7,
+      "5": 43.0,
+      "10": 47.3
+    },
+    "arise_static_line_R@k": {
+      "1": 8.7,
+      "5": 22.0,
+      "10": 26.3
+    },
+    "arise_ref_line_R@k": {
+      "1": 41,
+      "5": 62,
+      "10": 74
+    },
+    "delta_ours_minus_arise_static": {
+      "1": {
+        "mean": 0.19,
+        "ci": [
+          0.14,
+          0.24
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "5": {
+        "mean": 0.21,
+        "ci": [
+          0.153,
+          0.263
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "10": {
+        "mean": 0.21,
+        "ci": [
+          0.157,
+          0.26
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      }
+    }
+  },
+  "ablation_paired_deltas_R@k": {
+    "coverage_effect__dyn_minus_ourstatic": {
+      "1": {
+        "mean": 0.003,
+        "ci": [
+          0.0,
+          0.01
+        ],
+        "p_gt0": 0.634,
+        "sig": false,
+        "n": 300
+      },
+      "5": {
+        "mean": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "p_gt0": 0.0,
+        "sig": false,
+        "n": 300
+      },
+      "10": {
+        "mean": 0.003,
+        "ci": [
+          0.0,
+          0.01
+        ],
+        "p_gt0": 0.633,
+        "sig": false,
+        "n": 300
+      }
+    },
+    "finalpick_effect__dyn_minus_dynnofp": {
+      "1": {
+        "mean": 0.033,
+        "ci": [
+          -0.007,
+          0.073
+        ],
+        "p_gt0": 0.936,
+        "sig": false,
+        "n": 300
+      },
+      "5": {
+        "mean": 0.013,
+        "ci": [
+          -0.007,
+          0.033
+        ],
+        "p_gt0": 0.869,
+        "sig": false,
+        "n": 300
+      },
+      "10": {
+        "mean": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "p_gt0": 0.0,
+        "sig": false,
+        "n": 300
+      }
+    },
+    "vote+graph_vs_ariseStatic__ourstatic_minus_arise": {
+      "1": {
+        "mean": 0.153,
+        "ci": [
+          0.107,
+          0.2
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "5": {
+        "mean": 0.197,
+        "ci": [
+          0.143,
+          0.247
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "10": {
+        "mean": 0.207,
+        "ci": [
+          0.153,
+          0.257
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      }
+    },
+    "vote_vs_ariseStatic__voteonly_minus_arise": {
+      "1": {
+        "mean": 0.163,
+        "ci": [
+          0.113,
+          0.213
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "5": {
+        "mean": 0.2,
+        "ci": [
+          0.147,
+          0.253
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      },
+      "10": {
+        "mean": 0.22,
+        "ci": [
+          0.167,
+          0.273
+        ],
+        "p_gt0": 1.0,
+        "sig": true,
+        "n": 300
+      }
+    }
+  },
+  "diagnostics": {
+    "reg_ceiling": 0.784,
+    "voted_ceiling": 0.557,
+    "cov_on_gold_recall": 0.373,
+    "cov_files_found_mean": 0.587,
+    "n_found_mean": 0.737,
+    "small_bypass_files_mean": 0.26,
+    "found_file_lines_median": 813
+  }
+}

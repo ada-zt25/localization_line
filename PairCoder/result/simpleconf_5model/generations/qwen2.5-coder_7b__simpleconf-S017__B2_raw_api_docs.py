@@ -1,5 +1,0 @@
-def double_use_persistent(profiles):
-    conf = Config.load(profiles)
-    use_profile(conf, 'prod')
-    use_profile(conf, 'default')
-    return conf.x

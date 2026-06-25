@@ -1,5 +1,0 @@
-def restructure(data):
-    return glom.assign(
-        {'name': glom.Coalesce('a.b', default=''), 'n': len(glom.Coalesce('items'))},
-        data
-    )

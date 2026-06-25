@@ -14,6 +14,8 @@ __pycache__/
 .env
 .env.*
 *.key
+.key*
+*.key.*
 *.pem
 secrets*
 *_key.txt
@@ -21,6 +23,19 @@ openai_key*
 
 # Local Claude Code settings (personal, machine-specific)
 .claude/
+
+# Preliminary-experiment local cache (fetched repo files + dataset rows; bulky, not secrets)
+prelim_localization/cache/
+# Extracted GitHub repo tarballs (~6 GB, regenerable by repo_snapshot.py) — NEVER commit
+prelim_localization/snapshots/
+# Failing-test execution-coverage cache (~54 MB, regenerable but expensive: ~250 Docker runs) — reuse, don't commit
+prelim_localization/egl_cov_cache.json
+# Compiled pycache anywhere under prelim_localization
+prelim_localization/__pycache__/
+
+# Stale staging artifacts (duplicate of old code; not part of the project)
+_upload_stage/
+prelim_upload.zip
 
 # Vendored third-party libraries (~48M; includes platform-specific .so binaries
 # that are not portable). Reconstruct all 5 libs into

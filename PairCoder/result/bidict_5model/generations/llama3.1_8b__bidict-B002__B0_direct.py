@@ -1,7 +1,0 @@
-from bidict import bidict
-
-def invert(pairs):
-    b = bidict()
-    for k, v in pairs.items():
-        b[v] = k
-    return dict(b.inv)

@@ -1,8 +1,0 @@
- ```python
-from bidict import bidict, frozenbidict, OrderedBidict
-
-def add_then_lookup(pairs, key, val):
-    bidict_obj = OrderedBidict() if isinstance(pairs, (frozenbidict, dict)) else pairs.update({}, ordered=True)
-    bidict_obj[key] = val
-    return bidict_obj.inv[val]
-```

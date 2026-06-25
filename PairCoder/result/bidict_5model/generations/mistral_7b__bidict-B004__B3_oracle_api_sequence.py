@@ -1,9 +1,0 @@
-from bidict import bidict, frozenbidict, OrderedBidict
-
-def remap(pairs, key, val):
-    b = bidict(frozenbidict(pairs))
-    if key in b:
-        b[key] = val
-    else:
-        b.update({key: val})
-    return dict(b)

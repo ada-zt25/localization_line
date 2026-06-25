@@ -1,0 +1,1276 @@
+{
+  "summary": {
+    "model": "deepseek-ai/DeepSeek-V3",
+    "n": 30,
+    "k": 5,
+    "temp": 0.8,
+    "single_shot": {
+      "recall": 0.53,
+      "precision": 0.353,
+      "f1": 0.348,
+      "pred": 13.7
+    },
+    "vote>=1": {
+      "recall": 0.682,
+      "precision": 0.293,
+      "f1": 0.328,
+      "pred": 22.467
+    },
+    "vote>=2": {
+      "recall": 0.61,
+      "precision": 0.337,
+      "f1": 0.357,
+      "pred": 17.2
+    },
+    "vote>=3": {
+      "recall": 0.565,
+      "precision": 0.334,
+      "f1": 0.343,
+      "pred": 15.333
+    },
+    "vote>=4": {
+      "recall": 0.453,
+      "precision": 0.387,
+      "f1": 0.352,
+      "pred": 9.5
+    },
+    "vote>=5": {
+      "recall": 0.4,
+      "precision": 0.366,
+      "f1": 0.322,
+      "pred": 7.667
+    }
+  },
+  "results": [
+    {
+      "instance_id": "django__django-13810",
+      "n_gold": 6,
+      "file_lines": 348,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.5454545454545454,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 0.833,
+        "precision": 0.385,
+        "f1": 0.526,
+        "pred": 13
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.545,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.167,
+        "precision": 0.5,
+        "f1": 0.25,
+        "pred": 2
+      },
+      "vote>=4": {
+        "recall": 0.167,
+        "precision": 1.0,
+        "f1": 0.286,
+        "pred": 1
+      },
+      "vote>=5": {
+        "recall": 0.167,
+        "precision": 1.0,
+        "f1": 0.286,
+        "pred": 1
+      }
+    },
+    {
+      "instance_id": "django__django-10973",
+      "n_gold": 36,
+      "file_lines": 71,
+      "single": {
+        "recall": 0.7777777777777778,
+        "precision": 0.875,
+        "f1": 0.823529411764706,
+        "pred": 32
+      },
+      "vote>=1": {
+        "recall": 0.778,
+        "precision": 0.875,
+        "f1": 0.824,
+        "pred": 32
+      },
+      "vote>=2": {
+        "recall": 0.778,
+        "precision": 0.875,
+        "f1": 0.824,
+        "pred": 32
+      },
+      "vote>=3": {
+        "recall": 0.778,
+        "precision": 0.875,
+        "f1": 0.824,
+        "pred": 32
+      },
+      "vote>=4": {
+        "recall": 0.778,
+        "precision": 0.875,
+        "f1": 0.824,
+        "pred": 32
+      },
+      "vote>=5": {
+        "recall": 0.694,
+        "precision": 0.862,
+        "f1": 0.769,
+        "pred": 29
+      }
+    },
+    {
+      "instance_id": "django__django-11728",
+      "n_gold": 18,
+      "file_lines": 237,
+      "single": {
+        "recall": 0.5555555555555556,
+        "precision": 0.2857142857142857,
+        "f1": 0.3773584905660377,
+        "pred": 35
+      },
+      "vote>=1": {
+        "recall": 0.556,
+        "precision": 0.286,
+        "f1": 0.377,
+        "pred": 35
+      },
+      "vote>=2": {
+        "recall": 0.556,
+        "precision": 0.286,
+        "f1": 0.377,
+        "pred": 35
+      },
+      "vote>=3": {
+        "recall": 0.556,
+        "precision": 0.286,
+        "f1": 0.377,
+        "pred": 35
+      },
+      "vote>=4": {
+        "recall": 0.556,
+        "precision": 0.286,
+        "f1": 0.377,
+        "pred": 35
+      },
+      "vote>=5": {
+        "recall": 0.556,
+        "precision": 0.286,
+        "f1": 0.377,
+        "pred": 35
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-14141",
+      "n_gold": 2,
+      "file_lines": 117,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.2,
+        "f1": 0.33333333333333337,
+        "pred": 10
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.2,
+        "f1": 0.333,
+        "pred": 10
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.2,
+        "f1": 0.333,
+        "pred": 10
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.2,
+        "f1": 0.333,
+        "pred": 10
+      },
+      "vote>=4": {
+        "recall": 1.0,
+        "precision": 0.2,
+        "f1": 0.333,
+        "pred": 10
+      },
+      "vote>=5": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      }
+    },
+    {
+      "instance_id": "django__django-16527",
+      "n_gold": 2,
+      "file_lines": 150,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.6666666666666666,
+        "pred": 4
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=4": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=5": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6903",
+      "n_gold": 2,
+      "file_lines": 232,
+      "single": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "pred": 1
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.044,
+        "f1": 0.085,
+        "pred": 45
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.044,
+        "f1": 0.085,
+        "pred": 45
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.071,
+        "f1": 0.133,
+        "pred": 28
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      }
+    },
+    {
+      "instance_id": "django__django-13516",
+      "n_gold": 2,
+      "file_lines": 577,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.06060606060606061,
+        "f1": 0.1142857142857143,
+        "pred": 33
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.059,
+        "f1": 0.111,
+        "pred": 34
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.059,
+        "f1": 0.111,
+        "pred": 34
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.061,
+        "f1": 0.114,
+        "pred": 33
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 7
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 7
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-23950",
+      "n_gold": 2,
+      "file_lines": 48,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      }
+    },
+    {
+      "instance_id": "django__django-10880",
+      "n_gold": 2,
+      "file_lines": 155,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 3
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.333,
+        "f1": 0.5,
+        "pred": 6
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.667,
+        "f1": 0.8,
+        "pred": 3
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.667,
+        "f1": 0.8,
+        "pred": 3
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 0
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7336",
+      "n_gold": 2,
+      "file_lines": 231,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.4,
+        "f1": 0.5714285714285715,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.4,
+        "f1": 0.571,
+        "pred": 5
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=4": {
+        "recall": 1.0,
+        "precision": 0.5,
+        "f1": 0.667,
+        "pred": 4
+      },
+      "vote>=5": {
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "pred": 2
+      }
+    },
+    {
+      "instance_id": "django__django-14349",
+      "n_gold": 4,
+      "file_lines": 561,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.047619047619047616,
+        "f1": 0.08695652173913042,
+        "pred": 42
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.047,
+        "f1": 0.085,
+        "pred": 43
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.048,
+        "f1": 0.087,
+        "pred": 42
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 0.048,
+        "f1": 0.087,
+        "pred": 42
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.048,
+        "f1": 0.087,
+        "pred": 42
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 0.048,
+        "f1": 0.087,
+        "pred": 42
+      }
+    },
+    {
+      "instance_id": "django__django-11292",
+      "n_gold": 8,
+      "file_lines": 548,
+      "single": {
+        "recall": 0.375,
+        "precision": 0.6,
+        "f1": 0.4615384615384615,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.125,
+        "f1": 0.2,
+        "pred": 32
+      },
+      "vote>=2": {
+        "recall": 0.375,
+        "precision": 0.2,
+        "f1": 0.261,
+        "pred": 15
+      },
+      "vote>=3": {
+        "recall": 0.375,
+        "precision": 0.375,
+        "f1": 0.375,
+        "pred": 8
+      },
+      "vote>=4": {
+        "recall": 0.375,
+        "precision": 0.6,
+        "f1": 0.462,
+        "pred": 5
+      },
+      "vote>=5": {
+        "recall": 0.125,
+        "precision": 0.333,
+        "f1": 0.182,
+        "pred": 3
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-21596",
+      "n_gold": 21,
+      "file_lines": 490,
+      "single": {
+        "recall": 0.9047619047619048,
+        "precision": 0.4318181818181818,
+        "f1": 0.5846153846153846,
+        "pred": 44
+      },
+      "vote>=1": {
+        "recall": 0.905,
+        "precision": 0.432,
+        "f1": 0.585,
+        "pred": 44
+      },
+      "vote>=2": {
+        "recall": 0.905,
+        "precision": 0.432,
+        "f1": 0.585,
+        "pred": 44
+      },
+      "vote>=3": {
+        "recall": 0.905,
+        "precision": 0.432,
+        "f1": 0.585,
+        "pred": 44
+      },
+      "vote>=4": {
+        "recall": 0.905,
+        "precision": 0.432,
+        "f1": 0.585,
+        "pred": 44
+      },
+      "vote>=5": {
+        "recall": 0.905,
+        "precision": 0.432,
+        "f1": 0.585,
+        "pred": 44
+      }
+    },
+    {
+      "instance_id": "django__django-14672",
+      "n_gold": 2,
+      "file_lines": 330,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.2857142857142857,
+        "f1": 0.4444444444444445,
+        "pred": 7
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.286,
+        "f1": 0.444,
+        "pred": 7
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.286,
+        "f1": 0.444,
+        "pred": 7
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.286,
+        "f1": 0.444,
+        "pred": 7
+      },
+      "vote>=4": {
+        "recall": 1.0,
+        "precision": 0.333,
+        "f1": 0.5,
+        "pred": 6
+      },
+      "vote>=5": {
+        "recall": 1.0,
+        "precision": 0.333,
+        "f1": 0.5,
+        "pred": 6
+      }
+    },
+    {
+      "instance_id": "django__django-15569",
+      "n_gold": 2,
+      "file_lines": 340,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.2222222222222222,
+        "f1": 0.3636363636363636,
+        "pred": 9
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      },
+      "vote>=4": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      },
+      "vote>=5": {
+        "recall": 1.0,
+        "precision": 0.222,
+        "f1": 0.364,
+        "pred": 9
+      }
+    },
+    {
+      "instance_id": "django__django-13794",
+      "n_gold": 2,
+      "file_lines": 417,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 4
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.167,
+        "f1": 0.25,
+        "pred": 6
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.2,
+        "f1": 0.286,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 4
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 4
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 4
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8475",
+      "n_gold": 4,
+      "file_lines": 380,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.3333333333333333,
+        "f1": 0.4,
+        "pred": 6
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.154,
+        "f1": 0.235,
+        "pred": 13
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.333,
+        "f1": 0.4,
+        "pred": 6
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 0.333,
+        "f1": 0.4,
+        "pred": 6
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.333,
+        "f1": 0.4,
+        "pred": 6
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 0.333,
+        "f1": 0.4,
+        "pred": 6
+      }
+    },
+    {
+      "instance_id": "django__django-10999",
+      "n_gold": 4,
+      "file_lines": 146,
+      "single": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      },
+      "vote>=1": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      },
+      "vote>=2": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      },
+      "vote>=3": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      },
+      "vote>=4": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      },
+      "vote>=5": {
+        "recall": 0.25,
+        "precision": 1.0,
+        "f1": 0.4,
+        "pred": 1
+      }
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7432",
+      "n_gold": 2,
+      "file_lines": 314,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 1
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.043,
+        "f1": 0.082,
+        "pred": 47
+      },
+      "vote>=2": {
+        "recall": 1.0,
+        "precision": 0.044,
+        "f1": 0.085,
+        "pred": 45
+      },
+      "vote>=3": {
+        "recall": 1.0,
+        "precision": 0.045,
+        "f1": 0.087,
+        "pred": 44
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 2
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 2
+      }
+    },
+    {
+      "instance_id": "django__django-13346",
+      "n_gold": 4,
+      "file_lines": 505,
+      "single": {
+        "recall": 0.25,
+        "precision": 0.06666666666666667,
+        "f1": 0.10526315789473685,
+        "pred": 15
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.062,
+        "f1": 0.116,
+        "pred": 65
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.04,
+        "f1": 0.074,
+        "pred": 50
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 42
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 0
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 0
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9367",
+      "n_gold": 5,
+      "file_lines": 239,
+      "single": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8000000000000002,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8,
+        "pred": 5
+      },
+      "vote>=2": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8,
+        "pred": 5
+      },
+      "vote>=4": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8,
+        "pred": 5
+      },
+      "vote>=5": {
+        "recall": 0.8,
+        "precision": 0.8,
+        "f1": 0.8,
+        "pred": 5
+      }
+    },
+    {
+      "instance_id": "django__django-11964",
+      "n_gold": 2,
+      "file_lines": 75,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=2": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 4
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-23413",
+      "n_gold": 6,
+      "file_lines": 403,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.0821917808219178,
+        "f1": 0.1518987341772152,
+        "pred": 73
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.083,
+        "f1": 0.154,
+        "pred": 72
+      },
+      "vote>=2": {
+        "recall": 0.333,
+        "precision": 0.061,
+        "f1": 0.103,
+        "pred": 33
+      },
+      "vote>=3": {
+        "recall": 0.333,
+        "precision": 0.062,
+        "f1": 0.105,
+        "pred": 32
+      },
+      "vote>=4": {
+        "recall": 0.167,
+        "precision": 0.25,
+        "f1": 0.2,
+        "pred": 4
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 0
+      }
+    },
+    {
+      "instance_id": "django__django-13809",
+      "n_gold": 5,
+      "file_lines": 158,
+      "single": {
+        "recall": 1.0,
+        "precision": 0.19230769230769232,
+        "f1": 0.32258064516129037,
+        "pred": 26
+      },
+      "vote>=1": {
+        "recall": 1.0,
+        "precision": 0.083,
+        "f1": 0.154,
+        "pred": 60
+      },
+      "vote>=2": {
+        "recall": 0.8,
+        "precision": 0.118,
+        "f1": 0.205,
+        "pred": 34
+      },
+      "vote>=3": {
+        "recall": 0.8,
+        "precision": 0.16,
+        "f1": 0.267,
+        "pred": 25
+      },
+      "vote>=4": {
+        "recall": 0.6,
+        "precision": 0.143,
+        "f1": 0.231,
+        "pred": 21
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 1
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-13033",
+      "n_gold": 6,
+      "file_lines": 92,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.5454545454545454,
+        "pred": 5
+      },
+      "vote>=1": {
+        "recall": 0.833,
+        "precision": 0.2,
+        "f1": 0.323,
+        "pred": 25
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.545,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.545,
+        "pred": 5
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.545,
+        "pred": 5
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 0.6,
+        "f1": 0.545,
+        "pred": 5
+      }
+    },
+    {
+      "instance_id": "django__django-11066",
+      "n_gold": 2,
+      "file_lines": 134,
+      "single": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "pred": 2
+      }
+    },
+    {
+      "instance_id": "django__django-14017",
+      "n_gold": 2,
+      "file_lines": 324,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 7
+      },
+      "vote>=1": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 14
+      },
+      "vote>=2": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 8
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 2
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 2
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 2
+      }
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9230",
+      "n_gold": 2,
+      "file_lines": 344,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 20
+      },
+      "vote>=1": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 23
+      },
+      "vote>=2": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 20
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 20
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 20
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 0
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12585",
+      "n_gold": 2,
+      "file_lines": 565,
+      "single": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "pred": 1
+      },
+      "vote>=1": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      },
+      "vote>=2": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      },
+      "vote>=3": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      },
+      "vote>=4": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      },
+      "vote>=5": {
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.667,
+        "pred": 1
+      }
+    },
+    {
+      "instance_id": "psf__requests-1724",
+      "n_gold": 4,
+      "file_lines": 531,
+      "single": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 3
+      },
+      "vote>=1": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 14
+      },
+      "vote>=2": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 5
+      },
+      "vote>=3": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 3
+      },
+      "vote>=4": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 3
+      },
+      "vote>=5": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0,
+        "pred": 3
+      }
+    }
+  ]
+}

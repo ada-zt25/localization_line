@@ -1,2 +1,0 @@
-def apply_after_nav(data):
-    return Coalesce(Assign('sum', glom.sum_(data['nums'])), data)

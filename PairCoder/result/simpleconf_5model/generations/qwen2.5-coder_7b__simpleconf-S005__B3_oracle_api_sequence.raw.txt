@@ -1,6 +1,0 @@
-```python
-def active_profile_name(profiles, profile):
-    config = ProfileConfig.load(profiles)
-    config.select(profile)
-    return config.active_profile_name()
-```

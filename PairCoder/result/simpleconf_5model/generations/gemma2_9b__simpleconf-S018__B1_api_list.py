@@ -1,7 +1,0 @@
-def two_reads_same_conf(profiles):
-  prof = ProfileConfig.load(profiles, base='default')
-  prof.use_profile('prod')
-  with prof.with_profile('prod'):
-    x1 = prof.conf.x
-    x2 = prof.conf.x
-  return (x1, x2)

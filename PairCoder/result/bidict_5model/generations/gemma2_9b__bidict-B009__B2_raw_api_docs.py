@@ -1,5 +1,0 @@
-def make_frozen(pairs):
-  b = OrderedBidict()
-  for k, v in pairs:
-    b.forceput(k, v)
-  return frozenbidict(b)

@@ -1,4 +1,0 @@
-def switch_two_profiles(profiles):
-    prod_x = profiles['prod'].read('x')
-    default_x = profiles['default'].read('x')
-    return (prod_x, default_x)

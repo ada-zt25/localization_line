@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError('expression cannot contain assignment, perhaps you meant \"==\"?', ('<solution>', 2, 32, '  return FrozenDiot(data).thaw(lambda d: d[key] = val)\\n', 2, 50))"}

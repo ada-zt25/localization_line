@@ -1,9 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def use_then_with_restore(profiles):
-    with profiles.with_profile('default'):
-        mid = profiles.config.x
-
-    profiles.use_profile('prod')
-    after = profiles.config.x
-    return mid, after

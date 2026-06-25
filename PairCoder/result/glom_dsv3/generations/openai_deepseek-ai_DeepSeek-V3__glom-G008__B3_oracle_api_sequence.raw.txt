@@ -1,3 +1,0 @@
-def assign_return_target(data, path, val):
-    glom(data, Assign(path, val))
-    return data

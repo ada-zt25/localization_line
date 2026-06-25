@@ -1,4 +1,0 @@
-def mutate_then_read(data, key, val):
-    conf = Config.load(ProfileConfig.load(['default']))
-    setattr(conf, key, val)
-    return getattr(conf, key)

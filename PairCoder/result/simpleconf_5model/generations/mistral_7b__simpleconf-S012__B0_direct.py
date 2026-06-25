@@ -1,9 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def with_profile_temporary(profiles, profile):
-    original = Config.default_config.x
-    with ProfileConfig(profiles=profiles, profile=profile):
-        inside = Config.default_config.x
-    Config.default_config.load()
-    after = Config.default_config.x
-    return inside, after

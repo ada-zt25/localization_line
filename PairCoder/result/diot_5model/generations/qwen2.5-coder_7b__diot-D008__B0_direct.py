@@ -1,4 +1,0 @@
-def todict_then_index(data):
-    diot_obj = Diot(data)
-    plain_dict = dict(diot_obj)
-    return plain_dict['x']['y']

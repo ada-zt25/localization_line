@@ -1,6 +1,0 @@
-def key_for(pairs, val):
-    b = bidict(pairs)
-    try:
-        return b.inv[val]
-    except DuplicationError as e:
-        raise ValueError("Multiple keys map to the same value") from e

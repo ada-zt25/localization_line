@@ -1,3 +1,0 @@
-def access_snake(data):
-    d = Diot(data, strict=False)
-    return getattr(d, 'foo_bar')

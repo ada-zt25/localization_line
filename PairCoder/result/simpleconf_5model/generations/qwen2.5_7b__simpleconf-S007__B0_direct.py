@@ -1,4 +1,0 @@
-def profile_load_attr(profiles):
-    default_profile = profiles.get_default()
-    conf = Config(default_profile)
-    return conf.x

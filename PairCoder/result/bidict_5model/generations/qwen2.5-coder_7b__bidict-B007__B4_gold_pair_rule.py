@@ -1,5 +1,0 @@
-def roundtrip(pairs, key):
-    b = bidict(pairs)
-    value = b[key]
-    recovered_key = b.inv[value]
-    return recovered_key

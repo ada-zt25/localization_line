@@ -1,9 +1,0 @@
-from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
-
-def set_then_get(key, val):
-    d = OrderedDiot()
-    d[key] = val
-    try:
-        return d[key]
-    except DiotFrozenError:
-        raise DiotFrozenError("Set operation is not allowed on a frozen Diot.") from None

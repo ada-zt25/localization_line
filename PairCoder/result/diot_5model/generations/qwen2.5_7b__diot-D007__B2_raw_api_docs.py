@@ -1,5 +1,0 @@
-from diot import Diot
-
-def nested_chain(data):
-    d = Diot(data, diot_nest=True)
-    return d.x.y

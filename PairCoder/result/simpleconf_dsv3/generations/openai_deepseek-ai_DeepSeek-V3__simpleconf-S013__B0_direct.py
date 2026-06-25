@@ -1,9 +1,0 @@
-def use_then_with_restore(profiles):
-    conf = ProfileConfig(profiles)
-    conf.switch('prod')
-    
-    with conf.with_profile('default'):
-        mid = conf.x
-    
-    after = conf.x
-    return (mid, after)

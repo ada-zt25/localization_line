@@ -1,0 +1,135 @@
+{
+  "results": [
+    {
+      "instance_id": "django__django-15814",
+      "repo": "django/django",
+      "n_gold_files": 1,
+      "tot_gold": 2,
+      "ranked_files": [
+        "django/db/models/query.py",
+        "django/db/models/sql/query.py",
+        "tests/proxy_models/models.py",
+        "tests/proxy_models/tests.py",
+        "tests/proxy_model_inheritance/models.py",
+        "tests/proxy_model_inheritance/tests.py",
+        "tests/model_inheritance/models.py",
+        "tests/model_inheritance/test_abstract_inheritance.py",
+        "tests/model_inheritance_regress/models.py",
+        "django/__init__.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 0,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "line_recall": 1.0,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "n_pred": 119,
+      "line_precision": 0.017,
+      "line_f1": 0.033,
+      "done": true
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "repo": "astropy/astropy",
+      "n_gold_files": 1,
+      "tot_gold": 4,
+      "ranked_files": [
+        "astropy/nddata/nddata_base.py",
+        "astropy/nddata/mixins/ndarithmetic.py",
+        "astropy/nddata/nddata.py",
+        "astropy/nddata/nddata_withmixins.py",
+        "astropy/nddata/tests/test_nddata.py",
+        "astropy/nddata/tests/test_nddata_base.py",
+        "astropy/nddata/utils.py",
+        "astropy/nddata/tests/test_utils.py",
+        "astropy/nddata/_testing.py",
+        "astropy/__init__.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 0,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "line_recall": 1.0,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 1,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "n_pred": 68,
+      "line_precision": 0.059,
+      "line_f1": 0.111,
+      "done": true
+    },
+    {
+      "instance_id": "django__django-13401",
+      "repo": "django/django",
+      "n_gold_files": 1,
+      "tot_gold": 8,
+      "ranked_files": [
+        "django/db/models/fields/__init__.py",
+        "django/__init__.py",
+        "django/apps/__init__.py",
+        "django/conf/__init__.py",
+        "django/core/__init__.py",
+        "django/core/checks/__init__.py",
+        "django/core/exceptions.py",
+        "django/core/validators.py",
+        "django/db/__init__.py",
+        "django/db/models/constants.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "line_recall": 0.875,
+      "line_recall_given_found": 0.875,
+      "line_R@1": 1,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "n_pred": 51,
+      "line_precision": 0.137,
+      "line_f1": 0.237,
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 3,
+    "file_recall_gold": 1.0,
+    "file_R@k": {
+      "1": 33.3,
+      "5": 100,
+      "10": 100
+    },
+    "line_recall": 0.958,
+    "line_recall_ci": [
+      0.875,
+      1.0
+    ],
+    "line_recall_given_found_files": 0.958,
+    "line_precision": 0.071,
+    "line_precision_ci": [
+      0.017,
+      0.137
+    ],
+    "line_f1": 0.127,
+    "n_pred_mean": 79.333,
+    "line_R@k": {
+      "1": 66.7,
+      "5": 66.7,
+      "10": 66.7
+    },
+    "swe_contextbench_ref": {
+      "gpt5_prometheus_recall": ">0.60",
+      "precision": "<0.35",
+      "f1": "<0.40"
+    },
+    "arise_ref_line_R@k": {
+      "1": 41,
+      "5": 62,
+      "10": 74
+    },
+    "arise_ref_file_R@1": 67
+  }
+}

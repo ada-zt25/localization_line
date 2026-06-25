@@ -1,8 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def merge_three(a, b, c, key):
-    config = ProfileConfig()
-    config.add_profile('a', a)
-    config.add_profile('b', b)
-    config.add_profile('c', c)
-    return config[key]

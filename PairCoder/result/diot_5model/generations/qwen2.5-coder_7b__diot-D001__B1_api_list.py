@@ -1,3 +1,0 @@
-def access_camel(data):
-    d = Diot(data, diot_transform='safe', diot_nest=True)
-    return d.fooBar

@@ -1,4 +1,0 @@
-def active_profile_name(profiles, profile):
-  Config.load(profiles)
-  Config.select(profile)
-  return Config.active_profile()

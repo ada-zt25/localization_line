@@ -1,5 +1,0 @@
-def profile_load_attr(profiles):
-  conf = Config()
-  for p in profiles:
-    conf.load(p)
-  return conf.x

@@ -1,3 +1,0 @@
-def access_snake(data):
-    d = Diot(data, diot_transform='snake', diot_nest=True)
-    return d.foo_bar

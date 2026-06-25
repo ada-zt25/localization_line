@@ -1,7 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def merge_then_nested(data, k1, k2):
-    with ProfileConfig.use_profile('default'):
-        config = Config.load(data)
-        nested_config = config[k1]
-        return nested_config[k2]

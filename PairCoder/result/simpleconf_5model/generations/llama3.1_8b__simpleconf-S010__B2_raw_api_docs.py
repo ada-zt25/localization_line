@@ -1,5 +1,0 @@
-def mutate_then_read(data, key, val):
-    config = Config.load(data)
-    with use_profile(config, 'default'):
-        config[key] = val
-    return getattr(config, key)

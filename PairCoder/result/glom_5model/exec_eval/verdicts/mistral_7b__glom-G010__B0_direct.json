@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "runtime_error", "reason_coarse": "exec_error", "detail": "AttributeError: module 'glom' has no attribute 'sum'. Did you mean: 'Sum'?"}

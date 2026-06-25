@@ -1,7 +1,0 @@
-from simpleconf import ProfileConfig
-
-def active_profile_name(profiles, profile):
-    config = profiles[profile]
-    config.load()
-    config.select(profile)
-    return config.active_profile_name

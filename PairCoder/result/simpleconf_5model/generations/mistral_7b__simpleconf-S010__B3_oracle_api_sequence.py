@@ -1,7 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def mutate_then_read(data, key, val):
-    config = ProfileConfig(data)
-    config.load()
-    config[key] = val
-    return config[key]

@@ -1,0 +1,51 @@
+[E6] 30 instances x 7 variants (file-given, model=Qwen2.5-Coder-32B)
+[1/30] django__django-15996
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[2/30] django__django-15851
+[3/30] django__django-15252
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[4/30] django__django-13551
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[5/30] pytest-dev__pytest-7373
+[6/30] sphinx-doc__sphinx-7738
+[7/30] pydata__xarray-4094
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[8/30] django__django-13401
+[9/30] django__django-12308
+[10/30] astropy__astropy-14995
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[11/30] sympy__sympy-23117
+[12/30] pallets__flask-5063
+[13/30] django__django-15814
+<unknown>:755: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[14/30] sympy__sympy-21171
+[15/30] django__django-16527
+[16/30] sympy__sympy-13895
+[17/30] psf__requests-2148
+[18/30] sympy__sympy-20154
+[19/30] django__django-11133
+[20/30] django__django-14752
+[21/30] scikit-learn__scikit-learn-11281
+[22/30] django__django-14787
+[23/30] django__django-16873
+[24/30] sphinx-doc__sphinx-8627
+[25/30] matplotlib__matplotlib-26020
+[26/30] sympy__sympy-24909
+[27/30] matplotlib__matplotlib-23563
+[28/30] mwaskom__seaborn-2848
+[29/30] django__django-13028
+[30/30] scikit-learn__scikit-learn-10297
+
+==== E6 Stage-B construct ablation (file-given) ====
+variant            regCeil voteRec  R@1    R@5    R@10
+full               0.819   0.549   0.333  0.633  0.733
+no_element_sc      0.819   0.555   0.267  0.633  0.733
+no_graph_backstop  0.785   0.579   0.3    0.633  0.733
+no_module_lines    0.766   0.605   0.367  0.633  0.733
+no_small_bypass    0.85    0.585   0.267  0.733  0.767
+no_temp_sched      0.819   0.426   0.333  0.667  0.733
+k3_samples         0.819   0.545   0.267  0.7    0.7
+
+Rule: delta_vs_full < 0 on regCeil/voteRec/R@k => the removed construct WAS helping (keep);
+      delta >= 0 => removing it didn't hurt => DEAD WEIGHT, cut it (and save its LLM cost).

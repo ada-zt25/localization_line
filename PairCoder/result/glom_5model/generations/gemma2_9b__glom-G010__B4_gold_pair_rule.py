@@ -1,2 +1,0 @@
-def summarize(data):
-  return glom(data, ('nums', ['+']), default=0) , len(glom(data, ('nums',), default=[]))

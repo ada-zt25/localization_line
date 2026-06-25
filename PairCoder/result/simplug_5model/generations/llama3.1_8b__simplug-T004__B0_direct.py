@@ -1,5 +1,0 @@
-def get_beta_wrapper_disable_then_score(value):
-    sp, alpha, beta, gamma = make_score_manager()
-    wrapper = beta.plugin
-    wrapper.enabled = False
-    return sp.hooks.score(value)

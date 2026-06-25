@@ -1,2 +1,0 @@
-def nested_is_diot(data):
-  return Diot(data, diot_nest=True).x

@@ -1,6 +1,0 @@
-def durable_update(items):
-    db = make_store()
-    with db.bulk_load():
-        db.update(items)
-    db.commit()
-    db.close()

@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "instance_id": "pydata__xarray-6992",
+      "repo": "pydata/xarray",
+      "n_gold_files": 2,
+      "tot_gold": 59,
+      "ranked_files": [
+        "xarray/core/dataset.py",
+        "xarray/core/indexes.py",
+        "xarray/core/variable.py",
+        "xarray/core/coordinates.py",
+        "xarray/tests/test_dataset.py",
+        "xarray/tests/test_indexes.py",
+        "xarray/__init__.py",
+        "xarray/backends/__init__.py",
+        "xarray/coding/cftimeindex.py",
+        "xarray/core/__init__.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "line_recall": 0.203,
+      "line_recall_given_found": 0.203,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "whole_line_recall": 0.0,
+      "whole_line_R@1": 0,
+      "whole_line_R@5": 0,
+      "whole_line_R@10": 0,
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-20826",
+      "repo": "matplotlib/matplotlib",
+      "n_gold_files": 1,
+      "tot_gold": 3,
+      "ranked_files": [
+        "lib/matplotlib/axes/_base.py",
+        "lib/matplotlib/axes/_axes.py",
+        "lib/matplotlib/axis.py",
+        "lib/matplotlib/tests/test_axes.py",
+        "lib/matplotlib/tests/test_subplots.py",
+        "lib/matplotlib/spines.py",
+        "lib/matplotlib/artist.py",
+        "lib/matplotlib/axes/__init__.py",
+        "lib/matplotlib/axes/_subplots.py",
+        "lib/matplotlib/figure.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 0,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "line_recall": 1.0,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 0,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "whole_line_recall": 0.0,
+      "whole_line_R@1": 0,
+      "whole_line_R@5": 0,
+      "whole_line_R@10": 0,
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 2,
+    "file_recall_gold": 1.0,
+    "file_R@k": {
+      "1": 50.0,
+      "5": 100,
+      "10": 100
+    },
+    "line_recall": 0.602,
+    "line_recall_ci": [
+      0.203,
+      1.0
+    ],
+    "line_recall_given_found_files": 0.602,
+    "line_R@k": {
+      "1": 0,
+      "5": 50.0,
+      "10": 50.0
+    },
+    "arise_ref_line_R@k": {
+      "1": 41,
+      "5": 62,
+      "10": 74
+    },
+    "arise_ref_file_R@1": 67,
+    "whole_line_recall": 0.0,
+    "whole_line_R@k": {
+      "1": 0,
+      "5": 0,
+      "10": 0
+    },
+    "region_minus_whole_recall_paired": {
+      "mean": 0.602,
+      "ci": [
+        0.203,
+        1.0
+      ],
+      "p_gt0": 1.0,
+      "sig": true,
+      "n": 2
+    }
+  }
+}

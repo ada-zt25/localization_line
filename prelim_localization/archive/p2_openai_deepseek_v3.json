@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "backend": "openai",
+    "model": "deepseek-ai/DeepSeek-V3",
+    "n": 20,
+    "mean_gold_files": 2.45,
+    "mean_file_recall@10": 0.662,
+    "all_files_found_rate": 0.35,
+    "mean_global_line_recall": 0.277
+  },
+  "results": [
+    {
+      "instance_id": "django__django-13344",
+      "repo": "django/django",
+      "n_gold_files": 3,
+      "n_repo_pyfiles": 2673,
+      "file_recall": 0.0,
+      "all_files_found": false,
+      "global_line_recall": 0.0
+    },
+    {
+      "instance_id": "django__django-14376",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2691,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.4444444444444444
+    },
+    {
+      "instance_id": "django__django-13512",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2678,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.16666666666666666
+    },
+    {
+      "instance_id": "django__django-15103",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2723,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.9090909090909091
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12682",
+      "repo": "scikit-learn/scikit-learn",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 726,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.047619047619047616
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7462",
+      "repo": "sphinx-doc/sphinx",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 487,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.125
+    },
+    {
+      "instance_id": "django__django-13212",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2668,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.27906976744186046
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3187",
+      "repo": "mwaskom/seaborn",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 152,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.5
+    },
+    {
+      "instance_id": "django__django-14170",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2688,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.3
+    },
+    {
+      "instance_id": "django__django-11532",
+      "repo": "django/django",
+      "n_gold_files": 5,
+      "n_repo_pyfiles": 2565,
+      "file_recall": 0.4,
+      "all_files_found": false,
+      "global_line_recall": 0.08
+    },
+    {
+      "instance_id": "django__django-11885",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2573,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.0
+    },
+    {
+      "instance_id": "sympy__sympy-20438",
+      "repo": "sympy/sympy",
+      "n_gold_files": 3,
+      "n_repo_pyfiles": 1450,
+      "file_recall": 0.3333333333333333,
+      "all_files_found": false,
+      "global_line_recall": 0.0
+    },
+    {
+      "instance_id": "django__django-16631",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2746,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.3076923076923077
+    },
+    {
+      "instance_id": "django__django-16560",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2746,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.23529411764705882
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6386",
+      "repo": "pylint-dev/pylint",
+      "n_gold_files": 4,
+      "n_repo_pyfiles": 1388,
+      "file_recall": 0.75,
+      "all_files_found": false,
+      "global_line_recall": 0.125
+    },
+    {
+      "instance_id": "pytest-dev__pytest-5840",
+      "repo": "pytest-dev/pytest",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 202,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.52
+    },
+    {
+      "instance_id": "django__django-16938",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2752,
+      "file_recall": 0.5,
+      "all_files_found": false,
+      "global_line_recall": 0.5
+    },
+    {
+      "instance_id": "django__django-12155",
+      "repo": "django/django",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 2584,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.08695652173913043
+    },
+    {
+      "instance_id": "django__django-11138",
+      "repo": "django/django",
+      "n_gold_files": 4,
+      "n_repo_pyfiles": 2545,
+      "file_recall": 0.75,
+      "all_files_found": false,
+      "global_line_recall": 0.27906976744186046
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6528",
+      "repo": "pylint-dev/pylint",
+      "n_gold_files": 2,
+      "n_repo_pyfiles": 1452,
+      "file_recall": 1.0,
+      "all_files_found": true,
+      "global_line_recall": 0.6428571428571429
+    }
+  ]
+}

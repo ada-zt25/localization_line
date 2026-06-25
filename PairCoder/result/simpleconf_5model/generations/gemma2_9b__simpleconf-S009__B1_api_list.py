@@ -1,5 +1,0 @@
-def use_profile_same_conf(profiles, profile):
-  prof = ProfileConfig()
-  prof.load(profiles)
-  prof.use_profile(profile)
-  return prof.conf.x

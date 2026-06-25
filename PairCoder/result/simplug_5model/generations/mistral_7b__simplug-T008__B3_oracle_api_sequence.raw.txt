@@ -1,7 +1,0 @@
- Here is the Python code for the `last_score` function as per your requirements:
-
-```python
-def last_score(value):
-    sp, alpha, beta, gamma = make_last_score_manager()
-    return sp.hooks.score(value)
-```

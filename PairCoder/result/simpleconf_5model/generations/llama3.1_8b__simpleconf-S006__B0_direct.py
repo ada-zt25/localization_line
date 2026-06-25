@@ -1,3 +1,0 @@
-def load_then_get(data, key):
-    config = Config.from_data(data)
-    return config.get(key)

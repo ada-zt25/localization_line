@@ -1,7 +1,0 @@
-from simpleconf import ProfileConfig
-
-def use_profile_same_conf(profiles, profile):
-    config = profiles[profile]
-    config.load()
-    config.switch(profile)
-    return config.x

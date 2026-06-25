@@ -1,4 +1,0 @@
-def use_profile_same_conf(profiles, profile):
-    config = ProfileConfig.load(profiles)
-    with config.with_profile(profile):
-        return config.conf.x

@@ -1,5 +1,0 @@
-from simpleconf import Config, ProfileConfig
-
-def merge_get(base, override, key):
-    merged = ProfileConfig({'base': base}, {'override': override})
-    return merged[key]

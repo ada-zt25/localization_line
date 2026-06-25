@@ -1,8 +1,0 @@
- Here is the Python code for the function `nested_stays_dict` as per your requirements:
-
-```python
-from diot import Diot, OrderedDiot, FrozenDiot, DiotFrozenError
-
-def nested_stays_dict(data):
-    return Diot(OrderedDiot(data), frozen=False).get('x')
-```

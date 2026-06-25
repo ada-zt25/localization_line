@@ -1,4 +1,0 @@
-def summarize(data):
-    total = glom.glom(data, ('nums', 'sum'))
-    count = glom.glom(data, ('nums', 'len'))
-    return {'total': total, 'count': count}

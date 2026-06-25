@@ -1,7 +1,0 @@
-def two_reads_same_conf(profiles):
-    with profiles['default'].use_profile('prod'):
-        conf = profiles['default']
-        x1 = conf.conf.x
-        conf = profiles['default']  # reload from same config
-        x2 = conf.conf.x
-    return (x1, x2)

@@ -1,7 +1,0 @@
-def restructure(data):
-    from glom import Coalesce, Assign, T
-
-    return glom(data, {
-        'name': Coalesce(T['a']['b'], PathAccessError()),
-        'n': len(T['items'])
-    })

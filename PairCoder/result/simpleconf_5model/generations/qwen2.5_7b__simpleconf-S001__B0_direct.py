@@ -1,3 +1,0 @@
-def merge_get(base: Config, override: ProfileConfig, key):
-    merged_config = base + override
-    return merged_config.get(key)

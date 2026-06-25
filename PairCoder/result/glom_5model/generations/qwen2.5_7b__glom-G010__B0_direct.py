@@ -1,7 +1,0 @@
-from glom import Coalesce, Assign, T
-
-def summarize(data):
-    return glom(data, {
-        'total': Coalesce(T['nums'], 0, 'sum'),
-        'count': Coalesce(T['nums'], [], len),
-    })

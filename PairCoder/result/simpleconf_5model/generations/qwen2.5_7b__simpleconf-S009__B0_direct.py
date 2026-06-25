@@ -1,5 +1,0 @@
-def use_profile_same_conf(profiles, profile):
-    conf = Config()
-    pc = ProfileConfig(conf)
-    pc.load(profiles, profile)
-    return pc.get('conf.x')

@@ -1,3 +1,0 @@
-def profile_value(profiles, profile):
-  conf = profiles[profile]
-  return conf.x

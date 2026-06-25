@@ -1,4 +1,0 @@
-def summarize(data):
-    total = glom(data, Coalesce(('nums', sum), 0))
-    count = glom(data, Coalesce(('nums', len), 0))
-    return glom({}, Assign('total', total), Assign('count', count))

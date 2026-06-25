@@ -1,4 +1,0 @@
-def merge_three(a, b, c, key):
-    with use_profile(a, 'default'):
-        Config.load([a, b, c])
-        return getattr(Config.current(), key)

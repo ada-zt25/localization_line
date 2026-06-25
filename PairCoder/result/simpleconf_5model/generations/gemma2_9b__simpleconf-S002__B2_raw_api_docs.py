@@ -1,3 +1,0 @@
-def merge_three(a, b, c, key):
-  merged = Config.load([a, b, c])
-  return merged[key]

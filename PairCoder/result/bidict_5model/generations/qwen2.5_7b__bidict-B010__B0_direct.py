@@ -1,6 +1,0 @@
-def reject_dup(pairs, key, val):
-    bidict = bidict(pairs)
-    try:
-        bidict[key] = val
-    except ValueDuplicationError:
-        return dict(bidict)

@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError(\"'(' was never closed\", ('<solution>', 5, 24, \"        return Coalesce(*[glom(data, spec) for spec in Path(path).split('.')] if path else -1\", 5, 0))"}

@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError(\"closing parenthesis ')' does not match opening parenthesis '['\", ('<solution>', 2, 125, \"    return Coalesce(*[glom(data, spec) for spec in Path(path).split('.' if len(Path(path).split('.')) > 1 else [Path(path)]))\", 2, 125))"}

@@ -1,8 +1,0 @@
- Here is the Python code for the `durable_put` function using the sqlitedict library:
-
-```python
-def durable_put(items):
-    store = make_store()
-    store.update(items)
-    store.commit()
-```

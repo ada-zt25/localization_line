@@ -1,5 +1,0 @@
-def durable_put(items):
-  db = make_store()
-  db.update(items)
-  db.commit() 
-  db.close()

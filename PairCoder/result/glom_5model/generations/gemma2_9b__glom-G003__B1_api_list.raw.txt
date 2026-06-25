@@ -1,4 +1,0 @@
-```python
-def pluck_list(data):
-  return glom(data, 'items.v', default=[]) 
-```

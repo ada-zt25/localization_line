@@ -1,4 +1,0 @@
-def active_profile_name(profiles, profile):
-    conf = ProfileConfig.load(profiles, base='default')
-    with ProfileConfig.with_profile(conf, profile):
-        return ProfileConfig.current_profile(conf)

@@ -1,0 +1,96 @@
+{
+  "n": 30,
+  "summary": {
+    "full": {
+      "reg_ceiling": 0.819,
+      "voted_recall": 0.549,
+      "R@1": 0.333,
+      "R@5": 0.633,
+      "R@10": 0.733
+    },
+    "no_element_sc": {
+      "reg_ceiling": 0.819,
+      "voted_recall": 0.555,
+      "R@1": 0.267,
+      "R@5": 0.633,
+      "R@10": 0.733,
+      "delta_vs_full": {
+        "reg_ceiling": 0.0,
+        "voted_recall": 0.006,
+        "R@1": -0.066,
+        "R@5": 0.0,
+        "R@10": 0.0
+      }
+    },
+    "no_graph_backstop": {
+      "reg_ceiling": 0.785,
+      "voted_recall": 0.579,
+      "R@1": 0.3,
+      "R@5": 0.633,
+      "R@10": 0.733,
+      "delta_vs_full": {
+        "reg_ceiling": -0.034,
+        "voted_recall": 0.03,
+        "R@1": -0.033,
+        "R@5": 0.0,
+        "R@10": 0.0
+      }
+    },
+    "no_module_lines": {
+      "reg_ceiling": 0.766,
+      "voted_recall": 0.605,
+      "R@1": 0.367,
+      "R@5": 0.633,
+      "R@10": 0.733,
+      "delta_vs_full": {
+        "reg_ceiling": -0.053,
+        "voted_recall": 0.056,
+        "R@1": 0.034,
+        "R@5": 0.0,
+        "R@10": 0.0
+      }
+    },
+    "no_small_bypass": {
+      "reg_ceiling": 0.85,
+      "voted_recall": 0.585,
+      "R@1": 0.267,
+      "R@5": 0.733,
+      "R@10": 0.767,
+      "delta_vs_full": {
+        "reg_ceiling": 0.031,
+        "voted_recall": 0.036,
+        "R@1": -0.066,
+        "R@5": 0.1,
+        "R@10": 0.034
+      }
+    },
+    "no_temp_sched": {
+      "reg_ceiling": 0.819,
+      "voted_recall": 0.426,
+      "R@1": 0.333,
+      "R@5": 0.667,
+      "R@10": 0.733,
+      "delta_vs_full": {
+        "reg_ceiling": 0.0,
+        "voted_recall": -0.123,
+        "R@1": 0.0,
+        "R@5": 0.034,
+        "R@10": 0.0
+      }
+    },
+    "k3_samples": {
+      "reg_ceiling": 0.819,
+      "voted_recall": 0.545,
+      "R@1": 0.267,
+      "R@5": 0.7,
+      "R@10": 0.7,
+      "delta_vs_full": {
+        "reg_ceiling": 0.0,
+        "voted_recall": -0.004,
+        "R@1": -0.066,
+        "R@5": 0.067,
+        "R@10": -0.033
+      }
+    }
+  }
+}

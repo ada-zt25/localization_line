@@ -1,6 +1,0 @@
-def merge_three(a, b, c, key):
-  merged = Config()
-  merged.update(a)
-  merged.update(b)
-  merged.update(c)
-  return merged[key]

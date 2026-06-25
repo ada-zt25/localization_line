@@ -1,3 +1,0 @@
-def to_plain_dict(data):
-    diot = Diot.from_dict(data)
-    return diot.to_plain_dict()

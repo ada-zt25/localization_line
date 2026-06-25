@@ -1,0 +1,340 @@
+{
+  "results": [
+    {
+      "instance_id": "astropy__astropy-14369",
+      "repo": "astropy/astropy",
+      "probes": [
+        {
+          "path": "astropy/units/format/cds.py",
+          "func": "_make_parser",
+          "lines": "135-263",
+          "n_gold_in": 5,
+          "false_drop": false,
+          "Sf_exc": [
+            "AttributeError",
+            "RuntimeWarning"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "astropy/units/format/cds.py",
+          "func": "p_division_of_units",
+          "lines": "182-190",
+          "n_gold_in": 2,
+          "false_drop": false,
+          "Sf_exc": [
+            "RuntimeWarning",
+            "TypeError"
+          ],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 2,
+      "n_gold_funcs_probed": 2,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "astropy/units/tests/test_format.py::test_cds_grammar[strings4-unit4]",
+          "astropy/units/tests/test_format.py::test_cds_grammar[strings6-unit6]",
+          "astropy/units/tests/test_format.py::test_cds_grammar_fail[km"
+        ],
+        "exc": [
+          "RuntimeWarning",
+          "ValueError"
+        ],
+        "asserts": [
+          "/testbed/astropy/units/tests/test_format.py:#: assert Unit(#) == Unit(#)"
+        ]
+      },
+      "done": true
+    },
+    {
+      "instance_id": "astropy__astropy-8707",
+      "repo": "astropy/astropy",
+      "probes": [
+        {
+          "path": "astropy/io/fits/header.py",
+          "func": "fromstring",
+          "lines": "330-397",
+          "n_gold_in": 17,
+          "false_drop": true,
+          "Sf_exc": [
+            "DeprecationWarning",
+            "PytestConfigWarning",
+            "PytestRemovedIn8Warning",
+            "TypeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "astropy/io/fits/card.py",
+          "func": "fromstring",
+          "lines": "548-559",
+          "n_gold_in": 2,
+          "false_drop": false,
+          "Sf_exc": [
+            "AttributeError",
+            "DeprecationWarning",
+            "PytestConfigWarning",
+            "PytestRemovedIn8Warning"
+          ],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 2,
+      "n_gold_funcs_probed": 2,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "astropy/io/fits/tests/test_header.py::TestHeaderFunctions"
+        ],
+        "exc": [
+          "DeprecationWarning",
+          "PytestConfigWarning",
+          "PytestRemovedIn8Warning",
+          "TypeError"
+        ],
+        "asserts": []
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-14623",
+      "repo": "matplotlib/matplotlib",
+      "probes": [
+        {
+          "path": "lib/matplotlib/axes/_base.py",
+          "func": "set_xlim",
+          "lines": "3161-3284",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [
+            "DeprecationWarning"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/axes/_base.py",
+          "func": "set_ylim",
+          "lines": "3540-3664",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [
+            "DeprecationWarning"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/mpl_toolkits/mplot3d/axes3d.py",
+          "func": "set_xlim3d",
+          "lines": "589-643",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [
+            "DeprecationWarning"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/mpl_toolkits/mplot3d/axes3d.py",
+          "func": "set_ylim3d",
+          "lines": "646-701",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [
+            "DeprecationWarning"
+          ],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 6,
+      "n_gold_funcs_probed": 4,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "lib/matplotlib/tests/test_axes.py::test_inverted_limits"
+        ],
+        "exc": [
+          "DeprecationWarning"
+        ],
+        "asserts": [
+          "/testbed/lib/matplotlib/tests/test_axes.py:#: assert (#.#, #.#) == (#, #)",
+          "FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits - assert (#.#,..."
+        ]
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24870",
+      "repo": "matplotlib/matplotlib",
+      "probes": [
+        {
+          "path": "lib/matplotlib/contour.py",
+          "func": "_contour_args",
+          "lines": "1443-1466",
+          "n_gold_in": 8,
+          "false_drop": false,
+          "Sf_exc": [
+            "TypeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/contour.py",
+          "func": "_process_contour_level_args",
+          "lines": "1120-1148",
+          "n_gold_in": 7,
+          "false_drop": false,
+          "Sf_exc": [
+            "TypeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/contour.py",
+          "func": "_check_xyz",
+          "lines": "1468-1510",
+          "n_gold_in": 5,
+          "false_drop": true,
+          "Sf_exc": [],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/tri/_tricontour.py",
+          "func": "_contour_args",
+          "lines": "53-78",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 4,
+      "n_gold_funcs_probed": 4,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "lib/matplotlib/tests/test_contour.py::test_bool_autolevel"
+        ],
+        "exc": [],
+        "asserts": [
+          "/testbed/lib/matplotlib/tests/test_contour.py:#: assert [#.#, #.#...#, ...] == [#.#]",
+          "FAILED lib/matplotlib/tests/test_contour.py::test_bool_autolevel - assert [#...."
+        ]
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25479",
+      "repo": "matplotlib/matplotlib",
+      "probes": [
+        {
+          "path": "lib/matplotlib/colors.py",
+          "func": "__eq__",
+          "lines": "776-785",
+          "n_gold_in": 2,
+          "false_drop": false,
+          "Sf_exc": [],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/cm.py",
+          "func": "register",
+          "lines": "103-148",
+          "n_gold_in": 1,
+          "false_drop": false,
+          "Sf_exc": [
+            "ValueError"
+          ],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 2,
+      "n_gold_funcs_probed": 2,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "lib/matplotlib/tests/test_colors.py::test_colormap_equals",
+          "lib/matplotlib/tests/test_colors.py::test_set_cmap_mismatched_name"
+        ],
+        "exc": [
+          "AssertionError"
+        ],
+        "asserts": [
+          "/testbed/lib/matplotlib/tests/test_colors.py:#: AssertionError: assert # == #",
+          "/testbed/lib/matplotlib/tests/test_colors.py:#: assert <matplotlib.colors.ListedColormap object at #x#fb#e#e#> == <matplotlib.colors.ListedColormap object at #x#fb#e#c#>",
+          "FAILED lib/matplotlib/tests/test_colors.py::test_colormap_equals - assert <ma..."
+        ]
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25775",
+      "repo": "matplotlib/matplotlib",
+      "probes": [
+        {
+          "path": "lib/matplotlib/text.py",
+          "func": "__init__",
+          "lines": "104-153",
+          "n_gold_in": 6,
+          "false_drop": true,
+          "Sf_exc": [
+            "AttributeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/backends/backend_cairo.py",
+          "func": "draw_text",
+          "lines": "190-214",
+          "n_gold_in": 4,
+          "false_drop": true,
+          "Sf_exc": [
+            "AttributeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/text.py",
+          "func": "_reset_visual_defaults",
+          "lines": "155-189",
+          "n_gold_in": 3,
+          "false_drop": true,
+          "Sf_exc": [
+            "AttributeError"
+          ],
+          "Sf_rc": "1"
+        },
+        {
+          "path": "lib/matplotlib/text.py",
+          "func": "update_from",
+          "lines": "312-325",
+          "n_gold_in": 3,
+          "false_drop": true,
+          "Sf_exc": [
+            "AttributeError"
+          ],
+          "Sf_rc": "1"
+        }
+      ],
+      "n_gold_funcs": 7,
+      "n_gold_funcs_probed": 4,
+      "S0": {
+        "rc": "1",
+        "tests": [
+          "lib/matplotlib/tests/test_text.py::test_annotation_antialiased",
+          "lib/matplotlib/tests/test_text.py::test_get_antialiased",
+          "lib/matplotlib/tests/test_text.py::test_set_antialiased",
+          "lib/matplotlib/tests/test_text.py::test_text_antialiased_off_default_vs_manual[pdf]",
+          "lib/matplotlib/tests/test_text.py::test_text_antialiased_off_default_vs_manual[png]",
+          "lib/matplotlib/tests/test_text.py::test_text_antialiased_on_default_vs_manual[png]"
+        ],
+        "exc": [
+          "AttributeError"
+        ],
+        "asserts": []
+      },
+      "done": true
+    }
+  ]
+}

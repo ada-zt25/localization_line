@@ -1,3 +1,0 @@
-def get_default(data, key):
-    diot = Diot(data)
-    return diot.get(key, 0)

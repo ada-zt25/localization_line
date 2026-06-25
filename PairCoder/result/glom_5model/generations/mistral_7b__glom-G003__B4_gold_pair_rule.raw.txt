@@ -1,6 +1,0 @@
- Here is the Python code for the `pluck_list` function using the glom library as per your requirements:
-
-```python
-def pluck_list(data):
-    return list(glom(data, ('items', ['v']), default=[]))
-```

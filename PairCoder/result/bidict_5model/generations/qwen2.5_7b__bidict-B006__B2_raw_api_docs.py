@@ -1,7 +1,0 @@
-def set_through_inverse(pairs, key, val):
-    b = bidict()
-    try:
-        b.inv[val] = key
-        return b[key]
-    except ValueDuplicationError:
-        raise  # Re-raise if there's an issue with the inverse assignment

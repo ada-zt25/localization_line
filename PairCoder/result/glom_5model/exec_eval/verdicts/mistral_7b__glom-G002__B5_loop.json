@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "syntax_error", "reason_coarse": "exec_error", "detail": "SyntaxError(\"'(' was never closed\", ('<solution>', 2, 20, \"    return Coalesce(glom(data, 'nums', default=[]), glom(Coalesce(*[glom(x, {'sum': T.sum}) for x in data['nums']]))\\n\", 2, 0))"}

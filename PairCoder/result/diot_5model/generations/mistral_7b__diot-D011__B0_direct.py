@@ -1,7 +1,0 @@
-from diot import FrozenDiot, Diot
-
-def thaw_to_modify(data, key, val):
-    with FrozenDiot(data) as f:
-        d = f.thaw()
-        d[key] = val
-        return d[key]

@@ -1,6 +1,0 @@
-def switch_two_profiles(profiles):
-  with profiles['prod'] as prod:
-    prod_x = prod.get('x')
-  with profiles['default'] as default:
-    default_x = default.get('x')
-  return (prod_x, default_x)

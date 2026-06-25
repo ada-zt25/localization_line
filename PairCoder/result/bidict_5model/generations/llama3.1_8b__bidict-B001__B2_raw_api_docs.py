@@ -1,5 +1,0 @@
-from bidict import bdict, inv
-
-def key_for(pairs, val):
-    b = bdict(pairs)
-    return inv[b][val]

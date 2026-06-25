@@ -1,7 +1,0 @@
- Here is the Python code for the `invert` function:
-
-```python
-def invert(pairs):
-    b = bidict(pairs)
-    return dict(b.inv)
-```

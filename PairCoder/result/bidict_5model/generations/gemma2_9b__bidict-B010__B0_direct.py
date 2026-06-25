@@ -1,6 +1,0 @@
-def reject_dup(pairs, key, val):
-  try:
-    OrderedBidict(**pairs).update({key: val})
-  except DuplicationError:
-    return dict(pairs)
-  return dict(pairs)

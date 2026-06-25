@@ -1,1 +1,0 @@
-{"exec_pass": false, "reason": "wrong_output", "reason_coarse": "wrong_behavior", "detail": "returned {'name': Coalesce('a.b', '', 'hi'), 'n': 3}, expected {'name': 'hi', 'n': 3}"}

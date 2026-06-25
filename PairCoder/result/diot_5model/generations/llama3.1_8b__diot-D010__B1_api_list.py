@@ -1,5 +1,0 @@
-def nested_mutate_reflects(data, val):
-    d = Diot(data, diot_transform='safe', diot_nest=True, diot_frozen=False)
-    with d.thaw():
-        d['x']['y'] = val
-    return d['x']['y']

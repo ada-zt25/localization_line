@@ -1,2 +1,0 @@
-def restructure(data):
-  return {'name': glom(data, 'a.b'), 'n': len(glom(data, 'items'))}

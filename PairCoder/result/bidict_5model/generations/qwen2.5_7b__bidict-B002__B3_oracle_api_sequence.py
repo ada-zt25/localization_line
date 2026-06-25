@@ -1,6 +1,0 @@
-def invert(pairs):
-    try:
-        b = bidict(pairs)
-        return {v: k for k, v in b.items()}
-    except DuplicationError:
-        raise ValueError("Duplicate values found which cannot be inverted")

@@ -1,8 +1,0 @@
-def restructure(data):
-    return glom(
-        data,
-        {
-            'name': ('a', 'b'),
-            'n': Coalesce(('items', len), 0)
-        }
-    )

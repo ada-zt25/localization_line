@@ -1,4 +1,0 @@
-from glom import Coalesce, Path, T
-
-def safe_get(data, path):
-    return Coalesce(Path(path), T(-1))

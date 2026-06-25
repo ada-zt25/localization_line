@@ -1,3 +1,0 @@
-def to_plain_dict(data):
-    with FrozenDiot(data) as d:
-        return d.to_dict()

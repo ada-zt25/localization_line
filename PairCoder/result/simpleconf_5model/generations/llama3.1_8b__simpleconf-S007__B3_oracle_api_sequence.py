@@ -1,3 +1,0 @@
-def profile_load_attr(profiles):
-    profile = profiles['default'].load()
-    return getattr(profile.conf, 'x')
