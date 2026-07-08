@@ -10,7 +10,7 @@
 
 **方法 SPINE**:一个**断言接地的行级重排器**。给定某个行级候选排序(来自自一致性投票或覆盖率),SPINE 用**失败测试的断言(期望值 vs 现状)**做一次 LLM 反向推理,把 top-k 头部重排,把"真正产生错值的根因行(producer)"提到 #1,而不是"只传递错值的行(propagator)"。它是**纯 top-k 重排(recall-safe,R@10 不变)**,只贡献判别力(R@1),不贡献可达性(R@5/R@10)。
 
-**核心发现(已验证)**:在多数类(behavioral)行级定位上,SPINE 把 R@1 提升 **+13~20pp**(相对弱基线)/ **+8~15pp**(相对最强公平基线 vote_only),在**官方 gold 上 3 个模型稳显著(DeepSeek-V3.2-Exp、Qwen3-Coder-30B、Qwen2.5-72B)+ DeepSeek-V3 borderline(p≈.12)**,对抗审计(5 维)通过,机制上与 ARISE 的静态 def-use **正交**。
+**核心发现(已验证)**:在多数类(behavioral)行级定位上,SPINE 把 R@1 提升 **+13~20pp**(相对弱基线)/ **+8~15pp**(相对最强公平基线 vote_only),在**满-n 专属跑上 5/7 模型显著**(DeepSeek-V3 最强 +19.7pp;官方口径已复核 3 个一致,V3 因残跑待补;仅 GLM/Ling 是 null),对抗审计(5 维 + 二次对抗工作流 wf_5132a810)通过,机制上与 ARISE 的静态 def-use **正交**。
 
 **当前状态**:定位这半篇已硬。**唯一还没跑的决定性实验 = "SPINE 叠加到 ARISE 上"**(rerank ARISE 的 top-k,看 R@1 能否从 41 再涨)。工具全就绪,卡在算力/环境(见 §11、§12)。
 
@@ -128,7 +128,7 @@
 ### 7.1 决定性 gate(behavioral-132,file-given)
 `runs/spine_behav132.json`(DeepSeek-V3)。**区分两组对比,别混**:
 - **clean_gold,M5(SPINE)vs cov-max(M4)**:R@1 **25.0→44.7**(`spine_paired_stats.py`,即 §9.2 那条命令的输出)。
-- **官方 gold,M5 vs vote_only**:真 DeepSeek-V3(`basecmp_dsv3.json`)= **28.8→39.4,+10.6,p≈.12(n=66),官方口径下不显著**。原表 "+13.6/.0003" 其实是 DeepSeek-**V3.2-Exp**(`spine_behav132_dsv32.json`),见 §7.3。
+- **官方 gold,M5 vs vote_only**:`basecmp_dsv3.json` = 28.8→39.4,+10.6,p≈.12(n=66)——**⚠️残跑**(run 被 kill、`meta` 空、`ours_m5` 只有前 67/110 实例且偏 Django),**不是 V3 弱**;**V3 在满-n 专属跑 `spine_behav132.json` 上全场最强**(clean gold,M5 vs cov-max +19.7pp,28W/4L,p≈0);官方口径满-n 待补(basecmp 重跑 132 带 `--dump-ranks`)。原表 "+13.6/.0003" 其实是 DeepSeek-**V3.2-Exp**(`spine_behav132_dsv32.json`),见 §7.3。
 - R@5 小涨、R@10 平 → **纯判别器形状**(口径无关)。
 
 ### 7.2 对抗审计(5 维,`wf_03ce1105`)= **SURVIVES-QUALIFIED**
@@ -146,12 +146,13 @@
 | **DeepSeek-V3.2-Exp** | spine_behav132_dsv32(官方gold) | 25.8 | 39.4 | **+13.6** | .0003 ✅ |
 | **Qwen3-Coder-30B** | basecmp_qwen30(官方gold) | 18.5 | 31.5 | **+13.0** | .039 ✅ |
 | **Qwen2.5-72B** | basecmp_qwen72b(官方gold) | 23.5 | 31.8 | **+8.3** | .013 ✅ |
-| DeepSeek-V3 | basecmp_dsv3(官方gold,n=66) | 28.8 | 39.4 | +10.6 | .12 ⚠️ borderline |
+| DeepSeek-V3 | basecmp_dsv3 **残跑n=66** | 28.8 | 39.4 | +10.6 | .12 ⚠️欠功效 |
+| DeepSeek-V3(满-n专属跑) | spine_behav132(clean,M5vsM4,n=122) | 24.6 | 44.3 | **+19.7** | ≈0 ✅ |
 | Hunyuan-A13B | multi_summary | 23.5 | ~27.6 | +4.1 | n.s. ❌ |
 | GLM-4.5-Air | multi_summary | 34.1 | 34.6 | +0.0 | n.s. ❌ |
 | Ling-flash-2.0 | multi_summary | 31.1 | 31.1 | +0.0 | n.s. ❌ |
 - **机制 = headroom × capability**:赢家 vote 基线低(有 headroom)且模型够强;GLM/Ling 基线高(无 headroom);Hunyuan 有 headroom 但弱推理(在基线排错的实例上只救回 5% vs DeepSeek 30%)。
-- **⚠️ DeepSeek-V3 的显著性口径依赖**:官方 gold + vote_only 基线下 +10.6 p≈.12(borderline);clean_gold 或 vs-covmax 基线下更大更显著。报论文用官方 gold,别把 V3 当"稳显著"。
+- **⚠️ DeepSeek-V3 的 borderline = 残跑欠功效,非弱效应**:V3 在满-n 专属跑上 **+19.7pp p≈0(全场最强)**。**满-n 专属跑(spine_paired_stats,clean gold,M5 vs cov-max)= 5/7 显著**(加 V3 +19.7、Hunyuan +5.7;只有 GLM/Ling 真 null,它们的重排 rescue≈breakage 近随机)。**别用 n-collapsing 的 basecmp intersection 报显著性**(审稿人一复算就是"不显著");官方口径满-n 只有 dsv32/qwen72 有 ranks 能算,其余需补 `--dump-ranks` 重跑。
 - **basecmp_*.json**(dsv3/qwen30/dsv32b/qwen72b)= 含 `arise_static` 全 6 臂的官方口径重跑,是官方 baseline-vs-SPINE 表的**唯一可信来源**。
 
 ### 7.4 修复率 proof-of-concept(`repair_ab.py`,DeepSeek-V3.2,diff-function 子集 33 个)
@@ -247,6 +248,13 @@ python3 -c "import sys;sys.path.insert(0,'.');import region_loc,p0_line_recall,c
   3. **同模型是硬要求**(否则增益是"更大 reranker"而非断言信号)。random 控制证明是断言信号不是乱洗。
 - **绿灯**:ARISE 41 → 50+,p<.05,discordant≥8,且 > random。
 - **工具已验证**:`stack_arise_spine.py` 管线已跑通(喂 vote_only 能重现 `ours_m5_votebase`;random 控制可复现)。
+- **⚠️⚠️ 有效性硬要求(对抗审计 wf_5132a810 坐实;不满足=不是"对标 ARISE",会被拒)**:
+  1. **必须真·agentic ARISE**(官方 SWE-agent + Docker + `fl.yaml`),复现 ~41。**现仓库里没有任何真 ARISE 跑**——所有结果里的 `arise_static` 臂 = `code_graph.line_scores_v2` **自复现** ARISE 打分公式的**代理**,官方口径只有 **line R@1≈13.6/14.8**(≠ 论文 41)。**"SPINE 打过 arise_static +16~26pp" 不是对标 ARISE,千万别这么报**(审稿人一眼看穿"你打的是自己的残缺复现")。
+  2. **同 backbone**:ARISE 与 SPINE 用同一模型(理想=ARISE 原生 Qwen2.5-Coder-32B-AWQ),否则增益可能是"换了更强模型"。
+  3. **去 oracle 文件定位**:现主实验用 `--reuse-files`(fileR@1=100),而 ARISE 真实 fileR@1=67 → 绝对 line R@1 **不可比**。对标时两边共用同一套**非 oracle** 文件定位。
+  4. **backbone 事先定死** = ARISE 自己的;别从 SPINE 赢的模型里挑(post-hoc 挑模型 = cherry-pick)。
+  5. **功效够 + 过 random 控制 + R@5/R@10 不变**(别 n=20)。
+- **⚠️ 工程注意(功效)**:真 ARISE 只吐 ≤10 个**跨文件稀疏**定位,落到 #1 文件的行很少 → SPINE 若只重排 #1 文件头部会"没料可排"。**改成对整个 top-k 全局重排**(不只 files[0] 头部),否则叠加实验会因可重排行太少而欠功效。stack_arise_spine.py::rerank 现在只动 `files[0]` 头部,需改。
 
 ### 11.2 怎么拿到"真·ARISE 的 top-k"(有 Docker 约束)
 ARISE = SWE-agent + **Docker**(SWE-bench 容器给仓库环境)。三条路:
