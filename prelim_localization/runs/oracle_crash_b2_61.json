@@ -1,0 +1,370 @@
+{
+ "results": [
+  {
+   "instance_id": "astropy__astropy-13033",
+   "ranked_files": [
+    "astropy/timeseries/core.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-13977",
+   "ranked_files": [
+    "astropy/units/quantity.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-14096",
+   "ranked_files": [
+    "astropy/coordinates/sky_coordinate.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-14309",
+   "ranked_files": [
+    "astropy/io/fits/connect.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-7336",
+   "ranked_files": [
+    "astropy/units/decorators.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-7606",
+   "ranked_files": [
+    "astropy/units/core.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-7671",
+   "ranked_files": [
+    "astropy/utils/introspection.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11087",
+   "ranked_files": [
+    "django/db/models/deletion.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11265",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11299",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11749",
+   "ranked_files": [
+    "django/core/management/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12663",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12774",
+   "ranked_files": [
+    "django/db/models/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13012",
+   "ranked_files": [
+    "django/db/models/expressions.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13023",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13112",
+   "ranked_files": [
+    "django/db/models/fields/related.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13406",
+   "ranked_files": [
+    "django/db/models/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13449",
+   "ranked_files": [
+    "django/db/models/expressions.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13794",
+   "ranked_files": [
+    "django/utils/functional.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13821",
+   "ranked_files": [
+    "django/db/backends/sqlite3/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14007",
+   "ranked_files": [
+    "django/db/models/sql/compiler.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14140",
+   "ranked_files": [
+    "django/db/models/query_utils.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14349",
+   "ranked_files": [
+    "django/core/validators.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14351",
+   "ranked_files": [
+    "django/db/models/lookups.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14493",
+   "ranked_files": [
+    "django/contrib/staticfiles/storage.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14765",
+   "ranked_files": [
+    "django/db/migrations/state.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15104",
+   "ranked_files": [
+    "django/db/migrations/autodetector.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15161",
+   "ranked_files": [
+    "django/db/models/expressions.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15277",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15375",
+   "ranked_files": [
+    "django/db/models/aggregates.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15380",
+   "ranked_files": [
+    "django/db/migrations/autodetector.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15503",
+   "ranked_files": [
+    "django/db/models/fields/json.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15525",
+   "ranked_files": [
+    "django/core/serializers/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15987",
+   "ranked_files": [
+    "django/core/management/commands/loaddata.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16100",
+   "ranked_files": [
+    "django/contrib/admin/options.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16116",
+   "ranked_files": [
+    "django/core/management/commands/makemigrations.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16136",
+   "ranked_files": [
+    "django/views/generic/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16454",
+   "ranked_files": [
+    "django/core/management/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16667",
+   "ranked_files": [
+    "django/forms/widgets.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-20859",
+   "ranked_files": [
+    "lib/matplotlib/legend.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-22719",
+   "ranked_files": [
+    "lib/matplotlib/category.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24026",
+   "ranked_files": [
+    "lib/matplotlib/stackplot.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25122",
+   "ranked_files": [
+    "lib/matplotlib/mlab.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-26291",
+   "ranked_files": [
+    "lib/mpl_toolkits/axes_grid1/inset_locator.py"
+   ]
+  },
+  {
+   "instance_id": "mwaskom__seaborn-3069",
+   "ranked_files": [
+    "seaborn/_core/plot.py"
+   ]
+  },
+  {
+   "instance_id": "pallets__flask-5014",
+   "ranked_files": [
+    "src/flask/blueprints.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-1724",
+   "ranked_files": [
+    "requests/sessions.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-5414",
+   "ranked_files": [
+    "requests/models.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-3677",
+   "ranked_files": [
+    "xarray/core/dataset.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-7233",
+   "ranked_files": [
+    "xarray/core/rolling.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-4970",
+   "ranked_files": [
+    "pylint/checkers/similar.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-6903",
+   "ranked_files": [
+    "pylint/lint/run.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-12585",
+   "ranked_files": [
+    "sklearn/base.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13135",
+   "ranked_files": [
+    "sklearn/preprocessing/_discretization.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13328",
+   "ranked_files": [
+    "sklearn/linear_model/huber.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13372",
+   "ranked_files": [
+    "sympy/core/evalf.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14711",
+   "ranked_files": [
+    "sympy/physics/vector/vector.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-19954",
+   "ranked_files": [
+    "sympy/combinatorics/perm_groups.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20428",
+   "ranked_files": [
+    "sympy/polys/domains/expressiondomain.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-23824",
+   "ranked_files": [
+    "sympy/physics/hep/gamma_matrices.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-23950",
+   "ranked_files": [
+    "sympy/sets/contains.py"
+   ]
+  }
+ ]
+}

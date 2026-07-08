@@ -1,0 +1,54 @@
+{
+ "config": "MODEL=Qwen2.5-Coder-32B BASE_URL=http://127.0.0.1:8000/v1 K=5 TOPK=10 WORKERS=24 COV_WORKERS=6 ARISE_GOLD=True GIT_SHA=uncommitted",
+ "file_loc": "oracle(gold-file, file-given)",
+ "n_S1": 57,
+ "arms": {
+  "M0_ours_static": {
+   "R@1": 29.8,
+   "R@5": 50.9,
+   "R@10": 56.1
+  },
+  "M3_ours_dynamic": {
+   "R@1": 29.8,
+   "R@5": 50.9,
+   "R@10": 56.1
+  },
+  "M2_covnarrow_static": {
+   "R@1": 35.1,
+   "R@5": 52.6,
+   "R@10": 68.4
+  },
+  "M4_coverage_max": {
+   "R@1": 35.1,
+   "R@5": 52.6,
+   "R@10": 68.4
+  },
+  "anchor_arise_static": {
+   "R@1": 12.3,
+   "R@5": 26.3,
+   "R@10": 29.8
+  },
+  "anchor_vote_only": {
+   "R@1": 31.6,
+   "R@5": 47.4,
+   "R@10": 56.1
+  }
+ },
+ "arise_ref_NOTE": "ARISE 41/62/74 is END-TO-END\u53e3\u5f84; NOT comparable to these file-given absolutes",
+ "arise_ref": {
+  "line_R@1": 41,
+  "line_R@5": 62,
+  "line_R@10": 74,
+  "file_R@1": 67,
+  "file_R@3": 82
+ },
+ "offline_ceiling": {
+  "S1_line_R@10": 43.9,
+  "delta_vs_static_pp": 14.0,
+  "ci95": [
+   3.5,
+   24.6
+  ],
+  "sig": true
+ }
+}

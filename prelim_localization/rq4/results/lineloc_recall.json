@@ -1,0 +1,72 @@
+{
+ "setup": "crash on-path, n=57, file-given(oracle), full vote+graph+LLM, Qwen2.5-Coder-32B",
+ "metric_note": "recall = fraction recall = 召回金标行/全部金标行 (file-given → = recall-given-found-file)",
+ "arms": {
+  "M0_ours_static": {
+   "recall": 0.629,
+   "precision": 0.068,
+   "f1": 0.107,
+   "n_pred": 50.421
+  },
+  "M3_ours_dynamic": {
+   "recall": 0.629,
+   "precision": 0.068,
+   "f1": 0.107,
+   "n_pred": 50.421
+  },
+  "M2_covnarrow_static": {
+   "recall": 0.644,
+   "precision": 0.084,
+   "f1": 0.118,
+   "n_pred": 40.684
+  },
+  "M4_coverage_max": {
+   "recall": 0.644,
+   "precision": 0.084,
+   "f1": 0.118,
+   "n_pred": 40.684
+  },
+  "anchor_arise_static": {
+   "recall": 0.344,
+   "precision": 0.03,
+   "f1": 0.047,
+   "n_pred": 57.351
+  },
+  "anchor_vote_only": {
+   "recall": 0.629,
+   "precision": 0.068,
+   "f1": 0.107,
+   "n_pred": 50.421
+  }
+ },
+ "M4_minus_M0": {
+  "recall": {
+   "delta": 0.016,
+   "ci95": [
+    -0.079,
+    0.11
+   ],
+   "sig": false,
+   "n": 57
+  },
+  "precision": {
+   "delta": 0.016,
+   "ci95": [
+    -0.001,
+    0.036
+   ],
+   "sig": false,
+   "n": 57
+  },
+  "f1": {
+   "delta": 0.011,
+   "ci95": [
+    -0.007,
+    0.03
+   ],
+   "sig": false,
+   "n": 57
+  }
+ },
+ "model": "Qwen2.5-Coder-32B"
+}

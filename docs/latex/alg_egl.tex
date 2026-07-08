@@ -1,0 +1,40 @@
+% ============================================================================
+% EGL algorithm block  —  \input{alg_egl} from main.tex   (RQ4 / superset+LoC)
+% Preamble requirements:
+%   \usepackage[ruled,linesnumbered]{algorithm2e}
+%   \usepackage{amsmath,amssymb}
+% The two \Set... lines set the triangle comment style; may live in the preamble.
+% ============================================================================
+\SetKwComment{Comment}{$\triangleright$\ }{}
+\SetCommentSty{small}
+\begin{algorithm}[t]
+\DontPrintSemicolon
+\SetKwInOut{Require}{Require}
+\SetKwInOut{Result}{Result}
+\caption{\textbf{EGL} --- coverage-guided line localization (one instance). Execution coverage $E$
+is a \emph{membership} signal injected at three stages of a vote-based edit-location step running on a
+pluggable localization host: \textbf{(1)} upstream pool expansion (raise the superset ceiling),
+\textbf{(2)} midstream conditioned generation, \textbf{(3)} downstream frontier filter (cut LoC).
+The output is an \emph{unordered} candidate set, scored by \textsc{superset} (predicted set $\supseteq$ all gold lines)
+and \textsc{LoC} (set size). $E^{\pm\delta}$ is $E$ dilated by a $\pm\delta$ line window; $E_f$ the executed lines of file $f$.}
+\label{alg:egl}
+\Require{issue $I$; repo $\mathcal{R}$; failing-test coverage $E$; host localizer; samples $k$; expansion budget $K$; frontier width $\delta$; cut-off $N$; window $w$}
+\Result{candidate set $\mathcal{S}$;\quad report \textsc{superset} $=[\,\mathrm{gold}\subseteq\mathcal{S}\,]$ and \textsc{LoC} $=|\mathcal{S}|$}
+\BlankLine
+$(\mathcal{F},\mathrm{Rel}) \leftarrow \textsc{HostLocalize}(I,\mathcal{R})$ \Comment*[r]{pluggable host: candidate files + related elements}
+$\mathit{voted} \leftarrow \{\}$ \Comment*[r]{$\{(\mathrm{file},\mathrm{line})\!:\!\mathrm{freq}\}$}
+\ForEach{file $f$ with elements $\mathrm{Rel}_f$}{
+  $\Omega \leftarrow \textsc{Lines}(\mathrm{Rel}_f,\ \pm w)$ \Comment*[r]{coarse element region}
+  $\Omega \leftarrow \Omega \,\cup\, \textsc{ScoredExecTopK}(f,I,E_f,K)$ \Comment*[r]{\textbf{(1)} top-$K$ executed lines by \textsc{LineScore} (issue + traceback slice + coverage); ceiling $68.4\!\to\!75.4$}
+  $\mathit{freq} \leftarrow \mathbf{0}$\;
+  \For{$s \leftarrow 1$ \KwTo $k$}{
+     $L_s \leftarrow \textsc{Llm}\big(I,\ \textsc{View}(\Omega,E_f),\ \tau_s\big)$ \Comment*[r]{\textbf{(2)} conditioned generation: mark executed `\texttt{>}' + prepend crash traceback}
+     \lForEach{$(r,\ell)\in L_s$}{$\mathit{freq}[\ell] \mathrel{+}= 1/(1+r)$}
+  }
+  \lForEach{$\ell$}{$\mathit{voted}[(f,\ell)] \leftarrow \mathit{freq}[\ell]$}
+}
+$\mathit{voted} \leftarrow \{\,(f,\ell)\in\mathit{voted} : \ell \in E_f^{\pm\delta}\,\}$ \Comment*[r]{\textbf{(3)} downstream frontier filter $\to$ cut LoC}
+$\mathcal{P} \leftarrow \textsc{TopN}(\mathit{voted},\ N)$ \Comment*[r]{$N$ highest-frequency pairs (unordered)}
+$\mathcal{S} \leftarrow \bigcup_{(f,\ell)\in\mathcal{P}} \textsc{Window}(f,\ell,\pm w)$ \Comment*[r]{$\pm w$ expansion; the reported edit-location set}
+\Return $\mathcal{S}$ \Comment*[r]{\textsc{superset}$=[\mathrm{gold}\subseteq\mathcal{S}]$, \textsc{LoC}$=|\mathcal{S}|$; sweep $N$ for the Pareto curve}
+\end{algorithm}

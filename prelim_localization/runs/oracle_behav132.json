@@ -1,0 +1,796 @@
+{
+ "results": [
+  {
+   "instance_id": "astropy__astropy-12907",
+   "ranked_files": [
+    "astropy/modeling/separable.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-6938",
+   "ranked_files": [
+    "astropy/io/fits/fitsrec.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-10914",
+   "ranked_files": [
+    "django/conf/global_settings.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11001",
+   "ranked_files": [
+    "django/db/models/sql/compiler.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11019",
+   "ranked_files": [
+    "django/forms/widgets.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11039",
+   "ranked_files": [
+    "django/core/management/commands/sqlmigrate.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11099",
+   "ranked_files": [
+    "django/contrib/auth/validators.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11133",
+   "ranked_files": [
+    "django/http/response.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11179",
+   "ranked_files": [
+    "django/db/models/deletion.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11283",
+   "ranked_files": [
+    "django/contrib/auth/migrations/0011_update_proxy_permissions.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11422",
+   "ranked_files": [
+    "django/utils/autoreload.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11564",
+   "ranked_files": [
+    "django/conf/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11630",
+   "ranked_files": [
+    "django/core/checks/model_checks.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11742",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11797",
+   "ranked_files": [
+    "django/db/models/lookups.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11815",
+   "ranked_files": [
+    "django/db/migrations/serializer.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11848",
+   "ranked_files": [
+    "django/utils/http.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11905",
+   "ranked_files": [
+    "django/db/models/lookups.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11910",
+   "ranked_files": [
+    "django/db/migrations/autodetector.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11999",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12125",
+   "ranked_files": [
+    "django/db/migrations/serializer.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12284",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12286",
+   "ranked_files": [
+    "django/core/checks/translation.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12453",
+   "ranked_files": [
+    "django/db/backends/base/creation.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12470",
+   "ranked_files": [
+    "django/db/models/sql/compiler.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12589",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12708",
+   "ranked_files": [
+    "django/db/backends/base/schema.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12747",
+   "ranked_files": [
+    "django/db/models/deletion.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12856",
+   "ranked_files": [
+    "django/db/models/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12908",
+   "ranked_files": [
+    "django/db/models/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12983",
+   "ranked_files": [
+    "django/utils/text.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13033",
+   "ranked_files": [
+    "django/db/models/sql/compiler.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13158",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13265",
+   "ranked_files": [
+    "django/db/migrations/autodetector.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13315",
+   "ranked_files": [
+    "django/forms/models.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13401",
+   "ranked_files": [
+    "django/db/models/fields/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13551",
+   "ranked_files": [
+    "django/contrib/auth/tokens.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13590",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13658",
+   "ranked_files": [
+    "django/core/management/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13757",
+   "ranked_files": [
+    "django/db/models/fields/json.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13768",
+   "ranked_files": [
+    "django/dispatch/dispatcher.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14411",
+   "ranked_files": [
+    "django/contrib/auth/forms.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14915",
+   "ranked_files": [
+    "django/forms/models.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15388",
+   "ranked_files": [
+    "django/template/autoreload.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15789",
+   "ranked_files": [
+    "django/utils/html.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-15902",
+   "ranked_files": [
+    "django/forms/formsets.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16595",
+   "ranked_files": [
+    "django/db/migrations/operations/fields.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16820",
+   "ranked_files": [
+    "django/db/migrations/operations/models.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16910",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-17051",
+   "ranked_files": [
+    "django/db/models/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-17087",
+   "ranked_files": [
+    "django/db/migrations/serializer.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-18869",
+   "ranked_files": [
+    "lib/matplotlib/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23314",
+   "ranked_files": [
+    "lib/mpl_toolkits/mplot3d/axes3d.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23913",
+   "ranked_files": [
+    "lib/matplotlib/legend.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23987",
+   "ranked_files": [
+    "lib/matplotlib/figure.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24970",
+   "ranked_files": [
+    "lib/matplotlib/colors.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25311",
+   "ranked_files": [
+    "lib/matplotlib/offsetbox.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25332",
+   "ranked_files": [
+    "lib/matplotlib/cbook.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25433",
+   "ranked_files": [
+    "lib/matplotlib/figure.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-26011",
+   "ranked_files": [
+    "lib/matplotlib/axis.py"
+   ]
+  },
+  {
+   "instance_id": "mwaskom__seaborn-2848",
+   "ranked_files": [
+    "seaborn/_oldcore.py"
+   ]
+  },
+  {
+   "instance_id": "mwaskom__seaborn-3407",
+   "ranked_files": [
+    "seaborn/axisgrid.py"
+   ]
+  },
+  {
+   "instance_id": "pallets__flask-4992",
+   "ranked_files": [
+    "src/flask/config.py"
+   ]
+  },
+  {
+   "instance_id": "pallets__flask-5063",
+   "ranked_files": [
+    "src/flask/cli.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-1963",
+   "ranked_files": [
+    "requests/sessions.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-2317",
+   "ranked_files": [
+    "requests/sessions.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-3362",
+   "ranked_files": [
+    "requests/utils.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-4094",
+   "ranked_files": [
+    "xarray/core/dataarray.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-4248",
+   "ranked_files": [
+    "xarray/core/formatting.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-4493",
+   "ranked_files": [
+    "xarray/core/variable.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-5131",
+   "ranked_files": [
+    "xarray/core/groupby.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-5859",
+   "ranked_files": [
+    "pylint/checkers/misc.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-7080",
+   "ranked_files": [
+    "pylint/lint/expand_modules.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-7114",
+   "ranked_files": [
+    "pylint/lint/expand_modules.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-7993",
+   "ranked_files": [
+    "pylint/reporters/text.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-10297",
+   "ranked_files": [
+    "sklearn/linear_model/ridge.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-10949",
+   "ranked_files": [
+    "sklearn/utils/validation.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-11040",
+   "ranked_files": [
+    "sklearn/neighbors/base.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-11281",
+   "ranked_files": [
+    "sklearn/mixture/base.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-12471",
+   "ranked_files": [
+    "sklearn/preprocessing/_encoders.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13241",
+   "ranked_files": [
+    "sklearn/decomposition/kernel_pca.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13439",
+   "ranked_files": [
+    "sklearn/pipeline.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13496",
+   "ranked_files": [
+    "sklearn/ensemble/iforest.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13497",
+   "ranked_files": [
+    "sklearn/feature_selection/mutual_info_.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13584",
+   "ranked_files": [
+    "sklearn/utils/_pprint.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-11400",
+   "ranked_files": [
+    "sympy/printing/ccode.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-11870",
+   "ranked_files": [
+    "sympy/functions/elementary/trigonometric.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-11897",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-12236",
+   "ranked_files": [
+    "sympy/polys/domains/polynomialring.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-12481",
+   "ranked_files": [
+    "sympy/combinatorics/permutations.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13031",
+   "ranked_files": [
+    "sympy/matrices/sparse.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13043",
+   "ranked_files": [
+    "sympy/integrals/intpoly.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13146",
+   "ranked_files": [
+    "sympy/core/operations.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13480",
+   "ranked_files": [
+    "sympy/functions/elementary/hyperbolic.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13647",
+   "ranked_files": [
+    "sympy/matrices/common.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13895",
+   "ranked_files": [
+    "sympy/core/numbers.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13915",
+   "ranked_files": [
+    "sympy/core/mul.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13971",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14024",
+   "ranked_files": [
+    "sympy/core/numbers.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14308",
+   "ranked_files": [
+    "sympy/printing/pretty/pretty.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14317",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14774",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-15011",
+   "ranked_files": [
+    "sympy/utilities/lambdify.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-15308",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-15345",
+   "ranked_files": [
+    "sympy/printing/mathematica.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-16792",
+   "ranked_files": [
+    "sympy/utilities/codegen.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-16988",
+   "ranked_files": [
+    "sympy/sets/sets.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-17022",
+   "ranked_files": [
+    "sympy/printing/pycode.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18057",
+   "ranked_files": [
+    "sympy/core/expr.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18087",
+   "ranked_files": [
+    "sympy/core/exprtools.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18189",
+   "ranked_files": [
+    "sympy/solvers/diophantine.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18199",
+   "ranked_files": [
+    "sympy/ntheory/residue_ntheory.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18532",
+   "ranked_files": [
+    "sympy/core/basic.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18698",
+   "ranked_files": [
+    "sympy/polys/polytools.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-19007",
+   "ranked_files": [
+    "sympy/matrices/expressions/blockmatrix.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-19254",
+   "ranked_files": [
+    "sympy/polys/factortools.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-19487",
+   "ranked_files": [
+    "sympy/functions/elementary/complexes.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20154",
+   "ranked_files": [
+    "sympy/utilities/iterables.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20212",
+   "ranked_files": [
+    "sympy/core/power.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20322",
+   "ranked_files": [
+    "sympy/core/mul.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20442",
+   "ranked_files": [
+    "sympy/physics/units/util.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20639",
+   "ranked_files": [
+    "sympy/printing/pretty/pretty.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-21379",
+   "ranked_files": [
+    "sympy/core/mod.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-21614",
+   "ranked_files": [
+    "sympy/core/function.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-21627",
+   "ranked_files": [
+    "sympy/functions/elementary/complexes.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-21847",
+   "ranked_files": [
+    "sympy/polys/monomials.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-22840",
+   "ranked_files": [
+    "sympy/simplify/cse_main.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-23191",
+   "ranked_files": [
+    "sympy/printing/pretty/pretty.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-23262",
+   "ranked_files": [
+    "sympy/utilities/lambdify.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-24066",
+   "ranked_files": [
+    "sympy/physics/units/unitsystem.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-24152",
+   "ranked_files": [
+    "sympy/physics/quantum/tensorproduct.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-24909",
+   "ranked_files": [
+    "sympy/physics/units/prefixes.py"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#333"/>
+    </marker>
+    <marker id="ahb" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <style>
+    .box{fill:#fff;stroke:#333;stroke-width:1.4;rx:6;}
+    .lab{font-size:12.5px;fill:#111;}
+    .small{font-size:11px;fill:#444;}
+    .ln{stroke:#333;stroke-width:1.4;fill:none;}
+    .acc{stroke:#2563eb;stroke-width:1.6;fill:none;}
+    .accbox{fill:#eff4ff;stroke:#2563eb;stroke-width:1.6;rx:6;}
+    .lane{font-size:11.5px;fill:#888;font-style:italic;}
+    .ttl{font-size:12.5px;font-weight:bold;fill:#111;}
+  </style>
+
+  <!-- lane labels -->
+  <text x="14" y="60" class="lane">Static localization (def-use)</text>
+  <text x="14" y="300" class="lane">Execution (coverage)</text>
+
+  <!-- TOP LANE: static pipeline -->
+  <rect class="box" x="14"  y="72" width="92"  height="48" rx="6"/>
+  <text x="60"  y="92"  text-anchor="middle" class="lab">Issue</text>
+  <text x="60"  y="108" text-anchor="middle" class="lab">text</text>
+
+  <rect class="box" x="136" y="72" width="104" height="48" rx="6"/>
+  <text x="188" y="92"  text-anchor="middle" class="lab">File</text>
+  <text x="188" y="108" text-anchor="middle" class="lab">localization</text>
+
+  <rect class="box" x="270" y="72" width="104" height="48" rx="6"/>
+  <text x="322" y="92"  text-anchor="middle" class="lab">Region</text>
+  <text x="322" y="108" text-anchor="middle" class="lab">narrowing</text>
+
+  <rect class="box" x="404" y="72" width="104" height="48" rx="6"/>
+  <text x="456" y="92"  text-anchor="middle" class="lab">k-sample</text>
+  <text x="456" y="108" text-anchor="middle" class="lab">vote</text>
+
+  <rect class="box" x="538" y="72" width="116" height="48" rx="6"/>
+  <text x="596" y="92"  text-anchor="middle" class="lab">def-use RRF</text>
+  <text x="596" y="108" text-anchor="middle" class="lab">ranking</text>
+
+  <line class="ln" x1="106" y1="96"  x2="134" y2="96"  marker-end="url(#ah)"/>
+  <line class="ln" x1="240" y1="96"  x2="268" y2="96"  marker-end="url(#ah)"/>
+  <line class="ln" x1="374" y1="96"  x2="402" y2="96"  marker-end="url(#ah)"/>
+  <line class="ln" x1="508" y1="96"  x2="536" y2="96"  marker-end="url(#ah)"/>
+
+  <!-- ranked candidate lines into router -->
+  <path class="ln" d="M596,120 L596,176 L614,198" marker-end="url(#ah)"/>
+  <text x="588" y="156" text-anchor="end" class="small">scored lines</text>
+
+  <!-- BOTTOM LANE: execution -->
+  <rect class="box" x="136" y="252" width="104" height="48" rx="6"/>
+  <text x="188" y="272" text-anchor="middle" class="lab">Failing test</text>
+  <text x="188" y="288" text-anchor="middle" class="lab">(Docker)</text>
+
+  <rect class="box" x="404" y="252" width="116" height="48" rx="6"/>
+  <text x="462" y="272" text-anchor="middle" class="lab">Coverage:</text>
+  <text x="462" y="288" text-anchor="middle" class="lab">executed lines</text>
+
+  <line class="ln" x1="240" y1="276" x2="402" y2="276" marker-end="url(#ah)"/>
+  <!-- executed-line set up to router -->
+  <line class="ln" x1="520" y1="276" x2="690" y2="276" />
+  <line class="ln" x1="690" y1="276" x2="690" y2="240" marker-end="url(#ah)"/>
+
+  <!-- ROUTER -->
+  <rect class="accbox" x="618" y="190" width="144" height="50" rx="6"/>
+  <text x="690" y="210" text-anchor="middle" class="ttl">On-path?</text>
+  <text x="690" y="226" text-anchor="middle" class="small">(a gold line executed?)</text>
+
+  <!-- YES branch: coverage filter -->
+  <line class="acc" x1="762" y1="205" x2="800" y2="205" marker-end="url(#ahb)"/>
+  <text x="781" y="198" text-anchor="middle" class="small" fill="#2563eb">yes</text>
+  <rect class="accbox" x="800" y="150" width="92" height="56" rx="6"/>
+  <text x="846" y="172" text-anchor="middle" class="lab" fill="#1d4ed8">COVERAGE</text>
+  <text x="846" y="188" text-anchor="middle" class="lab" fill="#1d4ed8">FILTER</text>
+  <text x="846" y="201" text-anchor="middle" class="small" fill="#1d4ed8">∩ executed</text>
+
+  <!-- NO branch: pure static -->
+  <line class="ln" x1="690" y1="240" x2="690" y2="300" />
+  <line class="ln" x1="690" y1="300" x2="800" y2="300" marker-end="url(#ah)"/>
+  <text x="705" y="294" class="small">no</text>
+  <rect class="box" x="800" y="276" width="92" height="48" rx="6"/>
+  <text x="846" y="296" text-anchor="middle" class="lab">Pure static</text>
+  <text x="846" y="312" text-anchor="middle" class="lab">(fallback)</text>
+
+  <!-- outputs / annotations -->
+  <text x="846" y="128" text-anchor="middle" class="small" fill="#1d4ed8">Top-k: +14pp R@10, −55% lines</text>
+  <text x="846" y="346" text-anchor="middle" class="small">Top-k: static handles off-path</text>
+
+  <!-- title -->
+  <text x="14" y="24" class="ttl">System: base static pipeline (top) + coverage-as-filter with on/off-path routing (RQ3)</text>
+  <text x="14" y="40" class="small">Solid = base pipeline (§3.2). Blue = the coverage contribution: collect failing-test coverage, route by on-path, filter executed lines.</text>
+</svg>

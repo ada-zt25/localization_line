@@ -1,0 +1,95 @@
+{
+ "primary": [
+  "M4_coverage_max",
+  "M0_ours_static"
+ ],
+ "deltas": {
+  "M4_minus_M0": {
+   "R@1": {
+    "delta_pp": 5.3,
+    "ci95": [
+     -3.5,
+     14.0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@5": {
+    "delta_pp": 1.8,
+    "ci95": [
+     -10.5,
+     14.0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@10": {
+    "delta_pp": 12.3,
+    "ci95": [
+     1.8,
+     22.8
+    ],
+    "sig": true,
+    "n": 57
+   }
+  },
+  "M2_minus_M0": {
+   "R@1": {
+    "delta_pp": 5.3,
+    "ci95": [
+     -3.5,
+     14.0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@5": {
+    "delta_pp": 1.8,
+    "ci95": [
+     -10.5,
+     14.0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@10": {
+    "delta_pp": 12.3,
+    "ci95": [
+     1.8,
+     22.8
+    ],
+    "sig": true,
+    "n": 57
+   }
+  },
+  "M3_minus_M0": {
+   "R@1": {
+    "delta_pp": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@5": {
+    "delta_pp": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "sig": false,
+    "n": 57
+   },
+   "R@10": {
+    "delta_pp": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "sig": false,
+    "n": 57
+   }
+  }
+ }
+}

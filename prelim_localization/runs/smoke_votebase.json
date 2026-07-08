@@ -1,0 +1,1012 @@
+{
+  "results": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "n_gold_files": 1,
+      "tot_gold": 1,
+      "has_cov": true,
+      "ranked_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "arms": {
+        "arise_static": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "n_pred": 60,
+          "hits": 0
+        },
+        "vote_only": {
+          "R@1": 0,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        },
+        "ours_static": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        },
+        "ours_dynamic_nofp": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        },
+        "ours_dynamic": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        },
+        "ours_m5": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        },
+        "ours_m5_votebase": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.019,
+          "f1": 0.038,
+          "n_pred": 52,
+          "hits": 1
+        }
+      },
+      "ranks": {
+        "vote_only": [
+          [
+            "astropy/modeling/separable.py",
+            215
+          ],
+          [
+            "astropy/modeling/separable.py",
+            239
+          ],
+          [
+            "astropy/modeling/separable.py",
+            245
+          ],
+          [
+            "astropy/modeling/separable.py",
+            214
+          ],
+          [
+            "astropy/modeling/separable.py",
+            240
+          ],
+          [
+            "astropy/modeling/separable.py",
+            209
+          ],
+          [
+            "astropy/modeling/separable.py",
+            244
+          ],
+          [
+            "astropy/modeling/separable.py",
+            212
+          ],
+          [
+            "astropy/modeling/separable.py",
+            210
+          ],
+          [
+            "astropy/modeling/separable.py",
+            242
+          ],
+          [
+            "astropy/modeling/separable.py",
+            213
+          ],
+          [
+            "astropy/modeling/separable.py",
+            206
+          ],
+          [
+            "astropy/modeling/separable.py",
+            189
+          ],
+          [
+            "astropy/modeling/separable.py",
+            190
+          ],
+          [
+            "astropy/modeling/separable.py",
+            197
+          ]
+        ],
+        "ours_dynamic_nofp": [
+          [
+            "astropy/modeling/separable.py",
+            215
+          ],
+          [
+            "astropy/modeling/separable.py",
+            214
+          ],
+          [
+            "astropy/modeling/separable.py",
+            212
+          ],
+          [
+            "astropy/modeling/separable.py",
+            239
+          ],
+          [
+            "astropy/modeling/separable.py",
+            206
+          ],
+          [
+            "astropy/modeling/separable.py",
+            200
+          ],
+          [
+            "astropy/modeling/separable.py",
+            245
+          ],
+          [
+            "astropy/modeling/separable.py",
+            240
+          ],
+          [
+            "astropy/modeling/separable.py",
+            208
+          ],
+          [
+            "astropy/modeling/separable.py",
+            191
+          ],
+          [
+            "astropy/modeling/separable.py",
+            202
+          ],
+          [
+            "astropy/modeling/separable.py",
+            190
+          ],
+          [
+            "astropy/modeling/separable.py",
+            198
+          ],
+          [
+            "astropy/modeling/separable.py",
+            197
+          ],
+          [
+            "astropy/modeling/separable.py",
+            189
+          ]
+        ],
+        "ours_m5": [
+          [
+            "astropy/modeling/separable.py",
+            245
+          ],
+          [
+            "astropy/modeling/separable.py",
+            240
+          ],
+          [
+            "astropy/modeling/separable.py",
+            239
+          ],
+          [
+            "astropy/modeling/separable.py",
+            215
+          ],
+          [
+            "astropy/modeling/separable.py",
+            214
+          ],
+          [
+            "astropy/modeling/separable.py",
+            212
+          ],
+          [
+            "astropy/modeling/separable.py",
+            206
+          ],
+          [
+            "astropy/modeling/separable.py",
+            200
+          ],
+          [
+            "astropy/modeling/separable.py",
+            208
+          ],
+          [
+            "astropy/modeling/separable.py",
+            191
+          ],
+          [
+            "astropy/modeling/separable.py",
+            202
+          ],
+          [
+            "astropy/modeling/separable.py",
+            190
+          ],
+          [
+            "astropy/modeling/separable.py",
+            198
+          ],
+          [
+            "astropy/modeling/separable.py",
+            197
+          ],
+          [
+            "astropy/modeling/separable.py",
+            189
+          ]
+        ],
+        "ours_m5_votebase": [
+          [
+            "astropy/modeling/separable.py",
+            245
+          ],
+          [
+            "astropy/modeling/separable.py",
+            239
+          ],
+          [
+            "astropy/modeling/separable.py",
+            240
+          ],
+          [
+            "astropy/modeling/separable.py",
+            215
+          ],
+          [
+            "astropy/modeling/separable.py",
+            214
+          ],
+          [
+            "astropy/modeling/separable.py",
+            209
+          ],
+          [
+            "astropy/modeling/separable.py",
+            244
+          ],
+          [
+            "astropy/modeling/separable.py",
+            212
+          ],
+          [
+            "astropy/modeling/separable.py",
+            210
+          ],
+          [
+            "astropy/modeling/separable.py",
+            242
+          ],
+          [
+            "astropy/modeling/separable.py",
+            213
+          ],
+          [
+            "astropy/modeling/separable.py",
+            206
+          ],
+          [
+            "astropy/modeling/separable.py",
+            189
+          ],
+          [
+            "astropy/modeling/separable.py",
+            190
+          ],
+          [
+            "astropy/modeling/separable.py",
+            197
+          ]
+        ]
+      },
+      "gold_flat": [
+        [
+          "astropy/modeling/separable.py",
+          245
+        ]
+      ],
+      "line_recall": 1.0,
+      "line_precision": 0.019,
+      "line_f1": 0.038,
+      "n_pred": 52,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 1,
+      "n_found": 1,
+      "found_file_lines": [
+        317
+      ],
+      "cov_files_found": 1,
+      "small_bypass_files": 1,
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "done": true
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "repo": "astropy/astropy",
+      "n_gold_files": 1,
+      "tot_gold": 1,
+      "has_cov": true,
+      "ranked_files": [
+        "astropy/io/fits/fitsrec.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "arms": {
+        "arise_static": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 60,
+          "hits": 1
+        },
+        "vote_only": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        },
+        "ours_static": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        },
+        "ours_dynamic_nofp": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        },
+        "ours_dynamic": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        },
+        "ours_m5": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        },
+        "ours_m5_votebase": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.022,
+          "f1": 0.043,
+          "n_pred": 45,
+          "hits": 1
+        }
+      },
+      "ranks": {
+        "vote_only": [
+          [
+            "astropy/io/fits/fitsrec.py",
+            1264
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1263
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            837
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            838
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1261
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1262
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1260
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1259
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1244
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1243
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1242
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1241
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1258
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1240
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1239
+          ]
+        ],
+        "ours_dynamic_nofp": [
+          [
+            "astropy/io/fits/fitsrec.py",
+            1264
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            837
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            838
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1263
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1260
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1262
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1243
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1261
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1244
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1259
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1237
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1252
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1258
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1242
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1241
+          ]
+        ],
+        "ours_m5": [
+          [
+            "astropy/io/fits/fitsrec.py",
+            1264
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            837
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            838
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1263
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1260
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1262
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1243
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1261
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1244
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1259
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1237
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1252
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1258
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1242
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1241
+          ]
+        ],
+        "ours_m5_votebase": [
+          [
+            "astropy/io/fits/fitsrec.py",
+            1264
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            837
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1263
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            838
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1261
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1262
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1260
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1259
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1244
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1243
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1242
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1241
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1258
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1240
+          ],
+          [
+            "astropy/io/fits/fitsrec.py",
+            1239
+          ]
+        ]
+      },
+      "gold_flat": [
+        [
+          "astropy/io/fits/fitsrec.py",
+          1264
+        ]
+      ],
+      "line_recall": 1.0,
+      "line_precision": 0.022,
+      "line_f1": 0.043,
+      "n_pred": 45,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 1,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "n_found": 1,
+      "found_file_lines": [
+        1331
+      ],
+      "cov_files_found": 1,
+      "small_bypass_files": 0,
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 2,
+    "n_with_coverage": 2,
+    "file_recall_gold": 1.0,
+    "file_R@k": {
+      "1": 100,
+      "5": 100,
+      "10": 100
+    },
+    "line_recall": 1.0,
+    "line_recall_ci": [
+      1.0,
+      1.0
+    ],
+    "line_recall_given_found_files": 1.0,
+    "line_precision": 0.02,
+    "line_precision_ci": [
+      0.019,
+      0.022
+    ],
+    "line_f1": 0.04,
+    "n_pred_mean": 48.5,
+    "line_R@k": {
+      "1": 50.0,
+      "5": 50.0,
+      "10": 100
+    },
+    "swe_contextbench_ref": {
+      "gpt5_prometheus_recall": ">0.60",
+      "precision": "<0.35",
+      "f1": "<0.40"
+    },
+    "arise_ref_line_R@k": {
+      "1": 41,
+      "5": 62,
+      "10": 74
+    },
+    "arise_ref_file_R@1": 67,
+    "line_loc_arms": {
+      "arise_static": {
+        "R@1": 50.0,
+        "R@3": 50.0,
+        "R@5": 50.0,
+        "R@10": 50.0,
+        "recall": 0.5,
+        "precision": 0.009,
+        "f1": 0.017
+      },
+      "vote_only": {
+        "R@1": 50.0,
+        "R@3": 100,
+        "R@5": 100,
+        "R@10": 100,
+        "recall": 1.0,
+        "precision": 0.02,
+        "f1": 0.04
+      },
+      "ours_static": {
+        "R@1": 50.0,
+        "R@3": 50.0,
+        "R@5": 50.0,
+        "R@10": 100,
+        "recall": 1.0,
+        "precision": 0.02,
+        "f1": 0.04
+      },
+      "ours_dynamic_nofp": {
+        "R@1": 50.0,
+        "R@3": 50.0,
+        "R@5": 50.0,
+        "R@10": 100,
+        "recall": 1.0,
+        "precision": 0.02,
+        "f1": 0.04
+      },
+      "ours_dynamic": {
+        "R@1": 50.0,
+        "R@3": 50.0,
+        "R@5": 50.0,
+        "R@10": 100,
+        "recall": 1.0,
+        "precision": 0.02,
+        "f1": 0.04
+      }
+    },
+    "headline_us_vs_arise": {
+      "ours_dynamic_line_R@k": {
+        "1": 50.0,
+        "5": 50.0,
+        "10": 100
+      },
+      "arise_static_line_R@k": {
+        "1": 50.0,
+        "5": 50.0,
+        "10": 50.0
+      },
+      "arise_ref_line_R@k": {
+        "1": 41,
+        "5": 62,
+        "10": 74
+      },
+      "delta_ours_minus_arise_static": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "10": {
+          "mean": 0.5,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.746,
+          "sig": false,
+          "n": 2
+        }
+      }
+    },
+    "ablation_paired_deltas_R@k": {
+      "coverage_effect__dyn_minus_ourstatic": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "10": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        }
+      },
+      "finalpick_effect__dyn_minus_dynnofp": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "10": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        }
+      },
+      "vote+graph_vs_ariseStatic__ourstatic_minus_arise": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "10": {
+          "mean": 0.5,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.746,
+          "sig": false,
+          "n": 2
+        }
+      },
+      "vote_vs_ariseStatic__voteonly_minus_arise": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 2
+        },
+        "5": {
+          "mean": 0.5,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.746,
+          "sig": false,
+          "n": 2
+        },
+        "10": {
+          "mean": 0.5,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.746,
+          "sig": false,
+          "n": 2
+        }
+      }
+    },
+    "diagnostics": {
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "cov_files_found_mean": 1,
+      "n_found_mean": 1,
+      "small_bypass_files_mean": 0.5,
+      "found_file_lines_median": 824.0
+    }
+  }
+}

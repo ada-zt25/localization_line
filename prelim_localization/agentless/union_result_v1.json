@@ -1,0 +1,70 @@
+{
+ "n": 57,
+ "model": "deepseek-ai/DeepSeek-V3",
+ "subset": "crash_onpath",
+ "vote": "V1 崩溃帧扩区+投票",
+ "AL": {
+  "superset": 66.7,
+  "LoC": 341
+ },
+ "union": {
+  "10": {
+   "superset": 66.7,
+   "LoC": 375
+  },
+  "25": {
+   "superset": 66.7,
+   "LoC": 403
+  },
+  "40": {
+   "superset": 70.2,
+   "LoC": 424
+  },
+  "60": {
+   "superset": 70.2,
+   "LoC": 444
+  },
+  "100": {
+   "superset": 71.9,
+   "LoC": 474
+  },
+  "150": {
+   "superset": 71.9,
+   "LoC": 485
+  },
+  "200": {
+   "superset": 71.9,
+   "LoC": 487
+  }
+ },
+ "union_frontier": {
+  "10": {
+   "superset": 64.9,
+   "LoC": 315
+  },
+  "25": {
+   "superset": 66.7,
+   "LoC": 344
+  },
+  "40": {
+   "superset": 70.2,
+   "LoC": 363
+  },
+  "60": {
+   "superset": 70.2,
+   "LoC": 382
+  },
+  "100": {
+   "superset": 71.9,
+   "LoC": 410
+  },
+  "150": {
+   "superset": 71.9,
+   "LoC": 421
+  },
+  "200": {
+   "superset": 71.9,
+   "LoC": 423
+  }
+ }
+}

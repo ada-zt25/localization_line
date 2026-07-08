@@ -1,0 +1,245 @@
+{
+  "results": [
+    {
+      "instance_id": "matplotlib__matplotlib-23987",
+      "repo": "matplotlib/matplotlib",
+      "path": "lib/matplotlib/figure.py",
+      "n_gold": 4,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 41,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 26,
+          "loc_has_gold": true,
+          "ctx_n": 186
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23913",
+      "repo": "matplotlib/matplotlib",
+      "path": "lib/matplotlib/legend.py",
+      "n_gold": 5,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 61,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 61,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25332",
+      "repo": "matplotlib/matplotlib",
+      "path": "lib/matplotlib/cbook.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 11,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 8,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25433",
+      "repo": "matplotlib/matplotlib",
+      "path": "lib/matplotlib/figure.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 34,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": true,
+          "rounds_used": 2,
+          "n_edited": 8,
+          "loc_has_gold": false,
+          "ctx_n": 8
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-4248",
+      "repo": "pydata/xarray",
+      "path": "xarray/core/formatting.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 13,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 21,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11040",
+      "repo": "scikit-learn/scikit-learn",
+      "path": "sklearn/neighbors/base.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 106,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 13,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11281",
+      "repo": "scikit-learn/scikit-learn",
+      "path": "sklearn/mixture/base.py",
+      "n_gold": 5,
+      "arms": {
+        "vote": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 23,
+          "loc_has_gold": false,
+          "ctx_n": 61
+        },
+        "m5": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 17,
+          "loc_has_gold": false,
+          "ctx_n": 17
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13439",
+      "repo": "scikit-learn/scikit-learn",
+      "path": "sklearn/pipeline.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 19,
+          "loc_has_gold": true,
+          "ctx_n": 19
+        },
+        "m5": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 11,
+          "loc_has_gold": false,
+          "ctx_n": 11
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "sympy__sympy-13895",
+      "repo": "sympy/sympy",
+      "path": "sympy/core/numbers.py",
+      "n_gold": 7,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 31,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 41,
+          "no_edits": false
+        }
+      },
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 9,
+    "model": "deepseek-ai/DeepSeek-V3.2-Exp",
+    "context": "function",
+    "rounds": 3,
+    "k": 1,
+    "window": 30,
+    "arms": {
+      "vote": {
+        "n": 9,
+        "resolved_rate": 22.2,
+        "loc_has_gold_rate": 22.2
+      },
+      "m5": {
+        "n": 9,
+        "resolved_rate": 44.4,
+        "loc_has_gold_rate": 22.2
+      }
+    },
+    "m5_vs_vote_resolve": {
+      "delta_pp": 22.2,
+      "ci": [
+        0.0,
+        55.6
+      ],
+      "mcnemar": {
+        "w": 2,
+        "l": 0,
+        "disc": 2,
+        "p": 0.5
+      },
+      "n": 9
+    }
+  }
+}

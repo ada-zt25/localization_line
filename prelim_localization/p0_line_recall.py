@@ -110,20 +110,31 @@ def parse_patch(patch):
         f["hunks"] = [h for h in f["hunks"] if h]
     return files
 
+_GOLD_PUNCT = set("()[]{},:;\\")   # structural closers/openers — never a localizable target
+
 def clean_gold(gold, flines):
     """ARISE-aligned gold line set: ARISE's gold EXCLUDES context AND blank lines. Our parse_patch
-    adds insertion anchors (old-1, old) that frequently land on a BLANK line (inserting a new
-    method after a blank separator) — those are not localizable code targets. Drop blank lines,
-    comment lines, and out-of-range anchors; the adjacent code anchor parse_patch already kept is
-    the real target. Measured effect: region-recall ceiling 0.795 -> 0.896 (21% of raw 'gold' was
-    blank/comment/oob), and it makes our Line R@k口径 match ARISE's instead of being unfairly harsher."""
+    adds insertion anchors (old-1, old) that frequently land on a BLANK / COMMENT / pure-PUNCTUATION
+    line (inserting a method after a blank separator, or anchoring on a lone `)` / `):` continuation)
+    — none are localizable code targets. Drop blank, comment, pure-punctuation, and out-of-range
+    anchors; the adjacent real code anchor parse_patch already kept (old-1/old pair) is the true
+    target (measured 100% best-effort recovery — every non-code anchor has a code line within +-3).
+    Measured effect: region-recall ceiling 0.783 -> ~0.896 (~22.6% of raw 'gold' was
+    blank/comment/punct/oob), and it makes our Line R@k口径 match ARISE's instead of being harsher.
+    NOTE: this is a fraction-of-gold / recall-ceiling correction; binary R@k barely moves because
+    region voting never emits blank/comment lines, so they were never hits to begin with."""
     n = len(flines)
     out = set()
     for ln in gold:
-        if 1 <= ln <= n:
-            s = flines[ln - 1].strip()
-            if s and not s.startswith("#"):
-                out.add(ln)
+        if not (1 <= ln <= n):
+            continue
+        s = flines[ln - 1].strip()
+        if not s or s.startswith("#"):
+            continue
+        core = s.split("#", 1)[0].strip()                 # ignore any trailing comment
+        if core and all(ch in _GOLD_PUNCT for ch in core):
+            continue                                      # lone `)`, `):`, `},` etc.
+        out.add(ln)
     return out
 
 def line_to_func(src):

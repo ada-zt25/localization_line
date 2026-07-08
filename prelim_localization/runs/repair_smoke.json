@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "path": "astropy/modeling/separable.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": true,
+          "n_edited": 3,
+          "edited_lines": [
+            243,
+            244,
+            245
+          ],
+          "loc_has_gold": true,
+          "window_n": 91
+        },
+        "m5": {
+          "resolved": true,
+          "n_edited": 2,
+          "edited_lines": [
+            244,
+            245
+          ],
+          "loc_has_gold": true,
+          "window_n": 67
+        }
+      },
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 1,
+    "model": "deepseek-ai/DeepSeek-V3",
+    "k": 3,
+    "window": 30,
+    "arms": {
+      "vote": {
+        "n": 1,
+        "resolved_rate": 100.0,
+        "loc_has_gold_rate": 100.0
+      },
+      "m5": {
+        "n": 1,
+        "resolved_rate": 100.0,
+        "loc_has_gold_rate": 100.0
+      }
+    },
+    "m5_vs_vote_resolve": {
+      "delta_pp": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "mcnemar": {
+        "w": 0,
+        "l": 0,
+        "disc": 0,
+        "p": 1.0
+      },
+      "n": 1
+    }
+  }
+}

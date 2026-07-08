@@ -1,0 +1,364 @@
+{
+  "results": [
+    {
+      "instance_id": "django__django-11019",
+      "repo": "django/django",
+      "path": "django/forms/widgets.py",
+      "n_gold": 36,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "error": "RemoteDisconnected('Remote end closed connection without response')",
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "error": "RemoteDisconnected('Remote end closed connection without response')",
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11179",
+      "repo": "django/django",
+      "path": "django/db/models/deletion.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "n_edited": 9,
+          "edited_lines": [
+            319,
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326,
+            327
+          ],
+          "loc_has_gold": false,
+          "window_n": 22
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 7,
+          "edited_lines": [
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11133",
+      "repo": "django/django",
+      "path": "django/http/response.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "n_edited": 15,
+          "edited_lines": [
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 15,
+          "edited_lines": [
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11630",
+      "repo": "django/django",
+      "path": "django/core/checks/model_checks.py",
+      "n_gold": 10,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "n_edited": 30,
+          "edited_lines": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 18,
+          "edited_lines": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11742",
+      "repo": "django/django",
+      "path": "django/db/models/fields/__init__.py",
+      "n_gold": 5,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "edit_no_match": true,
+          "loc_has_gold": false,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "error": "RemoteDisconnected('Remote end closed connection without response')",
+          "loc_has_gold": false,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11815",
+      "repo": "django/django",
+      "path": "django/db/migrations/serializer.py",
+      "n_gold": 3,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "n_edited": 7,
+          "edited_lines": [
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 7,
+          "edited_lines": [
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11848",
+      "repo": "django/django",
+      "path": "django/utils/http.py",
+      "n_gold": 5,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "n_edited": 16,
+          "edited_lines": [
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 33,
+          "edited_lines": [
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11797",
+      "repo": "django/django",
+      "path": "django/db/models/lookups.py",
+      "n_gold": 3,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "edit_no_match": true,
+          "loc_has_gold": true,
+          "window_n": 41
+        },
+        "m5": {
+          "resolved": false,
+          "n_edited": 13,
+          "edited_lines": [
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            271,
+            272,
+            273
+          ],
+          "loc_has_gold": true,
+          "window_n": 41
+        }
+      },
+      "done": true
+    }
+  ]
+}

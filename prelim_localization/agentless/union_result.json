@@ -1,0 +1,70 @@
+{
+ "n": 57,
+ "model": "deepseek-ai/DeepSeek-V3",
+ "subset": "crash_onpath",
+ "vote": "投票+打分扩区域(V2:top-30 scored-exec + channel①)",
+ "AL": {
+  "superset": 66.7,
+  "LoC": 341
+ },
+ "union": {
+  "10": {
+   "superset": 66.7,
+   "LoC": 378
+  },
+  "25": {
+   "superset": 66.7,
+   "LoC": 418
+  },
+  "40": {
+   "superset": 68.4,
+   "LoC": 451
+  },
+  "60": {
+   "superset": 68.4,
+   "LoC": 479
+  },
+  "100": {
+   "superset": 68.4,
+   "LoC": 543
+  },
+  "150": {
+   "superset": 70.2,
+   "LoC": 575
+  },
+  "200": {
+   "superset": 70.2,
+   "LoC": 580
+  }
+ },
+ "union_frontier": {
+  "10": {
+   "superset": 64.9,
+   "LoC": 319
+  },
+  "25": {
+   "superset": 66.7,
+   "LoC": 358
+  },
+  "40": {
+   "superset": 68.4,
+   "LoC": 389
+  },
+  "60": {
+   "superset": 68.4,
+   "LoC": 418
+  },
+  "100": {
+   "superset": 68.4,
+   "LoC": 480
+  },
+  "150": {
+   "superset": 70.2,
+   "LoC": 512
+  },
+  "200": {
+   "superset": 70.2,
+   "LoC": 516
+  }
+ }
+}

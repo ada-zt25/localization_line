@@ -28,7 +28,9 @@ openai_key*
 prelim_localization/cache/
 # Extracted GitHub repo tarballs (~6 GB, regenerable by repo_snapshot.py) — NEVER commit
 prelim_localization/snapshots/
-# Failing-test execution-coverage cache (~54 MB, regenerable but expensive: ~250 Docker runs) — reuse, don't commit
+# Failing-test execution-coverage cache (~50 MB, expensive: ~250 Docker runs).
+# Ignored by default so a regenerated 200MB+ blob isn't auto-staged; but force-added
+# ONCE (`git add -f`) as a cross-device transfer artifact — behav-132 needs it to run without Docker.
 prelim_localization/egl_cov_cache.json
 # Compiled pycache anywhere under prelim_localization
 prelim_localization/__pycache__/
@@ -45,3 +47,24 @@ prelim_upload.zip
 #     simplug==0.5.7 diot==0.3.4 python-simpleconf==0.9.3 glom==25.12.0 bidict==0.23.1
 Ollama问题存在性实验/exec_oracle/vendor/
 PairCoder/exec_oracle/vendor/
+.t2_secrets
+prelim_localization/.t2_secrets
+prelim_localization/rq4/results_*
+
+# local build env for docs/ppt_build
+.venv_ppt/
+docs/ppt_build/行级故障定位_汇报_AI版.pdf
+docs/ppt_build/行级故障定位_RQ汇报.pdf
+prelim_localization/_excluded_runs/
+prelim_localization/agentless_vendor/
+
+# Run logs / process artifacts (regenerable, not research output)
+*.log
+*.err
+*.pid
+prelim_localization/err_*.txt
+# LLM response cache (~220MB, OVER GitHub's 100MB/file hard limit; regenerable)
+prelim_localization/value_cache.json
+# Vendored ARISE clone (556M, re-clonable). On a new device:
+#   git clone https://github.com/FARD-Lab/ARISE.git vendor/ARISE && cd vendor/ARISE && git checkout 3abdc361
+vendor/

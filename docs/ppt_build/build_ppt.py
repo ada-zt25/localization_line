@@ -474,5 +474,136 @@ text(s, MX + 6.55, 2.2, SW - 2 * MX - 6.9, 4.1, [
 ], space_after=2, line=1.08)
 notes(s, "论文定位：CCF-B 的『实证刻画加方法创新』。C1 实证刻画是主线：前沿 LLM 行级定位失败模式的系统刻画——粒度 gap、真实度恶化 0.53 到 0.28 到 0.15、精确性墙、纯执行无效加 bug 类型门控机制，实验是 P0 到 P3 加 EGL，在 DeepSeek-V3 上并跨规模对照。C2 方法创新也是主线、不是配角：静动结合的执行-反馈-修复闭环，把执行当迭代反馈而不是直接信号、和静态融合提升行级 recall——这是真实有效的创新方法，我们不做简单方法。右边新颖性定位：T2L 是 trace 到 line 但做 C/C++；DAIRA、Echo 是 2026 执行接地但没有行级和效率视角，我们给出反例；ARISE 是静态行级 SOTA 当对照。本文双卖点：一是纯执行对行级不灵加机制解释给热潮纠偏，二是执行作反馈闭环的静动结合定位方法。")
 
+# ============================================================================
+# ===== 最新进展（2026-06-26）：当前方法全链路 + 对标 ARISE =====
+# ============================================================================
+
+# ---- Slide 15 当前方法全链路图（核心：一张图讲方法 + 每步关键构件与实测贡献）----
+s = slide(WHITE)
+title(s, "当前方法：全链路行级定位流水线", "每一步的关键构件与实测贡献　（★ = 唯一确凿有效的杠杆）")
+chip(s, MX, 1.62, 3.5, 0.42, TINT2, NAVY, "输入：Issue ＋ 仓库 ＋ 失败测试", size=12)
+chip(s, SW - MX - 4.3, 1.62, 4.3, 0.42, NAVY, WHITE, "输出：排序候选行 → 评测 R@1 / R@5 / R@10", size=12)
+steps = [
+    ("①", "文件定位", ["ARISE-agent", "多跳文件定位"], "file_R@1≈63%", NAVY, "EEF3F7"),
+    ("②", "区域收窄", ["骨架元素选择", "＋图/覆盖兜底"], "缩到 ~200 行", NAVY, "EEF3F7"),
+    ("③", "自洽投票★", ["k 次采样", "并集候选行"], "★唯一确凿 +20pp", CORAL, "FBE7E0"),
+    ("④", "RRF 排序", ["票数＋图分＋覆盖", "RRF 融合"], "对的行往前排", NAVY, "EEF3F7"),
+    ("⑤", "精排定#1", ["LLM 从 top-N", "挑出 #1"], "+3.3 R@1", TEAL, "E0F1F2"),
+]
+bw, gap, by, bh = 2.0, 0.45, 2.45, 0.95
+for i, (num, name, comp, contrib, hd, cardbg) in enumerate(steps):
+    x = MX + i * (bw + gap)
+    rect(s, x, by, bw, bh, fill=hd, rounded=True, shadow=True)
+    text(s, x, by, bw, bh, [[(num + " ", {"size": 15, "bold": True, "color": WHITE}), (name, {"size": 14, "bold": True, "color": WHITE})]],
+         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    if i < len(steps) - 1:
+        arrow(s, x + bw + 0.07, by + bh / 2 - 0.15, gap - 0.14, 0.30, fill=MUTED)
+    cy = by + bh + 0.16
+    rect(s, x, cy, bw, 1.35, fill=cardbg, rounded=True)
+    text(s, x + 0.07, cy + 0.12, bw - 0.14, 0.78, [[(l, {})] for l in comp], size=11, color=INK, align=PP_ALIGN.CENTER, line=1.05)
+    chip(s, x + 0.12, cy + 0.95, bw - 0.24, 0.32, hd, WHITE, contrib, size=9.5)
+text(s, MX, 5.55, SW - 2 * MX, 1.3, [
+    [("一句话：", {"bold": True, "color": NAVY, "size": 14}),
+     ("② 区域收窄让 LLM『够得着』，③ 自洽投票是发动机（唯一被 n=300 证实大幅有效），⑤ 精排把对的行顶到 #1。", {"size": 14, "color": INK})],
+    [("已精简：", {"bold": True, "color": RED, "size": 14}),
+     ("LLM 裁判精排、多视角、区域放大、test-evidence 等加成——实测增益均在统计噪声内，已从代码库移除。", {"size": 14, "color": MUTED})],
+], space_after=6, line=1.15)
+notes(s, "这是当前方法的全链路。输入是 issue+仓库+失败测试。五步：①文件定位（ARISE-agent，file_R@1约63%）；②区域收窄——用 Agentless 式骨架元素选择把上千行文件缩到约200行，这是让 LLM 够得着的前提；③自洽投票——多次采样取并集，这是唯一被 n=300 证实大幅有效的杠杆（比裸静态切片+20pp）；④RRF 把投票票数、def-use 图分、覆盖融合排序；⑤精排——LLM 从 top-N 挑 #1，带来 +3.3 的 R@1。下面诚实标注：裁判、多视角等花哨加成实测都在噪声内，已精简掉。")
+
+# ---- Slide 16 最优结果 vs SOTA(ARISE) ----
+s = slide(WHITE)
+title(s, "最优结果 vs SOTA（ARISE）", "SWE-bench-Lite · 端到端 file-not-given · 行级 R@k（%）· n≈300")
+tx, ty = MX, 2.1
+cols = [("方法（模型）", 3.5), ("R@1", 1.4), ("R@5", 1.4), ("R@10", 1.4)]
+rows = [
+    ("ARISE（SOTA · Qwen-32B）", ["41", "62", "74"], CORAL, "FBE7E0"),
+    ("本方法 @ DeepSeek-V3", ["36.1", "64.6", "71.9"], NAVY, "E0F1F2"),
+    ("本方法 @ Qwen-32B（同模型）", ["29.0", "44.8", "49.8"], MUTED, "F2F5F8"),
+]
+# header
+cx = tx
+for name, w in cols:
+    rect(s, cx, ty, w, 0.55, fill=NAVY, rounded=False)
+    text(s, cx, ty, w, 0.55, [[(name, {"bold": True, "color": WHITE, "size": 14})]], align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    cx += w
+ry = ty + 0.55
+for rname, vals, tcol, bg in rows:
+    cx = tx
+    rect(s, cx, ry, cols[0][1], 0.72, fill=bg)
+    text(s, cx + 0.12, ry, cols[0][1] - 0.18, 0.72, [[(rname, {"bold": True, "color": tcol, "size": 12.5})]], anchor=MSO_ANCHOR.MIDDLE)
+    cx += cols[0][1]
+    for j, v in enumerate(vals):
+        rect(s, cx, ry, cols[j + 1][1], 0.72, fill=bg)
+        text(s, cx, ry, cols[j + 1][1], 0.72, [[(v, {"bold": True, "color": tcol, "size": 16})]], align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        cx += cols[j + 1][1]
+    ry += 0.72
+# right callouts
+rxx = tx + 7.7 + 0.4
+for cy0, big, lab, col in [
+    (2.1, "@5 超 SOTA", "DeepSeek-V3 的 64.6 ＞ ARISE 62（@1/@10 也接近）", GREEN),
+    (3.45, "但模型更强", "DeepSeek-V3 ≠ ARISE 的 Qwen-32B；同模型则全输", AMBER),
+    (4.8, "两堵墙", "R@1 = 排序问题 · R@10 = 文件墙（line ≤ file）", TEAL),
+]:
+    rect(s, rxx, cy0, SW - MX - rxx, 1.15, fill="F7FAFC", line="E3ECF2", rounded=True)
+    text(s, rxx + 0.2, cy0 + 0.14, SW - MX - rxx - 0.4, 0.55, [[(big, {"bold": True, "color": col, "size": 24})]])
+    text(s, rxx + 0.2, cy0 + 0.7, SW - MX - rxx - 0.4, 0.4, [[(lab, {"color": INK, "size": 11.5})]])
+text(s, MX, 6.25, SW - 2 * MX, 0.8, [[
+    ("诚实结论：", {"bold": True, "color": NAVY, "size": 14}),
+    ("换更强模型（DeepSeek-V3）@5 反超 SOTA；同模型（Qwen-32B）方法本身仍落后 ARISE——@5 的胜部分来自模型更强。", {"size": 14, "color": INK})]], line=1.15)
+notes(s, "最优结果有两版，必须标清模型。我们最好的一版是 DeepSeek-V3：36.1/64.6/71.9，其中 R@5 的 64.6 超过了 ARISE 的 62，R@1、R@10 也很接近（差约5、约2）。但要诚实：RUN_PLAN 写明 ARISE 的 41/62/74 是在 Qwen2.5-Coder-32B 上，而 DeepSeek-V3 是更强的模型（连 file_R@1 都 72 反超 ARISE 的 67），所以这个 @5 的胜部分来自模型更强。把模型对齐、都用 Qwen-32B 的公平对比里，我们 29/44.8/49.8 全面落后 ARISE。两堵墙：R@1 是排序问题（金标在候选池里约85%但排到#1只约38%），R@10 是文件墙（line R@10 不可能超过 file R@10，而 ARISE 的74压在文件墙之上）。所以诚实结论是：换强模型 @5 能反超，同模型方法本身还落后。")
+
+# ---- Slide 17 为什么暂时打不过 SOTA（困难分析）----
+s = slide(WHITE)
+title(s, "为什么打不过 SOTA", "R@1 / R@10 各有一堵墙 ＋ 同模型下方法差距（都有数据支撑）")
+cards = [
+    ("1", "R@1 是『排序』问题", [
+        "金标在候选集里约 85%，",
+        "但被排到 #1 只约 38%。",
+        "同模型下排序器挑不出对的行；",
+        "聚焦精排(final-pick)能补一点 +3~6。"], CORAL),
+    ("2", "R@10 撞『文件墙』", [
+        "硬约束：line R@10 ≤ file R@10。",
+        "ARISE 的 74 压在文件墙『之上』，",
+        "光做行定位最多约 67；",
+        "够 74 必须同时抬文件召回。"], TEAL),
+    ("3", "同模型方法更弱 ＋ 裁判死结", [
+        "同模型(Qwen-32B)我们的方法本身",
+        "弱于 ARISE；换更强的 DeepSeek-V3",
+        "才赢回 @5。且 LLM 裁判精排",
+        "零增益(弱验证器命门，已删)。"], AMBER),
+]
+cw = (SW - 2 * MX - 2 * 0.4) / 3
+for i, (num, head, lines, col) in enumerate(cards):
+    x = MX + i * (cw + 0.4)
+    rect(s, x, 2.1, cw, 3.9, fill="F7FAFC", line="E3ECF2", rounded=True, shadow=True)
+    rect(s, x + 0.3, 2.4, 0.6, 0.6, fill=col, rounded=True)
+    text(s, x + 0.3, 2.4, 0.6, 0.6, [[(num, {"bold": True, "color": WHITE, "size": 22})]], align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, x + 0.3, 3.15, cw - 0.6, 0.8, [[(head, {"bold": True, "color": NAVY, "size": 15})]], line=1.05)
+    text(s, x + 0.3, 4.0, cw - 0.55, 1.9, [[(l, {})] for l in lines], size=12, color=INK, line=1.25, space_after=3)
+notes(s, "为什么打不过，三点都有数据。一，R@1 是排序问题：金标其实在候选集里约85%，但被排到第1只有约38%，同模型下排序器挑不出对的行；聚焦精排 final-pick 能补一点，+3到6。二，R@10 撞文件墙：line R@10 在数学上不可能超过 file R@10，而 ARISE 的74压在文件墙之上，我们光做行定位最多约67，要够74必须同时把文件召回抬上去。三，同模型下方法本身更弱加裁判死结：用同样的 Qwen-32B，我们的方法落后 ARISE，只有换更强的 DeepSeek-V3 才赢回 R@5；而我们试过的 LLM 裁判精排零增益，是弱验证器命门，已经删掉。")
+
+# ---- Slide 18 痛点与难点（末页，最清晰地向导师表明）----
+s = slide(NAVY)
+title(s, "痛点与难点（请老师指点）", "用最直白的话讲清楚现在卡在哪", dark=True)
+pains = [
+    ("@5 超 SOTA，但靠的是更强模型", "最好一版 DeepSeek-V3 36.1/64.6/71.9，@5(64.6)超过 ARISE 62。但 ARISE 是 Qwen-32B；同模型公平比我们 29/44.8/49.8 全输——@5 的胜部分来自模型更强，不全是方法。"),
+    ("R@1、R@10 各卡一堵墙", "R@1=排序问题（金标在池约85%却排到#1只约38%）；R@10=文件墙（line R@10 ≤ file R@10，ARISE 的74压在墙上）。要追平得同时解决『排序』和『文件召回』。"),
+    ("『同模型当裁判』是死结", "试过 LLM 重排候选行做精排——零统计增益（弱验证器命门）。同模型自我验证走不通，已删，需要新思路。"),
+    ("工程瓶颈拖慢迭代", "GPU 隧道极不稳，长实验反复被毁（这次 n=300 端到端一半数据被连接中断毁掉），严重影响实验速度。"),
+]
+yy = 2.05
+for i, (h, d) in enumerate(pains):
+    rect(s, MX, yy, 0.5, 0.5, fill=CORAL, rounded=True)
+    text(s, MX, yy, 0.5, 0.5, [[(str(i + 1), {"bold": True, "color": WHITE, "size": 18})]], align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, MX + 0.75, yy - 0.04, SW - 2 * MX - 0.75, 0.45, [[(h, {"bold": True, "color": WHITE, "size": 17})]])
+    text(s, MX + 0.75, yy + 0.42, SW - 2 * MX - 0.75, 0.7, [[(d, {"color": "CADCFC", "size": 13})]], line=1.12)
+    yy += 1.18
+rect(s, MX, yy + 0.02, SW - 2 * MX, 0.62, fill="1B2A4A", line=TEAL, rounded=True)
+text(s, MX + 0.2, yy + 0.02, SW - 2 * MX - 0.4, 0.62, [[
+    ("请老师指点：", {"bold": True, "color": TEAL, "size": 14}),
+    ("用 DeepSeek-V3 主打『@5 反超 SOTA』（需承认模型更强），还是死磕同模型 Qwen-32B、靠『解排序＋破文件墙』追平 ARISE？", {"color": WHITE, "size": 14})]],
+     anchor=MSO_ANCHOR.MIDDLE, line=1.1)
+notes(s, "最后最直白讲痛点。一，我们最好一版 DeepSeek-V3 的 R@5 超过 ARISE，但 ARISE 是 Qwen-32B、DeepSeek-V3 更强，同模型公平比我们全输——这个胜部分来自模型。二，R@1 和 R@10 各卡一堵墙：R@1 是排序问题，金标在池里却排不到第一；R@10 是文件墙，行召回不可能超过文件召回，而 ARISE 的74压在墙上。三，同模型当裁判精排是死结，零增益，弱验证器命门，已删。四，工程上 GPU 隧道极不稳，这次 n=300 一半数据被连接中断毁掉。请老师指点方向：是用 DeepSeek-V3 主打 R@5 反超、但要承认模型更强，还是死磕同模型 Qwen-32B、靠解决排序和打破文件墙去追平 ARISE。")
+
 prs.save("行级故障定位_汇报.pptx")
 print("saved slides:", len(prs.slides._sldIdLst))

@@ -26,16 +26,24 @@ from hybrid_loop import _llm, RANK_PROMPT, parse_ranked
 HERE = Path(__file__).resolve().parent
 _CTX = ssl.create_default_context()
 
-def _llm_t(model, prompt, temperature=0.0, timeout=90, retries=2):
+def _llm_t(model, prompt, temperature=0.0, timeout=120, retries=4):
     """Temperature-capable OpenAI-compatible call (hybrid_loop._llm is temp=0 only, so
     its k 'self-consistency' samples were near-identical; temp>0 gives real diversity).
     timeout is short (outputs are short ranked-line JSON) so a HUNG connection fails fast
     and retries — a 300s timeout stalled the agentic harness ~15 min per dropped socket."""
     base = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
     key = p0._openai_key()
-    payload = {"model": model, "temperature": temperature, "messages": [{"role": "user", "content": prompt}]}
-    if any(x in model.lower() for x in ("v4", "glm")):   # reasoning-by-default -> disable for batch speed
-        payload["thinking"] = {"type": "disabled"}
+    # max_tokens cap: every localizer output is a SHORT ranked line-number / function-name list.
+    # Without a cap, reasoning-default models (e.g. Hunyuan, Ling) intermittently DUMP the whole
+    # region (900+ "lines") at high sampling temperature -> slow response -> 90s timeout under batch
+    # concurrency -> all k vote samples fail -> EMPTY vote (a run artifact, NOT model incapacity).
+    payload = {"model": model, "temperature": temperature, "max_tokens": 800,
+               "messages": [{"role": "user", "content": prompt}]}
+    _ml = model.lower()
+    if any(x in _ml for x in ("v4", "glm", "qwen3", "hunyuan", "ling",  # reasoning-by-default ->
+                              "minimax", "step", "seed-oss", "longcat", "kimi")) \
+       and "0414" not in _ml:   # THUDM/GLM-4-*-0414 = 旧非思考 instruct, 不支持 thinking 参数 (HTTP 400)
+        payload["thinking"] = {"type": "disabled"}                                # disable (direct-output localizer)
     body = json.dumps(payload).encode()
     for a in range(retries):
         try:
@@ -71,6 +79,43 @@ REGION_RANK_PROMPT = """You are localizing the exact code lines that must be edi
 ## Task
 List ALL line numbers that plausibly need editing, RANKED most-likely first. FAVOR RECALL: include every line you are even somewhat unsure about (a later stage re-ranks for precision, so over-inclusion is fine, omission is costly).
 Output ONLY a JSON array of line numbers (most-likely first), up to {cap}, e.g. [88, 89, 42]. JSON only."""
+
+# COVERAGE-CONDITIONED variant (channel ①, on-path only): the vote prompt is coverage-blind by default,
+# so nothing tells the LLM which lines the failing test actually ran. For a CRASH bug the faulty line is
+# ON the executed path; marking executed lines (> ) and prepending the crash traceback conditions the
+# GENERATION distribution (not just the output filter) toward the executed path -> sharper votes on gold.
+# Gated: only used when _vote(cov_annot=...) is passed; the shipped call stays byte-identical.
+COV_REGION_RANK_PROMPT = """You are localizing the exact code lines that must be edited to resolve a GitHub issue, within a NARROWED suspect region of one file. This bug is a CRASH/error reproduced by a FAILING TEST.
+
+## Issue
+{issue}
+
+## Failing-test execution evidence
+{crash_ctx}
+
+## File: {path} — numbered lines of the suspect region
+Lines the failing test ACTUALLY EXECUTED are marked with `>` at the start; unmarked lines were not executed. The faulty line lies on the executed (`>`) path — reason BACKWARD from the crash to the line that PRODUCES the wrong value/behavior (not lines that merely pass it along).
+{numbered}
+
+## Task
+List ALL line numbers that plausibly need editing, RANKED most-likely first. Strongly PREFER executed (`>`) lines, but keep any line you are even somewhat unsure about (a later stage re-ranks for precision, so over-inclusion is fine, omission is costly).
+Output ONLY a JSON array of line numbers (most-likely first), up to {cap}, e.g. [88, 89, 42]. JSON only."""
+
+# WIDE-NET variant (env EGL_WIDE_VOTE=1): forces a minimum breadth for backbones that under-comply
+# with the recall-favoring instruction above (terse rankers like Hunyuan/Ling vote ~5 lines and miss
+# gold that IS in the region). Casting a wider net restores the pipeline's designed wide-net→filter
+# precondition so the coverage filter has non-executed distractors to prune. Disclosed as a config.
+WIDE_REGION_RANK_PROMPT = """You are localizing the exact code lines that must be edited to resolve a GitHub issue, within a NARROWED suspect region of one file.
+
+## Issue
+{issue}
+
+## File: {path} — numbered lines of the suspect region
+{numbered}
+
+## Task
+List the line numbers that plausibly need editing, RANKED most-likely first. CAST A WIDE NET: you MUST return AT LEAST {minn} line numbers (or every line if the region is smaller), including every line even loosely related -- the bug line is often a caller, a guard, a return, or a helper near the obvious spot. A later stage filters and re-ranks for precision, so OVER-INCLUSION is rewarded and OMISSION is heavily penalized.
+Output ONLY a JSON array of line numbers (most-likely first), up to {cap}, e.g. [88, 89, 42, 91, ...]. JSON only."""
 
 def parse_names(text):
     m = re.search(r"\[.*?\]", text, re.S)
@@ -155,20 +200,51 @@ def _make_region(model, issue, src, path, g, lines, coverage_lines, failure,
                                    module_lines=cfg.get("module_lines", 12),
                                    all_module=cfg.get("all_module", False))   # Lever 2: include ALL module-level code lines
     region = {ln for ln in region if 1 <= ln <= len(lines)}
+    if cfg.get("cov_narrow") and coverage_lines:   # RQ4 M2: show the LLM ONLY executed lines (on-path-safe;
+        narrowed = {ln for ln in region if ln in coverage_lines}   # gold is executed so it survives the cut)
+        if narrowed:
+            region = narrowed
     if len(region) > max_region_lines:        # budget: keep top graph-scored region lines
         scores, _ = g._line_scores(issue, failure, coverage_lines)
         region = set(sorted(region, key=lambda ln: -scores.get(ln, 0))[:max_region_lines])
     return region
 
-def _vote(model, issue, path, lines, region, k_samples, lines_cap=30, temp_sched=True, region_filter=True):
+def _vote(model, issue, path, lines, region, k_samples, lines_cap=30, temp_sched=True, region_filter=True,
+          cov_annot=None, crash_ctx=None):
     """Stage 2 RR-vote (Stage-B TUNED for recall): k samples drawn with a TEMPERATURE SCHEDULE
     (sample 0 greedy, the rest spread over [0.5,1.0] for genuine diversity -> a bigger
     self-consistency UNION), a LARGER per-sample line cap (`lines_cap`, so big-gold files aren't
     truncated at 15), and a recall-favoring prompt. reciprocal-rank vote -> {line: vote_mass}.
     The union of voted lines is the recall set; k and lines_cap directly lift that union.
-    temp_sched=False (E6 ablation) -> all samples greedy (temp=0), killing vote diversity."""
+    temp_sched=False (E6 ablation) -> all samples greedy (temp=0), killing vote diversity.
+    cov_annot (channel ①, gated; None = byte-identical shipped prompt): a set of executed line numbers.
+    When given, the numbered view marks executed lines with `>` and the prompt prepends crash_ctx and
+    an execution-path instruction -> coverage conditions GENERATION, not just the output re-rank."""
+    if cov_annot is not None:
+        ex = set(cov_annot)
+        numbered = "\n".join(f"{'>' if ln in ex else ' '} {ln}: {lines[ln-1]}" for ln in sorted(region))
+        prompt = COV_REGION_RANK_PROMPT.format(issue=issue, path=path, numbered=numbered, cap=lines_cap,
+                                               crash_ctx=(crash_ctx or "(no traceback available)")[:1600])
+        freq = {}; counts = {}
+        k = max(1, k_samples)
+        for s in range(k):
+            temp = (0.0 if s == 0 else min(1.0, 0.5 + 0.5 * ((s - 1) / max(1, k - 2)))) if temp_sched else 0.0
+            try:
+                voted_this = set()
+                for r, p in enumerate(parse_ranked(_llm_t(model, prompt, temperature=temp))):
+                    if (p in region) if region_filter else (1 <= p <= len(lines)):
+                        freq[p] = freq.get(p, 0) + 1.0 / (1 + r); voted_this.add(p)
+                for p in voted_this:
+                    counts[p] = counts.get(p, 0) + 1
+            except Exception:
+                pass
+        return freq, counts
     numbered = "\n".join(f"{ln}: {lines[ln-1]}" for ln in sorted(region))
-    prompt = REGION_RANK_PROMPT.format(issue=issue, path=path, numbered=numbered, cap=lines_cap)
+    if os.environ.get("EGL_WIDE_VOTE") == "1":
+        minn = int(os.environ.get("EGL_WIDE_MIN", "15"))
+        prompt = WIDE_REGION_RANK_PROMPT.format(issue=issue, path=path, numbered=numbered, cap=lines_cap, minn=minn)
+    else:
+        prompt = REGION_RANK_PROMPT.format(issue=issue, path=path, numbered=numbered, cap=lines_cap)
     freq = {}; counts = {}
     k = max(1, k_samples)
     for s in range(k):
@@ -241,6 +317,31 @@ def _rank_counts(freq, scores, counts, K=20):
     voted = list(freq)
     return sorted(voted, key=lambda ln: (-counts.get(ln, 0), -freq.get(ln, 0.0),
                                          -scores.get(ln, 0.0), _tiebreak(ln)))
+
+def _rank_cov(freq, scores, counts, ex, frame_lines=None, K=20):
+    """COVERAGE-REFINED re-rank (channels ③ graded-filter + ⑤ agreement, on-path). RECALL-MONOTONE:
+    reorders the voted set, NEVER drops -> R@∞ ceiling identical to v0 (so it can only help, and the
+    off-path −45 catastrophe is impossible because non-executed lines are DOWN-WEIGHTED, not deleted).
+    Replaces the crude binary executed/not filter and the flat delta*covered bonus with a graded
+    coverage ARM fused by RRF alongside vote/graph/consensus:
+      tier 3 = on the crash path (line inside a traceback-frame function `frame_lines`);
+      tier 2 = executed by the failing test (`ex`);
+      tier 1 = not executed (kept, tail — recall floor).
+    The coverage arm's within-tier ties break by cross-sample agreement then vote mass (channel ⑤:
+    executed AND agreed = the strongest single bet), so EXECUTED gold is pulled up; note on-path
+    guarantees only >=1 gold line executed (NOT all — ~37% of gold is off-path), and unexecuted
+    gold is never evicted (tier 1 kept)."""
+    ex = set(ex or ()); frame_lines = set(frame_lines or ())
+    voted = list(freq)
+    vr = {ln: i for i, ln in enumerate(sorted(voted, key=lambda k: -freq[k]))}
+    gr = {ln: i for i, ln in enumerate(sorted(voted, key=lambda k: -scores.get(k, 0.0)))}
+    cr = {ln: i for i, ln in enumerate(sorted(voted, key=lambda k: -(counts or {}).get(k, 0)))}
+    def tier(ln): return 3 if ln in frame_lines else (2 if ln in ex else 1)
+    xr = {ln: i for i, ln in enumerate(sorted(
+        voted, key=lambda k: (-tier(k), -(counts or {}).get(k, 0), -freq.get(k, 0.0))))}
+    def score(ln):
+        return 1.0/(K+vr[ln]) + 1.0/(K+gr[ln]) + 1.0/(K+cr[ln]) + 1.0/(K+xr[ln])
+    return sorted(voted, key=lambda ln: (-score(ln), _tiebreak(ln)))
 
 def region_line_loc(model, issue, src, path, coverage_lines=None, k_samples=5,
                     failure="", max_region_lines=900, small_file=500, lines_cap=30):
@@ -346,6 +447,48 @@ def llm_final_pick(model, issue, path, lines, ranked, top_n=8, ctx=1):
     reordered = picked + [ln for ln in head if ln not in picked]
     return reordered + ranked[top_n:]
 
+ASSERT_RERANK_PROMPT = """You are pinpointing the BUGGY source line(s) that cause a failing test.
+
+ISSUE (summary):
+{issue}
+
+FAILING-TEST EVIDENCE — what the test expects vs. what the buggy code actually does:
+{evidence}
+
+The lines below were ALL EXECUTED by the failing test in {path}; the bug is among them. Most are
+correct lines that merely lie on the execution path. Reason BACKWARD from the observed failure:
+which line(s) actually PRODUCE the wrong value/behavior the test catches (the ROOT CAUSE) — not lines
+that merely pass the wrong value along?
+
+Candidates:
+{candidates}
+
+Output ONLY line numbers chosen from the candidates above, most-likely root cause FIRST, comma-separated
+(e.g. 412, 88). No prose."""
+
+def assertion_rerank(model, issue, path, lines, ranked, evidence, top_n=10, ctx=2):
+    """M5 — assertion-grounded final re-rank (one focused LLM call). Re-orders ONLY the top_n head of the
+    coverage-narrowed ranking by reasoning backward from the failing test's expected-vs-observed evidence
+    (the signal ORTHOGONAL to coverage). Recall-safe: head-only reorder, tail preserved; falls back to the
+    input ranking on empty evidence / parse failure / error (never regresses R@10)."""
+    head = ranked[:top_n]
+    if len(head) <= 1 or not evidence:
+        return ranked
+    block = []
+    for ln in head:
+        lo = max(1, ln - ctx); hi = min(len(lines), ln + ctx)
+        snip = " | ".join(f"{i}:{lines[i-1].strip()[:80]}" for i in range(lo, hi + 1))
+        block.append(f"[{ln}] {snip}")
+    try:
+        picked = [p for p in parse_ranked(_llm_t(model, ASSERT_RERANK_PROMPT.format(
+            issue=issue[:3500], evidence=evidence[:1600], path=path, candidates="\n".join(block)),
+            temperature=0.0)) if p in head]
+    except Exception:
+        return ranked
+    if not picked:
+        return ranked
+    return picked + [ln for ln in head if ln not in picked] + ranked[top_n:]
+
 # ------------------------------- validation ----------------------------------
 
 def main():
@@ -354,6 +497,7 @@ def main():
     ap.add_argument("--k", type=int, default=3)
     ap.add_argument("--broad", action="store_true", help="ALL Verified Python instances (single+multi, all repos) for the 150-300 significance run")
     ap.add_argument("--min-file-lines", type=int, default=0, help="only instances whose largest gold file exceeds this (focus where region-narrowing applies)")
+    ap.add_argument("--arise-gold", action="store_true", help="(Lever 1) ARISE-aligned gold: drop blank/comment/pure-punctuation anchor lines from gold before scoring (p0.clean_gold), matching egl_e2e --arise-gold and ARISE's口径 (excludes blank lines). Raises the region/recall ceiling; binary R@k stays ~unchanged (region voting never emits blank lines).")
     ap.add_argument("--out", default=str(HERE / "region_loc_validation.json"))
     args = ap.parse_args()
     model = os.environ.get("MODEL", "deepseek-ai/DeepSeek-V3")
@@ -390,13 +534,14 @@ def main():
     for iid in cands:
         r = rows[iid]; files = p0.parse_patch(r.get("patch") or ""); issue = (r.get("problem_statement") or "")[:5000]
         gold_files = [f for f in files if f.endswith(".py")]
-        tot_gold = sum(len(files[f]["region"]) for f in gold_files)
+        gold_by_file = {}                          # ARISE-gold cleaning applied per file (needs the fetched src)
         whole_hit = reg_hit = 0; reg_ranked_global = []; whole_ranked_global = []; reg_recall_sum = 0
         for gf in gold_files:
-            gold = files[gf]["region"]
             try: src = p0.fetch_file(r["repo"], r["base_commit"], gf)
             except Exception: continue
             lines = src.splitlines()
+            gold = p0.clean_gold(files[gf]["region"], lines) if args.arise_gold else files[gf]["region"]
+            gold_by_file[gf] = gold
             # whole-file baseline (no region narrowing), file given fully
             if len(lines) <= 4000:
                 numbered = "\n".join(f"{i+1}: {l}" for i, l in enumerate(lines))
@@ -408,7 +553,8 @@ def main():
             rp, region, _ = region_line_loc(model, issue, src, gf, k_samples=args.k)
             reg_hit += len(set(rp) & gold); reg_ranked_global += [(gf, p) for p in rp]
             reg_recall_sum += (len(gold & region) / len(gold)) if gold else 0
-        goldflat = {(f, ln) for f in gold_files for ln in files[f]["region"]}
+        tot_gold = sum(len(g) for g in gold_by_file.values())   # ARISE-gold aware denominator
+        goldflat = {(f, ln) for f, g in gold_by_file.items() for ln in g}
         def hitk(rk, k): return 1 if (set(rk[:k]) & goldflat) else 0
         rec = {"instance_id": iid, "n_gold_files": len(gold_files), "tot_gold": tot_gold,
                "whole_recall": round(whole_hit / tot_gold, 3) if tot_gold else 0,

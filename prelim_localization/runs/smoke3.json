@@ -1,0 +1,578 @@
+{
+  "results": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "n_gold_files": 1,
+      "tot_gold": 1,
+      "has_cov": true,
+      "ranked_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "arms": {
+        "arise_static": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "n_pred": 60,
+          "hits": 0
+        },
+        "vote_only": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.034,
+          "n_pred": 58,
+          "hits": 1
+        },
+        "ours_static": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.034,
+          "n_pred": 58,
+          "hits": 1
+        },
+        "ours_dynamic_nofp": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.034,
+          "n_pred": 58,
+          "hits": 1
+        },
+        "ours_dynamic": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.034,
+          "n_pred": 58,
+          "hits": 1
+        },
+        "ours_m5": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.034,
+          "n_pred": 58,
+          "hits": 1
+        }
+      },
+      "line_recall": 1.0,
+      "line_precision": 0.017,
+      "line_f1": 0.034,
+      "n_pred": 58,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 0,
+      "line_R@5": 0,
+      "line_R@10": 0,
+      "n_found": 1,
+      "found_file_lines": [
+        317
+      ],
+      "cov_files_found": 1,
+      "small_bypass_files": 1,
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "done": true
+    },
+    {
+      "instance_id": "astropy__astropy-6938",
+      "repo": "astropy/astropy",
+      "n_gold_files": 1,
+      "tot_gold": 1,
+      "has_cov": true,
+      "ranked_files": [
+        "astropy/io/fits/fitsrec.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "arms": {
+        "arise_static": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 60,
+          "hits": 1
+        },
+        "vote_only": {
+          "R@1": 0,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 59,
+          "hits": 1
+        },
+        "ours_static": {
+          "R@1": 0,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 59,
+          "hits": 1
+        },
+        "ours_dynamic_nofp": {
+          "R@1": 0,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 59,
+          "hits": 1
+        },
+        "ours_dynamic": {
+          "R@1": 0,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 59,
+          "hits": 1
+        },
+        "ours_m5": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.017,
+          "f1": 0.033,
+          "n_pred": 59,
+          "hits": 1
+        }
+      },
+      "line_recall": 1.0,
+      "line_precision": 0.017,
+      "line_f1": 0.033,
+      "n_pred": 59,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 0,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "n_found": 1,
+      "found_file_lines": [
+        1331
+      ],
+      "cov_files_found": 1,
+      "small_bypass_files": 0,
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "done": true
+    },
+    {
+      "instance_id": "django__django-10914",
+      "repo": "django/django",
+      "n_gold_files": 1,
+      "tot_gold": 1,
+      "has_cov": true,
+      "ranked_files": [
+        "django/conf/global_settings.py"
+      ],
+      "file_recall": 1.0,
+      "file_R@1": 1,
+      "file_R@5": 1,
+      "file_R@10": 1,
+      "arms": {
+        "arise_static": {
+          "R@1": 0,
+          "R@3": 0,
+          "R@5": 0,
+          "R@10": 0,
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "n_pred": 2,
+          "hits": 0
+        },
+        "vote_only": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.667,
+          "n_pred": 2,
+          "hits": 1
+        },
+        "ours_static": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.667,
+          "n_pred": 2,
+          "hits": 1
+        },
+        "ours_dynamic_nofp": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.667,
+          "n_pred": 2,
+          "hits": 1
+        },
+        "ours_dynamic": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.667,
+          "n_pred": 2,
+          "hits": 1
+        },
+        "ours_m5": {
+          "R@1": 1,
+          "R@3": 1,
+          "R@5": 1,
+          "R@10": 1,
+          "recall": 1.0,
+          "precision": 0.5,
+          "f1": 0.667,
+          "n_pred": 2,
+          "hits": 1
+        }
+      },
+      "line_recall": 1.0,
+      "line_precision": 0.5,
+      "line_f1": 0.667,
+      "n_pred": 2,
+      "line_recall_given_found": 1.0,
+      "line_R@1": 1,
+      "line_R@5": 1,
+      "line_R@10": 1,
+      "n_found": 1,
+      "found_file_lines": [
+        634
+      ],
+      "cov_files_found": 1,
+      "small_bypass_files": 0,
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 3,
+    "n_with_coverage": 3,
+    "file_recall_gold": 1.0,
+    "file_R@k": {
+      "1": 100,
+      "5": 100,
+      "10": 100
+    },
+    "line_recall": 1.0,
+    "line_recall_ci": [
+      1.0,
+      1.0
+    ],
+    "line_recall_given_found_files": 1.0,
+    "line_precision": 0.178,
+    "line_precision_ci": [
+      0.017,
+      0.5
+    ],
+    "line_f1": 0.245,
+    "n_pred_mean": 39.667,
+    "line_R@k": {
+      "1": 33.3,
+      "5": 66.7,
+      "10": 66.7
+    },
+    "swe_contextbench_ref": {
+      "gpt5_prometheus_recall": ">0.60",
+      "precision": "<0.35",
+      "f1": "<0.40"
+    },
+    "arise_ref_line_R@k": {
+      "1": 41,
+      "5": 62,
+      "10": 74
+    },
+    "arise_ref_file_R@1": 67,
+    "line_loc_arms": {
+      "arise_static": {
+        "R@1": 33.3,
+        "R@3": 33.3,
+        "R@5": 33.3,
+        "R@10": 33.3,
+        "recall": 0.333,
+        "precision": 0.006,
+        "f1": 0.011
+      },
+      "vote_only": {
+        "R@1": 33.3,
+        "R@3": 66.7,
+        "R@5": 66.7,
+        "R@10": 66.7,
+        "recall": 1.0,
+        "precision": 0.178,
+        "f1": 0.245
+      },
+      "ours_static": {
+        "R@1": 33.3,
+        "R@3": 66.7,
+        "R@5": 66.7,
+        "R@10": 66.7,
+        "recall": 1.0,
+        "precision": 0.178,
+        "f1": 0.245
+      },
+      "ours_dynamic_nofp": {
+        "R@1": 33.3,
+        "R@3": 66.7,
+        "R@5": 66.7,
+        "R@10": 66.7,
+        "recall": 1.0,
+        "precision": 0.178,
+        "f1": 0.245
+      },
+      "ours_dynamic": {
+        "R@1": 33.3,
+        "R@3": 66.7,
+        "R@5": 66.7,
+        "R@10": 66.7,
+        "recall": 1.0,
+        "precision": 0.178,
+        "f1": 0.245
+      }
+    },
+    "headline_us_vs_arise": {
+      "ours_dynamic_line_R@k": {
+        "1": 33.3,
+        "5": 66.7,
+        "10": 66.7
+      },
+      "arise_static_line_R@k": {
+        "1": 33.3,
+        "5": 33.3,
+        "10": 33.3
+      },
+      "arise_ref_line_R@k": {
+        "1": 41,
+        "5": 62,
+        "10": 74
+      },
+      "delta_ours_minus_arise_static": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            -1.0,
+            1.0
+          ],
+          "p_gt0": 0.358,
+          "sig": false,
+          "n": 3
+        },
+        "5": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        },
+        "10": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        }
+      }
+    },
+    "ablation_paired_deltas_R@k": {
+      "coverage_effect__dyn_minus_ourstatic": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        },
+        "10": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        }
+      },
+      "finalpick_effect__dyn_minus_dynnofp": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        },
+        "5": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        },
+        "10": {
+          "mean": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "p_gt0": 0.0,
+          "sig": false,
+          "n": 3
+        }
+      },
+      "vote+graph_vs_ariseStatic__ourstatic_minus_arise": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            -1.0,
+            1.0
+          ],
+          "p_gt0": 0.358,
+          "sig": false,
+          "n": 3
+        },
+        "5": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        },
+        "10": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        }
+      },
+      "vote_vs_ariseStatic__voteonly_minus_arise": {
+        "1": {
+          "mean": 0.0,
+          "ci": [
+            -1.0,
+            1.0
+          ],
+          "p_gt0": 0.358,
+          "sig": false,
+          "n": 3
+        },
+        "5": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        },
+        "10": {
+          "mean": 0.333,
+          "ci": [
+            0.0,
+            1.0
+          ],
+          "p_gt0": 0.705,
+          "sig": false,
+          "n": 3
+        }
+      }
+    },
+    "diagnostics": {
+      "reg_ceiling": 1.0,
+      "voted_ceiling": 1.0,
+      "cov_on_gold_recall": 1.0,
+      "cov_files_found_mean": 1,
+      "n_found_mean": 1,
+      "small_bypass_files_mean": 0.333,
+      "found_file_lines_median": 634
+    }
+  }
+}

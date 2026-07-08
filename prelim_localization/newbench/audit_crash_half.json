@@ -1,0 +1,2783 @@
+{
+ "regression_gate": {
+  "frozen57_recovered": 57,
+  "missed": []
+ },
+ "verified_strict_crash_half": [
+  "astropy__astropy-13033",
+  "astropy__astropy-13977",
+  "astropy__astropy-14096",
+  "astropy__astropy-14182",
+  "astropy__astropy-14309",
+  "astropy__astropy-14365",
+  "astropy__astropy-14995",
+  "astropy__astropy-7336",
+  "astropy__astropy-7606",
+  "astropy__astropy-7671",
+  "django__django-11087",
+  "django__django-11265",
+  "django__django-11299",
+  "django__django-11749",
+  "django__django-11964",
+  "django__django-12663",
+  "django__django-12774",
+  "django__django-13012",
+  "django__django-13023",
+  "django__django-13028",
+  "django__django-13112",
+  "django__django-13406",
+  "django__django-13449",
+  "django__django-13794",
+  "django__django-13807",
+  "django__django-13809",
+  "django__django-13821",
+  "django__django-14007",
+  "django__django-14017",
+  "django__django-14140",
+  "django__django-14238",
+  "django__django-14349",
+  "django__django-14351",
+  "django__django-14493",
+  "django__django-14580",
+  "django__django-14672",
+  "django__django-14765",
+  "django__django-15104",
+  "django__django-15161",
+  "django__django-15277",
+  "django__django-15375",
+  "django__django-15380",
+  "django__django-15503",
+  "django__django-15525",
+  "django__django-15814",
+  "django__django-15973",
+  "django__django-15987",
+  "django__django-16100",
+  "django__django-16116",
+  "django__django-16136",
+  "django__django-16255",
+  "django__django-16429",
+  "django__django-16454",
+  "django__django-16667",
+  "django__django-17029",
+  "django__django-9296",
+  "matplotlib__matplotlib-20859",
+  "matplotlib__matplotlib-22719",
+  "matplotlib__matplotlib-23299",
+  "matplotlib__matplotlib-24026",
+  "matplotlib__matplotlib-24149",
+  "matplotlib__matplotlib-25122",
+  "matplotlib__matplotlib-26291",
+  "mwaskom__seaborn-3069",
+  "pallets__flask-5014",
+  "psf__requests-1724",
+  "psf__requests-5414",
+  "pydata__xarray-3677",
+  "pydata__xarray-7233",
+  "pylint-dev__pylint-4970",
+  "pylint-dev__pylint-6903",
+  "pytest-dev__pytest-5262",
+  "pytest-dev__pytest-5787",
+  "pytest-dev__pytest-6197",
+  "scikit-learn__scikit-learn-12585",
+  "scikit-learn__scikit-learn-13135",
+  "scikit-learn__scikit-learn-13142",
+  "scikit-learn__scikit-learn-13328",
+  "scikit-learn__scikit-learn-14087",
+  "scikit-learn__scikit-learn-14496",
+  "scikit-learn__scikit-learn-14710",
+  "scikit-learn__scikit-learn-14894",
+  "scikit-learn__scikit-learn-25747",
+  "scikit-learn__scikit-learn-25973",
+  "scikit-learn__scikit-learn-26323",
+  "sphinx-doc__sphinx-9320",
+  "sphinx-doc__sphinx-9711",
+  "sympy__sympy-12419",
+  "sympy__sympy-13372",
+  "sympy__sympy-14711",
+  "sympy__sympy-17139",
+  "sympy__sympy-17630",
+  "sympy__sympy-17655",
+  "sympy__sympy-19954",
+  "sympy__sympy-20428",
+  "sympy__sympy-22714",
+  "sympy__sympy-23824",
+  "sympy__sympy-23950",
+  "sympy__sympy-24213"
+ ],
+ "verified_net_new": [
+  "astropy__astropy-13033",
+  "astropy__astropy-13977",
+  "astropy__astropy-14096",
+  "astropy__astropy-14309",
+  "astropy__astropy-7336",
+  "astropy__astropy-7606",
+  "astropy__astropy-7671",
+  "django__django-11087",
+  "django__django-11265",
+  "django__django-11299",
+  "django__django-11749",
+  "django__django-12663",
+  "django__django-12774",
+  "django__django-13012",
+  "django__django-13023",
+  "django__django-13112",
+  "django__django-13406",
+  "django__django-13449",
+  "django__django-13794",
+  "django__django-13807",
+  "django__django-13809",
+  "django__django-13821",
+  "django__django-14007",
+  "django__django-14140",
+  "django__django-14349",
+  "django__django-14351",
+  "django__django-14493",
+  "django__django-14765",
+  "django__django-15104",
+  "django__django-15161",
+  "django__django-15277",
+  "django__django-15375",
+  "django__django-15380",
+  "django__django-15503",
+  "django__django-15525",
+  "django__django-15973",
+  "django__django-15987",
+  "django__django-16100",
+  "django__django-16116",
+  "django__django-16136",
+  "django__django-16429",
+  "django__django-16454",
+  "django__django-16667",
+  "django__django-17029",
+  "django__django-9296",
+  "matplotlib__matplotlib-20859",
+  "matplotlib__matplotlib-22719",
+  "matplotlib__matplotlib-24026",
+  "matplotlib__matplotlib-25122",
+  "matplotlib__matplotlib-26291",
+  "mwaskom__seaborn-3069",
+  "pallets__flask-5014",
+  "psf__requests-1724",
+  "psf__requests-5414",
+  "pydata__xarray-3677",
+  "pydata__xarray-7233",
+  "pylint-dev__pylint-4970",
+  "pylint-dev__pylint-6903",
+  "pytest-dev__pytest-5262",
+  "pytest-dev__pytest-5787",
+  "pytest-dev__pytest-6197",
+  "scikit-learn__scikit-learn-12585",
+  "scikit-learn__scikit-learn-13135",
+  "scikit-learn__scikit-learn-13328",
+  "scikit-learn__scikit-learn-14496",
+  "scikit-learn__scikit-learn-14710",
+  "scikit-learn__scikit-learn-25973",
+  "scikit-learn__scikit-learn-26323",
+  "sphinx-doc__sphinx-9320",
+  "sphinx-doc__sphinx-9711",
+  "sympy__sympy-13372",
+  "sympy__sympy-14711",
+  "sympy__sympy-19954",
+  "sympy__sympy-20428",
+  "sympy__sympy-23824",
+  "sympy__sympy-23950"
+ ],
+ "records": {
+  "astropy__astropy-13033": {
+   "instance_id": "astropy__astropy-13033",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/timeseries/core.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "me', 'a']\n+    with pytest.raises(ValueError) as exc:\n+",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/timeseries/core.py",
+   "n_region": 6,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    57,
+    79,
+    80,
+    81
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-13977": {
+   "instance_id": "astropy__astropy-13977",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/units/quantity.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "eter)\n-        with pytest.raises(TypeError) as exc:\n+",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/units/quantity.py",
+   "n_region": 43,
+   "n_clean_gold": 20,
+   "code_gold_ok": true,
+   "clean_gold": [
+    636,
+    637,
+    643,
+    645,
+    647,
+    650,
+    651,
+    652,
+    654,
+    656,
+    662,
+    663,
+    667,
+    668,
+    669,
+    670,
+    673,
+    679,
+    680,
+    682
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-14096": {
+   "instance_id": "astropy__astropy-14096",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/coordinates/sky_coordinate.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"test.py\", line 11, in <module>\r\n    ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/coordinates/sky_coordinate.py",
+   "n_region": 5,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    898,
+    899
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-14182": {
+   "instance_id": "astropy__astropy-14182",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/io/ascii/rst.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/io/ascii/rst.py",
+   "n_region": 14,
+   "n_clean_gold": 11,
+   "code_gold_ok": true,
+   "clean_gold": [
+    30,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    60,
+    61,
+    65,
+    66
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-14309": {
+   "instance_id": "astropy__astropy-14309",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/io/fits/connect.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\nCell In [4], line 1\r\n----> 1 identify_format(",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/io/fits/connect.py",
+   "n_region": 5,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    68,
+    69,
+    71,
+    72
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-14365": {
+   "instance_id": "astropy__astropy-14365",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/io/ascii/qdp.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n...\r\n    raise ValueError(f'Unrecognized QDP",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/io/ascii/qdp.py",
+   "n_region": 4,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    71,
+    72,
+    309,
+    310
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-14995": {
+   "instance_id": "astropy__astropy-14995",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/nddata/mixins/ndarithmetic.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "erations:\n     with pytest.raises(ValueError):\n         ndd1",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    523,
+    524,
+    527
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-7336": {
+   "instance_id": "astropy__astropy-7336",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/units/decorators.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"poc.py\", line 12, in <module>\r\n    p",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/units/decorators.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    223,
+    224
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-7606": {
+   "instance_id": "astropy__astropy-7606",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/units/core.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-13-2486f2ccf928> in <module>()",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/units/core.py",
+   "n_region": 5,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    731,
+    1713,
+    1714
+   ],
+   "strict_crash_half": true
+  },
+  "astropy__astropy-7671": {
+   "instance_id": "astropy__astropy-7671",
+   "repo": "astropy/astropy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "astropy/utils/introspection.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-1-760e6b1c375e> in <module>()\r",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "astropy/utils/introspection.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    6,
+    7,
+    142
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-11087": {
+   "instance_id": "django__django-11087",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/deletion.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last): \n File \"./manage.py\", line 16, in <module> \n\t",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/deletion.py",
+   "n_region": 11,
+   "n_clean_gold": 10,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1,
+    2,
+    119,
+    138,
+    139,
+    140,
+    141,
+    223,
+    224,
+    225
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-11265": {
+   "instance_id": "django__django-11265",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/usr/lib/python3.6/unittest/case.py\", ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/query.py",
+   "n_region": 6,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1668,
+    1669,
+    2145,
+    2146
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-11299": {
+   "instance_id": "django__django-11299",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "+        with self.assertRaises(IntegrityError), transactio",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1341,
+    1342
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-11749": {
+   "instance_id": "django__django-11749",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/management/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "+        with self.assertRaisesMessage(CommandError, msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/management/__init__.py",
+   "n_region": 4,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    132,
+    137
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-11964": {
+   "instance_id": "django__django-11964",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/enums.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/Users/mikailkocak/Development/django3",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/enums.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    63
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-12663": {
+   "instance_id": "django__django-12663",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/Users/u/PycharmProjects/django_debug/",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    236,
+    237
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-12774": {
+   "instance_id": "django__django-12774",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/usr/local/lib/python3.8/code.py\", lin",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    692,
+    693
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13012": {
+   "instance_id": "django__django-13012",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/expressions.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(NotImplementedError,",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/expressions.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    866
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13023": {
+   "instance_id": "django__django-13023",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "-        with self.assertRaisesMessage(ValidationError, msg",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/__init__.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1504,
+    1505
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13028": {
+   "instance_id": "django__django-13028",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/backoffice/backoffice/adminpricing/te",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1127,
+    1128
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13112": {
+   "instance_id": "django__django-13112",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/related.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(ValueError, msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/related.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    585,
+    586
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13406": {
+   "instance_id": "django__django-13406",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/home/beda/.config/JetBrains/PyCharm20",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    212,
+    213
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13449": {
+   "instance_id": "django__django-13449",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/expressions.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\nC:\\ProgramData\\Anaconda3\\envs\\djbase\\lib\\site-",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/expressions.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1256,
+    1257,
+    1335
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13794": {
+   "instance_id": "django__django-13794",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/utils/functional.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(TypeError, msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/utils/functional.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    179
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13807": {
+   "instance_id": "django__django-13807",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/backends/sqlite3/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"python3.7/site-packages/django/db/back",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/backends/sqlite3/base.py",
+   "n_region": 6,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    330,
+    331,
+    336,
+    337,
+    342
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13809": {
+   "instance_id": "django__django-13809",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/management/commands/runserver.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(Exception):\n-",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/management/commands/runserver.py",
+   "n_region": 5,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    117,
+    118
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-13821": {
+   "instance_id": "django__django-13821",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/backends/sqlite3/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "self.assertRaisesMessage(ImproperlyConfigured",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/backends/sqlite3/base.py",
+   "n_region": 3,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    67,
+    68
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14007": {
+   "instance_id": "django__django-14007",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/compiler.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(IntegrityError):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/compiler.py",
+   "n_region": 10,
+   "n_clean_gold": 7,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1408,
+    1415,
+    1416,
+    1417,
+    1418,
+    1419,
+    1420
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14017": {
+   "instance_id": "django__django-14017",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/query_utils.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\n<ipython-input-4-21d3dea0fcb9> in <module>\n---",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/query_utils.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    43,
+    44
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14140": {
+   "instance_id": "django__django-14140",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/query_utils.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"<console>\", line 1, in <module>\n File ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/query_utils.py",
+   "n_region": 9,
+   "n_clean_gold": 9,
+   "code_gold_ok": true,
+   "clean_gold": [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14238": {
+   "instance_id": "django__django-14238",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/..././manage.py\", line 21, in <module",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/__init__.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    2527
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14349": {
+   "instance_id": "django__django-14349",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/validators.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/usr/lib/python3.7/unittest/case.py\", ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/validators.py",
+   "n_region": 4,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    94,
+    103
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14351": {
+   "instance_id": "django__django-14351",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/lookups.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"/venv/lib/python3.6/site-packages/django/db/utils.py\", line 90 | File \"/venv/lib/python3.6/site-packages/django/db/backends/utils.py\", line 84",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/lookups.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    409
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14493": {
+   "instance_id": "django__django-14493",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/contrib/staticfiles/storage.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"lib/python3.7/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py\", line 188 | File \"lib/python3.7/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py\", line 128 | File \"lib/python3.7/site-packages/django/contrib/staticfiles/storage.py\", line 403",
+   "is_crash_alt": false,
+   "wellformed": true,
+   "gold_file": "django/contrib/staticfiles/storage.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    262
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14580": {
+   "instance_id": "django__django-14580",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/migrations/serializer.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"/home/jj/django_example/app/migrations/0001_initial.py\", line 7 | File \"/home/jj/django_example/app/migrations/0001_initial.py\", line 23",
+   "is_crash_alt": false,
+   "wellformed": true,
+   "gold_file": "django/db/migrations/serializer.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    276,
+    277
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14672": {
+   "instance_id": "django__django-14672",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/reverse_related.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"manage.py\", line 23 | File \"manage.py\", line 19 | File \"/home/tom/PycharmProjects/broken_m2m_project/venv/lib/python3.8/site-packages/django/core/management/__init__.py\", line 419",
+   "is_crash_alt": false,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/reverse_related.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    313,
+    314
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-14765": {
+   "instance_id": "django__django-14765",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/migrations/state.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "+        with self.assertRaises(AssertionError):\n+",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/migrations/state.py",
+   "n_region": 5,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    94,
+    95,
+    96,
+    97,
+    98
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15104": {
+   "instance_id": "django__django-15104",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/migrations/autodetector.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"manage.py\", line 17, in <module>\n\texec",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/migrations/autodetector.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    99,
+    100
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15161": {
+   "instance_id": "django__django-15161",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/expressions.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(ValueError, \"Could n",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/expressions.py",
+   "n_region": 12,
+   "n_clean_gold": 6,
+   "code_gold_ok": true,
+   "clean_gold": [
+    654,
+    734,
+    956,
+    988,
+    1055,
+    1228
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15277": {
+   "instance_id": "django__django-15277",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(FieldError, msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/__init__.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1013
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15375": {
+   "instance_id": "django__django-15375",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/aggregates.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\n...\nOperationalError: near \"FROM\": syntax erro",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/aggregates.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    68
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15380": {
+   "instance_id": "django__django-15380",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/migrations/autodetector.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"manage.py\", line 22, in <module>\n\tmain",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/migrations/autodetector.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    827,
+    828
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15503": {
+   "instance_id": "django__django-15503",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/fields/json.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"H:\\Files\\Projects\\Electaco\\Webservice\\",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/fields/json.py",
+   "n_region": 18,
+   "n_clean_gold": 13,
+   "code_gold_ok": true,
+   "clean_gold": [
+    175,
+    196,
+    197,
+    198,
+    199,
+    200,
+    256,
+    390,
+    391,
+    404,
+    405,
+    469,
+    470
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15525": {
+   "instance_id": "django__django-15525",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/serializers/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/Users/francois/Library/Caches/pypoetr",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/serializers/base.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    339,
+    340
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15814": {
+   "instance_id": "django__django-15814",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/models/sql/query.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"D:\\study\\django_college\\manage.py\", li",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/models/sql/query.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    750,
+    751
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15973": {
+   "instance_id": "django__django-15973",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/db/migrations/autodetector.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/home/elysium/tutes/django-test-stuff/",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/db/migrations/autodetector.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1425,
+    1426
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-15987": {
+   "instance_id": "django__django-15987",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/management/commands/loaddata.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(ImproperlyConfigured",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/management/commands/loaddata.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    370,
+    371
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16100": {
+   "instance_id": "django__django-16100",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/contrib/admin/options.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(IncorrectLookupParameters):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/contrib/admin/options.py",
+   "n_region": 10,
+   "n_clean_gold": 9,
+   "code_gold_ok": true,
+   "clean_gold": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2023
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16116": {
+   "instance_id": "django__django-16116",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/management/commands/makemigrations.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(SystemExit):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/management/commands/makemigrations.py",
+   "n_region": 6,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    73,
+    250,
+    251,
+    255,
+    256
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16136": {
+   "instance_id": "django__django-16136",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/views/generic/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/home/alorence/.cache/pypoetry/virtual",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/views/generic/base.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    151
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16255": {
+   "instance_id": "django__django-16255",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/contrib/sitemaps/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/usr/local/lib/python3.10/site-package",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/contrib/sitemaps/__init__.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    170,
+    171
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16429": {
+   "instance_id": "django__django-16429",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/utils/timesince.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaisesMessage(ValueError, msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/utils/timesince.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    99
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16454": {
+   "instance_id": "django__django-16454",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/management/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n File \"/Users/chainz/tmp/subparserstest/./man",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/management/base.py",
+   "n_region": 4,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    8,
+    9
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-16667": {
+   "instance_id": "django__django-16667",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/forms/widgets.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n[...]\n File \"[...]/site-packages/django/forms",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/forms/widgets.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1163,
+    1164
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-17029": {
+   "instance_id": "django__django-17029",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/apps/registry.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(ValueError):\n             a",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/apps/registry.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    375
+   ],
+   "strict_crash_half": true
+  },
+  "django__django-9296": {
+   "instance_id": "django__django-9296",
+   "repo": "django/django",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "django/core/paginator.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "with self.assertRaises(EmptyPage):\n             pa",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "django/core/paginator.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    37
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-20859": {
+   "instance_id": "matplotlib__matplotlib-20859",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/legend.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"bug_test.py\", line 5, in <module>\r\n ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/legend.py",
+   "n_region": 6,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    363,
+    437,
+    438,
+    441,
+    442
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-22719": {
+   "instance_id": "matplotlib__matplotlib-22719",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/category.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n~/miniconda3/envs/seaborn-py39-latest/lib/pyt",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/category.py",
+   "n_region": 4,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    61,
+    62,
+    233,
+    234
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-23299": {
+   "instance_id": "matplotlib__matplotlib-23299",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/__init__.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-1-fa4d099aa289> in <cell line:",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/__init__.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1062,
+    1090,
+    1091
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-24026": {
+   "instance_id": "matplotlib__matplotlib-24026",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/stackplot.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/stackplot.py",
+   "n_region": 10,
+   "n_clean_gold": 8,
+   "code_gold_ok": true,
+   "clean_gold": [
+    9,
+    73,
+    111,
+    113,
+    114,
+    120,
+    122,
+    123
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-24149": {
+   "instance_id": "matplotlib__matplotlib-24149",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/axes/_axes.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\nCell In [1], line 4\r\n      2 import matplotli",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/axes/_axes.py",
+   "n_region": 4,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    2184,
+    2189
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-25122": {
+   "instance_id": "matplotlib__matplotlib-25122",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/matplotlib/mlab.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "elf):\n         with pytest.raises(AssertionError):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/matplotlib/mlab.py",
+   "n_region": 8,
+   "n_clean_gold": 6,
+   "code_gold_ok": true,
+   "clean_gold": [
+    398,
+    399,
+    403,
+    427,
+    428,
+    430
+   ],
+   "strict_crash_half": true
+  },
+  "matplotlib__matplotlib-26291": {
+   "instance_id": "matplotlib__matplotlib-26291",
+   "repo": "matplotlib/matplotlib",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "lib/mpl_toolkits/axes_grid1/inset_locator.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\nFile ~/miniconda3/envs/ubermagdev/lib/python3",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "lib/mpl_toolkits/axes_grid1/inset_locator.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    71,
+    72
+   ],
+   "strict_crash_half": true
+  },
+  "mwaskom__seaborn-3069": {
+   "instance_id": "mwaskom__seaborn-3069",
+   "repo": "mwaskom/seaborn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "seaborn/_core/plot.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "elf):\n         with pytest.raises(RuntimeError, match=err):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "seaborn/_core/plot.py",
+   "n_region": 7,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    28,
+    29,
+    1241,
+    1633,
+    1647
+   ],
+   "strict_crash_half": true
+  },
+  "pallets__flask-5014": {
+   "instance_id": "pallets__flask-5014",
+   "repo": "pallets/flask",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "src/flask/blueprints.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "client):\n+    with pytest.raises(ValueError):\n+        flas",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "src/flask/blueprints.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    193
+   ],
+   "strict_crash_half": true
+  },
+  "psf__requests-1724": {
+   "instance_id": "psf__requests-1724",
+   "repo": "psf/requests",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "requests/sessions.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\n  File \"/Users/hwkns/test_requests.py\", line ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "requests/sessions.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    15,
+    16,
+    311
+   ],
+   "strict_crash_half": true
+  },
+  "psf__requests-5414": {
+   "instance_id": "psf__requests-5414",
+   "repo": "psf/requests",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "requests/models.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "url):\n         with pytest.raises(exception):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "requests/models.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    406,
+    407
+   ],
+   "strict_crash_half": true
+  },
+  "pydata__xarray-3677": {
+   "instance_id": "pydata__xarray-3677",
+   "repo": "pydata/xarray",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "xarray/core/dataset.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"mwe.py\", line 6, in <module>\r\n    ac",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "xarray/core/dataset.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    3606,
+    3607
+   ],
+   "strict_crash_half": true
+  },
+  "pydata__xarray-7233": {
+   "instance_id": "pydata__xarray-7233",
+   "repo": "pydata/xarray",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "xarray/core/rolling.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "artx\"])\n-\n-    with pytest.raises(ValueError):\n-        ds.c",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "xarray/core/rolling.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    976,
+    977
+   ],
+   "strict_crash_half": true
+  },
+  "pylint-dev__pylint-4970": {
+   "instance_id": "pylint-dev__pylint-4970",
+   "repo": "pylint-dev/pylint",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "pylint/checkers/similar.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "ect_stdout(output), pytest.raises(SystemExit) as ex:\n+",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "pylint/checkers/similar.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    392,
+    393
+   ],
+   "strict_crash_half": true
+  },
+  "pylint-dev__pylint-6903": {
+   "instance_id": "pylint-dev__pylint-6903",
+   "repo": "pylint-dev/pylint",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "pylint/lint/run.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"/usr/local/lib/python3.9/dist-packages/pylint/lint/run.py\", line 197 | File \"/usr/local/lib/python3.9/dist-packages/pylint/lint/pylinter.py\", line 650 | File \"/usr/local/lib/python3.9/dist-packages/pylint/lint/parallel.py\", line 140",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "pylint/lint/run.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    60,
+    61
+   ],
+   "strict_crash_half": true
+  },
+  "pytest-dev__pytest-5262": {
+   "instance_id": "pytest-dev__pytest-5262",
+   "repo": "pytest-dev/pytest",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "src/_pytest/capture.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "done()\n             pytest.raises(AttributeError, cap.suspen",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "src/_pytest/capture.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    450
+   ],
+   "strict_crash_half": true
+  },
+  "pytest-dev__pytest-5787": {
+   "instance_id": "pytest-dev__pytest-5787",
+   "repo": "pytest-dev/pytest",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "src/_pytest/reports.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "excinfo = pytest.raises(ValueError, mod.entry)",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "src/_pytest/reports.py",
+   "n_region": 95,
+   "n_clean_gold": 73,
+   "code_gold_ok": true,
+   "clean_gold": [
+    6,
+    164,
+    165,
+    166,
+    168,
+    169,
+    170,
+    171,
+    172,
+    174,
+    175,
+    176,
+    177,
+    179,
+    181,
+    182,
+    183,
+    184,
+    187,
+    188,
+    189,
+    190,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    214,
+    215,
+    216,
+    217,
+    220,
+    221,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    253,
+    254,
+    255,
+    258,
+    259,
+    260,
+    262
+   ],
+   "strict_crash_half": true
+  },
+  "pytest-dev__pytest-6197": {
+   "instance_id": "pytest-dev__pytest-6197",
+   "repo": "pytest-dev/pytest",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "src/_pytest/python.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "+        \"    with pytest.raises(ImportError):\\n\"\n+",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "src/_pytest/python.py",
+   "n_region": 19,
+   "n_clean_gold": 13,
+   "code_gold_ok": true,
+   "clean_gold": [
+    254,
+    255,
+    257,
+    258,
+    259,
+    261,
+    268,
+    435,
+    436,
+    437,
+    439,
+    440,
+    642
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-12585": {
+   "instance_id": "scikit-learn__scikit-learn-12585",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n...\r\n  File \"...\\lib\\site-packages\\sklearn\\b",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/base.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    51,
+    52
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-13135": {
+   "instance_id": "scikit-learn__scikit-learn-13135",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/preprocessing/_discretization.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-1-3d95a2ed3d01> in <module>()\r",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/preprocessing/_discretization.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    174,
+    175
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-13142": {
+   "instance_id": "scikit-learn__scikit-learn-13142",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/mixture/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"test_gm.py\", line 17, in <module>\r\n ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/mixture/base.py",
+   "n_region": 7,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    263,
+    276
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-13328": {
+   "instance_id": "scikit-learn__scikit-learn-13328",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/linear_model/huber.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-5-39e33e1adc6f> in <module>\r\n-",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/linear_model/huber.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    254,
+    255
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-14087": {
+   "instance_id": "scikit-learn__scikit-learn-14087",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/linear_model/logistic.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-3-81609fd8d2ca> in <module>\r\n-",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/linear_model/logistic.py",
+   "n_region": 5,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    2173,
+    2174,
+    2183,
+    2184
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-14496": {
+   "instance_id": "scikit-learn__scikit-learn-14496",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/cluster/optics_.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "frames>=2",
+   "crash_evidence": "File \"/home/someusername/anaconda3/envs/bachelor_project/lib/python3.7/site-packages/sklearn/cluster/optics_.py\", line 248 | File \"/home/someusername/anaconda3/envs/bachelor_project/lib/python3.7/site-packages/sklearn/cluster/optics_.py\", line 456 | File \"/home/someusername/anaconda3/envs/bachelor_project/lib/python3.7/site-packages/sklearn/neighbors/base.py\", line 930",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/cluster/optics_.py",
+   "n_region": 21,
+   "n_clean_gold": 18,
+   "code_gold_ok": true,
+   "clean_gold": [
+    47,
+    48,
+    344,
+    345,
+    440,
+    585,
+    586,
+    622,
+    623,
+    627,
+    756,
+    757,
+    759,
+    760,
+    762,
+    763,
+    764,
+    765
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-14710": {
+   "instance_id": "scikit-learn__scikit-learn-14710",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n/tmp/tmp.py in <module>\r\n     10 \r\n     11 gb",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py",
+   "n_region": 4,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    428,
+    429,
+    433,
+    434
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-14894": {
+   "instance_id": "scikit-learn__scikit-learn-14894",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/svm/base.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/svm/base.py",
+   "n_region": 6,
+   "n_clean_gold": 5,
+   "code_gold_ok": true,
+   "clean_gold": [
+    290,
+    291,
+    292,
+    293,
+    294
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-25747": {
+   "instance_id": "scikit-learn__scikit-learn-25747",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/utils/_set_output.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\nCell In[5], line 25\r\n     23 # This does not ",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/utils/_set_output.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    37,
+    58,
+    59
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-25973": {
+   "instance_id": "scikit-learn__scikit-learn-25973",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/feature_selection/_sequential.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n\r\n[<ipython-input-18-d4c8f5222560>](https://l",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/feature_selection/_sequential.py",
+   "n_region": 12,
+   "n_clean_gold": 9,
+   "code_gold_ok": true,
+   "clean_gold": [
+    11,
+    12,
+    16,
+    17,
+    262,
+    278,
+    294,
+    312,
+    313
+   ],
+   "strict_crash_half": true
+  },
+  "scikit-learn__scikit-learn-26323": {
+   "instance_id": "scikit-learn__scikit-learn-26323",
+   "repo": "scikit-learn/scikit-learn",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sklearn/compose/_column_transformer.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "):\n     )\n     with pytest.raises(ValueError, match=msg):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sklearn/compose/_column_transformer.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    295,
+    296,
+    306
+   ],
+   "strict_crash_half": true
+  },
+  "sphinx-doc__sphinx-9320": {
+   "instance_id": "sphinx-doc__sphinx-9320",
+   "repo": "sphinx-doc/sphinx",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sphinx/cmd/quickstart.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "d = {}\n+    with pytest.raises(SystemExit):\n+        qs.a",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sphinx/cmd/quickstart.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    98,
+    226,
+    227
+   ],
+   "strict_crash_half": true
+  },
+  "sphinx-doc__sphinx-9711": {
+   "instance_id": "sphinx-doc__sphinx-9711",
+   "repo": "sphinx-doc/sphinx",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sphinx/extension.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "n='3.10')\n+    with pytest.raises(VersionRequirementError):",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sphinx/extension.py",
+   "n_region": 4,
+   "n_clean_gold": 3,
+   "code_gold_ok": true,
+   "clean_gold": [
+    13,
+    54,
+    55
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-12419": {
+   "instance_id": "sympy__sympy-12419",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/matrices/expressions/matexpr.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "raises",
+   "crash_evidence": "_ZeroMatrix():\n     with raises(ShapeError):\n         Z**2",
+   "is_crash_alt": false,
+   "wellformed": true,
+   "gold_file": "sympy/matrices/expressions/matexpr.py",
+   "n_region": 10,
+   "n_clean_gold": 9,
+   "code_gold_ok": true,
+   "clean_gold": [
+    5,
+    6,
+    9,
+    10,
+    378,
+    479,
+    480,
+    481,
+    482
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-13372": {
+   "instance_id": "sympy__sympy-13372",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/core/evalf.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"./sympy/core/evalf.py\", line 1285, i",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/core/evalf.py",
+   "n_region": 4,
+   "n_clean_gold": 4,
+   "code_gold_ok": true,
+   "clean_gold": [
+    1303,
+    1304,
+    1309,
+    1310
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-14711": {
+   "instance_id": "sympy__sympy-14711",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/physics/vector/vector.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n<ipython-input-1-0b9155eecc0e> in <module>()\r",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/physics/vector/vector.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    59,
+    60
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-17139": {
+   "instance_id": "sympy__sympy-17139",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/simplify/fu.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/simplify/fu.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    502
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-17630": {
+   "instance_id": "sympy__sympy-17630",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/matrices/expressions/matexpr.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/matrices/expressions/matexpr.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    630
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-17655": {
+   "instance_id": "sympy__sympy-17655",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/geometry/point.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last)\r\n~/.virtualenvs/test/lib/python3.6/site-packag",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/geometry/point.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    281
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-19954": {
+   "instance_id": "sympy__sympy-19954",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/combinatorics/perm_groups.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<input>\", line 7, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/combinatorics/perm_groups.py",
+   "n_region": 7,
+   "n_clean_gold": 6,
+   "code_gold_ok": true,
+   "clean_gold": [
+    2197,
+    2198,
+    2201,
+    2202,
+    2203,
+    2208
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-20428": {
+   "instance_id": "sympy__sympy-20428",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/polys/domains/expressiondomain.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/polys/domains/expressiondomain.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    123
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-22714": {
+   "instance_id": "sympy__sympy-22714",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/geometry/point.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/geometry/point.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    155,
+    156
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-23824": {
+   "instance_id": "sympy__sympy-23824",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/physics/hep/gamma_matrices.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/physics/hep/gamma_matrices.py",
+   "n_region": 3,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    697,
+    698
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-23950": {
+   "instance_id": "sympy__sympy-23950",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/sets/contains.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/sets/contains.py",
+   "n_region": 2,
+   "n_clean_gold": 1,
+   "code_gold_ok": true,
+   "clean_gold": [
+    48
+   ],
+   "strict_crash_half": true
+  },
+  "sympy__sympy-24213": {
+   "instance_id": "sympy__sympy-24213",
+   "repo": "sympy/sympy",
+   "n_py_gold": 1,
+   "n_all_gold": 1,
+   "py_gold": [
+    "sympy/physics/units/unitsystem.py"
+   ],
+   "non_py_gold": [],
+   "is_crash": true,
+   "crash_rule": "traceback",
+   "crash_evidence": "Traceback (most recent call last):\r\n  File \"<stdin>\", line 1, in <module>\r\n  Fil",
+   "is_crash_alt": true,
+   "wellformed": true,
+   "gold_file": "sympy/physics/units/unitsystem.py",
+   "n_region": 2,
+   "n_clean_gold": 2,
+   "code_gold_ok": true,
+   "clean_gold": [
+    178,
+    179
+   ],
+   "strict_crash_half": true
+  }
+ }
+}

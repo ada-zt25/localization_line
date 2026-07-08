@@ -1,0 +1,225 @@
+\begin{thebibliography}{10}
+
+\bibitem{liu_cannotfix}
+Kui Liu, Anil Koyuncu, Tegawend{\'e}~F. Bissyand{\'e}, Dongsun Kim, Jacques
+  Klein, and Yves Le~Traon.
+\newblock You cannot fix what you cannot find! an investigation of fault
+  localization bias in benchmarking automated program repair systems.
+\newblock In {\em 2019 12th IEEE Conference on Software Testing, Validation and
+  Verification (ICST)}, 2019.
+
+\bibitem{swebench}
+Carlos~E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir
+  Press, and Karthik Narasimhan.
+\newblock {SWE-bench}: Can language models resolve real-world {GitHub} issues?
+\newblock In {\em The Twelfth International Conference on Learning
+  Representations (ICLR)}, 2024.
+
+\bibitem{self_consistency}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc~V. Le, Ed~H. Chi, Sharan Narang,
+  Aakanksha Chowdhery, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In {\em The Eleventh International Conference on Learning
+  Representations (ICLR)}, 2023.
+
+\bibitem{tarantula}
+James~A. Jones and Mary~Jean Harrold.
+\newblock Empirical evaluation of the tarantula automatic fault-localization
+  technique.
+\newblock In {\em Proceedings of the 20th IEEE/ACM International Conference on
+  Automated Software Engineering (ASE)}, pages 273--282. ACM, 2005.
+
+\bibitem{ochiai}
+Rui Abreu, Peter Zoeteweij, and Arjan J.~C. van Gemund.
+\newblock An evaluation of similarity coefficients for software fault
+  localization.
+\newblock In {\em 12th IEEE Pacific Rim International Symposium on Dependable
+  Computing (PRDC)}, pages 39--46. IEEE Computer Society, 2006.
+
+\bibitem{wong_survey}
+W.~Eric Wong, Ruizhi Gao, Yihao Li, Rui Abreu, and Franz Wotawa.
+\newblock A survey on software fault localization.
+\newblock {\em IEEE Transactions on Software Engineering}, 42(8):707--740,
+  2016.
+
+\bibitem{sweagent}
+John Yang, Carlos~E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao,
+  Karthik Narasimhan, and Ofir Press.
+\newblock {SWE-agent}: Agent-computer interfaces enable automated software
+  engineering.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  2024.
+
+\bibitem{agentless}
+Chunqiu~Steven Xia, Yinlin Deng, Soren Dunn, and Lingming Zhang.
+\newblock Demystifying {LLM}-based software engineering agents.
+\newblock {\em Proceedings of the ACM on Software Engineering (PACMSE)},
+  2(FSE):801--824, 2025.
+\newblock Tool name: Agentless. Preprint arXiv:2407.01489. ACM SIGSOFT
+  Distinguished Paper.
+
+\bibitem{beyondloc}
+Pengtao Zhao, Boyang Yang, Bach Le, Feng Liu, and Haoye Tian.
+\newblock Beyond localization: Recoverable headroom and residual frontier in
+  repository-level {RAG}-{APR}, 2026.
+
+\bibitem{locagent}
+Zhaoling Chen, Xiangru Tang, Gangda Deng, Fang Wu, Jialong Wu, Zhiwei Jiang,
+  Viktor Prasanna, Arman Cohan, and Xingyao Wang.
+\newblock {LocAgent}: Graph-guided {LLM} agents for code localization.
+\newblock In {\em Proceedings of the 63rd Annual Meeting of the Association for
+  Computational Linguistics (ACL), Volume 1: Long Papers}, pages 8697--8727,
+  Vienna, Austria, 2025.
+
+\bibitem{orcaloca}
+Zhongming Yu, Hejia Zhang, Yujie Zhao, Hanxian Huang, Matrix Yao, Ke~Ding, and
+  Jishen Zhao.
+\newblock {OrcaLoca}: An {LLM} agent framework for software issue localization,
+  2025.
+
+\bibitem{cosil}
+Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, and Zhongxin Liu.
+\newblock {CoSIL}: Issue localization via {LLM}-driven iterative code graph
+  searching.
+\newblock In {\em Proceedings of the 40th IEEE/ACM International Conference on
+  Automated Software Engineering (ASE)}, 2025.
+
+\bibitem{arise}
+Shahd Seddik and Fatemeh Fard.
+\newblock {ARISE}: A repository-level graph representation and toolset for
+  agentic fault localization and program repair, 2026.
+
+\bibitem{test_time_compute}
+Charlie Snell, Jaehoon Lee, Kelvin Xu, and Aviral Kumar.
+\newblock Scaling {LLM} test-time compute optimally can be more effective than
+  scaling model parameters, 2024.
+
+\bibitem{flcontext}
+Melika Sepidband, Hung~Viet Pham, and Hadi Hemmati.
+\newblock On the role of fault localization context for {LLM}-based program
+  repair, 2026.
+
+\bibitem{dstar}
+W.~Eric Wong, Vidroha Debroy, Ruizhi Gao, and Yihao Li.
+\newblock The {DStar} method for effective software fault localization.
+\newblock {\em IEEE Transactions on Reliability}, 63(1):290--308, 2014.
+
+\bibitem{korel_laski}
+Bogdan Korel and Janusz Laski.
+\newblock Dynamic program slicing.
+\newblock {\em Information Processing Letters}, 29(3):155--163, 1988.
+
+\bibitem{agrawal_horgan}
+Hiralal Agrawal and Joseph~R. Horgan.
+\newblock Dynamic program slicing.
+\newblock In {\em Proceedings of the ACM SIGPLAN 1990 Conference on Programming
+  Language Design and Implementation (PLDI)}, pages 246--256, 1990.
+
+\bibitem{defects4j}
+Ren\'{e} Just, Darioush Jalali, and Michael~D. Ernst.
+\newblock {Defects4J}: A database of existing faults to enable controlled
+  testing studies for {Java} programs.
+\newblock In {\em Proceedings of the 2014 International Symposium on Software
+  Testing and Analysis (ISSTA)}, pages 437--440, San Jose, CA, USA, 2014. ACM.
+
+\bibitem{autofl}
+Sungmin Kang, Gabin An, and Shin Yoo.
+\newblock A quantitative and qualitative evaluation of {LLM}-based explainable
+  fault localization.
+\newblock {\em Proceedings of the ACM on Software Engineering (PACMSE)},
+  1(FSE):1424--1446, 2024.
+\newblock Tool name: AutoFL. Preprint arXiv:2308.05487.
+
+\bibitem{autocoderover}
+Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, and Abhik Roychoudhury.
+\newblock {AutoCodeRover}: Autonomous program improvement.
+\newblock In {\em Proceedings of the 33rd ACM SIGSOFT International Symposium
+  on Software Testing and Analysis (ISSTA)}, 2024.
+
+\bibitem{agentfl}
+Yihao Qin, Shangwen Wang, Yiling Lou, Jinhao Dong, Kaixin Wang, Xiaoling Li,
+  and Xiaoguang Mao.
+\newblock {AgentFL}: Scaling {LLM}-based fault localization to project-level
+  context.
+\newblock {\em arXiv preprint arXiv:2403.16362}, 2024.
+
+\bibitem{swebench_verified}
+{OpenAI}.
+\newblock Introducing {SWE-bench} verified.
+\newblock OpenAI Blog, August 2024.
+\newblock Human-validated 500-instance subset of SWE-bench.
+
+\bibitem{swebench_mm}
+John Yang, Carlos~E. Jimenez, Alex~L. Zhang, Kilian Lieret, Joyce Yang, Xindi
+  Wu, Ori Press, Niklas Muennighoff, Gabriel Synnaeve, Karthik~R. Narasimhan,
+  Diyi Yang, Sida~I. Wang, and Ofir Press.
+\newblock {SWE-bench Multimodal}: Do {AI} systems generalize to visual software
+  domains?, 2024.
+
+\bibitem{swebench_plus}
+Reem Aleithan, Haoran Xue, Mohammad~Mahdi Mohajer, Elijah Nnorom, Gias Uddin,
+  and Song Wang.
+\newblock {SWE-Bench+}: Enhanced coding benchmark for {LLMs}, 2024.
+
+\bibitem{specrover}
+Haifeng Ruan, Yuntong Zhang, and Abhik Roychoudhury.
+\newblock {SpecRover}: Code intent extraction via {LLMs}.
+\newblock In {\em Proceedings of the IEEE/ACM 47th International Conference on
+  Software Engineering (ICSE)}, 2025.
+
+\bibitem{dissecting}
+Matias Martinez and Xavier Franch.
+\newblock Dissecting the {SWE-Bench} leaderboards: Profiling submitters and
+  architectures of {LLM}- and agent-based repair systems, 2025.
+
+\bibitem{qwen25coder}
+Binyuan Hui, Jian Yang, Zeyu Cui, Jiaxi Yang, Dayiheng Liu, Lei Zhang, Tianyu
+  Liu, Jiajun Zhang, Bowen Yu, Keming Lu, Kai Dang, Yang Fan, Yichang Zhang,
+  An~Yang, Rui Men, Fei Huang, Bo~Zheng, Yibo Miao, Shanghaoran Quan, Yunlong
+  Feng, Xingzhang Ren, Xuancheng Ren, Jingren Zhou, and Junyang Lin.
+\newblock {Qwen2.5-Coder} technical report, 2024.
+
+\bibitem{deepseekv3}
+{DeepSeek-AI}.
+\newblock {DeepSeek-V3} technical report, 2024.
+
+\bibitem{muse}
+Seokhyeon Moon, Yunho Kim, Moonzoo Kim, and Shin Yoo.
+\newblock Ask the mutants: Mutating faulty programs for fault localization.
+\newblock In {\em 2014 IEEE Seventh International Conference on Software
+  Testing, Verification and Validation (ICST)}, pages 153--162, 2014.
+
+\bibitem{metallaxis}
+Mike Papadakis and Yves Le~Traon.
+\newblock {Metallaxis-FL}: Mutation-based fault localization.
+\newblock {\em Software Testing, Verification and Reliability},
+  25(5-7):605--628, 2015.
+
+\bibitem{llm_as_judge}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+  Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang, Joseph~E.
+  Gonzalez, and Ion Stoica.
+\newblock Judging {LLM}-as-a-judge with {MT-Bench} and chatbot arena.
+\newblock In {\em Advances in Neural Information Processing Systems 36
+  (NeurIPS), Datasets and Benchmarks Track}, 2023.
+
+\bibitem{cannot_self_correct}
+Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu~Steven Zheng, Adams~Wei Yu,
+  Xinying Song, and Denny Zhou.
+\newblock Large language models cannot self-correct reasoning yet.
+\newblock In {\em The Twelfth International Conference on Learning
+  Representations (ICLR)}, 2024.
+
+\bibitem{verifiers}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz
+  Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano,
+  Christopher Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems, 2021.
+
+\bibitem{rgfl}
+Melika Sepidband, Hamed Taherkhani, Hung~Viet Pham, and Hadi Hemmati.
+\newblock {RGFL}: Reasoning guided fault localization for automated program
+  repair using large language models, 2026.
+
+\end{thebibliography}

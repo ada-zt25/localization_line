@@ -21,8 +21,8 @@ import p0_line_recall as p0
 import p1_realistic as p1
 import region_loc as rl
 import file_localize as fl
-import arise_file_loc as afl
 import code_graph as cg
+import test_evidence as te
 import statistics as st
 from hybrid_loop import _llm, RANK_PROMPT, parse_ranked
 
@@ -105,7 +105,7 @@ class FatalAPIError(Exception):
 
 def process_instance(model, r, topk, k, lines_cap, baseline, rank_mode="v0", final_pick=0, dump=False,
                      cov_cache=None, file_rerank=0, file_loc="agentless", arise_turns=8, reuse_files=None,
-                     cfg=None, arise_gold=False):
+                     cfg=None, arise_gold=False, assert_rerank=0, dump_ranks=False, spine_votebase=False):
     """All work for ONE instance (strong file-find + tuned region line-loc + optional baseline).
     Thread-safe: only reads shared state, returns its own rec. Raises FatalAPIError on 403/balance.
     rank_mode/final_pick select the Stage-B ranker (R@1 ablation); dump persists the per-file
@@ -129,11 +129,6 @@ def process_instance(model, r, topk, k, lines_cap, baseline, rank_mode="v0", fin
     try:
         if reuse_files is not None and reuse_files.get(iid):   # reuse a prior run's file-loc (coverage-independent)
             ranked_files = reuse_files[iid]
-        elif file_loc == "arise":                              # ARISE agentic program-graph file-finder
-            _st = {}
-            ranked_files = afl.localize_files_arise(model, r["repo"], r["base_commit"], issue,
-                                                    topk=topk, max_turns=arise_turns, stats=_st)
-            rec["arise_turns"] = _st.get("turns"); rec["arise_committed"] = _st.get("committed")
         else:                                                  # Agentless single-shot (+ optional LLM rerank)
             ranked_files = fl.localize_files(model, r["repo"], r["base_commit"], issue, topk=topk)
             if file_rerank and ranked_files:                   # ARISE-parity file R@1 lever
@@ -157,6 +152,10 @@ def process_instance(model, r, topk, k, lines_cap, baseline, rank_mode="v0", fin
     gold_in_found = sum(len(gold[f]) for f in found)
     reg_ceils = []; voted_ceils = []; cov_gold_hits = 0; cov_gold_tot = 0
     found_sizes = []; nbypass = 0; cov_files_found = 0
+    m5_per = []                                                # M5: assertion-grounded rerank of the cov-narrowed ranking
+    m5v_per = []                                               # M5-votebase: SAME rerank on the coverage-FREE vote list (isolates the assertion signal from coverage)
+    rank_dump = {}                                             # per-arm (file,line) rankings for auditability (--dump-ranks)
+    ev = te.extract_test_evidence(r) if assert_rerank else ""  # the signal orthogonal to coverage
     for f in found:
         try: src = p0.fetch_file(r["repo"], r["base_commit"], f)
         except Exception: continue
@@ -188,6 +187,18 @@ def process_instance(model, r, topk, k, lines_cap, baseline, rank_mode="v0", fin
                  if (final_pick and a_dynnofp) else a_dynnofp)
         for a, ranked in zip(ARMS, [a_arise, a_vote, a_ourstat, a_dynnofp, a_dyn]):
             arm_per[a].append([(f, ln) for ln in ranked])
+        a_m5 = a_m5v = []                                      # reset per file (avoid stale carry-over on multi-file instances)
+        if assert_rerank and a_dynnofp:                        # M5 = rerank the cov-aware ranking by test evidence
+            a_m5 = rl.assertion_rerank(model, issue, f, flines, a_dynnofp, ev, top_n=assert_rerank)
+            m5_per.append([(f, ln) for ln in a_m5])
+        if assert_rerank and spine_votebase and a_vote:        # M5-votebase = SAME rerank on the coverage-FREE vote list
+            a_m5v = rl.assertion_rerank(model, issue, f, flines, a_vote, ev, top_n=assert_rerank)
+            m5v_per.append([(f, ln) for ln in a_m5v])
+        if dump_ranks:                                         # persist the actual head rankings (audit rank-1 pick vs gold/evidence)
+            for a, ranked in (("arise_static", a_arise), ("vote_only", a_vote), ("ours_static", a_ourstat),
+                              ("ours_dynamic_nofp", a_dynnofp), ("ours_m5", a_m5), ("ours_m5_votebase", a_m5v)):
+                if ranked:
+                    rank_dump.setdefault(a, []).extend([[f, int(ln)] for ln in ranked[:15]])
         if gf:
             reg_ceils.append(len(gf & region) / len(gf))
             voted_ceils.append(len(gf & set(freq)) / len(gf))
@@ -202,6 +213,12 @@ def process_instance(model, r, topk, k, lines_cap, baseline, rank_mode="v0", fin
             whole_per.append([(f, ln) for ln in wp]); whole_hit += len(set(wp) & gf)
     goldflat = {(f, ln) for f in gold_files for ln in gold[f]}
     rec["arms"] = {a: _arm_metrics(arm_per[a], goldflat, tot_gold) for a in ARMS}
+    if assert_rerank and m5_per:                               # M5 arm (only present when --assert-rerank set)
+        rec["arms"]["ours_m5"] = _arm_metrics(m5_per, goldflat, tot_gold)
+    if assert_rerank and spine_votebase and m5v_per:           # coverage-neutral SPINE arm (rerank of vote_only)
+        rec["arms"]["ours_m5_votebase"] = _arm_metrics(m5v_per, goldflat, tot_gold)
+    if dump_ranks and rank_dump:
+        rec["ranks"] = rank_dump; rec["gold_flat"] = sorted([f, int(ln)] for f, ln in goldflat)
     dyn = rec["arms"]["ours_dynamic"]                          # headline = full dynamic+static method
     rec["line_recall"] = dyn["recall"]; rec["line_precision"] = dyn["precision"]
     rec["line_f1"] = dyn["f1"]; rec["n_pred"] = dyn["n_pred"]
@@ -235,7 +252,7 @@ def main():
     ap.add_argument("--coverage", action="store_true", help="ACTIVATE the DYNAMIC half: collect failing-test execution coverage (Docker) and thread it into line-loc (un-dormants the Q3 coverage signal)")
     ap.add_argument("--cov-workers", type=int, default=4, help="parallel Docker workers for the coverage pre-pass (peak disk ~= this many SWE-bench images; raise if disk+bandwidth allow)")
     ap.add_argument("--prefetch-coverage", action="store_true", help="ONLY run the Docker coverage pre-pass (populate egl_cov_cache.json) then exit — run this in parallel with a no-coverage LLM run to overlap Docker(本机) with GPU(tunnel); the later --coverage run then finds all coverage cached")
-    ap.add_argument("--file-loc", default="agentless", choices=["agentless", "arise"], help="file-finder front-end: 'agentless' (single-shot LLM + optional --file-rerank) or 'arise' (agentic program-graph ReAct loop, ARISE-aligned, for 口径-unified comparison)")
+    ap.add_argument("--file-loc", default="agentless", choices=["agentless"], help="file-finder front-end: 'agentless' (single-shot LLM + optional --file-rerank). [The blind ARISE reimpl front-end was retired 2026-07-08 — ARISE is now open-source (github.com/FARD-Lab/ARISE); use the official repo for the ARISE baseline.]")
     ap.add_argument("--arise-turns", type=int, default=8, help="(arise file-loc) max agent turns per instance — lower = fewer LLM calls = faster (default 8; the agent usually localizes in 3-6)")
     ap.add_argument("--file-rerank", type=int, default=0, help="(agentless only) LLM listwise re-rank of the top-N candidate files for ARISE-parity file R@1 (0=off)")
     ap.add_argument("--reuse-files", default="", help="path to a prior egl_e2e output json; reuse its per-instance ranked_files and SKIP the file-finder (file-loc is coverage-independent, so the static & dynamic ablation arms share ONE ARISE-agent file-loc run)")
@@ -247,9 +264,32 @@ def main():
     ap.add_argument("--max-region", type=int, default=0, help="(Lever 2) override max region lines (0=keep 900); raise so whole-file regions aren't truncated by graph score")
     ap.add_argument("--all-module-lines", action="store_true", help="(Lever 2) include EVERY module-level code line in the region (recovers the module-level gold -- imports/class-body/decorators, ~1 in 11 gold lines -- the top-12 heuristic misses)")
     ap.add_argument("--out", default=str(HERE / "egl_e2e.json"))
+    ap.add_argument("--instances", default="", help="(RQ4) path to a JSON list of instance_ids OR a comma list; "
+                    "overrides the --sample pool so a run targets the FROZEN subset (e.g. rq4 S1 crash·on-path)")
+    ap.add_argument("--cov-narrow", action="store_true", help="(RQ4 M2) restrict the region shown to the LLM vote "
+                    "to EXECUTED lines only (coverage-narrowed vote) — the one untested lever vs the offline filter ceiling")
+    ap.add_argument("--assert-rerank", type=int, default=0, help="(RQ4 M5) assertion-grounded rerank of the top-N "
+                    "cov-narrowed candidates: reason BACKWARD from the failing test's expected-vs-observed evidence "
+                    "(the signal orthogonal to coverage) to pinpoint the root-cause line (targets R@1/R@5). 0=off")
+    ap.add_argument("--spine-votebase", action="store_true", help="also emit 'ours_m5_votebase': the SAME assertion "
+                    "rerank applied to the coverage-FREE vote_only list — isolates the assertion signal from coverage "
+                    "(the fair-baseline SPINE effect; requires --assert-rerank)")
+    ap.add_argument("--dump-ranks", action="store_true", help="persist per-instance head (file,line) rankings for each "
+                    "arm + gold_flat, so the actual rank-1 pick can be audited vs gold/evidence offline")
     args = ap.parse_args()
     model = os.environ.get("MODEL", "deepseek-ai/DeepSeek-V3")
     rows, pool = select_pool_mixed(args.sample, args.broad)
+    if args.instances:                                   # RQ4: target an explicit frozen instance list
+        rows = {r["instance_id"]: r for r in p0.load_rows(500)}
+        if args.instances.endswith(".json"):
+            doc = json.loads(Path(args.instances).read_text())
+            ids = doc if isinstance(doc, list) else doc.get("instances", [])
+        else:
+            ids = [s for s in args.instances.split(",") if s]
+        pool = [iid for iid in ids if iid in rows]
+        print(f"[instances] frozen pool: {len(pool)} instances from {args.instances}", file=sys.stderr)
+    if args.cov_narrow:
+        args.coverage = True                             # M2 needs coverage; force the DYNAMIC half on
     out = Path(args.out)
     results = json.loads(out.read_text())["results"] if out.exists() else []
     by_id = {r["instance_id"]: r for r in results}
@@ -316,6 +356,8 @@ def main():
         cfg["max_region_lines"] = args.max_region
     if args.all_module_lines:
         cfg["all_module"] = True
+    if args.cov_narrow:                                  # RQ4 M2: coverage-narrowed vote region
+        cfg["cov_narrow"] = True
     if cfg:
         print(f"[Q3] line-loc knobs ON (cfg={cfg}) — validate offline first via ablation_rank_sweep.py!", file=sys.stderr)
     if args.arise_gold:
@@ -325,7 +367,8 @@ def main():
     ex = ThreadPoolExecutor(max_workers=args.workers)
     futs = {ex.submit(process_instance, model, rows[iid], args.topk, args.k, args.lines_cap, args.baseline,
                       args.rank_mode, args.final_pick, args.dump_substrate, cov_cache, args.file_rerank,
-                      args.file_loc, args.arise_turns, reuse_files, cfg, args.arise_gold): iid
+                      args.file_loc, args.arise_turns, reuse_files, cfg, args.arise_gold, args.assert_rerank,
+                      args.dump_ranks, args.spine_votebase): iid
             for iid in todo}
     try:
         for fut in as_completed(futs):

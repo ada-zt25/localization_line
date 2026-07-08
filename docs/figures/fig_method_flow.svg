@@ -1,0 +1,153 @@
+<svg viewBox="0 0 1560 810" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8a94a6"/></marker>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#1d4ed8"/></marker>
+    <marker id="ap" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7e57c2"/></marker>
+    <filter id="sh" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#64748b" flood-opacity="0.22"/></filter>
+  </defs>
+  <style>
+    .h1{font-size:23px;font-weight:bold;fill:#0f172a;}
+    .h2{font-size:12.5px;fill:#64748b;}
+    .node{fill:#ffffff;stroke-width:1.8;}
+    .nt{font-size:14.5px;font-weight:bold;fill:#0f172a;}
+    .mech{font-size:10.5px;fill:#64748b;}
+    .cardh{font-size:10.5px;font-weight:bold;fill:#94a3b8;letter-spacing:0.4px;}
+    .mono{font-family:'DejaVu Sans Mono',Menlo,monospace;font-size:11.5px;}
+    .flow{stroke:#8a94a6;stroke-width:2.6;fill:none;}
+    .fcov{stroke:#1d4ed8;stroke-width:2.6;fill:none;}
+    .fg{stroke:#7e57c2;stroke-width:2;fill:none;}
+    .cbadge{fill:#1d4ed8;stroke:#fff;stroke-width:1.6;}
+    .cbt{font-size:12px;font-weight:bold;fill:#fff;}
+    .inj{font-size:11px;font-weight:bold;fill:#1565c0;}
+    .pchip{font-size:9.5px;}
+  </style>
+
+  <!-- white background so title/labels are legible on any viewer -->
+  <rect x="0" y="0" width="1560" height="810" fill="#ffffff"/>
+
+  <text x="34" y="36" class="h1">EGL &#8212; coverage-guided line localization</text>
+  <text x="34" y="58" class="h2">A single pipeline on a reproducible localization host. Execution coverage (blue) is a membership signal injected at three stages; the output is an unordered candidate set scored by superset &amp; LoC.</text>
+
+  <!-- ============ LEFT INPUTS ============ -->
+  <rect class="node" x="34" y="150" width="212" height="90" rx="12" stroke="#94a3b8" filter="url(#sh)"/>
+  <text x="50" y="171" class="cardh">ISSUE &#119920;</text>
+  <text x="50" y="192" class="mono" fill="#64748b">getitem does not infer</text>
+  <text x="50" y="209" class="mono" fill="#64748b">the unpacked value ...</text>
+  <text x="50" y="226" class="mono" fill="#64748b">Traceback: http.py:16</text>
+
+  <rect class="node" x="34" y="270" width="190" height="162" rx="12" stroke="#66bb6a" filter="url(#sh)"/>
+  <text x="50" y="292" class="cardh" fill="#66a06a">REPOSITORY &#8475;</text>
+  <g stroke="#66bb6a" stroke-width="1.5" fill="none"><path d="M60,306 V420 M60,330 h12 M60,356 h12 M60,392 h12 M84,380 V410 h12"/></g>
+  <g font-size="12" fill="#33691e">
+    <rect x="52" y="300" width="14" height="11" rx="2" fill="#c8e6c9" stroke="#66bb6a"/><text x="74" y="310">src/</text>
+    <rect x="66" y="324" width="14" height="11" rx="2" fill="#c8e6c9" stroke="#66bb6a"/><text x="88" y="334">core/</text>
+    <rect x="80" y="349" width="10" height="12" rx="1.5" fill="#e8f5e9" stroke="#66bb6a"/><text x="96" y="359" class="mono">http.py</text>
+    <rect x="66" y="386" width="14" height="11" rx="2" fill="#c8e6c9" stroke="#66bb6a"/><text x="88" y="396">utils/</text>
+    <rect x="94" y="404" width="10" height="12" rx="1.5" fill="#e8f5e9" stroke="#66bb6a"/><text x="110" y="414" class="mono">io.py</text>
+  </g>
+
+  <!-- ============ SPINE ============ -->
+  <!-- host (grey, pluggable) -->
+  <rect class="node" x="272" y="290" width="182" height="116" rx="14" stroke="#94a3b8" fill="#f8fafc" filter="url(#sh)"/>
+  <circle cx="298" cy="316" r="14" fill="#64748b"/><circle cx="295" cy="313" r="5.5" fill="none" stroke="#fff" stroke-width="2"/><line x1="299" y1="317" x2="304" y2="322" stroke="#fff" stroke-width="2"/>
+  <text x="322" y="313" class="nt">Localization</text><text x="322" y="330" class="nt">host</text>
+  <text x="288" y="356" class="mech">file &#8594; related-element loc</text>
+  <text x="288" y="371" class="mech">coarse region (elements &#177;10)</text>
+  <rect x="288" y="382" width="118" height="16" rx="8" fill="#eef2f7" stroke="#cbd5e1"/><text x="347" y="394" text-anchor="middle" class="pchip" fill="#475569">pluggable host</text>
+
+  <!-- region assembly (teal) — injection 1 -->
+  <rect class="node" x="478" y="290" width="200" height="116" rx="14" stroke="#14b8a6" filter="url(#sh)"/>
+  <circle cx="504" cy="316" r="14" fill="#0d9488"/><path d="M504,309 v14 M497,316 h14" stroke="#fff" stroke-width="2.4"/>
+  <text x="528" y="313" class="nt">Region</text><text x="528" y="330" class="nt">assembly</text>
+  <text x="494" y="356" class="mech">elements &#8746; selective expansion</text>
+  <text x="494" y="371" class="mech">(coverage-scored executed lines)</text>
+  <rect x="494" y="382" width="168" height="16" rx="8" fill="#ccfbf1" stroke="#14b8a6"/><text x="578" y="394" text-anchor="middle" class="pchip" fill="#0f766e">region ceiling 68.4 &#8594; 75.4</text>
+
+  <!-- self-consistency vote (indigo) — injection 2 -->
+  <rect class="node" x="702" y="290" width="196" height="116" rx="14" stroke="#6366f1" filter="url(#sh)"/>
+  <rect x="722" y="312" width="18" height="24" rx="3" fill="#e0e7ff" stroke="#6366f1"/><rect x="728" y="307" width="18" height="24" rx="3" fill="#c7d2fe" stroke="#6366f1"/><rect x="734" y="302" width="18" height="24" rx="3" fill="#a5b4fc" stroke="#4f46e5"/>
+  <text x="760" y="315" class="nt">Self-consistency</text><text x="760" y="332" class="nt">vote</text>
+  <text x="718" y="358" class="mech">k samples &#183; RR frequency</text>
+  <text x="718" y="373" class="mech">conditioned: annotate + traceback</text>
+  <rect x="708" y="384" width="184" height="16" rx="8" fill="#eef2ff" stroke="#6366f1"/><text x="800" y="395" text-anchor="middle" class="mono" font-size="8.5" fill="#4338ca">voted = {(file,line): freq}</text>
+
+  <!-- frontier filter + top-N (blue) — injection 3 -->
+  <rect class="node" x="922" y="290" width="196" height="116" rx="14" stroke="#2563eb" filter="url(#sh)"/>
+  <circle cx="948" cy="316" r="14" fill="#1d4ed8"/><path d="M941,310 h14 l-4,6 v6 l-6,3 v-9 z" fill="#fff"/>
+  <text x="972" y="313" class="nt">Frontier filter</text><text x="972" y="330" class="nt">+ top-N</text>
+  <text x="938" y="356" class="mech">voted &#8745; executed &#177;2</text>
+  <text x="938" y="371" class="mech">&#8594; top-N &#8594; candidate set</text>
+  <rect x="938" y="382" width="120" height="16" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="998" y="394" text-anchor="middle" class="pchip" fill="#1d4ed8">LoC &#8722;14% (shrink)</text>
+
+  <!-- output: candidate SET (purple, unordered) -->
+  <rect class="node" x="1142" y="272" width="290" height="150" rx="14" stroke="#9575cd" fill="#f6f0fb" filter="url(#sh)"/>
+  <text x="1158" y="294" class="cardh" fill="#8b6fc0">CANDIDATE SET &#8466; (unordered)</text>
+  <g class="mono" font-size="11.5" fill="#4a148c">
+    <text x="1158" y="318">&#8226; http.py : server()  L16</text>
+    <text x="1158" y="338">&#8226; io.py   : request()  L3</text>
+    <text x="1158" y="358">&#8226; http.py : parse()   L41</text>
+  </g>
+  <line x1="1158" y1="372" x2="1414" y2="372" stroke="#e2d5f0" stroke-width="1.2"/>
+  <text x="1158" y="392" class="mech" fill="#6d28d9" font-weight="bold">superset: set &#8839; ALL gold lines</text>
+  <text x="1158" y="410" class="mech" fill="#6d28d9" font-weight="bold">LoC: |set| (smaller = better) &#183; Pareto</text>
+
+  <!-- spine arrows -->
+  <path class="flow" d="M246,196 C264,196 262,334 270,334" marker-end="url(#a)"/>
+  <path class="flow" d="M224,350 C248,350 254,344 270,346" marker-end="url(#a)"/>
+  <path class="flow" d="M454,348 H476" marker-end="url(#a)"/>
+  <path class="flow" d="M678,348 H700" marker-end="url(#a)"/>
+  <path class="flow" d="M898,348 H920" marker-end="url(#a)"/>
+  <path class="flow" d="M1118,348 H1140" marker-end="url(#a)"/>
+
+  <!-- def-use graph tributary (feeds the selective-expansion scoring) -->
+  <rect class="node" x="478" y="128" width="200" height="86" rx="12" stroke="#9575cd" fill="#faf7ff" filter="url(#sh)"/>
+  <text x="578" y="150" text-anchor="middle" class="cardh" fill="#8b6fc0">DEF-USE GRAPH &#119964;</text>
+  <g stroke="#b39ddb" stroke-width="1.5"><line x1="516" y1="186" x2="560" y2="172"/><line x1="560" y1="172" x2="608" y2="188"/><line x1="516" y1="186" x2="556" y2="202"/><line x1="556" y1="202" x2="608" y2="188"/><line x1="560" y1="172" x2="556" y2="202"/></g>
+  <g fill="#ede7f6" stroke="#9575cd" stroke-width="1.6"><circle cx="516" cy="186" r="8"/><circle cx="560" cy="172" r="8"/><circle cx="608" cy="188" r="8"/><circle cx="556" cy="202" r="8"/></g>
+  <path class="fg" d="M578,214 V288" marker-end="url(#ap)"/>
+  <text x="588" y="256" class="mech" fill="#7e57c2">line_scores_v2 scores executed lines (issue + traceback slice + coverage)</text>
+
+  <!-- ============ COVERAGE: compact source + feed bus ============ -->
+  <rect x="252" y="556" width="392" height="118" rx="14" fill="#f0f7ff" stroke="#bfdbfe" stroke-width="1.4"/>
+  <text x="268" y="580" class="inj" font-size="12.5">Execution grounding &#8212; coverage E (crash &#183; on-path scope)</text>
+  <rect class="node" x="268" y="592" width="150" height="66" rx="12" stroke="#42a5f5" fill="#e3f2fd" filter="url(#sh)"/>
+  <path d="M290,614 l0,20 l16,-10 z" fill="#1d4ed8"/>
+  <text x="360" y="619" text-anchor="middle" class="nt" font-size="13" fill="#1565c0">Failing test</text>
+  <text x="360" y="637" text-anchor="middle" class="mech" fill="#1565c0">Docker run</text>
+  <rect class="node" x="438" y="592" width="186" height="66" rx="12" stroke="#42a5f5" fill="#e3f2fd" filter="url(#sh)"/>
+  <text x="531" y="619" text-anchor="middle" class="nt" font-size="13" fill="#1565c0">Coverage E</text>
+  <text x="531" y="637" text-anchor="middle" class="mech" fill="#1565c0">executed lines</text>
+  <path class="fcov" d="M418,625 H436" marker-end="url(#ab)"/>
+
+  <!-- coverage feed bus: Coverage E -> up -> horizontal rail -> 3 taps into the stages -->
+  <path class="fcov" d="M531,592 V520 H1020" fill="none"/>
+  <circle cx="531" cy="520" r="3.5" fill="#1d4ed8"/>
+  <!-- tap 1: upstream -> region -->
+  <path class="fcov" d="M578,520 V406" marker-end="url(#ab)"/>
+  <circle class="cbadge" cx="578" cy="474" r="13"/><text x="578" y="479" text-anchor="middle" class="cbt">1</text>
+  <text x="596" y="478" class="inj">upstream: expand pool</text>
+  <!-- tap 2: midstream -> vote -->
+  <path class="fcov" d="M800,520 V406" marker-end="url(#ab)"/>
+  <circle class="cbadge" cx="800" cy="474" r="13"/><text x="800" y="479" text-anchor="middle" class="cbt">2</text>
+  <text x="818" y="478" class="inj">midstream: annotate</text>
+  <!-- tap 3: downstream -> filter -->
+  <path class="fcov" d="M1020,520 V406" marker-end="url(#ab)"/>
+  <circle class="cbadge" cx="1020" cy="474" r="13"/><text x="1020" y="479" text-anchor="middle" class="cbt">3</text>
+  <text x="1038" y="478" class="inj">downstream: filter</text>
+
+  <!-- reconciliation callout -->
+  <rect x="1162" y="554" width="372" height="86" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="1178" y="578" font-size="11.5" font-weight="bold" fill="#b45309">Why coverage-as-score works here (not RQ3)</text>
+  <text x="1178" y="600" font-size="10.5" fill="#92400e">Used UPSTREAM to expand the pool = a membership</text>
+  <text x="1178" y="616" font-size="10.5" fill="#92400e">(reachability) move, +7pp ceiling. RQ3 used it downstream</text>
+  <text x="1178" y="632" font-size="10.5" fill="#92400e">to re-rank a fixed pool &#8594; = Static (useless).</text>
+
+  <!-- legend -->
+  <g font-size="11" fill="#475569">
+    <rect x="270" y="712" width="14" height="12" rx="3" fill="#f8fafc" stroke="#94a3b8"/><text x="290" y="722">pluggable host</text>
+    <rect x="400" y="712" width="14" height="12" rx="3" fill="#faf7ff" stroke="#9575cd"/><text x="420" y="722">def-use graph</text>
+    <rect x="530" y="712" width="14" height="12" rx="3" fill="#e3f2fd" stroke="#42a5f5"/><text x="550" y="722">execution coverage</text>
+    <circle class="cbadge" cx="677" cy="718" r="8"/><text x="677" y="722" text-anchor="middle" class="cbt" font-size="9">n</text><text x="690" y="722">coverage injection point</text>
+    <rect x="880" y="712" width="14" height="12" rx="3" fill="#f6f0fb" stroke="#9575cd"/><text x="900" y="722">output candidate set</text>
+  </g>
+</svg>

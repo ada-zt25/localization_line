@@ -1,0 +1,72 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .ttl{font-size:13px;font-weight:bold;fill:#111;}
+    .ax{stroke:#999;stroke-width:1;}
+    .grid{stroke:#e5e5e5;stroke-width:1;}
+    .tick{font-size:10.5px;fill:#666;}
+    .glab{font-size:11.5px;fill:#111;}
+    .bA{fill:#9aa3af;}
+    .bB{fill:#2563eb;}
+    .val{font-size:10.5px;fill:#111;}
+    .small{font-size:11px;fill:#444;}
+  </style>
+
+  <text x="20" y="24" class="ttl">RQ3: coverage-as-filter R@10 by subset (file-given, def-use ranker, no LLM)</text>
+
+  <!-- gridlines + y ticks (0..50%) -->
+  <line class="ax" x1="70" y1="320" x2="690" y2="320"/>
+  <g>
+    <line class="grid" x1="70" y1="266" x2="690" y2="266"/><text x="40" y="270" class="tick">10</text>
+    <line class="grid" x1="70" y1="212" x2="690" y2="212"/><text x="40" y="216" class="tick">20</text>
+    <line class="grid" x1="70" y1="158" x2="690" y2="158"/><text x="40" y="162" class="tick">30</text>
+    <line class="grid" x1="70" y1="104" x2="690" y2="104"/><text x="40" y="108" class="tick">40</text>
+    <line class="grid" x1="70" y1="50"  x2="690" y2="50"/><text x="40" y="54"  class="tick">50</text>
+    <text x="40" y="324" class="tick">0</text>
+  </g>
+  <text x="22" y="190" class="small" transform="rotate(-90 22 190)">line R@10 (%)</text>
+
+  <!-- Group 1: crash on-path  A 29.8 / B 43.9 -->
+  <rect class="bA" x="120" y="159" width="26" height="161"/>
+  <rect class="bB" x="154" y="83"  width="26" height="237"/>
+  <text x="133" y="153" text-anchor="middle" class="val">29.8</text>
+  <text x="167" y="77"  text-anchor="middle" class="val" fill="#1d4ed8">43.9</text>
+  <text x="150" y="340" text-anchor="middle" class="glab">crash</text>
+  <text x="150" y="354" text-anchor="middle" class="glab">on-path</text>
+  <!-- +14pp annotation -->
+  <path d="M183,100 C205,100 205,150 188,150" fill="none" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="212" y="128" class="val" fill="#1d4ed8" font-weight="bold">+14.1pp</text>
+
+  <!-- Group 2: behavioral on-path  A 27.5 / B 34.4 -->
+  <rect class="bA" x="280" y="171" width="26" height="149"/>
+  <rect class="bB" x="314" y="134" width="26" height="186"/>
+  <text x="293" y="165" text-anchor="middle" class="val">27.5</text>
+  <text x="327" y="128" text-anchor="middle" class="val" fill="#1d4ed8">34.4</text>
+  <text x="310" y="340" text-anchor="middle" class="glab">behav.</text>
+  <text x="310" y="354" text-anchor="middle" class="glab">on-path</text>
+
+  <!-- Group 3: crash off-path  A 45.5 / B 0 -->
+  <rect class="bA" x="440" y="74" width="26" height="246"/>
+  <rect class="bB" x="474" y="318" width="26" height="2"/>
+  <text x="453" y="68"  text-anchor="middle" class="val">45.5</text>
+  <text x="487" y="312" text-anchor="middle" class="val" fill="#dc2626" font-weight="bold">→0</text>
+  <text x="470" y="340" text-anchor="middle" class="glab">crash</text>
+  <text x="470" y="354" text-anchor="middle" class="glab">off-path</text>
+
+  <!-- Group 4: behavioral off-path  A 35.0 / B 0 -->
+  <rect class="bA" x="580" y="131" width="26" height="189"/>
+  <rect class="bB" x="614" y="318" width="26" height="2"/>
+  <text x="593" y="125" text-anchor="middle" class="val">35.0</text>
+  <text x="627" y="312" text-anchor="middle" class="val" fill="#dc2626" font-weight="bold">→0</text>
+  <text x="610" y="340" text-anchor="middle" class="glab">behav.</text>
+  <text x="610" y="354" text-anchor="middle" class="glab">off-path</text>
+
+  <!-- callout: off-path collapse -->
+  <text x="470" y="378" text-anchor="middle" class="small" fill="#dc2626">filter deletes the gold off-path</text>
+  <text x="540" y="392" text-anchor="middle" class="small" fill="#dc2626">→ on-path routing mandatory; static still scores 45.5 / 35.0 here</text>
+
+  <!-- legend (stacked, upper area to avoid the right edge) -->
+  <rect class="bA" x="520" y="58" width="14" height="14"/>
+  <text x="540" y="70" class="small">static def-use (A)</text>
+  <rect class="bB" x="520" y="80" width="14" height="14"/>
+  <text x="540" y="92" class="small">+ coverage filter (B)</text>
+</svg>

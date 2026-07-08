@@ -1,0 +1,2985 @@
+{
+  "summary": {
+    "model": "deepseek-ai/DeepSeek-V3",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "subset": "crash_onpath",
+    "n": 57,
+    "k": 5,
+    "llm_calls": 735,
+    "arms": {
+      "A0_base": {
+        "R@1": 35.1,
+        "R@5": 56.1,
+        "R@10": 71.9,
+        "MRR": 0.451,
+        "exec_retention": 71.9
+      },
+      "A1_filter": {
+        "R@1": 35.1,
+        "R@5": 59.6,
+        "R@10": 70.2,
+        "MRR": 0.461,
+        "exec_retention": 70.2
+      },
+      "A2_graded": {
+        "R@1": 38.6,
+        "R@5": 59.6,
+        "R@10": 70.2,
+        "MRR": 0.491,
+        "exec_retention": 70.2
+      },
+      "A3_annot": {
+        "R@1": 38.6,
+        "R@5": 64.9,
+        "R@10": 75.4,
+        "MRR": 0.507,
+        "exec_retention": 75.4
+      },
+      "A4_revote": {
+        "R@1": 35.1,
+        "R@5": 63.2,
+        "R@10": 73.7,
+        "MRR": 0.493,
+        "exec_retention": 73.7
+      }
+    },
+    "paired": {
+      "A1_filter\u2212A0_base@1": {
+        "delta_pp": 0.0,
+        "CI95": [
+          0.0,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 0,
+          "p": 1.0
+        }
+      },
+      "A1_filter\u2212A0_base@5": {
+        "delta_pp": 3.5,
+        "CI95": [
+          0.0,
+          8.8
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 2,
+          "base_hit_treat_miss": 0,
+          "p": 0.5
+        }
+      },
+      "A1_filter\u2212A0_base@10": {
+        "delta_pp": -1.8,
+        "CI95": [
+          -5.3,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 1,
+          "p": 1.0
+        }
+      },
+      "A2_graded\u2212A0_base@1": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -3.5,
+          10.5
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 3,
+          "base_hit_treat_miss": 1,
+          "p": 0.625
+        }
+      },
+      "A2_graded\u2212A0_base@5": {
+        "delta_pp": 3.5,
+        "CI95": [
+          0.0,
+          8.8
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 2,
+          "base_hit_treat_miss": 0,
+          "p": 0.5
+        }
+      },
+      "A2_graded\u2212A0_base@10": {
+        "delta_pp": -1.8,
+        "CI95": [
+          -5.3,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 1,
+          "p": 1.0
+        }
+      },
+      "A3_annot\u2212A0_base@1": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -5.3,
+          14.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 5,
+          "base_hit_treat_miss": 3,
+          "p": 0.7266
+        }
+      },
+      "A3_annot\u2212A0_base@5": {
+        "delta_pp": 8.8,
+        "CI95": [
+          0.0,
+          17.5
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 6,
+          "base_hit_treat_miss": 1,
+          "p": 0.125
+        }
+      },
+      "A3_annot\u2212A0_base@10": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -7.0,
+          14.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 6,
+          "base_hit_treat_miss": 4,
+          "p": 0.7539
+        }
+      },
+      "A4_revote\u2212A0_base@1": {
+        "delta_pp": 0.0,
+        "CI95": [
+          -8.8,
+          10.5
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 4,
+          "base_hit_treat_miss": 4,
+          "p": 1.0
+        }
+      },
+      "A4_revote\u2212A0_base@5": {
+        "delta_pp": 7.0,
+        "CI95": [
+          1.8,
+          14.0
+        ],
+        "sig": true,
+        "mcnemar": {
+          "base_miss_treat_hit": 4,
+          "base_hit_treat_miss": 0,
+          "p": 0.125
+        }
+      },
+      "A4_revote\u2212A0_base@10": {
+        "delta_pp": 1.8,
+        "CI95": [
+          -10.5,
+          14.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 6,
+          "base_hit_treat_miss": 5,
+          "p": 1.0
+        }
+      },
+      "A0_base\u2212A1_filter@1": {
+        "delta_pp": 0.0,
+        "CI95": [
+          0.0,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 0,
+          "p": 1.0
+        }
+      },
+      "A0_base\u2212A1_filter@5": {
+        "delta_pp": -3.5,
+        "CI95": [
+          -8.8,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 2,
+          "p": 0.5
+        }
+      },
+      "A0_base\u2212A1_filter@10": {
+        "delta_pp": 1.8,
+        "CI95": [
+          0.0,
+          5.3
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 1,
+          "base_hit_treat_miss": 0,
+          "p": 1.0
+        }
+      },
+      "A2_graded\u2212A1_filter@1": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -3.5,
+          10.5
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 3,
+          "base_hit_treat_miss": 1,
+          "p": 0.625
+        }
+      },
+      "A2_graded\u2212A1_filter@5": {
+        "delta_pp": 0.0,
+        "CI95": [
+          -5.3,
+          5.3
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 1,
+          "base_hit_treat_miss": 1,
+          "p": 1.0
+        }
+      },
+      "A2_graded\u2212A1_filter@10": {
+        "delta_pp": 0.0,
+        "CI95": [
+          0.0,
+          0.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 0,
+          "base_hit_treat_miss": 0,
+          "p": 1.0
+        }
+      },
+      "A3_annot\u2212A1_filter@1": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -5.3,
+          14.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 5,
+          "base_hit_treat_miss": 3,
+          "p": 0.7266
+        }
+      },
+      "A3_annot\u2212A1_filter@5": {
+        "delta_pp": 5.3,
+        "CI95": [
+          -1.8,
+          12.3
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 4,
+          "base_hit_treat_miss": 1,
+          "p": 0.375
+        }
+      },
+      "A3_annot\u2212A1_filter@10": {
+        "delta_pp": 5.3,
+        "CI95": [
+          -5.3,
+          15.8
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 6,
+          "base_hit_treat_miss": 3,
+          "p": 0.5078
+        }
+      },
+      "A4_revote\u2212A1_filter@1": {
+        "delta_pp": 0.0,
+        "CI95": [
+          -8.8,
+          10.5
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 4,
+          "base_hit_treat_miss": 4,
+          "p": 1.0
+        }
+      },
+      "A4_revote\u2212A1_filter@5": {
+        "delta_pp": 3.5,
+        "CI95": [
+          0.0,
+          8.8
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 2,
+          "base_hit_treat_miss": 0,
+          "p": 0.5
+        }
+      },
+      "A4_revote\u2212A1_filter@10": {
+        "delta_pp": 3.5,
+        "CI95": [
+          -7.0,
+          14.0
+        ],
+        "sig": false,
+        "mcnemar": {
+          "base_miss_treat_hit": 6,
+          "base_hit_treat_miss": 4,
+          "p": 0.7539
+        }
+      }
+    }
+  },
+  "per_instance": [
+    {
+      "instance_id": "astropy__astropy-14182",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 47,
+        "n_exec_in_region": 28,
+        "n_gold": 11,
+        "file_lines": 66,
+        "n_frame": 4
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 458,
+        "n_exec_in_region": 92,
+        "n_gold": 3,
+        "file_lines": 750,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.2,
+        "A1_filter": 0.3333,
+        "A2_graded": 0.25,
+        "A3_annot": 1.0,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "django__django-11964",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 52,
+        "n_exec_in_region": 43,
+        "n_gold": 1,
+        "file_lines": 75,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "django__django-12113",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 85,
+        "n_exec_in_region": 23,
+        "n_gold": 2,
+        "file_lines": 101,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0312,
+        "A1_filter": 0.0769,
+        "A2_graded": 0.0769,
+        "A3_annot": 0.1,
+        "A4_revote": 0.125
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 560,
+        "n_exec_in_region": 203,
+        "n_gold": 4,
+        "file_lines": 642,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0769,
+        "A1_filter": 0.0833,
+        "A2_graded": 0.0769,
+        "A3_annot": 0.0833,
+        "A4_revote": 0.0769
+      }
+    },
+    {
+      "instance_id": "astropy__astropy-7746",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 563,
+        "n_exec_in_region": 241,
+        "n_gold": 4,
+        "file_lines": 3299,
+        "n_frame": 75
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.3333,
+        "A2_graded": 0.3333,
+        "A3_annot": 0.5,
+        "A4_revote": 0.25
+      }
+    },
+    {
+      "instance_id": "django__django-11583",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 194,
+        "n_exec_in_region": 118,
+        "n_gold": 2,
+        "file_lines": 600,
+        "n_frame": 178
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.1429,
+        "A1_filter": 0.1429,
+        "A2_graded": 0.1111,
+        "A3_annot": 0.0833,
+        "A4_revote": 0.0769
+      }
+    },
+    {
+      "instance_id": "django__django-12184",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 288,
+        "n_exec_in_region": 164,
+        "n_gold": 3,
+        "file_lines": 676,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "django__django-12915",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 65,
+        "n_exec_in_region": 33,
+        "n_gold": 1,
+        "file_lines": 88,
+        "n_frame": 12
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "django__django-13321",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 303,
+        "n_exec_in_region": 195,
+        "n_gold": 1,
+        "file_lines": 386,
+        "n_frame": 62
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.125,
+        "A1_filter": 0.125,
+        "A2_graded": 0.1429,
+        "A3_annot": 0.1,
+        "A4_revote": 0.0909
+      }
+    },
+    {
+      "instance_id": "django__django-13448",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 228,
+        "n_exec_in_region": 86,
+        "n_gold": 1,
+        "file_lines": 304,
+        "n_frame": 85
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.3333,
+        "A2_graded": 1.0,
+        "A3_annot": 0.5,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "django__django-13660",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 75,
+        "n_exec_in_region": 33,
+        "n_gold": 4,
+        "file_lines": 103,
+        "n_frame": 20
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "django__django-13028",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 560,
+        "n_exec_in_region": 254,
+        "n_gold": 2,
+        "file_lines": 2414,
+        "n_frame": 245
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.5,
+        "A1_filter": 0.5,
+        "A2_graded": 0.5,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "django__django-14016",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 259,
+        "n_exec_in_region": 67,
+        "n_gold": 3,
+        "file_lines": 323,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0345,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.1667,
+        "A4_revote": 0.1667
+      }
+    },
+    {
+      "instance_id": "django__django-16873",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 315,
+        "n_exec_in_region": 40,
+        "n_gold": 3,
+        "file_lines": 982,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "django__django-16408",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 726,
+        "n_exec_in_region": 218,
+        "n_gold": 3,
+        "file_lines": 2058,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.1,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0204,
+        "A4_revote": 0.0208
+      }
+    },
+    {
+      "instance_id": "django__django-16816",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 451,
+        "n_exec_in_region": 117,
+        "n_gold": 3,
+        "file_lines": 1352,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0385,
+        "A1_filter": 0.0667,
+        "A2_graded": 0.0769,
+        "A3_annot": 0.2,
+        "A4_revote": 0.1
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22711",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 661,
+        "n_exec_in_region": 241,
+        "n_gold": 10,
+        "file_lines": 3988,
+        "n_frame": 1025
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-22835",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 315,
+        "n_exec_in_region": 73,
+        "n_gold": 6,
+        "file_lines": 1800,
+        "n_frame": 45
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23299",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 476,
+        "n_exec_in_region": 105,
+        "n_gold": 3,
+        "file_lines": 1459,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.027,
+        "A1_filter": 0.0833,
+        "A2_graded": 0.0833,
+        "A3_annot": 0.0769,
+        "A4_revote": 0.0667
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23562",
+      "meta": {
+        "gold_in_region": 0,
+        "gold_executed": 1,
+        "n_region": 404,
+        "n_exec_in_region": 164,
+        "n_gold": 4,
+        "file_lines": 932,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23563",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 308,
+        "n_exec_in_region": 120,
+        "n_gold": 2,
+        "file_lines": 932,
+        "n_frame": 20
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0526,
+        "A1_filter": 0.0556,
+        "A2_graded": 0.0588,
+        "A3_annot": 0.0625,
+        "A4_revote": 0.0667
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-23964",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 485,
+        "n_exec_in_region": 270,
+        "n_gold": 1,
+        "file_lines": 1366,
+        "n_frame": 250
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.5,
+        "A1_filter": 0.5,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24149",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 900,
+        "n_exec_in_region": 371,
+        "n_gold": 2,
+        "file_lines": 8237,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.125,
+        "A1_filter": 0.125,
+        "A2_graded": 0.1667,
+        "A3_annot": 0.0909,
+        "A4_revote": 0.0769
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-24265",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 206,
+        "n_exec_in_region": 84,
+        "n_gold": 31,
+        "file_lines": 261,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25442",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 729,
+        "n_exec_in_region": 205,
+        "n_gold": 17,
+        "file_lines": 1617,
+        "n_frame": 36
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.2,
+        "A1_filter": 0.2,
+        "A2_graded": 0.5,
+        "A3_annot": 0.3333,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25079",
+      "meta": {
+        "gold_in_region": 0,
+        "gold_executed": 1,
+        "n_region": 796,
+        "n_exec_in_region": 336,
+        "n_gold": 2,
+        "file_lines": 2659,
+        "n_frame": 261
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-25498",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 622,
+        "n_exec_in_region": 306,
+        "n_gold": 4,
+        "file_lines": 1594,
+        "n_frame": 337
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.1,
+        "A1_filter": 0.1667,
+        "A2_graded": 0.3333,
+        "A3_annot": 1.0,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26020",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 489,
+        "n_exec_in_region": 220,
+        "n_gold": 4,
+        "file_lines": 571,
+        "n_frame": 272
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3010",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 27,
+        "n_exec_in_region": 23,
+        "n_gold": 1,
+        "file_lines": 47,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.1667,
+        "A1_filter": 0.1667,
+        "A2_graded": 0.1667,
+        "A3_annot": 0.125,
+        "A4_revote": 0.125
+      }
+    },
+    {
+      "instance_id": "pallets__flask-4045",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 278,
+        "n_exec_in_region": 90,
+        "n_gold": 8,
+        "file_lines": 542,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "mwaskom__seaborn-3190",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 362,
+        "n_exec_in_region": 141,
+        "n_gold": 2,
+        "file_lines": 988,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.3333,
+        "A2_graded": 0.3333,
+        "A3_annot": 0.3333,
+        "A4_revote": 0.3333
+      }
+    },
+    {
+      "instance_id": "psf__requests-2674",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 330,
+        "n_exec_in_region": 131,
+        "n_gold": 3,
+        "file_lines": 435,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.5,
+        "A2_graded": 0.5,
+        "A3_annot": 0.1429,
+        "A4_revote": 0.2
+      }
+    },
+    {
+      "instance_id": "psf__requests-2148",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 251,
+        "n_exec_in_region": 111,
+        "n_gold": 5,
+        "file_lines": 813,
+        "n_frame": 99
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0714,
+        "A1_filter": 0.0833,
+        "A2_graded": 0.0833,
+        "A3_annot": 0.2,
+        "A4_revote": 0.1667
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-6506",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 61,
+        "n_exec_in_region": 38,
+        "n_gold": 2,
+        "file_lines": 106,
+        "n_frame": 87
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "pydata__xarray-3364",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 345,
+        "n_exec_in_region": 176,
+        "n_gold": 6,
+        "file_lines": 426,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 0.5,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7228",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 391,
+        "n_exec_in_region": 114,
+        "n_gold": 5,
+        "file_lines": 488,
+        "n_frame": 250
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-10508",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 425,
+        "n_exec_in_region": 121,
+        "n_gold": 2,
+        "file_lines": 830,
+        "n_frame": 76
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.3333,
+        "A2_graded": 0.3333,
+        "A3_annot": 0.3333,
+        "A4_revote": 0.25
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-12419",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 212,
+        "n_exec_in_region": 100,
+        "n_gold": 9,
+        "file_lines": 548,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-13142",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 321,
+        "n_exec_in_region": 96,
+        "n_gold": 2,
+        "file_lines": 536,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 0.3333,
+        "A3_annot": 0.5,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-13471",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 613,
+        "n_exec_in_region": 297,
+        "n_gold": 2,
+        "file_lines": 3871,
+        "n_frame": 312
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-13773",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 430,
+        "n_exec_in_region": 126,
+        "n_gold": 3,
+        "file_lines": 2323,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-14817",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 332,
+        "n_exec_in_region": 189,
+        "n_gold": 2,
+        "file_lines": 2391,
+        "n_frame": 69
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-14396",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 243,
+        "n_exec_in_region": 104,
+        "n_gold": 4,
+        "file_lines": 775,
+        "n_frame": 238
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.1667,
+        "A1_filter": 0.2,
+        "A2_graded": 0.1667,
+        "A3_annot": 0.2,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-15678",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 346,
+        "n_exec_in_region": 117,
+        "n_gold": 5,
+        "file_lines": 680,
+        "n_frame": 60
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-17139",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 876,
+        "n_exec_in_region": 396,
+        "n_gold": 1,
+        "file_lines": 2215,
+        "n_frame": 74
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0667,
+        "A4_revote": 0.0625
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-17655",
+      "meta": {
+        "gold_in_region": 0,
+        "gold_executed": 1,
+        "n_region": 293,
+        "n_exec_in_region": 84,
+        "n_gold": 1,
+        "file_lines": 1351,
+        "n_frame": 119
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-17630",
+      "meta": {
+        "gold_in_region": 0,
+        "gold_executed": 1,
+        "n_region": 369,
+        "n_exec_in_region": 47,
+        "n_gold": 1,
+        "file_lines": 1232,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.0,
+        "A1_filter": 0.0,
+        "A2_graded": 0.0,
+        "A3_annot": 0.0,
+        "A4_revote": 0.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-18621",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 209,
+        "n_exec_in_region": 99,
+        "n_gold": 1,
+        "file_lines": 571,
+        "n_frame": 66
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0588,
+        "A1_filter": 0.0769,
+        "A2_graded": 0.0526,
+        "A3_annot": 0.125,
+        "A4_revote": 0.1429
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-18835",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 584,
+        "n_exec_in_region": 186,
+        "n_gold": 8,
+        "file_lines": 2715,
+        "n_frame": 37
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.3333,
+        "A1_filter": 0.3333,
+        "A2_graded": 0.3333,
+        "A3_annot": 0.5,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-20049",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 351,
+        "n_exec_in_region": 80,
+        "n_gold": 5,
+        "file_lines": 566,
+        "n_frame": 26
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.1429,
+        "A1_filter": 0.25,
+        "A2_graded": 0.25,
+        "A3_annot": 0.25,
+        "A4_revote": 0.3333
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-22005",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 289,
+        "n_exec_in_region": 124,
+        "n_gold": 1,
+        "file_lines": 394,
+        "n_frame": 0
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.2,
+        "A1_filter": 0.2,
+        "A2_graded": 1.0,
+        "A3_annot": 0.5,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-21171",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 707,
+        "n_exec_in_region": 266,
+        "n_gold": 4,
+        "file_lines": 3085,
+        "n_frame": 390
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 0.25,
+        "A4_revote": 0.3333
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-22714",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 251,
+        "n_exec_in_region": 86,
+        "n_gold": 2,
+        "file_lines": 1376,
+        "n_frame": 81
+      },
+      "hits": {
+        "A0_base": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 1.0,
+        "A1_filter": 1.0,
+        "A2_graded": 1.0,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-23117",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 187,
+        "n_exec_in_region": 56,
+        "n_gold": 6,
+        "file_lines": 592,
+        "n_frame": 80
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        }
+      },
+      "rr": {
+        "A0_base": 0.125,
+        "A1_filter": 0.1429,
+        "A2_graded": 0.1667,
+        "A3_annot": 0.0833,
+        "A4_revote": 0.0556
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-24213",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 169,
+        "n_exec_in_region": 117,
+        "n_gold": 2,
+        "file_lines": 205,
+        "n_frame": 48
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A3_annot": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 0,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.5,
+        "A1_filter": 0.5,
+        "A2_graded": 0.5,
+        "A3_annot": 0.5,
+        "A4_revote": 0.5
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-24102",
+      "meta": {
+        "gold_in_region": 1,
+        "gold_executed": 1,
+        "n_region": 361,
+        "n_exec_in_region": 166,
+        "n_gold": 2,
+        "file_lines": 1079,
+        "n_frame": 52
+      },
+      "hits": {
+        "A0_base": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A1_filter": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A2_graded": {
+          "1": 0,
+          "5": 0,
+          "10": 0
+        },
+        "A3_annot": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        },
+        "A4_revote": {
+          "1": 1,
+          "5": 1,
+          "10": 1
+        }
+      },
+      "rr": {
+        "A0_base": 0.0385,
+        "A1_filter": 0.0435,
+        "A2_graded": 0.0435,
+        "A3_annot": 1.0,
+        "A4_revote": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "instance_id": "django__django-11815",
+      "repo": "django/django",
+      "path": "django/db/migrations/serializer.py",
+      "n_gold": 3,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 61,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 6,
+          "no_edits": false
+        }
+      },
+      "done": true
+    }
+  ]
+}

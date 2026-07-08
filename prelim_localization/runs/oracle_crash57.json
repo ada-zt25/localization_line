@@ -1,0 +1,346 @@
+{
+ "results": [
+  {
+   "instance_id": "astropy__astropy-14182",
+   "ranked_files": [
+    "astropy/io/ascii/rst.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-14365",
+   "ranked_files": [
+    "astropy/io/ascii/qdp.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-14995",
+   "ranked_files": [
+    "astropy/nddata/mixins/ndarithmetic.py"
+   ]
+  },
+  {
+   "instance_id": "astropy__astropy-7746",
+   "ranked_files": [
+    "astropy/wcs/wcs.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11583",
+   "ranked_files": [
+    "django/utils/autoreload.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-11964",
+   "ranked_files": [
+    "django/db/models/enums.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12113",
+   "ranked_files": [
+    "django/db/backends/sqlite3/creation.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12184",
+   "ranked_files": [
+    "django/urls/resolvers.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-12915",
+   "ranked_files": [
+    "django/contrib/staticfiles/handlers.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13028",
+   "ranked_files": [
+    "django/db/models/sql/query.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13321",
+   "ranked_files": [
+    "django/contrib/sessions/backends/base.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13448",
+   "ranked_files": [
+    "django/db/backends/base/creation.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-13660",
+   "ranked_files": [
+    "django/core/management/commands/shell.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-14016",
+   "ranked_files": [
+    "django/db/models/query_utils.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16408",
+   "ranked_files": [
+    "django/db/models/sql/compiler.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16816",
+   "ranked_files": [
+    "django/contrib/admin/checks.py"
+   ]
+  },
+  {
+   "instance_id": "django__django-16873",
+   "ranked_files": [
+    "django/template/defaultfilters.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-22711",
+   "ranked_files": [
+    "lib/matplotlib/widgets.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-22835",
+   "ranked_files": [
+    "lib/matplotlib/artist.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23299",
+   "ranked_files": [
+    "lib/matplotlib/__init__.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23562",
+   "ranked_files": [
+    "lib/mpl_toolkits/mplot3d/art3d.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23563",
+   "ranked_files": [
+    "lib/mpl_toolkits/mplot3d/art3d.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23964",
+   "ranked_files": [
+    "lib/matplotlib/backends/backend_ps.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24149",
+   "ranked_files": [
+    "lib/matplotlib/axes/_axes.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24265",
+   "ranked_files": [
+    "lib/matplotlib/style/core.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25079",
+   "ranked_files": [
+    "lib/matplotlib/colors.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25442",
+   "ranked_files": [
+    "lib/matplotlib/offsetbox.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25498",
+   "ranked_files": [
+    "lib/matplotlib/colorbar.py"
+   ]
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-26020",
+   "ranked_files": [
+    "lib/mpl_toolkits/axes_grid1/axes_grid.py"
+   ]
+  },
+  {
+   "instance_id": "mwaskom__seaborn-3010",
+   "ranked_files": [
+    "seaborn/_stats/regression.py"
+   ]
+  },
+  {
+   "instance_id": "mwaskom__seaborn-3190",
+   "ranked_files": [
+    "seaborn/_core/scales.py"
+   ]
+  },
+  {
+   "instance_id": "pallets__flask-4045",
+   "ranked_files": [
+    "src/flask/blueprints.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-2148",
+   "ranked_files": [
+    "requests/models.py"
+   ]
+  },
+  {
+   "instance_id": "psf__requests-2674",
+   "ranked_files": [
+    "requests/adapters.py"
+   ]
+  },
+  {
+   "instance_id": "pydata__xarray-3364",
+   "ranked_files": [
+    "xarray/core/concat.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-6506",
+   "ranked_files": [
+    "pylint/config/config_initialization.py"
+   ]
+  },
+  {
+   "instance_id": "pylint-dev__pylint-7228",
+   "ranked_files": [
+    "pylint/config/argument.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-10508",
+   "ranked_files": [
+    "sklearn/preprocessing/label.py"
+   ]
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13142",
+   "ranked_files": [
+    "sklearn/mixture/base.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-12419",
+   "ranked_files": [
+    "sympy/matrices/expressions/matexpr.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13471",
+   "ranked_files": [
+    "sympy/core/numbers.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-13773",
+   "ranked_files": [
+    "sympy/matrices/common.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14396",
+   "ranked_files": [
+    "sympy/polys/polyoptions.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-14817",
+   "ranked_files": [
+    "sympy/printing/pretty/pretty.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-15678",
+   "ranked_files": [
+    "sympy/geometry/util.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-17139",
+   "ranked_files": [
+    "sympy/simplify/fu.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-17630",
+   "ranked_files": [
+    "sympy/matrices/expressions/matexpr.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-17655",
+   "ranked_files": [
+    "sympy/geometry/point.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18621",
+   "ranked_files": [
+    "sympy/matrices/expressions/blockmatrix.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-18835",
+   "ranked_files": [
+    "sympy/utilities/iterables.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-20049",
+   "ranked_files": [
+    "sympy/physics/vector/point.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-21171",
+   "ranked_files": [
+    "sympy/printing/latex.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-22005",
+   "ranked_files": [
+    "sympy/solvers/polysys.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-22714",
+   "ranked_files": [
+    "sympy/geometry/point.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-23117",
+   "ranked_files": [
+    "sympy/tensor/array/ndim_array.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-24102",
+   "ranked_files": [
+    "sympy/parsing/mathematica.py"
+   ]
+  },
+  {
+   "instance_id": "sympy__sympy-24213",
+   "ranked_files": [
+    "sympy/physics/units/unitsystem.py"
+   ]
+  }
+ ]
+}

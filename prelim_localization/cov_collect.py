@@ -24,9 +24,13 @@ MIRROR = "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 
 def _is_testfile(f):
-    """An actual test MODULE (contains tests) — not a fixture/sample under tests/roots/ etc."""
+    """An actual test MODULE (contains tests) — not a fixture/sample under tests/roots/ etc.
+    Django's convention is a bare `tests.py` (or app `tests/` package), so recognize it too — otherwise
+    _test_files falls back to ALL touched .py (incl. fixture models.py/fields.py), which become bogus
+    runtests labels."""
     b = f.replace("\\", "/").rsplit("/", 1)[-1]
-    return (b.startswith("test_") or b.endswith("_test.py")) and "/roots/" not in f and "/data/" not in f
+    is_test = b.startswith("test_") or b.endswith("_test.py") or b == "tests.py"
+    return is_test and "/roots/" not in f and "/data/" not in f
 
 
 def _test_files(row):
@@ -52,7 +56,14 @@ def _test_cmd(repo, test_files):
     """Repo-aware coverage-wrapped command to run the failing test file(s)."""
     if repo == "django/django":
         labels = " ".join(_django_label(f) for f in test_files)
-        return ("python -m coverage run --source=/testbed ./tests/runtests.py "
+        # PYTHONPATH=/testbed/tests: newer Django runtests.py relies on sys.path[0] to import the
+        # test_sqlite settings, but `python -m coverage run ./tests/runtests.py` doesn't set it the way
+        # `python ./tests/runtests.py` does -> ModuleNotFoundError: test_sqlite -> runtests aborts in
+        # setup and ONLY boot/import coverage is captured (196 identical files, test body never runs).
+        # Older Django self-inserted tests/ so it worked; this makes it universal (redundant for old).
+        # `env PYTHONPATH=...` (not a bare VAR=val prefix): the command is wrapped in `timeout 1500 %CMD%`,
+        # and timeout execs its argument directly, so an inline assignment would be treated as the command.
+        return ("env PYTHONPATH=/testbed/tests python -m coverage run --source=/testbed ./tests/runtests.py "
                 f"--settings=test_sqlite --parallel 1 {labels}")
     tf = " ".join(f"'{f}'" for f in test_files)                 # pytest-native repos
     return ('python -m coverage run --source=/testbed -m pytest -p no:cacheprovider '

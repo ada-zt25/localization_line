@@ -1,0 +1,61 @@
+{"instance_id": "astropy__astropy-13033", "found_files": ["astropy/timeseries/core.py"], "found_related_locs": [["function: autocheck_required_columns\nclass: BaseTimeSeries"]]}
+{"instance_id": "astropy__astropy-13977", "found_files": ["astropy/units/quantity.py"], "found_related_locs": [["class: Quantity\nfunction: Quantity.__array_ufunc__\nfunction: Quantity._to_own_unit\nfunction: Quantity._condition_arg"]]}
+{"instance_id": "astropy__astropy-14309", "found_files": ["astropy/io/fits/connect.py"], "found_related_locs": [["function: is_fits\nfunction: read_table_fits\nfunction: write_table_fits"]]}
+{"instance_id": "astropy__astropy-14096", "found_files": ["astropy/coordinates/sky_coordinate.py"], "found_related_locs": [["class: SkyCoord\nfunction: SkyCoord.__getattr__\nfunction: SkyCoord.__setattr__\nfunction: SkyCoord.__delattr__"]]}
+{"instance_id": "astropy__astropy-7336", "found_files": ["astropy/units/decorators.py"], "found_related_locs": [["class: QuantityInput\nfunction: _validate_arg_value\nfunction: _get_allowed_units\nvariable: quantity_input"]]}
+{"instance_id": "astropy__astropy-7606", "found_files": ["astropy/units/core.py"], "found_related_locs": [["class: UnrecognizedUnit\nclass: UnitBase\nclass: _UnitMetaClass"]]}
+{"instance_id": "astropy__astropy-7671", "found_files": ["astropy/utils/introspection.py"], "found_related_locs": [["function: minversion"]]}
+{"instance_id": "django__django-11087", "found_files": ["django/db/models/deletion.py"], "found_related_locs": [["class: Collector\nfunction: CASCADE\nfunction: get_candidate_relations_to_delete"]]}
+{"instance_id": "django__django-11265", "found_files": ["django/db/models/sql/query.py"], "found_related_locs": [["class: Query\nfunction: split_exclude\nfunction: build_filter\nfunction: names_to_path\nfunction: setup_joins\nfunction: trim_joins"]]}
+{"instance_id": "django__django-11299", "found_files": ["django/db/models/sql/query.py"], "found_related_locs": [["function: _get_col\nclass: Query\nfunction: Query.build_filter\nfunction: Query.build_lookup\nfunction: Query.resolve_ref"]]}
+{"instance_id": "django__django-11749", "found_files": ["django/core/management/__init__.py"], "found_related_locs": [["function: call_command\nfunction: get_actions"]]}
+{"instance_id": "django__django-12663", "found_files": ["django/db/models/sql/query.py"], "found_related_locs": [["function: Query.build_lookup\nfunction: Query.build_filter\nfunction: Query.resolve_lookup_value"]]}
+{"instance_id": "django__django-12774", "found_files": ["django/db/models/query.py"], "found_related_locs": [["function: QuerySet.in_bulk"]]}
+{"instance_id": "django__django-13012", "found_files": ["django/db/models/expressions.py"], "found_related_locs": [["class: ExpressionWrapper\nclass: Value\nfunction: BaseExpression.get_group_by_cols"]]}
+{"instance_id": "django__django-13023", "found_files": ["django/db/models/fields/__init__.py"], "found_related_locs": [["class: DecimalField"]]}
+{"instance_id": "django__django-13112", "found_files": ["django/db/models/fields/related.py"], "found_related_locs": [["function: resolve_relation\nfunction: lazy_related_operation\nclass: ForeignKey"]]}
+{"instance_id": "django__django-13449", "found_files": ["django/db/models/expressions.py"], "found_related_locs": [["class: SQLiteNumericMixin\nclass: Window\nclass: Func"]]}
+{"instance_id": "django__django-13794", "found_files": ["django/utils/functional.py"], "found_related_locs": [["class: __proxy__\nfunction: lazy\nfunction: lazystr\nfunction: keep_lazy\nfunction: keep_lazy_text\nclass: LazyObject\nclass: SimpleLazyObject"]]}
+{"instance_id": "django__django-13406", "found_files": ["django/db/models/query.py"], "found_related_locs": [["class: QuerySet\nclass: ModelIterable\nclass: ValuesIterable\nclass: ValuesListIterable\nfunction: QuerySet.__getstate__\nfunction: QuerySet.__setstate__"]]}
+{"instance_id": "django__django-13821", "found_files": ["django/db/backends/sqlite3/base.py"], "found_related_locs": [["function: check_sqlite_version\nclass: DatabaseWrapper\nclass: DatabaseFeatures\nclass: DatabaseOperations"]]}
+{"instance_id": "django__django-14007", "found_files": ["django/db/models/sql/compiler.py"], "found_related_locs": [["class: SQLInsertCompiler\nfunction: SQLInsertCompiler.execute_sql\nfunction: SQLInsertCompiler.as_sql"]]}
+{"instance_id": "django__django-14349", "found_files": ["django/core/validators.py"], "found_related_locs": [["class: URLValidator\nfunction: validate_ipv6_address\nfunction: validate_ipv46_address"]]}
+{"instance_id": "django__django-14140", "found_files": ["django/db/models/query_utils.py"], "found_related_locs": [["class: Q\nfunction: Q.deconstruct"]]}
+{"instance_id": "django__django-14351", "found_files": ["django/db/models/lookups.py"], "found_related_locs": [["class: In\nclass: FieldGetDbPrepValueIterableMixin\nclass: FieldGetDbPrepValueMixin"]]}
+{"instance_id": "django__django-14493", "found_files": ["django/contrib/staticfiles/storage.py"], "found_related_locs": [["class: HashedFilesMixin\nfunction: HashedFilesMixin.post_process\nfunction: HashedFilesMixin._post_process"]]}
+{"instance_id": "django__django-14765", "found_files": ["django/db/migrations/state.py"], "found_related_locs": [["class: ProjectState\nclass: StateApps"]]}
+{"instance_id": "django__django-15104", "found_files": ["django/db/migrations/autodetector.py"], "found_related_locs": [["class: MigrationAutodetector\nfunction: MigrationAutodetector.only_relation_agnostic_fields\nfunction: MigrationAutodetector.deep_deconstruct"]]}
+{"instance_id": "django__django-15161", "found_files": ["django/db/models/expressions.py"], "found_related_locs": [["class: F\nclass: CombinedExpression\nclass: DurationExpression\nclass: TemporalSubtraction\nclass: Func\nclass: Value\nclass: Case\nclass: When\nclass: Subquery\nclass: Exists\nclass: Window"]]}
+{"instance_id": "django__django-15277", "found_files": ["django/db/models/fields/__init__.py"], "found_related_locs": [["class: CharField\nclass: BinaryField"]]}
+{"instance_id": "django__django-15375", "found_files": ["django/db/models/aggregates.py"], "found_related_locs": [["class: Aggregate\nclass: Sum"]]}
+{"instance_id": "django__django-15380", "found_files": ["django/db/migrations/autodetector.py"], "found_related_locs": [["class: MigrationAutodetector\nfunction: generate_renamed_fields\nfunction: generate_renamed_models"]]}
+{"instance_id": "django__django-15503", "found_files": ["django/db/models/fields/json.py"], "found_related_locs": [["class: HasKeyLookup\nclass: HasKey\nclass: HasKeys\nclass: HasAnyKeys\nfunction: compile_json_path\nclass: KeyTransform"]]}
+{"instance_id": "django__django-15525", "found_files": ["django/core/serializers/base.py"], "found_related_locs": [["function: build_instance\nfunction: deserialize_fk_value\nfunction: deserialize_m2m_values\nclass: DeserializedObject"]]}
+{"instance_id": "django__django-15987", "found_files": ["django/core/management/commands/loaddata.py"], "found_related_locs": [["class: Command\nfunction: Command.fixture_dirs\nfunction: Command.find_fixtures\nfunction: Command.find_fixture_files_in_dir"]]}
+{"instance_id": "django__django-16100", "found_files": ["django/contrib/admin/options.py"], "found_related_locs": [["class: ModelAdmin\nfunction: ModelAdmin.changelist_view\nfunction: ModelAdmin._get_list_editable_queryset\nfunction: ModelAdmin._get_edited_object_pks"]]}
+{"instance_id": "django__django-16116", "found_files": ["django/core/management/commands/makemigrations.py"], "found_related_locs": [["class: Command"]]}
+{"instance_id": "django__django-16454", "found_files": ["django/core/management/base.py"], "found_related_locs": [["class: CommandParser\nfunction: CommandParser.error"]]}
+{"instance_id": "django__django-16136", "found_files": ["django/views/generic/base.py"], "found_related_locs": [["class: View\nfunction: View.dispatch\nfunction: View.http_method_not_allowed\nfunction: View.as_view"]]}
+{"instance_id": "django__django-16667", "found_files": ["django/forms/widgets.py"], "found_related_locs": [["class: SelectDateWidget\nfunction: SelectDateWidget.value_from_datadict\nfunction: SelectDateWidget.format_value"]]}
+{"instance_id": "matplotlib__matplotlib-20859", "found_files": ["lib/matplotlib/legend.py"], "found_related_locs": [["class: Legend\nfunction: _parse_legend_args\nfunction: _get_legend_handles\nfunction: _get_legend_handles_labels"]]}
+{"instance_id": "matplotlib__matplotlib-22719", "found_files": ["lib/matplotlib/category.py"], "found_related_locs": [["class: StrCategoryConverter\nclass: UnitData"]]}
+{"instance_id": "matplotlib__matplotlib-24026", "found_files": ["lib/matplotlib/stackplot.py"], "found_related_locs": [["function: stackplot"]]}
+{"instance_id": "matplotlib__matplotlib-25122", "found_files": ["lib/matplotlib/mlab.py"], "found_related_locs": [["function: _spectral_helper\nfunction: psd\nfunction: csd\nfunction: specgram"]]}
+{"instance_id": "matplotlib__matplotlib-26291", "found_files": ["lib/mpl_toolkits/axes_grid1/inset_locator.py"], "found_related_locs": [["class: AnchoredLocatorBase\nclass: AnchoredSizeLocator\nfunction: inset_axes\nfunction: _add_inset_axes"]]}
+{"instance_id": "pallets__flask-5014", "found_files": ["src/flask/blueprints.py"], "found_related_locs": [["class: Blueprint\nclass: BlueprintSetupState"]]}
+{"instance_id": "mwaskom__seaborn-3069", "found_files": ["seaborn/_core/plot.py"], "found_related_locs": [["class: Plotter\nfunction: Plotter._finalize_figure\nfunction: Plotter._setup_scales"]]}
+{"instance_id": "psf__requests-1724", "found_files": ["requests/sessions.py"], "found_related_locs": [["class: Session\nfunction: prepare_request\nfunction: request"]]}
+{"instance_id": "psf__requests-5414", "found_files": ["requests/models.py"], "found_related_locs": [["class: PreparedRequest\nfunction: PreparedRequest._get_idna_encoded_host\nfunction: PreparedRequest.prepare_url"]]}
+{"instance_id": "pydata__xarray-7233", "found_files": ["xarray/core/rolling.py"], "found_related_locs": [["class: Coarsen\nclass: DataArrayCoarsen\nclass: DatasetCoarsen"]]}
+{"instance_id": "pydata__xarray-3677", "found_files": ["xarray/core/dataset.py"], "found_related_locs": [["function: Dataset.merge\nfunction: dataset_merge_method"]]}
+{"instance_id": "pylint-dev__pylint-4970", "found_files": ["pylint/checkers/similar.py"], "found_related_locs": [["variable: DEFAULT_MIN_SIMILARITY_LINE\nclass: Similar\nclass: SimilarChecker\nfunction: hash_lineset\nfunction: Similar._find_common"]]}
+{"instance_id": "scikit-learn__scikit-learn-12585", "found_files": ["sklearn/base.py"], "found_related_locs": [["function: clone\nclass: BaseEstimator"]]}
+{"instance_id": "pylint-dev__pylint-6903", "found_files": ["pylint/lint/run.py"], "found_related_locs": [["function: _query_cpu\nfunction: _cpu_count\nclass: Run"]]}
+{"instance_id": "scikit-learn__scikit-learn-13135", "found_files": ["sklearn/preprocessing/_discretization.py"], "found_related_locs": [["class: KBinsDiscretizer\nfunction: KBinsDiscretizer.fit\nfunction: KBinsDiscretizer.transform"]]}
+{"instance_id": "scikit-learn__scikit-learn-13328", "found_files": ["sklearn/linear_model/huber.py"], "found_related_locs": [["function: _huber_loss_and_gradient\nclass: HuberRegressor"]]}
+{"instance_id": "sympy__sympy-14711", "found_files": ["sympy/physics/vector/vector.py"], "found_related_locs": [["class: Vector\nfunction: _check_vector"]]}
+{"instance_id": "sympy__sympy-13372", "found_files": ["sympy/core/evalf.py"], "found_related_locs": [["function: evalf\nfunction: evalf_mul\nfunction: finalize_complex\nvariable: evalf_table"]]}
+{"instance_id": "sympy__sympy-19954", "found_files": ["sympy/combinatorics/perm_groups.py"], "found_related_locs": [["class: PermutationGroup\nfunction: minimal_blocks\nfunction: sylow_subgroup"]]}
+{"instance_id": "sympy__sympy-20428", "found_files": ["sympy/polys/domains/expressiondomain.py"], "found_related_locs": [["class: ExpressionDomain\nclass: ExpressionDomain.Expression"]]}
+{"instance_id": "sympy__sympy-23824", "found_files": ["sympy/physics/hep/gamma_matrices.py"], "found_related_locs": [[""]]}
+{"instance_id": "sympy__sympy-23950", "found_files": ["sympy/sets/contains.py"], "found_related_locs": [[""]]}

@@ -1,0 +1,75 @@
+{
+  "crash_onpath_lite": {
+    "n": 57,
+    "missing_row": 0,
+    "cov_cached": 57,
+    "cov_pct": 100.0,
+    "gold_file_cached": 57,
+    "spine_fires": 50,
+    "fire_pct": 87.7,
+    "traceback_present": 49,
+    "tb_pct": 86.0,
+    "gold_line_leak": 7,
+    "leak_examples": [
+      [
+        "matplotlib__matplotlib-23562",
+        "return self._facecolors2d"
+      ],
+      [
+        "matplotlib__matplotlib-25442",
+        "self.canvas.mpl_disconnect(cid)"
+      ],
+      [
+        "pylint-dev__pylint-6506",
+        "raise _UnrecognizedOptionError(options=unrecognized_options)"
+      ],
+      [
+        "sympy__sympy-13471",
+        "num[1] = long(num[1], 16)"
+      ]
+    ]
+  },
+  "behav_onpath_lite": {
+    "n": 132,
+    "missing_row": 0,
+    "cov_cached": 132,
+    "cov_pct": 100.0,
+    "gold_file_cached": 132,
+    "spine_fires": 122,
+    "fire_pct": 92.4,
+    "traceback_present": 0,
+    "tb_pct": 0.0,
+    "gold_line_leak": 0,
+    "leak_examples": []
+  },
+  "crash_bench2_verif": {
+    "n": 61,
+    "missing_row": 0,
+    "cov_cached": 61,
+    "cov_pct": 100.0,
+    "gold_file_cached": 61,
+    "spine_fires": 54,
+    "fire_pct": 88.5,
+    "traceback_present": 36,
+    "tb_pct": 59.0,
+    "gold_line_leak": 12,
+    "leak_examples": [
+      [
+        "astropy__astropy-13977",
+        "if function.nout == 1:"
+      ],
+      [
+        "astropy__astropy-7336",
+        "return return_.to(wrapped_signature.return_annotation)"
+      ],
+      [
+        "astropy__astropy-7606",
+        "other = Unit(other, parse_strict='silent')"
+      ],
+      [
+        "astropy__astropy-7671",
+        "if inclusive:"
+      ]
+    ]
+  }
+}

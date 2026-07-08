@@ -1,0 +1,52 @@
+{
+  "config": "M_hetero-real: DEPLOYABLE heterogeneous verifier re-rank (no oracle)",
+  "arm": "M_hetero_real",
+  "kind": "deployable_verifier_rerank",
+  "model": "deepseek-ai/DeepSeek-V3.2",
+  "base_url": "https://api.siliconflow.cn/v1",
+  "git_sha": "50b8714",
+  "n": 57,
+  "seed": 20260701,
+  "n_boot": 10000,
+  "candidate_set": "coverage-filtered executed lines of the gold file (frozen exec_lines)",
+  "metrics": {
+    "n": 57,
+    "verifier": "deepseek-ai/DeepSeek-V3.2",
+    "verifier_real": {
+      "R@1": 42.1,
+      "R@5": 64.9,
+      "R@10": 77.2
+    },
+    "base_qwen_M4": {
+      "R@1": 35.1,
+      "R@5": 52.6,
+      "R@10": 68.4
+    },
+    "delta_verifier_vs_base": {
+      "R@1": {
+        "delta_pp": 7.0,
+        "ci95": [
+          -5.3,
+          19.3
+        ],
+        "sig": false
+      },
+      "R@5": {
+        "delta_pp": 12.3,
+        "ci95": [
+          -1.8,
+          26.3
+        ],
+        "sig": false
+      },
+      "R@10": {
+        "delta_pp": 8.8,
+        "ci95": [
+          -1.8,
+          19.3
+        ],
+        "sig": false
+      }
+    }
+  }
+}

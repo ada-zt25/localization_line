@@ -1,0 +1,406 @@
+{
+  "results": [
+    {
+      "instance_id": "django__django-11133",
+      "repo": "django/django",
+      "path": "django/http/response.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 4,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 15,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11422",
+      "repo": "django/django",
+      "path": "django/utils/autoreload.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 8,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 11,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-11910",
+      "repo": "django/django",
+      "path": "django/db/migrations/autodetector.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 37,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 78,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-12125",
+      "repo": "django/django",
+      "path": "django/db/migrations/serializer.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 7,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 19,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-12589",
+      "repo": "django/django",
+      "path": "django/db/models/sql/query.py",
+      "n_gold": 4,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 94,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 27,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-12708",
+      "repo": "django/django",
+      "path": "django/db/backends/base/schema.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 15,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 15,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-12747",
+      "repo": "django/django",
+      "path": "django/db/models/deletion.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 23,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 67,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-13315",
+      "repo": "django/django",
+      "path": "django/forms/models.py",
+      "n_gold": 4,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 87,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 6,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "django__django-14915",
+      "repo": "django/django",
+      "path": "django/forms/models.py",
+      "n_gold": 1,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 5,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 4,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pydata__xarray-5131",
+      "repo": "pydata/xarray",
+      "path": "xarray/core/groupby.py",
+      "n_gold": 2,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 61,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 139,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "pylint-dev__pylint-7114",
+      "repo": "pylint-dev/pylint",
+      "path": "pylint/lint/expand_modules.py",
+      "n_gold": 4,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 16,
+          "no_edits": true
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 99,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-11281",
+      "repo": "scikit-learn/scikit-learn",
+      "path": "sklearn/mixture/base.py",
+      "n_gold": 5,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 61,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": true,
+          "rounds_used": 1,
+          "n_edited": 17,
+          "loc_has_gold": false,
+          "ctx_n": 17
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "sympy__sympy-12236",
+      "repo": "sympy/sympy",
+      "path": "sympy/polys/domains/polynomialring.py",
+      "n_gold": 4,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 6,
+          "no_edits": true
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 8,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "sympy__sympy-16792",
+      "repo": "sympy/sympy",
+      "path": "sympy/utilities/codegen.py",
+      "n_gold": 8,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 25,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 169,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "sympy__sympy-18087",
+      "repo": "sympy/sympy",
+      "path": "sympy/core/exprtools.py",
+      "n_gold": 12,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 181,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 47,
+          "no_edits": false
+        }
+      },
+      "done": true
+    },
+    {
+      "instance_id": "sympy__sympy-18698",
+      "repo": "sympy/sympy",
+      "path": "sympy/polys/polytools.py",
+      "n_gold": 7,
+      "arms": {
+        "vote": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": false,
+          "ctx_n": 19,
+          "no_edits": false
+        },
+        "m5": {
+          "resolved": false,
+          "rounds_used": 3,
+          "loc_has_gold": true,
+          "ctx_n": 56,
+          "no_edits": false
+        }
+      },
+      "done": true
+    }
+  ],
+  "summary": {
+    "n": 16,
+    "model": "Qwen/Qwen2.5-72B-Instruct",
+    "context": "function",
+    "rounds": 3,
+    "k": 1,
+    "window": 30,
+    "arms": {
+      "vote": {
+        "n": 16,
+        "resolved_rate": 0.0,
+        "loc_has_gold_rate": 6.2
+      },
+      "m5": {
+        "n": 16,
+        "resolved_rate": 6.2,
+        "loc_has_gold_rate": 56.2
+      }
+    },
+    "m5_vs_vote_resolve": {
+      "delta_pp": 6.2,
+      "ci": [
+        0.0,
+        18.8
+      ],
+      "mcnemar": {
+        "w": 1,
+        "l": 0,
+        "disc": 1,
+        "p": 1.0
+      },
+      "n": 16
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 680 410" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .ttl{font-size:13px;font-weight:bold;fill:#111;}
+    .ax{stroke:#999;stroke-width:1;}
+    .grid{stroke:#e9e9e9;stroke-width:1;}
+    .tick{font-size:10.5px;fill:#666;}
+    .glab{font-size:12px;fill:#111;}
+    .bA{fill:#9aa3af;}
+    .bB{fill:#2563eb;}
+    .val{font-size:10.5px;fill:#111;}
+    .small{font-size:11px;fill:#444;}
+  </style>
+
+  <text x="20" y="24" class="ttl">Coverage in the full vote+graph+LLM pipeline (crash on-path, n=57, file-given)</text>
+
+  <!-- y axis + gridlines 0..70 -->
+  <line class="ax" x1="62" y1="330" x2="660" y2="330"/>
+  <g>
+    <line class="grid" x1="62" y1="293" x2="660" y2="293"/><text x="40" y="297" class="tick">10</text>
+    <line class="grid" x1="62" y1="257" x2="660" y2="257"/><text x="40" y="261" class="tick">20</text>
+    <line class="grid" x1="62" y1="220" x2="660" y2="220"/><text x="40" y="224" class="tick">30</text>
+    <line class="grid" x1="62" y1="183" x2="660" y2="183"/><text x="40" y="187" class="tick">40</text>
+    <line class="grid" x1="62" y1="147" x2="660" y2="147"/><text x="40" y="151" class="tick">50</text>
+    <line class="grid" x1="62" y1="110" x2="660" y2="110"/><text x="40" y="114" class="tick">60</text>
+    <line class="grid" x1="62" y1="73"  x2="660" y2="73"/><text x="40" y="77"  class="tick">70</text>
+    <text x="46" y="334" class="tick">0</text>
+  </g>
+  <text x="20" y="200" class="small" transform="rotate(-90 20 200)">line Recall@k (%)</text>
+
+  <!-- Group R@1 (cx=150): M0 29.8 / M4 35.1 -->
+  <rect class="bA" x="108" y="221" width="38" height="109"/>
+  <rect class="bB" x="154" y="201" width="38" height="129"/>
+  <text x="127" y="215" text-anchor="middle" class="val">29.8</text>
+  <text x="173" y="195" text-anchor="middle" class="val" fill="#1d4ed8">35.1</text>
+  <text x="150" y="348" text-anchor="middle" class="glab">R@1</text>
+  <text x="150" y="366" text-anchor="middle" class="small" fill="#888">n.s.</text>
+
+  <!-- Group R@5 (cx=350): M0 50.9 / M4 52.6 -->
+  <rect class="bA" x="308" y="143" width="38" height="187"/>
+  <rect class="bB" x="354" y="137" width="38" height="193"/>
+  <text x="327" y="137" text-anchor="middle" class="val">50.9</text>
+  <text x="373" y="131" text-anchor="middle" class="val" fill="#1d4ed8">52.6</text>
+  <text x="350" y="348" text-anchor="middle" class="glab">R@5</text>
+  <text x="350" y="366" text-anchor="middle" class="small" fill="#888">n.s.</text>
+
+  <!-- Group R@10 (cx=550): M0 56.1 / M4 68.4  + the significant gain -->
+  <rect class="bA" x="508" y="124" width="38" height="206"/>
+  <rect class="bB" x="554" y="79"  width="38" height="251"/>
+  <text x="527" y="118" text-anchor="middle" class="val">56.1</text>
+  <text x="573" y="73"  text-anchor="middle" class="val" fill="#1d4ed8">68.4</text>
+  <text x="550" y="348" text-anchor="middle" class="glab">R@10</text>
+  <path d="M573,96 C600,96 600,118 591,118" fill="none" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="610" y="104" class="val" fill="#1d4ed8" font-weight="bold">+12.3pp</text>
+  <text x="610" y="118" class="small" fill="#16a34a" font-weight="bold">sig.</text>
+
+  <!-- legend (below title, left) -->
+  <rect class="bA" x="90" y="40" width="13" height="13"/>
+  <text x="108" y="51" class="small">Static (no coverage)</text>
+  <rect class="bB" x="272" y="40" width="13" height="13"/>
+  <text x="290" y="51" class="small">+filter+score (coverage on)</text>
+
+  <!-- footnote: the mechanism -->
+  <text x="62" y="392" class="small">Gain is concentrated at R@10 (95% CI [1.8, 22.8]); R@1/R@5 not significant — coverage lifts <tspan font-style="italic">reachability</tspan>, not <tspan font-style="italic">discrimination</tspan>.</text>
+  <text x="62" y="406" class="small" fill="#888">+score (coverage as a score term) = Static exactly — the coverage score cannot rank within the executed set.</text>
+</svg>
